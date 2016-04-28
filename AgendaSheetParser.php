@@ -36,7 +36,7 @@ class Event{
 	public function __construct($rowStr){
 		$row=str_getcsv($rowStr);
 		$this->name=$row[0];
-		$this->start=DateTime::createFromFormat(DATE_FORMAT, $row[1].' '.$row[2], new DateTimeZone('Europe/Rome')); 
+		$this->start=$row[1]==null || $row[2]==null ? null : DateTime::createFromFormat(DATE_FORMAT, $row[1].' '.$row[2], new DateTimeZone('Europe/Rome')); 
 		$this->organizedBy=explode(',', $row[5]);
 	}
 }
@@ -58,7 +58,7 @@ class AgendaSheetParser implements Iterator{
 		curl_setopt($h, CURLOPT_RETURNTRANSFER, TRUE);
 		$retrievedData=curl_exec($h);
 		if($retrievedData==FALSE)
-			throw new Exception("Unable to execute POST request: ".curl_error($h));
+			throw new Exception("Unable to execute request: ".curl_error($h));
 		curl_close($h);
 		$this->rows=str_getcsv($retrievedData,"\n");
 		$this->numItems=count($this->rows)-1;
@@ -92,7 +92,8 @@ class AgendaSheetParser implements Iterator{
 $p=new AgendaSheetParser();
 foreach($p as $e){
  	echo $e->name."\t";
- 	echo $e->start->format(DATE_FORMAT)."\t";
+ 	if ($e->start!=null)
+	 	echo $e->start->format(DATE_FORMAT)."\t";
  	echo "organized by ";
  	foreach($e->organizedBy as $o)
  		echo $o.' ';
