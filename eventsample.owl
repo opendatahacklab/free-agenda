@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY org "http://www.w3.org/ns/org#" >
+    <!ENTITY dcterms "http://purl.org/dc/terms/" >
+    <!ENTITY locn "http://www.w3.org/ns/locn#" >
+    <!ENTITY foaf "http://xmlns.com/foaf/0.1/" >
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY geo "http://www.w3.org/2003/01/geo/wgs84_pos#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY odt "http://www.dmi.unict.it/~longo/opendatatour/" >
+    <!ENTITY event "http://purl.org/NET/c4dm/event.owl#" >
+    <!ENTITY time "http://www.w3.org/2006/time#" >
+    <!ENTITY cct "http://www.comune.catania.it/comunect.owl/" >
+    <!ENTITY sioc "http://rdfs.org/sioc/ns#" >
+]>
+
+
+<rdf:RDF xml:base="http://example.org"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#"
+     xmlns:foaf="http://xmlns.com/foaf/0.1/"
+     xmlns:org="http://www.w3.org/ns/org#"
+     xmlns:locn="http://www.w3.org/ns/locn#"
+     xmlns:dcterms="http://purl.org/dc/terms/"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:event="http://purl.org/NET/c4dm/event.owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:time="http://www.w3.org/2006/time#"
+     xmlns:sioc	="&sioc;">
+     
+    <owl:Ontology rdf:about="http://www.dmi.unict.it/~longo/opendatatour">
+    </owl:Ontology>
+    
+    <event:Event rdf:about="stage1">
+		<rdfs:label>Open Data Tour - 24 Febbraio 2015 presso HACKSPACE Catania</rdfs:label>
+		<event:time>
+			<time:Interval rdf:about="stage1time">
+				<time:hasBeginning>
+					<time:Instant rdf:about="time201502242000">
+						<time:inXSDDateTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2015-02-24T20:00:00+01:00</time:inXSDDateTime>
+					</time:Instant>
+				</time:hasBeginning>
+			</time:Interval>
+		</event:time>
+	</event:Event>	
+</rdf:RDF>
