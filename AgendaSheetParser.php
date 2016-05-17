@@ -20,8 +20,11 @@
  * @author Cristiano Longo
  */
 
+
 define('AGEND_UNICA_URL','https://docs.google.com/spreadsheets/d/1bzVASM5_JjCgvNp3Vs0GJ4vDgYsKo_ig5NHU1QI5USc/export?format=csv&exportFormat=csv');
 define('DATE_FORMAT','d/m/Y H:i');
+
+
 /**
  * Basic representation of a Event
  *
@@ -89,14 +92,18 @@ class AgendaSheetParser implements Iterator{
 	}
 }
 
+
 $p=new AgendaSheetParser();
-foreach($p as $e){
- 	echo $e->name."\t";
- 	if ($e->start!=null)
+
+foreach($p as $e)
+{
+	 echo $e->name."\t";
+	 if ($e->start!=null)
 	 	echo $e->start->format(DATE_FORMAT)."\t";
- 	echo "organized by ";
- 	foreach($e->organizedBy as $o)
- 		echo $o.' ';
- 	echo "\n";
+	 echo "organized by ";
+	 foreach($e->organizedBy as $o)
+	 	echo $o.' ';
+	 echo "\n";
 }
+
 ?>
