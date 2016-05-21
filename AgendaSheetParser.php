@@ -34,7 +34,7 @@ class Event{
 	public $organizedBy;
 	
 	public function __construct($rowStr){
-		$row=str_getcsv($rowStr);
+		$row=str_getcsv($rowStr,",","\"");
 		$this->name=$row[0];
 		$this->start=$row[1]==null || $row[2]==null ? null : DateTime::createFromFormat(DATE_FORMAT, $row[1].' '.$row[2], new DateTimeZone('Europe/Rome')); 
 		$this->organizedBy=explode(',', $row[5]);
@@ -60,7 +60,7 @@ class AgendaSheetParser implements Iterator{
 		if($retrievedData==FALSE)
 			throw new Exception("Unable to execute request: ".curl_error($h));
 		curl_close($h);
-		$this->rows=str_getcsv($retrievedData,"\n");
+		$this->rows=explode("\n", $retrievedData);
 		$this->numItems=count($this->rows)-1;
 		$this->index=0;
 	}
