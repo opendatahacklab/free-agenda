@@ -14,6 +14,8 @@
 <h1>Agenda unica del movimento catanese</h1>
 <p>Inserire qui una breve descrizione</p>
 </header>
+
+<p id="demo"></p>
  <table id="events">
   <tr> 
    <th>Data</th>
@@ -31,13 +33,19 @@ var processEventFunction = function(event, isNext){
 	container.appendChild(trevents);
 	
 	var tdData = document.createElement("td");
+	var data = new Date(event.timeStart);
+	var stringaData=document.createTextNode(data.getDate() + "/" + data.getMonth()+ "/" + data.getFullYear());
+	tdData.appendChild(stringaData);
 	trevents.appendChild(tdData);
 	
 	var tdOra = document.createElement("td");
+	var data = new Date(event.timeStart);
+	var ora=document.createTextNode(data.getHours() + ":" + data.getMinutes());
+	tdOra.appendChild(ora);
 	trevents.appendChild(tdOra);
 	
 	var tdTitolo = document.createElement("td");
-	tdTestoTitolo = document.createTextNode(event.eventName);
+	var tdTestoTitolo = document.createTextNode(event.eventName);
 	tdTitolo.appendChild(tdTestoTitolo);
 	trevents.appendChild(tdTitolo);
 	
