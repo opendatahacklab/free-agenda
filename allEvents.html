@@ -34,13 +34,29 @@ var processEventFunction = function(event, isNext){
 	
 	var tdData = document.createElement("td");
 	var data = new Date(event.timeStart);
-	var stringaData=document.createTextNode(data.getDate() + "/" + data.getMonth()+ "/" + data.getFullYear());
+	var giorno = data.getDate();
+	if (giorno == "1" || giorno == "2" || giorno == "3" || giorno == "4" || giorno == "5" || giorno == "6" || giorno == "7" || giorno == "8" || giorno == "9" ){
+	   giorno = "0" + giorno;	
+	}
+	var mese = data.getMonth();
+	if (mese == "1" || mese == "2" ||mese == "3" || mese == "4" || mese == "5" || mese == "6" || mese == "7" || mese == "8" || mese == "9"){
+		mese = "0" + mese ;
+		}
+	var stringaData=document.createTextNode(giorno  + "/" + mese + "/" + data.getFullYear());
 	tdData.appendChild(stringaData);
 	trevents.appendChild(tdData);
 	
 	var tdOra = document.createElement("td");
 	var data = new Date(event.timeStart);
-	var ora=document.createTextNode(data.getHours() + ":" + data.getMinutes());
+	var minuti = data.getMinutes();
+	if (minuti == "0" || minuti == "1" || minuti == "2" || minuti == "3" || minuti == "4" || minuti == "5" || minuti == "6" || minuti == "7" || minuti == "8" || minuti == "9"){
+		minuti = "0" + minuti;
+	}
+	var ore = data.getHours();
+	if(ore == "0" || ore == "1" || ore == "2" || ore == "3" || ore == "4" || ore == "5" || ore == "6" || ore == "7" || ore == "8" || ore == "9"){
+		ore = "0" + ore;
+	}
+	var ora=document.createTextNode( ore + ":" + minuti);
 	tdOra.appendChild(ora);
 	trevents.appendChild(tdOra);
 	
@@ -51,8 +67,6 @@ var processEventFunction = function(event, isNext){
 	
 	var tdLink = document.createElement("td");
 	trevents.appendChild(tdLink);
-	
-
 };
 
 
