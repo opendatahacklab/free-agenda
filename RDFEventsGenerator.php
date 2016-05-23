@@ -42,6 +42,14 @@ define('ONTOLOGY_VALUE', 'http://www.dmi.unict.it/~longo/opendatatour');
  * @author Michele Maresca
  */
 
+/**
+*  Define URI
+*
+*  @author Michele Maresca
+*/
+define('URI', 'http://opendatahacklab.org/agendaunica/');
+
+
 define('BASE_VALUE', 'http://example.org');
 define('DC_VALUE', 'http://purl.org/dc/elements/1.1/');
 define('GEO_VALUE', 'http://www.w3.org/2003/01/geo/wgs84_pos#');
@@ -78,7 +86,10 @@ class RDFEventsGenerator
 
 	public function generateEvent($xml, $rdfParent)
 	{
+//Extract date from event following this format "YYYYMMDDHHMM"
 		$formatInstant = [];
+
+		$stringURI = "";
 
 		$event = $xml->createElement("event:Event");
 		$eventAttribute = $xml->createAttribute(RDF_ATTRIBUTE);
@@ -90,6 +101,7 @@ class RDFEventsGenerator
 
 		$timeInterval = $xml->createElement("time:Interval");
 		$rdfTimeAttribute = $xml->createAttribute(RDF_ATTRIBUTE);
+		$rdfTimeAttribute->value = "time";
 		$timeInterval->appendChild($rdfTimeAttribute);
 		$timeHasBeginning = $xml->createElement("time:hasBeginning");
 
@@ -122,6 +134,9 @@ class RDFEventsGenerator
 
 		$event->appendChild($eventTime);
 		$event->appendChild($name);
+
+		$uriString .= URI.substr($formatInstant[0], 0, 8)."/";
+		$eventAttribute->value = $uriString;
 
 		$rdfParent->appendChild($event);
 
