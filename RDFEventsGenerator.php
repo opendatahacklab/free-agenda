@@ -54,6 +54,8 @@ define('ONTOLOGY_VALUE', 'http://www.dmi.unict.it/~longo/opendatatour');
 define('URI', 'http://opendatahacklab.org/agendaunica/');
 
 
+
+
 /**
 *  Attribute for the RDF node parent
 *
@@ -111,7 +113,6 @@ class RDFEventsGenerator
 		$eventTime = $xml->createElement("event:time");
 		$timeInterval = $xml->createElement("time:Interval");
 		$rdfTimeAttribute = $xml->createAttribute(RDF_ATTRIBUTE);
-		$rdfTimeAttribute->value = "time";
 		$timeInterval->appendChild($rdfTimeAttribute);
 
 		$timeHasBeginning = $xml->createElement("time:hasBeginning");
@@ -131,7 +132,12 @@ class RDFEventsGenerator
 
 
 		$formatInstant = $this->setDateAttribute($date);
-		$rdfInstantAttribute ->value = "time".$formatInstant[0].$formatInstant[1];
+//Create timeURI and nameURI
+		$timeURI = substr($formatInstant[0], 0, 8);		
+		$nameURI = urlencode($this->event->name);
+		$stringURI .= URI.$timeURI."/".$nameURI."/";
+
+		$rdfInstantAttribute ->value = URI.$stringURI."time";
 		$timeInstant->appendChild($rdfInstantAttribute);
 
 
@@ -140,6 +146,7 @@ class RDFEventsGenerator
 		$rdfXSDAttribute->value = RDF_DATATYPE;
 		$timeXSDDataTime->appendChild($rdfXSDAttribute);
 
+		$rdfTimeAttribute->value = URI.$stringURI."time/begin";
 		$timeInstant->appendChild($timeXSDDataTime);
 		$timeHasBeginning->appendChild($timeInstant);
 		$timeInterval->appendChild($timeHasBeginning);
@@ -148,11 +155,8 @@ class RDFEventsGenerator
 		$eventRDF->appendChild($eventTime);
 		$eventRDF->appendChild($eventName);
 
-//Create URI
-		$timeURI = substr($formatInstant[0], 0, 8);
-		$nameURI = urlencode($this->event->name);
 
-		$stringURI .= URI.$timeURI."/".$nameURI."/";
+
 		$eventAttribute->value = $stringURI; 
 
 //Append RDFNode to the RDF Parent
