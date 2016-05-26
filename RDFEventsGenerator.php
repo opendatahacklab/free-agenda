@@ -1,6 +1,10 @@
 <?php
 
-//Include this for get event
+/**
+*  Include classes: Event and AgendaSheetParser
+*
+*  @author Michele Maresca
+*/
 
 include("./AgendaSheetParser.php");
 
@@ -11,13 +15,6 @@ include("./AgendaSheetParser.php");
 */
 define('XML_FILE', 'events.xml');
 
-/**
-*  Define string for event attribute
-*
-*  @author Michele Maresca
-*/
-
-define('EVENT_STRING', 'stage');
 
 define('DATATYPE_ATTRIBUTE', 'rdf:datatype');
 
@@ -27,7 +24,7 @@ define('DATATYPE_ATTRIBUTE', 'rdf:datatype');
 *  @author Michele Maresca
 */
 
-define('RDF_ATTRIBUTE', 'rdf:About');
+define('RDF_ATTRIBUTE', 'rdf:about');
 
 /**
 *  Define RDF DATATYPE
@@ -49,6 +46,22 @@ define('ONTOLOGY_VALUE', 'http://www.dmi.unict.it/~longo/opendatatour');
  * @author Michele Maresca
  */
 
+/**
+*  Define URI
+*
+*  @author Michele Maresca
+*/
+define('URI', 'http://opendatahacklab.org/agendaunica/');
+
+
+
+
+/**
+*  Attribute for the RDF node parent
+*
+*  @author Michele Maresca
+*/
+
 define('BASE_VALUE', 'http://example.org');
 define('DC_VALUE', 'http://purl.org/dc/elements/1.1/');
 define('GEO_VALUE', 'http://www.w3.org/2003/01/geo/wgs84_pos#');
@@ -68,103 +81,106 @@ define('SIOC_VALUE', '&sioc;');
 /**
  * Create a RDFnode to insert in the XML file
  *
+ * @param $event An Event Object generated from the Class AgensaSheetParser
+ *  
  * @author Michele Maresca
  */
 class RDFEventsGenerator
 {
 	private $event;
-	private $xml;
-	private static $stage = 0;
-	private static $firstTime = true;
 
-	public function __construct($event, $xml)
+	public function __construct($event)
 	{
 		$this->event = $event;
-		$this->xml = $xml;
-		$this->generateEvent();
-		$this->rdf = $this->xml->createElement("rdf:RDF");
 	}
 
 
-	private function generateEvent()
+	public function generateEvent($xml, $rdfParent)
 	{
-		++self::$stage;
-		static $rdf;
-		$formatInstant = [];
+//Extract date from event following the format "YYYYMMDDHHMM"
+//Strings who compose the URI of Event Object
+		$stringURI = "";
+		$timeURI = "";
+		$nameURI = "";
 
-		if(self::$firstTime)
-		{
-			$rdf = $this->xml->createElement("rdf:RDF");
-			$owlElement = $this->xml->createElement("owl:Ontology");
-			$owlAttribute = $this->xml->createAttribute(RDF_ATTRIBUTE);
-			$owlAttribute->value = ONTOLOGY_VALUE;
+//Create the Node for the RDFEvent
+		$eventRDF = $xml->createElement("event:Event");
+		$eventAttribute = $xml->createAttribute(RDF_ATTRIBUTE);
+		$eventRDF->appendChild($eventAttribute);
 
-			$owlElement->appendChild($owlAttribute);
-			$rdf->appendChild($owlElement);
-			$this->xml->appendChild($rdf);
+		$eventName = $xml->createElement("rdfs:Label");
 
-		}
-
-		$event = $this->xml->createElement("event:Event");
-		$eventAttribute = $this->xml->createAttribute(RDF_ATTRIBUTE);
-		$eventAttribute->value = EVENT_STRING.((string)self::$stage);
-		$event->appendChild($eventAttribute);
-
-
-		$name = $this->xml->createElement("rdfs:Label");
-		$eventTime = $this->xml->createElement("event:time");
-
-		$timeInterval = $this->xml->createElement("time:Interval");
-		$rdfTimeAttribute = $this->xml->createAttribute(RDF_ATTRIBUTE);
-		$rdfTimeAttribute->value = EVENT_STRING.((string)self::$stage)."time";
+		$eventTime = $xml->createElement("event:time");
+		$timeInterval = $xml->createElement("time:Interval");
+		$rdfTimeAttribute = $xml->createAttribute(RDF_ATTRIBUTE);
 		$timeInterval->appendChild($rdfTimeAttribute);
-		$timeHasBeginning = $this->xml->createElement("time:hasBeginning");
 
-		$timeInstant = $this->xml->createElement("time:Instant");
-		$rdfInstantAttribute = $this->xml->createAttribute(RDF_ATTRIBUTE);
+		$timeHasBeginning = $xml->createElement("time:hasBeginning");
 
-		$timeXSDDataTime = $this->xml->createElement("time:inXSDDateTime");
+		$timeInstant = $xml->createElement("time:Instant");
+		$rdfInstantAttribute = $xml->createAttribute(RDF_ATTRIBUTE);
 
-		$name->appendChild($this->xml->createTextNode($this->event->name));
+		$timeXSDDataTime = $xml->createElement("time:inXSDDateTime");
 
+		$eventName->appendChild($xml->createTextNode($this->event->name));
+
+//If the Event Date is valid, the information will be saved in $date
 		if($this->event->start)
-			$date = $this->xml->createTextNode(date("c", $this->event->start->getTimestamp()));
+			$date = $xml->createTextNode(date("c", $this->event->start->getTimestamp()));
 		else
-			$date = $this->xml->createComment("Data non valida!");
+			$date = $xml->createComment("Data non valida!");
+
 
 		$formatInstant = $this->setDateAttribute($date);
-		$rdfInstantAttribute ->value = "time".$formatInstant[0].$formatInstant[1];
+//Create timeURI and nameURI
+		$timeURI = substr($formatInstant[0], 0, 8);		
+		$nameURI = urlencode($this->event->name);
+		$stringURI .= URI.$timeURI."/".$nameURI."/";
+
+		$rdfInstantAttribute ->value = URI.$stringURI."time";
 		$timeInstant->appendChild($rdfInstantAttribute);
 
 
 		$timeXSDDataTime->appendChild($date);
-		$rdfXSDAttribute = $this->xml->createAttribute(DATATYPE_ATTRIBUTE);
+		$rdfXSDAttribute = $xml->createAttribute(DATATYPE_ATTRIBUTE);
 		$rdfXSDAttribute->value = RDF_DATATYPE;
 		$timeXSDDataTime->appendChild($rdfXSDAttribute);
 
+		$rdfTimeAttribute->value = URI.$stringURI."time/begin";
 		$timeInstant->appendChild($timeXSDDataTime);
 		$timeHasBeginning->appendChild($timeInstant);
 		$timeInterval->appendChild($timeHasBeginning);
 		$eventTime->appendChild($timeInterval);
 
-		$event->appendChild($eventTime);
-		$event->appendChild($name);
-
-		$rdf->appendChild($event);
-		$this->xml->appendChild($rdf);
+		$eventRDF->appendChild($eventTime);
+		$eventRDF->appendChild($eventName);
 
 
-		if(self::$firstTime)
-			self::$firstTime = false;
+
+		$eventAttribute->value = $stringURI; 
+
+//Append RDFNode to the RDF Parent
+		$rdfParent->appendChild($eventRDF);
 
 	}
+
+/**
+ * Format the date in the formate "YYYYMMDDHHMM"
+ *
+ * @param $date is Date Object
+ *  
+ * @author Michele Maresca
+ */
 
 	private function setDateAttribute($date)
 	{
 		$text = $tmp = [];
 		$str1 = $str2 = "";
+//Split the date and the time of the Event
 		$text = split("T",$date->wholeText);
+//Here obtaine the date
 		$str1 = join(split("-", $text[0]));
+//Here the time
 		$tmp = split("\+", $text[1]);
 		$tmp = join(split(":", $tmp[0]));
 		$str2 = substr($tmp, 0, 4);
@@ -176,8 +192,11 @@ class RDFEventsGenerator
 
 
 
-
+//Create a XML file
 $xml = new DOMDocument();
+
+//Create a RDF parent node
+$rdfParent = $xml->createElement("rdf:RDF");
 
 $xml->preserveWhiteSpace = false;
 $xml->formatOutput = true;
@@ -207,15 +226,18 @@ ob_start();
 $doctype = ob_get_contents();
 ob_flush();
 
-$xml->loadHTML($doctype);
+$xml->loadXML($doctype);
 
 
 //The parse is set in AgendaSheetParser
 
 foreach ($p as $e) 
 {
-	new RDFEventsGenerator($e, $xml);
+	$r = new RDFEventsGenerator($e);
+	$r->generateEvent($xml, $rdfParent);
 }
+
+$xml->appendChild($rdfParent);
 
 echo "File \"events.xml\" creato!";
 $xml->save(XML_FILE);
