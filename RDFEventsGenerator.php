@@ -137,7 +137,7 @@ class RDFEventsGenerator
 		$nameURI = urlencode($this->event->name);
 		$stringURI .= URI.$timeURI."/".$nameURI."/";
 
-		$rdfInstantAttribute ->value = URI.$stringURI."time";
+		$rdfInstantAttribute ->value = URI.$stringURI."time/begin";
 		$timeInstant->appendChild($rdfInstantAttribute);
 
 
@@ -146,7 +146,7 @@ class RDFEventsGenerator
 		$rdfXSDAttribute->value = RDF_DATATYPE;
 		$timeXSDDataTime->appendChild($rdfXSDAttribute);
 
-		$rdfTimeAttribute->value = URI.$stringURI."time/begin";
+		$rdfTimeAttribute->value = URI.$stringURI."time";
 		$timeInstant->appendChild($timeXSDDataTime);
 		$timeHasBeginning->appendChild($timeInstant);
 		$timeInterval->appendChild($timeHasBeginning);
