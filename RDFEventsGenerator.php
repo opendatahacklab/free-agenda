@@ -1,6 +1,10 @@
 <?php
 
-//Include this for get event
+/**
+*  Include classes: Event and AgendaSheetParser
+*
+*  @author Michele Maresca
+*/
 
 include("./AgendaSheetParser.php");
 
@@ -50,6 +54,14 @@ define('ONTOLOGY_VALUE', 'http://www.dmi.unict.it/~longo/opendatatour');
 define('URI', 'http://opendatahacklab.org/agendaunica/');
 
 
+
+
+/**
+*  Attribute for the RDF node parent
+*
+*  @author Michele Maresca
+*/
+
 define('BASE_VALUE', 'http://example.org');
 define('DC_VALUE', 'http://purl.org/dc/elements/1.1/');
 define('GEO_VALUE', 'http://www.w3.org/2003/01/geo/wgs84_pos#');
@@ -69,14 +81,13 @@ define('SIOC_VALUE', '&sioc;');
 /**
  * Create a RDFnode to insert in the XML file
  *
+ * @param $event An Event Object generated from the Class AgensaSheetParser
+ *  
  * @author Michele Maresca
  */
 class RDFEventsGenerator
 {
 	private $event;
-	private $xml;
-	private static $stage = 0;
-
 
 	public function __construct($event)
 	{
@@ -86,23 +97,24 @@ class RDFEventsGenerator
 
 	public function generateEvent($xml, $rdfParent)
 	{
-//Extract date from event following this format "YYYYMMDDHHMM"
-		$formatInstant = [];
-
+//Extract date from event following the format "YYYYMMDDHHMM"
+//Strings who compose the URI of Event Object
 		$stringURI = "";
+		$timeURI = "";
+		$nameURI = "";
 
-		$event = $xml->createElement("event:Event");
+//Create the Node for the RDFEvent
+		$eventRDF = $xml->createElement("event:Event");
 		$eventAttribute = $xml->createAttribute(RDF_ATTRIBUTE);
-		$event->appendChild($eventAttribute);
+		$eventRDF->appendChild($eventAttribute);
 
+		$eventName = $xml->createElement("rdfs:Label");
 
-		$name = $xml->createElement("rdfs:Label");
 		$eventTime = $xml->createElement("event:time");
-
 		$timeInterval = $xml->createElement("time:Interval");
 		$rdfTimeAttribute = $xml->createAttribute(RDF_ATTRIBUTE);
-		$rdfTimeAttribute->value = "time";
 		$timeInterval->appendChild($rdfTimeAttribute);
+
 		$timeHasBeginning = $xml->createElement("time:hasBeginning");
 
 		$timeInstant = $xml->createElement("time:Instant");
@@ -110,15 +122,22 @@ class RDFEventsGenerator
 
 		$timeXSDDataTime = $xml->createElement("time:inXSDDateTime");
 
-		$name->appendChild($xml->createTextNode($this->event->name));
+		$eventName->appendChild($xml->createTextNode($this->event->name));
 
+//If the Event Date is valid, the information will be saved in $date
 		if($this->event->start)
 			$date = $xml->createTextNode(date("c", $this->event->start->getTimestamp()));
 		else
 			$date = $xml->createComment("Data non valida!");
 
+
 		$formatInstant = $this->setDateAttribute($date);
-		$rdfInstantAttribute ->value = "time".$formatInstant[0].$formatInstant[1];
+//Create timeURI and nameURI
+		$timeURI = substr($formatInstant[0], 0, 8);		
+		$nameURI = urlencode($this->event->name);
+		$stringURI .= URI.$timeURI."/".$nameURI."/";
+
+		$rdfInstantAttribute ->value = URI.$stringURI."time/begin";
 		$timeInstant->appendChild($rdfInstantAttribute);
 
 
@@ -127,27 +146,41 @@ class RDFEventsGenerator
 		$rdfXSDAttribute->value = RDF_DATATYPE;
 		$timeXSDDataTime->appendChild($rdfXSDAttribute);
 
+		$rdfTimeAttribute->value = URI.$stringURI."time";
 		$timeInstant->appendChild($timeXSDDataTime);
 		$timeHasBeginning->appendChild($timeInstant);
 		$timeInterval->appendChild($timeHasBeginning);
 		$eventTime->appendChild($timeInterval);
 
-		$event->appendChild($eventTime);
-		$event->appendChild($name);
+		$eventRDF->appendChild($eventTime);
+		$eventRDF->appendChild($eventName);
 
-		$uriString .= URI.substr($formatInstant[0], 0, 8)."/";
-		$eventAttribute->value = $uriString;
 
-		$rdfParent->appendChild($event);
+
+		$eventAttribute->value = $stringURI; 
+
+//Append RDFNode to the RDF Parent
+		$rdfParent->appendChild($eventRDF);
 
 	}
+
+/**
+ * Format the date in the formate "YYYYMMDDHHMM"
+ *
+ * @param $date is Date Object
+ *  
+ * @author Michele Maresca
+ */
 
 	private function setDateAttribute($date)
 	{
 		$text = $tmp = [];
 		$str1 = $str2 = "";
+//Split the date and the time of the Event
 		$text = split("T",$date->wholeText);
+//Here obtaine the date
 		$str1 = join(split("-", $text[0]));
+//Here the time
 		$tmp = split("\+", $text[1]);
 		$tmp = join(split(":", $tmp[0]));
 		$str2 = substr($tmp, 0, 4);

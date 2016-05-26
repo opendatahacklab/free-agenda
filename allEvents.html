@@ -38,13 +38,15 @@ var processEventFunction = function(event, isNext){
 	};
 
 	
+
+
 	var trevents = document.createElement("tr");
 	container.appendChild(trevents);
 	
 	var tdData = document.createElement("td");
 	var data = new Date(event.timeStart);
 	var giorno = data.getDate();
-	giorno =insertZero(giorno);
+	giorno = insertZero(giorno);
 	var mese = data.getMonth();
 	mese = insertZero(mese);
 	var stringaData=document.createTextNode(giorno  + "/" + mese + "/" + data.getFullYear());
@@ -54,7 +56,7 @@ var processEventFunction = function(event, isNext){
 	var tdOra = document.createElement("td");
 	var data = new Date(event.timeStart);
 	var minuti = data.getMinutes();
-	minuti = insertZero(minuti);
+    minuti = insertZero(minuti);
 	var ore = data.getHours();
 	ore = insertZero(ore);
 	var ora=document.createTextNode( ore + ":" + minuti);
@@ -67,9 +69,13 @@ var processEventFunction = function(event, isNext){
 	trevents.appendChild(tdTitolo);
 	
 	var tdLink = document.createElement("td");
+	var a = document.createElement("a");
+	a.href="eventdetails.html?iri="+encodeURIComponent(event.URI);
+	a.innerHTML = "Link Evento";
+	tdLink.appendChild(a);
 	trevents.appendChild(tdLink);
-};
-
+	
+}
 
 function EventProcessor(){
 	this.processPast = function(event){
