@@ -5,8 +5,14 @@
 *
 *  @author Michele Maresca
 */
-
 include("./AgendaSheetParser.php");
+
+/**
+*  Include classes: Location e RDFLocnGenerator
+*
+*  @author Michele Maresca
+*/
+include("./RDFLocnGenerator.php");
 
 /**
 *  Define the output file
@@ -79,7 +85,7 @@ define('SIOC_VALUE', '&sioc;');
 
 
 /**
- * Create a RDFnode to insert in the XML file
+ * Create a Event RDFnode to insert in the XML file
  *
  * @param $event An Event Object generated from the Class AgensaSheetParser
  *  
@@ -97,11 +103,8 @@ class RDFEventsGenerator
 
 	public function generateEvent($xml, $rdfParent)
 	{
-//Extract date from event following the format "YYYYMMDDHHMM"
-//Strings who compose the URI of Event Object
-		$stringURI = "";
-		$timeURI = "";
-		$nameURI = "";
+//Contain the event URI
+		$eventURI = "";
 
 //Create the Node for the RDFEvent
 		$eventRDF = $xml->createElement("event:Event");
@@ -124,6 +127,15 @@ class RDFEventsGenerator
 
 		$eventName->appendChild($xml->createTextNode($this->event->name));
 
+		if($this->event->locationName)
+		{
+			$eventPlace = $xml->createElement("event:place");
+		    $eventPlaceAttribute = $xml->createAttribute("rdf:resource");
+			$eventPlaceAttribute->value = RDFLocnGenerator::getLocationURI(URI, $this->event->locationName);
+			$eventPlace->appendChild($eventPlaceAttribute);
+			$eventRDF->appendChild($eventPlace);
+		}
+
 //If the Event Date is valid, the information will be saved in $date
 		if($this->event->start)
 			$date = $xml->createTextNode(date("c", $this->event->start->getTimestamp()));
@@ -132,12 +144,11 @@ class RDFEventsGenerator
 
 
 		$formatInstant = $this->setDateAttribute($date);
-//Create timeURI and nameURI
-		$timeURI = substr($formatInstant[0], 0, 8);		
-		$nameURI = urlencode($this->event->name);
-		$stringURI .= URI.$timeURI."/".$nameURI."/";
 
-		$rdfInstantAttribute ->value = URI.$stringURI."time/begin";
+//Generate Event URI from formatInstant
+		$eventURI = $this->generateURIEvent($formatInstant[0]);
+
+		$rdfInstantAttribute ->value = URI.$eventURI."time/begin";
 		$timeInstant->appendChild($rdfInstantAttribute);
 
 
@@ -146,18 +157,17 @@ class RDFEventsGenerator
 		$rdfXSDAttribute->value = RDF_DATATYPE;
 		$timeXSDDataTime->appendChild($rdfXSDAttribute);
 
-		$rdfTimeAttribute->value = URI.$stringURI."time";
+		$rdfTimeAttribute->value = URI.$eventURI."time";
 		$timeInstant->appendChild($timeXSDDataTime);
 		$timeHasBeginning->appendChild($timeInstant);
 		$timeInterval->appendChild($timeHasBeginning);
 		$eventTime->appendChild($timeInterval);
 
 		$eventRDF->appendChild($eventTime);
+		$eventAttribute->value = $eventURI; 
 		$eventRDF->appendChild($eventName);
 
 
-
-		$eventAttribute->value = $stringURI; 
 
 //Append RDFNode to the RDF Parent
 		$rdfParent->appendChild($eventRDF);
@@ -188,6 +198,22 @@ class RDFEventsGenerator
 		return [$str1, $str2];
 	}
 
+	private function generateURIEvent($data)
+	{
+		//Extract date from event following the format "YYYYMMDDHHMM"
+//Strings who compose the URI of Event Object
+		$stringURI = "";
+		$timeURI = "";
+		$nameURI = "";
+
+		//Create timeURI and nameURI
+		$timeURI = substr($data, 0, 8);		
+		$nameURI = urlencode($this->event->name);
+		$stringURI .= URI.$timeURI."/".$nameURI."/";
+
+		return (string) $stringURI;
+	}
+
 }
 
 
@@ -197,40 +223,15 @@ $xml = new DOMDocument();
 
 //Create a RDF parent node
 $rdfParent = $xml->createElement("rdf:RDF");
+$rdfParent2 = $xml->createElement("rdf:RDF2");
 
 $xml->preserveWhiteSpace = false;
 $xml->formatOutput = true;
 
-ob_start();
-
-?>
-
-<!DOCTYPE rdf:RDF[
-	<!ENTITY org "http://www.w3.org/ns/org#" >
-	<!ENTITY dcterms "http://purl.org/dc/terms/" >
-    <!ENTITY locn "http://www.w3.org/ns/locn#" >
-    <!ENTITY foaf "http://xmlns.com/foaf/0.1/" >
-	<!ENTITY owl "http://www.w3.org/2002/07/owl#" >
-	<!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
-	<!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
-	<!ENTITY geo "http://www.w3.org/2003/01/geo/wgs84_pos#" >
-	<!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
-	<!ENTITY odt "http://www.dmi.unict.it/~longo/opendatatour/" >
-	<!ENTITY event "http://purl.org/NET/c4dm/event.owl#" >
-	<!ENTITY time "http://www.w3.org/2006/time#" >
-	<!ENTITY cct "http://www.comune.catania.it/comunect.owl/" >
-	<!ENTITY sioc "http://rdfs.org/sioc/ns#" >
-]>
-
-<?php
-$doctype = ob_get_contents();
-ob_flush();
-
-$xml->loadXML($doctype);
-
 
 //The parse is set in AgendaSheetParser
 
+$p = new AgendaSheetParser();
 foreach ($p as $e) 
 {
 	$r = new RDFEventsGenerator($e);
@@ -238,6 +239,9 @@ foreach ($p as $e)
 }
 
 $xml->appendChild($rdfParent);
+$xml->appendChild($rdfParent2);
 
-echo "File \"events.xml\" creato!";
+
+
+echo "File \"".XML_FILE."\" creato!";
 $xml->save(XML_FILE);

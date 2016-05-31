@@ -153,6 +153,11 @@ class RDFLocnGenerator
 		$rdfParent->appendChild($locnRDF);
 	}
 
+	public static function getLocationURI($prefix, $name)
+	{
+		return (string) $prefix.urlencode($name);
+	}
+
 	private function formatLabel()
 	{
 		return (string)($this->location->houseNumber.", ".$this->location->address.", ".$this->location->city.", Italy");
