@@ -29,7 +29,6 @@
  </table>
 <script type="text/javascript">
 var container = document.getElementById("events");
-
 var processEventFunction = function(event, isNext){	
 	
 	function insertZero(x){
@@ -74,11 +73,17 @@ var processEventFunction = function(event, isNext){
 	var tdLink = document.createElement("td");
 	var a = document.createElement("a");
 	a.href="eventdetails.html?iri="+encodeURIComponent(event.URI);
-	a.innerHTML = "Link Evento";
+	var clessidra = document.createElement("img");
+	clessidra.src ="https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Loupe.svg/58px-Loupe.svg.png";
+	a.appendChild(clessidra);
 	tdLink.appendChild(a);
 	trevents.appendChild(tdLink);
 	
-}
+	
+
+};
+
+
 
 function EventProcessor(){
 	this.processPast = function(event){
