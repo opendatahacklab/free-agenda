@@ -5,13 +5,43 @@
 <title></title>
 <script type="text/javascript" src="http://opendatahacklab.org/sparql_suite/sparql_processor.js"></script>
 <script type="text/javascript" src="http://opendatahacklab.org/sparql_suite/event_sparql_processor.js"></script>
+<style>
+
+.header{
+ background-color : red;
+ padding: 1em;
+ color: white;
+
+}
+
+h1{
+
+ font-weight : normal;
+ 
+}
+table, th , td {
+  border: 1px solid grey;
+  border-collapse: collapse;
+  padding: 5px;
+}
+
+table{
+padding : 1em;
+margin-left : 1em;
+}
+
+body{
+font-family : verdana,sans-serif;
+}
+</style>
 </head>
 
 
 
+
 <body>
-<header>
-<h1>Agenda unica del movimento catanese</h1>
+<header class="header">
+<h1 >Agenda Unica del Movimento Catanese</h1>
 <p>Inserire qui una breve descrizione</p>
 </header>
 
@@ -24,6 +54,13 @@
    <th>Link</th>
   </tr>
  </table>
+ 
+ <section>
+  <h2>Credits</h2>
+  
+  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Loupe.svg/58px-Loupe.svg.png"> by <a href="https://commons.wikimedia.org/wiki/Magnifying_glass">Wikimedia commons</a> 
+  </section>
+  
 <script type="text/javascript">
 var container = document.getElementById("events");
 var processEventFunction = function(event, isNext){	
@@ -70,9 +107,10 @@ var processEventFunction = function(event, isNext){
 	var tdLink = document.createElement("td");
 	var a = document.createElement("a");
 	a.href="eventdetails.html?iri="+encodeURIComponent(event.URI);
-	var clessidra = document.createElement("img");
-	clessidra.src ="https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Loupe.svg/58px-Loupe.svg.png";
-	a.appendChild(clessidra);
+	var lente = document.createElement("img");
+	lente.src ="https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Loupe.svg/58px-Loupe.svg.png";
+	lente.style.height = "1em";
+	a.appendChild(lente);
 	tdLink.appendChild(a);
 	trevents.appendChild(tdLink);
 	
