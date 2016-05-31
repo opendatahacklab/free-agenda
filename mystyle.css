@@ -1,0 +1,42 @@
+.main-header{
+ background-color : red;
+ padding: 1em;
+ color: white;
+
+}
+
+h1{
+
+ font-weight : normal;
+ 
+}
+
+#maintitle{
+	color : white;
+	  font-weight : normal;
+}
+
+#linkol{
+	color : white;
+}
+
+table, th , td {
+  border: 1px solid grey;
+  border-collapse: collapse;
+}
+
+#eventdetail{
+	
+	padding : 1em;
+margin-left : 1em;
+	
+}
+
+table{
+padding : 1em;
+margin-left : 1em;
+}
+
+body{
+font-family : verdana,sans-serif;
+}

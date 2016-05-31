@@ -35,12 +35,14 @@ class Event{
 	public $start;
 	//array organizations
 	public $organizedBy;
+	public $locationName;
 	
 	public function __construct($rowStr){
 		$row=str_getcsv($rowStr,",","\"");
 		$this->name=$row[0];
 		$this->start=$row[1]==null || $row[2]==null ? null : DateTime::createFromFormat(DATE_FORMAT, $row[1].' '.$row[2], new DateTimeZone('Europe/Rome')); 
 		$this->organizedBy=explode(',', $row[5]);
+		$this->locationName=isset($row[7]) ? $row[7] : null;
 	}
 }
 
@@ -91,19 +93,4 @@ class AgendaSheetParser implements Iterator{
 		return $this->numItems>0 && $this->index<$this->numItems;
 	}
 }
-
-
-$p=new AgendaSheetParser();
-
-foreach($p as $e)
-{
-	 echo $e->name."\t";
-	 if ($e->start!=null)
-	 	echo $e->start->format(DATE_FORMAT)."\t";
-	 echo "organized by ";
-	 foreach($e->organizedBy as $o)
-	 	echo $o.' ';
-	 echo "\n";
-}
-
 ?>
