@@ -29,12 +29,16 @@ var container = document.getElementById("events");
 var processEventFunction = function(event, isNext){	
 	
 	function insertZero(x){
-		if(x == "0" || x == "1" || x == "2" || x == "3" || x == "4" || x == "5" || x == "6" || x == "7" || x == "8" || x == "9"){
-			x = "0" + x;
-		}
-		
-		return x;
+		 
+		 if(x == "0" || x == "1" || x == "2" || x == "3" || x == "4" || x == "5" || x == "6" || x == "7" || x == "8" || x == "9"){
+				x = "0" + x;
+			}
+		 return x;
 	};
+
+	
+
+
 	var trevents = document.createElement("tr");
 	container.appendChild(trevents);
 	
@@ -43,7 +47,7 @@ var processEventFunction = function(event, isNext){
 	var giorno = data.getDate();
 	giorno = insertZero(giorno);
 	var mese = data.getMonth();
-    mese = insertZero(mese);
+	mese = insertZero(mese);
 	var stringaData=document.createTextNode(giorno  + "/" + mese + "/" + data.getFullYear());
 	tdData.appendChild(stringaData);
 	trevents.appendChild(tdData);
@@ -65,14 +69,17 @@ var processEventFunction = function(event, isNext){
 	
 	var tdLink = document.createElement("td");
 	var a = document.createElement("a");
-	a.href = event.URI;
-	a.innerHTML = "Link Evento";
+	a.href="eventdetails.html?iri="+encodeURIComponent(event.URI);
+	var clessidra = document.createElement("img");
+	clessidra.src ="https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Loupe.svg/58px-Loupe.svg.png";
+	a.appendChild(clessidra);
 	tdLink.appendChild(a);
 	trevents.appendChild(tdLink);
 	
 	
 
 };
+
 
 
 function EventProcessor(){
@@ -87,7 +94,10 @@ function EventProcessor(){
 	};
 	this.flush = function(){ 
 	};
+
+
 }
+
 
 var p = new EventQueryProcessor(new EventProcessor(), new Date());
 
