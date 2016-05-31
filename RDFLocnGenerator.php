@@ -12,7 +12,11 @@ define('URI', 'http://opendatahacklab.org/agendaunica/');
 *
 *  @author Michele Maresca
 */
-define('XML_FILE', 'demo.xml');
+echo basename(__FILE__);
+if(basename(__FILE__) == basename($argv[0]))
+	define('XML_FILE', 'demo.xml');
+
+
 
 /**
 *  Define rdf:label

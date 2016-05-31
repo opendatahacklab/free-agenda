@@ -19,7 +19,8 @@ include("./RDFLocnGenerator.php");
 *
 *  @author Michele Maresca
 */
-define('XML_FILE', 'events.xml');
+if(basename(__FILE__) == basename($argv[0]))
+	define('XML_FILE', 'events.xml');
 
 
 define('DATATYPE_ATTRIBUTE', 'rdf:datatype');
