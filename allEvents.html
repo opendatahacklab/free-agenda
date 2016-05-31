@@ -26,7 +26,6 @@
  </table>
 <script type="text/javascript">
 var container = document.getElementById("events");
-
 var processEventFunction = function(event, isNext){	
 	
 	function insertZero(x){
@@ -65,8 +64,15 @@ var processEventFunction = function(event, isNext){
 	trevents.appendChild(tdTitolo);
 	
 	var tdLink = document.createElement("td");
+	var a = document.createElement("a");
+	a.href = event.URI;
+	a.innerHTML = "Link Evento";
+	tdLink.appendChild(a);
 	trevents.appendChild(tdLink);
 	
+	
+
+};
 
 
 function EventProcessor(){
