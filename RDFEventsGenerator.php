@@ -199,6 +199,9 @@ class RDFEventsGenerator
 		return [$str1, $str2];
 	}
 
+	/*
+	 * TODO make it static and add comments
+	 */
 	private function generateURIEvent($data)
 	{
 		//Extract date from event following the format "YYYYMMDDHHMM"
