@@ -1,18 +1,12 @@
 <?php
 
-/**
-*  Define URI
-*
-*  @author Michele Maresca
-*/
-define('URI', 'http://opendatahacklab.org/agendaunica/');
 
 /**
 *  Define the output file
 *
 *  @author Michele Maresca
 */
-echo basename(__FILE__);
+
 if(basename(__FILE__) == basename($argv[0]))
 	define('XML_FILE', 'demo.xml');
 
@@ -75,18 +69,20 @@ class Location
 class RDFLocnGenerator
 {
 	private $location;
+	private $uri;
 	
 	public function __construct($location)
 	{
 		$this->location = $location;
+		$this->uri = $uri;
 	}
 
-	public function generateLocation($xml, $rdfParent)
+	public function generateLocation($xml, $rdfParent, $uri)
 	{
 //Create RDF Node for location
 		$locnRDF = $xml->createElement("locn:Location");
 		$locnRDFAttribute = $xml->createAttribute(RDF_ATTRIBUTE);
-		$locnRDFAttribute->value = URI."location/";
+		$locnRDFAttribute->value = $this->uri."location/";
 		$locnRDF->appendChild($locnRDFAttribute);
 
 //Create NODE locn:address
@@ -94,7 +90,7 @@ class RDFLocnGenerator
 //Create NODE locn:Address		
 		$locnAddress = $xml->createElement("locn:Address");
 		$locnAddressAttribute = $xml->createAttribute(RDF_ATTRIBUTE);
-		$locnAddressAttribute->value = URI;
+		$locnAddressAttribute->value = $uri;
 		$locnAddress->appendChild($locnAddressAttribute);
 
 //Create node rdf:label
@@ -136,7 +132,7 @@ class RDFLocnGenerator
 //Create NODE locn:Geometry		
 		$geoLocnGeometry = $xml->createElement("locn:Geometry");
 		$geoAttribute = $xml->createAttribute(RDF_ATTRIBUTE);
-		$geoAttribute->value = URI."location/geometry";
+		$geoAttribute->value = $uri."location/geometry";
 		$geoLocnGeometry->appendChild($geoAttribute);
 
 //Create node geo:lat
@@ -167,6 +163,8 @@ class RDFLocnGenerator
 		return (string)($this->location->houseNumber.", ".$this->location->address.", ".$this->location->city.", Italy");
 	}
 }
+
+//Insert a URI
 
 //Create a XML file
 $xml = new DOMDocument();
