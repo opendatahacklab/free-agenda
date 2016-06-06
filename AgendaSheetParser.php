@@ -21,9 +21,9 @@
  */
 
 
-define('AGEND_UNICA_URL','https://docs.google.com/spreadsheets/d/1bzVASM5_JjCgvNp3Vs0GJ4vDgYsKo_ig5NHU1QI5USc/export?format=csv&exportFormat=csv');
+define('AGEND_UNICA_URL','https://docs.google.com/spreadsheets/d/1bzVASM5_JjCgvNp3Vs0GJ4vDgYsKo_ig5NHU1QI5USc/export?format=tsv&exportFormat=tsv');
 define('DATE_FORMAT','d/m/Y H:i');
-
+require('RDFLocnGenerator.php');
 
 /**
  * Basic representation of a Event
@@ -37,11 +37,10 @@ class Event{
 	public $organizedBy;
 	public $locationName;
 	
-	public function __construct($rowStr){
-		$row=str_getcsv($rowStr,",","\"");
+	public function __construct($row){
 		$this->name=$row[0];
 		$this->start=$row[1]==null || $row[2]==null ? null : DateTime::createFromFormat(DATE_FORMAT, $row[1].' '.$row[2], new DateTimeZone('Europe/Rome')); 
-		$this->organizedBy=explode(',', $row[5]);
+		$this->organizedBy=isset($row[5]) ? explode(',', $row[5]) : null;
 		$this->locationName=isset($row[7]) ? $row[7] : null;
 	}
 }
@@ -51,6 +50,9 @@ class AgendaSheetParser implements Iterator{
 	private $rows;
 	private $numItems;
 	private $index;
+	
+	//this is a map location name -> location,l populated during the parsing
+	private $locations;
 
 	/**
 	 * Retrieve and parse the Agenda Unica Sheet
@@ -68,12 +70,64 @@ class AgendaSheetParser implements Iterator{
 		$this->rows=explode("\n", $retrievedData);
 		$this->numItems=count($this->rows)-1;
 		$this->index=0;
+		$this->locations=array();
 	}
 
-	//Iterator functions,  see http://php.net/manual/en/class.iterator.php
+	/**
+	 * Create a location by parsing a row of the sheet.
+	 *
+	 * @return the corresponding Location object or null if the location name is not provided.
+	 */
+	private function parseLocation($row){
+		$name=trim($row[7]);
+		$city=$row[8];
+		$address=$row[9];
+		$houseNumber=$row[10];
+		
+		if (!isset($name) || $name==null || strlen($name)==0 || 
+			$city==null || strlen($city)==0 ||
+			$address==null || strlen($address)==0)
+			return null;
+		//coordinates not available in this release
+		$lat=null;
+		$lon=null;
+		
+		return new Location($name, $city, $address, $houseNumber, $lat, $lon);
+	}
 
+	//locations parsing
+	
+	/**
+	 * Store the location in the locations map, if not already present.
+	 */
+	private function storeLocation($location){
+		//keep the more recent location description in the sheet
+		//assuming that events are listed in ascending order ordered by time
+		if (!array_key_exists($location->name, $this->locations)){
+			$this->locations[$location->name]=$location;
+		}
+	}
+	
+	/**
+	 * Get a map location name -> location of all the locations met during the parsing
+	 * until now.
+	 *
+	 */
+	public function getAllParsedLocations(){
+		$r=array();
+		foreach($this->locations as $n => $l)
+			$r[$n]=$l;
+		return $r;
+	}
+	
+	//Iterator functions,  see http://php.net/manual/en/class.iterator.php
 	public function current(){
-		return new Event($this->rows[$this->index+1]);
+		$rowStr=$this->rows[$this->index+1];
+		$row=str_getcsv($rowStr,"\t","\"");
+		$event=new Event($row);
+		$location=$this->parseLocation($row);
+		if ($location!=null) $this->storeLocation($location);
+		return $event;
 	}
 
 

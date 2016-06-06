@@ -1,6 +1,7 @@
 <?php
 
 
+
 /**
 *  Define the output file
 *
@@ -44,14 +45,24 @@ define('ADMIN_UNIT', 'IT');
 
 class Location
 {
+	public $name;
 	public $city;
 	public $address;
 	public $houseNumber;
 	public $lat;
 	public $long;
 
-	public function __construct($city, $address, $houseNumber, $lat, $long)
+	/**
+	 * @param String $name not null, used to identify the location
+	 * @param String $city
+	 * @param String $address
+	 * @param String $houseNumber
+	 * @param double $lat
+	 * @param double $long
+	 */
+	public function __construct($name, $city, $address, $houseNumber, $lat, $long)
 	{
+		$this->name=$name;
 		$this->city = $city;
 		$this->address = $address;
 		$this->houseNumber = $houseNumber;
@@ -167,20 +178,20 @@ class RDFLocnGenerator
 //Insert a URI
 
 //Create a XML file
-$xml = new DOMDocument();
+// $xml = new DOMDocument();
 
-//Create a RDF parent node
-$rdfParent = $xml->createElement("rdf:RDF");
+// //Create a RDF parent node
+// $rdfParent = $xml->createElement("rdf:RDF");
 
-$xml->preserveWhiteSpace = false;
-$xml->formatOutput = true;
+// $xml->preserveWhiteSpace = false;
+// $xml->formatOutput = true;
 
 
-$l = new Location("Catania", "Via Grotte Bianche", "112", "37.513287", "15.088008");
-$rdfl = new RDFLocnGenerator($l);
-$rdfl->generateLocation($xml, $rdfParent);
+// $l = new Location("Hackspace catania", Catania", "Via Grotte Bianche", "112", "37.513287", "15.088008");
+// $rdfl = new RDFLocnGenerator($l);
+// $rdfl->generateLocation($xml, $rdfParent);
 
-$xml->appendChild($rdfParent);
+// $xml->appendChild($rdfParent);
 
-echo "File \"".XML_FILE."\" creato!";
-$xml->save(XML_FILE);
+// echo "File \"".XML_FILE."\" creato!";
+// $xml->save(XML_FILE);
