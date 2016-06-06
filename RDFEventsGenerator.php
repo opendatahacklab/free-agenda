@@ -102,7 +102,7 @@ class RDFEventsGenerator
 	}
 
 
-	public function generateEvent($xml, $rdfParent)
+	public function generateEvent($xml, $rdfParent, $uri)
 	{
 //Contain the event URI
 		$eventURI = "";
@@ -132,7 +132,7 @@ class RDFEventsGenerator
 		{
 			$eventPlace = $xml->createElement("event:place");
 		    $eventPlaceAttribute = $xml->createAttribute("rdf:resource");
-			$eventPlaceAttribute->value = RDFLocnGenerator::getLocationURI(URI, $this->event->locationName);
+			$eventPlaceAttribute->value = RDFLocnGenerator::getLocationURI($uri, $this->event->locationName);
 			$eventPlace->appendChild($eventPlaceAttribute);
 			$eventRDF->appendChild($eventPlace);
 		}
@@ -147,9 +147,9 @@ class RDFEventsGenerator
 		$formatInstant = $this->setDateAttribute($date);
 
 //Generate Event URI from formatInstant
-		$eventURI = $this->generateURIEvent($formatInstant[0]);
+		$eventURI = $this->generateURIEvent($formatInstant[0], $uri);
 
-		$rdfInstantAttribute ->value = URI.$eventURI."time/begin";
+		$rdfInstantAttribute ->value = $eventURI."time/begin";
 		$timeInstant->appendChild($rdfInstantAttribute);
 
 
@@ -158,7 +158,7 @@ class RDFEventsGenerator
 		$rdfXSDAttribute->value = RDF_DATATYPE;
 		$timeXSDDataTime->appendChild($rdfXSDAttribute);
 
-		$rdfTimeAttribute->value = URI.$eventURI."time";
+		$rdfTimeAttribute->value = $eventURI."time";
 		$timeInstant->appendChild($timeXSDDataTime);
 		$timeHasBeginning->appendChild($timeInstant);
 		$timeInterval->appendChild($timeHasBeginning);
@@ -202,7 +202,7 @@ class RDFEventsGenerator
 	/*
 	 * TODO make it static and add comments
 	 */
-	private function generateURIEvent($data)
+	private function generateURIEvent($data, $uri)
 	{
 		//Extract date from event following the format "YYYYMMDDHHMM"
 //Strings who compose the URI of Event Object
@@ -213,7 +213,7 @@ class RDFEventsGenerator
 		//Create timeURI and nameURI
 		$timeURI = substr($data, 0, 8);		
 		$nameURI = urlencode($this->event->name);
-		$stringURI .= URI.$timeURI."/".$nameURI."/";
+		$stringURI .= $uri.$timeURI."/".$nameURI."/";
 
 		return (string) $stringURI;
 	}
@@ -222,9 +222,12 @@ class RDFEventsGenerator
 
 
 
+
 //Create a XML file
 $xml = new DOMDocument();
 
+//flag to detect a URI
+$isUri = false;
 //Create a RDF parent node
 $rdfParent = $xml->createElement("rdf:RDF");
 $rdfParent2 = $xml->createElement("rdf:RDF2");
@@ -233,13 +236,23 @@ $xml->preserveWhiteSpace = false;
 $xml->formatOutput = true;
 
 
+while(!$isUri)
+{
+	print("Inserisci una URL: ");
+	$uri = fgets( fopen( 'php://stdin', 'r' ));
+	$uri = trim($uri, "\n");
+
+ 	if(substr($uri, 0,7) == "http://")
+		$isUri = true;
+}
+
 //The parse is set in AgendaSheetParser
 
 $p = new AgendaSheetParser();
 foreach ($p as $e) 
 {
 	$r = new RDFEventsGenerator($e);
-	$r->generateEvent($xml, $rdfParent);
+	$r->generateEvent($xml, $rdfParent, $uri);
 }
 
 $xml->appendChild($rdfParent);
@@ -249,3 +262,4 @@ $xml->appendChild($rdfParent2);
 
 echo "File \"".XML_FILE."\" creato!";
 $xml->save(XML_FILE);
+print($uri);
