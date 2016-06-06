@@ -79,7 +79,7 @@ class AgendaSheetParser implements Iterator{
 	 * @return the corresponding Location object or null if the location name is not provided.
 	 */
 	private function parseLocation($row){
-		$name=$row[7];
+		$name=trim($row[7]);
 		$city=$row[8];
 		$address=$row[9];
 		$houseNumber=$row[10];
@@ -88,7 +88,6 @@ class AgendaSheetParser implements Iterator{
 			$city==null || strlen($city)==0 ||
 			$address==null || strlen($address)==0)
 			return null;
-		echo "PARSING $name ---> \n";
 		//coordinates not available in this release
 		$lat=null;
 		$lon=null;
@@ -102,6 +101,8 @@ class AgendaSheetParser implements Iterator{
 	 * Store the location in the locations map, if not already present.
 	 */
 	private function storeLocation($location){
+		//keep the more recent location description in the sheet
+		//assuming that events are listed in ascending order ordered by time
 		if (!array_key_exists($location->name, $this->locations)){
 			$this->locations[$location->name]=$location;
 		}

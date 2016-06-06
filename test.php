@@ -11,6 +11,6 @@ echo "LOCATIONS\n\n";
 $locations=$p->getAllParsedLocations();
 foreach ($locations as $n => $l)
 {
-	$l->name.", ".$l->city." ".$l->houseNumber." ".$l->address."\n";
+	echo $l->name.", ".$l->city." ".$l->houseNumber." ".$l->address."\n";
 }
 ?>
