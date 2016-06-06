@@ -226,8 +226,12 @@ class RDFEventsGenerator
 //Create a XML file
 $xml = new DOMDocument();
 
+//There will be the URI inserted by user
+$uri = "";
+
 //flag to detect a URI
 $isUri = false;
+
 //Create a RDF parent node
 $rdfParent = $xml->createElement("rdf:RDF");
 $rdfParent2 = $xml->createElement("rdf:RDF2");
@@ -236,6 +240,7 @@ $xml->preserveWhiteSpace = false;
 $xml->formatOutput = true;
 
 
+//insert and control input URI
 while(!$isUri)
 {
 	print("Inserisci una URL: ");
