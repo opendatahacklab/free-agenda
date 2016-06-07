@@ -2,7 +2,7 @@
  background-color : red;
  padding: 1em;
  color: white;
-
+ margin-bottom: 3em;
 }
 
 h1{
@@ -21,22 +21,23 @@ h1{
 }
 
 table, th , td {
-  border: 1px solid grey;
+  border: 2px solid #c0c0c0;
   border-collapse: collapse;
+  padding : 1em;
+  
 }
 
 #eventdetail{
-	
 	padding : 1em;
-margin-left : 1em;
-	
+margin-left : 1em;	
 }
 
 table{
-padding : 1em;
-margin-left : 1em;
+	min-width : 70%;
+margin-left : 15%;
 }
 
 body{
 font-family : verdana,sans-serif;
+margin: 0;
 }
