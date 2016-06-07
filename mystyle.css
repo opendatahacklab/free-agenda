@@ -5,17 +5,16 @@
  margin-bottom: 3em;
 }
 
-h1{
+#title, #maintitle{
 
  font-weight : normal;
- 
+ color : white;
 }
 
-#maintitle{
-	color : white;
-	  font-weight : normal;
+.back{
+	
+	margin-left: 1em;
 }
-
 #linkol{
 	color : white;
 }
@@ -40,4 +39,5 @@ margin-left : 15%;
 body{
 font-family : verdana,sans-serif;
 margin: 0;
+padding: 0;
 }
