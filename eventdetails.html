@@ -3,30 +3,16 @@
 	<head>
 		<meta charset="UTF-8">
 		<title>opendatahacklab - events</title>
-		<link rel="stylesheet" type="text/css" href="../commons/css/odhl.css" />
 		<link rel="alternate" type="application/rss+xml"  href="rdfevents2rss.php" title="opendatahacklab events feed">
 		<script type="text/javascript" src="http://opendatahacklab.org/sparql_suite/sparql_processor.js"></script>
 		<script type="text/javascript" src="http://opendatahacklab.org/sparql_suite/event_sparql_processor.js"></script>
         <link rel="stylesheet" type="text/css" href="mystyle.css"> 	
 	</head>
 <body>
-	<header class="main-header" id="top">
-		<img class="logo" src="../commons/imgs/logo_cog4_ter.png" alt="the opendatahacklab logo" />
+	<header class="main-header">
 		<h1 id="maintitle"></h1>
-		<p class="subtitle">THE OPEN DATA HACKING LABORATORY - Powered by 
-			<a href="http://dydra.com"><img alt="dydra.com" src="../commons/imgs/dydra-logo-24pt.png" /></a>
-			<a class="wt-tech" target="_blank" href="http://wt-tech.it">WT-TECH</a>
-		</p>
-		<nav>
-			<ol class="breadcrumb"><li><a id="linkol" href="index.html">home</a></li><li><a id ="linkol" href="events.html">events</a></li>
-				<li id="eventinbreadcrumb" />
-			</ol>
-			<a href="https://github.com/opendatahacklab/opendatahacklab.github.io"  title="GitHub repository of the opendatahacklab web site (this site)"><img alt="Source Code" src="../commons/imgs/GitHub-Mark-64px.png" /></a>
-			<a href="data.html"><img  src="../commons/imgs/rdf.png" /></a>
-			<a href="http://opendatahacklab.org/rdfevents2rss/rdfevents2rss.php" title="RSS feed of open data hacklab events"><img src="../commons/imgs/rss-feed-icon.png" /></a>			
-			<a href="irc.html" title="chat"><img alt="chat"src="../commons/imgs/PICOL_Chat.svg.png"></img></a>			
-		</nav>
 	</header>
+
 	<section id="eventdetail">
 		<p class="loading" id="loading">Loading ...</p>
 	</section>
@@ -36,11 +22,10 @@
 var processEventFunction = function(event){
 	
 	//replace titles 
-	var titleLower=event.eventName.toLowerCase();
-	document.getElementById("maintitle").appendChild(document.createTextNode(
-			"opendatahacklab - events - "+titleLower));
-	document.getElementById("eventinbreadcrumb").appendChild(
-			document.createTextNode(titleLower));
+	var titleLower=event.eventName;
+	document.getElementById("maintitle").appendChild(document.createTextNode(titleLower));
+	//document.getElementById("eventinbreadcrumb").appendChild(
+	//		document.createTextNode(titleLower));
     
 	//put event details in the specified section
 	var container = document.getElementById("eventdetail");
@@ -99,5 +84,7 @@ else{
 	sparql_query("http://dydra.com/cristianolongo/odhl/sparql", p);
 }
 	</script>
+	
+<a class="back" href="allEvents.html">Torna ad Agenda Unica</a>
 </body>
 </html>
