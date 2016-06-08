@@ -20,14 +20,13 @@
  *
  *  @author Michele Maresca
  */
-include("./AgendaSheetParser.php");
 
 /**
 *  Include classes: Location e RDFLocnGenerator
 *
 *  @author Michele Maresca
 */
-include("./RDFLocnGenerator.php");
+//include("./RDFLocnGenerator.php");
 
 /**
 *  Define the output file
@@ -232,54 +231,4 @@ class RDFEventsGenerator
 
 		return (string) $stringURI;
 	}
-
 }
-
-
-
-
-//Create a XML file
-$xml = new DOMDocument();
-
-//There will be the URI inserted by user
-$uri = "";
-
-//flag to detect a URI
-$isUri = false;
-
-//Create a RDF parent node
-$rdfParent = $xml->createElement("rdf:RDF");
-$rdfParent2 = $xml->createElement("rdf:RDF2");
-
-$xml->preserveWhiteSpace = false;
-$xml->formatOutput = true;
-
-
-//insert and control input URI
-while(!$isUri)
-{
-	print("Inserisci una URL: ");
-	$uri = fgets( fopen( 'php://stdin', 'r' ));
-	$uri = trim($uri, "\n");
-
- 	if(substr($uri, 0,7) == "http://")
-		$isUri = true;
-}
-
-//The parse is set in AgendaSheetParser
-
-$p = new AgendaSheetParser();
-foreach ($p as $e) 
-{
-	$r = new RDFEventsGenerator($e);
-	$r->generateEvent($xml, $rdfParent, $uri);
-}
-
-$xml->appendChild($rdfParent);
-$xml->appendChild($rdfParent2);
-
-
-
-echo "File \"".XML_FILE."\" creato!";
-$xml->save(XML_FILE);
-print($uri);

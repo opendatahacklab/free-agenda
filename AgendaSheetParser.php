@@ -24,6 +24,7 @@
 define('AGEND_UNICA_URL','https://docs.google.com/spreadsheets/d/1bzVASM5_JjCgvNp3Vs0GJ4vDgYsKo_ig5NHU1QI5USc/export?format=tsv&exportFormat=tsv');
 define('DATE_FORMAT','d/m/Y H:i');
 require('RDFLocnGenerator.php');
+require('RDFEventsGenerator.php');
 
 /**
  * Basic representation of a Event

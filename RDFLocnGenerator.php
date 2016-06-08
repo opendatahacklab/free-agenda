@@ -100,12 +100,10 @@ class Location
 class RDFLocnGenerator
 {
 	private $location;
-	private $uri;
 	
 	public function __construct($location)
 	{
 		$this->location = $location;
-		$this->uri = $uri;
 	}
 
 	public function generateLocation($xml, $rdfParent, $uri)
@@ -113,7 +111,7 @@ class RDFLocnGenerator
 //Create RDF Node for location
 		$locnRDF = $xml->createElement("locn:Location");
 		$locnRDFAttribute = $xml->createAttribute(RDF_ATTRIBUTE);
-		$locnRDFAttribute->value = $this->uri."location/";
+		$locnRDFAttribute->value = $uri."location/";
 		$locnRDF->appendChild($locnRDFAttribute);
 
 //Create NODE locn:address
