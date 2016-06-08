@@ -114,8 +114,20 @@ class RDFEventsGenerator
 	{
 		$this->event = $event;
 	}
-
-
+	
+	/**
+	 * Get the namespaces which are expected to be set (aside with respective
+	 * abbreviation prefixes) in the destination ontology. excluding the default ones
+	 * rdf, rdfs and owl-
+	 * 
+	 * @return a map prefix -> namespace
+	 */
+	public static function getRequiredNamespaces(){
+		return  array('event'=>'http://purl.org/NET/c4dm/event.owl#',
+    		'time'=>'http://www.w3.org/2006/time#'
+		);		
+	}
+	
 	public function generateEvent($xml, $rdfParent, $uri)
 	{
 //Contain the event URI

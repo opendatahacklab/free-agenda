@@ -182,6 +182,18 @@ class RDFLocnGenerator
 		$rdfParent->appendChild($locnRDF);
 	}
 
+	/**
+	 * Get the namespaces which are expected to be set (aside with respective
+	 * abbreviation prefixes) in the destination ontology. excluding the default ones
+	 * rdf, rdfs and owl-
+	 *
+	 * @return a map prefix -> namespace
+	 */
+	public static function getRequiredNamespaces(){
+		return  array('geo'=>'http://www.w3.org/2003/01/geo/wgs84_pos#',
+     		'locn'=>'http://www.w3.org/ns/locn#');
+	}
+	
 	public static function getLocationURI($prefix, $name)
 	{
 		return (string) $prefix.urlencode($name);

@@ -34,20 +34,20 @@ function createRDFXMLontology(){
 	$ontology->formatOutput = true;
 	$ontology->version="0.1";
 	$ontology->encoding="UTF-8";
-	addNamespace($ontology, 'rdfs','http://www.w3.org/2000/01/rdf-schema#');	
-	addNamespace($ontology, 'owl','http://www.w3.org/2002/07/owl#');	
+	addNamespaces($ontology, array('rdfs'=>'http://www.w3.org/2000/01/rdf-schema#',	
+		'owl'=>'http://www.w3.org/2002/07/owl#'));	
 	return $ontology;
 }
 
 /**
- * Declare a namespace in the root of the ontology.
- * 
+ * Declare a set of namespaces in the root of the ontology.
+ *
  * @param unknown $ontology
- * @param unknown $prefix
- * @param unknown $url
+ * @param unknown $namespaces a map nsprefix => uri
  */
-function addNamespace($ontology, $prefix, $url){
-	$ontology->documentElement->setAttributeNS('http://www.w3.org/2000/xmlns/' ,'xmlns:'.$prefix, $url);
+function addNamespaces($ontology, $namespaces){
+	foreach($namespaces as $prefix => $uri)
+		$ontology->documentElement->setAttributeNS('http://www.w3.org/2000/xmlns/' ,'xmlns:'.$prefix, $uri);
 }
 
 define('BASEURI', 'http://opendatahacklab.org/agenda-unica/');
@@ -57,8 +57,8 @@ define('BASEURI', 'http://opendatahacklab.org/agenda-unica/');
 //the root element
 $ontology=createRDFXMLOntology();
 $rdfElement = $ontology->documentElement;
-
-$ontology->appendChild($rdfElement);
+addNamespaces($ontology, RDFEventsGenerator::getRequiredNamespaces());
+addNamespaces($ontology, RDFLocnGenerator::getRequiredNamespaces());
 
 $agendaParser = new AgendaSheetParser();
 foreach ($agendaParser as $event)
