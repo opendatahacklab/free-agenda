@@ -24,12 +24,18 @@ require('AgendaSheetParser.php');
 define('BASEURI', 'http://opendatahacklab.org/agenda-unica/');
 
 //Create a XML file
-$ontology = new DOMDocument();
+$rdfDocumentType = DOMImplementation::createDocumentType("rdf:RDF");
+$ontology = DOMImplementation::createDocument("http://www.w3.org/1999/02/22-rdf-syntax-ns#", "rdf:RDF",$rdfDocumentType);
+//$ontology = new DOMDocument("1.0", "UTF-8");
 $ontology->preserveWhiteSpace = false;
 $ontology->formatOutput = true;
+$ontology->version="0.1";
+$ontology->encoding="UTF-8";
 
 //the root element
-$rdfElement = $ontology->createElement("rdf:RDF");
+//$rdfElement = $ontology->createElement("rdf:RDF");
+$rdfElement = $ontology->documentElement;
+
 $ontology->appendChild($rdfElement);
 
 $agendaParser = new AgendaSheetParser();
