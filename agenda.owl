@@ -355,9 +355,9 @@
     </event:time>
     <rdfs:label>Referendum Day</rdfs:label>
   </event:Event>
-  <locn:Location rdf:about="http://opendatahacklab.org/agenda-unica/location/">
+  <locn:Location rdf:about="http://opendatahacklab.org/agenda-unica/Circolo+Rosa+Luxemburg/location">
     <locn:address>
-      <locn:Address rdf:about="http://opendatahacklab.org/agenda-unica/">
+      <locn:Address rdf:about="http://opendatahacklab.org/agenda-unica/Circolo+Rosa+Luxemburg/address">
         <rdfs:label>89, Via Luigi Capuana, Catania, Italy</rdfs:label>
         <locn:fullAddress>89, Via Luigi Capuana, Catania, Italy</locn:fullAddress>
         <locn:throughfare>Via Luigi Capuana</locn:throughfare>
@@ -367,9 +367,9 @@
       </locn:Address>
     </locn:address>
   </locn:Location>
-  <locn:Location rdf:about="http://opendatahacklab.org/agenda-unica/location/">
+  <locn:Location rdf:about="http://opendatahacklab.org/agenda-unica/Pub+Nievski/location">
     <locn:address>
-      <locn:Address rdf:about="http://opendatahacklab.org/agenda-unica/">
+      <locn:Address rdf:about="http://opendatahacklab.org/agenda-unica/Pub+Nievski/address">
         <rdfs:label>17, Via Alessi, Catania, Italy</rdfs:label>
         <locn:fullAddress>17, Via Alessi, Catania, Italy</locn:fullAddress>
         <locn:throughfare>Via Alessi</locn:throughfare>
@@ -379,9 +379,9 @@
       </locn:Address>
     </locn:address>
   </locn:Location>
-  <locn:Location rdf:about="http://opendatahacklab.org/agenda-unica/location/">
+  <locn:Location rdf:about="http://opendatahacklab.org/agenda-unica/Palestra+Lupo/location">
     <locn:address>
-      <locn:Address rdf:about="http://opendatahacklab.org/agenda-unica/">
+      <locn:Address rdf:about="http://opendatahacklab.org/agenda-unica/Palestra+Lupo/address">
         <rdfs:label>25, Piazza Pietro Lupo, Catania, Italy</rdfs:label>
         <locn:fullAddress>25, Piazza Pietro Lupo, Catania, Italy</locn:fullAddress>
         <locn:throughfare>Piazza Pietro Lupo</locn:throughfare>
@@ -391,9 +391,9 @@
       </locn:Address>
     </locn:address>
   </locn:Location>
-  <locn:Location rdf:about="http://opendatahacklab.org/agenda-unica/location/">
+  <locn:Location rdf:about="http://opendatahacklab.org/agenda-unica/Club+House+Giuseppe+Cunsolo/location">
     <locn:address>
-      <locn:Address rdf:about="http://opendatahacklab.org/agenda-unica/">
+      <locn:Address rdf:about="http://opendatahacklab.org/agenda-unica/Club+House+Giuseppe+Cunsolo/address">
         <rdfs:label>, Via del Giaggiolo, Catania, Italy</rdfs:label>
         <locn:fullAddress>, Via del Giaggiolo, Catania, Italy</locn:fullAddress>
         <locn:throughfare>Via del Giaggiolo</locn:throughfare>
@@ -403,9 +403,9 @@
       </locn:Address>
     </locn:address>
   </locn:Location>
-  <locn:Location rdf:about="http://opendatahacklab.org/agenda-unica/location/">
+  <locn:Location rdf:about="http://opendatahacklab.org/agenda-unica/Pgreco+bar/location">
     <locn:address>
-      <locn:Address rdf:about="http://opendatahacklab.org/agenda-unica/">
+      <locn:Address rdf:about="http://opendatahacklab.org/agenda-unica/Pgreco+bar/address">
         <rdfs:label>234, Via Antonino di San Giuliano, Catania, Italy</rdfs:label>
         <locn:fullAddress>234, Via Antonino di San Giuliano, Catania, Italy</locn:fullAddress>
         <locn:throughfare>Via Antonino di San Giuliano</locn:throughfare>
@@ -415,9 +415,9 @@
       </locn:Address>
     </locn:address>
   </locn:Location>
-  <locn:Location rdf:about="http://opendatahacklab.org/agenda-unica/location/">
+  <locn:Location rdf:about="http://opendatahacklab.org/agenda-unica/Circolo+Comunista+%22Olga+Benario%22/location">
     <locn:address>
-      <locn:Address rdf:about="http://opendatahacklab.org/agenda-unica/">
+      <locn:Address rdf:about="http://opendatahacklab.org/agenda-unica/Circolo+Comunista+%22Olga+Benario%22/address">
         <rdfs:label>7, Vicolo Beritelli, Catania, Italy</rdfs:label>
         <locn:fullAddress>7, Vicolo Beritelli, Catania, Italy</locn:fullAddress>
         <locn:throughfare>Vicolo Beritelli</locn:throughfare>
@@ -427,9 +427,9 @@
       </locn:Address>
     </locn:address>
   </locn:Location>
-  <locn:Location rdf:about="http://opendatahacklab.org/agenda-unica/location/">
+  <locn:Location rdf:about="http://opendatahacklab.org/agenda-unica/Sala+Cento+Fiori/location">
     <locn:address>
-      <locn:Address rdf:about="http://opendatahacklab.org/agenda-unica/">
+      <locn:Address rdf:about="http://opendatahacklab.org/agenda-unica/Sala+Cento+Fiori/address">
         <rdfs:label>89, Via Campo Franco, Catania, Italy</rdfs:label>
         <locn:fullAddress>89, Via Campo Franco, Catania, Italy</locn:fullAddress>
         <locn:throughfare>Via Campo Franco</locn:throughfare>
@@ -439,9 +439,9 @@
       </locn:Address>
     </locn:address>
   </locn:Location>
-  <locn:Location rdf:about="http://opendatahacklab.org/agenda-unica/location/">
+  <locn:Location rdf:about="http://opendatahacklab.org/agenda-unica/Arci+Comitato+Territoriale+Catania/location">
     <locn:address>
-      <locn:Address rdf:about="http://opendatahacklab.org/agenda-unica/">
+      <locn:Address rdf:about="http://opendatahacklab.org/agenda-unica/Arci+Comitato+Territoriale+Catania/address">
         <rdfs:label>97, Corso Sicilia, Catania, Italy</rdfs:label>
         <locn:fullAddress>97, Corso Sicilia, Catania, Italy</locn:fullAddress>
         <locn:throughfare>Corso Sicilia</locn:throughfare>
@@ -451,9 +451,9 @@
       </locn:Address>
     </locn:address>
   </locn:Location>
-  <locn:Location rdf:about="http://opendatahacklab.org/agenda-unica/location/">
+  <locn:Location rdf:about="http://opendatahacklab.org/agenda-unica/Centro+Popolare+Experia/location">
     <locn:address>
-      <locn:Address rdf:about="http://opendatahacklab.org/agenda-unica/">
+      <locn:Address rdf:about="http://opendatahacklab.org/agenda-unica/Centro+Popolare+Experia/address">
         <rdfs:label>903, Via Plebiscito, Catania, Italy</rdfs:label>
         <locn:fullAddress>903, Via Plebiscito, Catania, Italy</locn:fullAddress>
         <locn:throughfare>Via Plebiscito</locn:throughfare>
@@ -463,9 +463,9 @@
       </locn:Address>
     </locn:address>
   </locn:Location>
-  <locn:Location rdf:about="http://opendatahacklab.org/agenda-unica/location/">
+  <locn:Location rdf:about="http://opendatahacklab.org/agenda-unica/Campo+San+Teodoro/location">
     <locn:address>
-      <locn:Address rdf:about="http://opendatahacklab.org/agenda-unica/">
+      <locn:Address rdf:about="http://opendatahacklab.org/agenda-unica/Campo+San+Teodoro/address">
         <rdfs:label>, Via del Giaggiolo, Catania, Italy</rdfs:label>
         <locn:fullAddress>, Via del Giaggiolo, Catania, Italy</locn:fullAddress>
         <locn:throughfare>Via del Giaggiolo</locn:throughfare>
@@ -475,9 +475,9 @@
       </locn:Address>
     </locn:address>
   </locn:Location>
-  <locn:Location rdf:about="http://opendatahacklab.org/agenda-unica/location/">
+  <locn:Location rdf:about="http://opendatahacklab.org/agenda-unica/Chilometro+Zero/location">
     <locn:address>
-      <locn:Address rdf:about="http://opendatahacklab.org/agenda-unica/">
+      <locn:Address rdf:about="http://opendatahacklab.org/agenda-unica/Chilometro+Zero/address">
         <rdfs:label>56, Via Grotte Bianche, Catania, Italy</rdfs:label>
         <locn:fullAddress>56, Via Grotte Bianche, Catania, Italy</locn:fullAddress>
         <locn:throughfare>Via Grotte Bianche</locn:throughfare>
@@ -487,9 +487,9 @@
       </locn:Address>
     </locn:address>
   </locn:Location>
-  <locn:Location rdf:about="http://opendatahacklab.org/agenda-unica/location/">
+  <locn:Location rdf:about="http://opendatahacklab.org/agenda-unica/CSA+Officina+Rebelde/location">
     <locn:address>
-      <locn:Address rdf:about="http://opendatahacklab.org/agenda-unica/">
+      <locn:Address rdf:about="http://opendatahacklab.org/agenda-unica/CSA+Officina+Rebelde/address">
         <rdfs:label>6, Via Pietro Antonio Coppola, Catania, Italy</rdfs:label>
         <locn:fullAddress>6, Via Pietro Antonio Coppola, Catania, Italy</locn:fullAddress>
         <locn:throughfare>Via Pietro Antonio Coppola</locn:throughfare>
@@ -499,9 +499,9 @@
       </locn:Address>
     </locn:address>
   </locn:Location>
-  <locn:Location rdf:about="http://opendatahacklab.org/agenda-unica/location/">
+  <locn:Location rdf:about="http://opendatahacklab.org/agenda-unica/Villa+Bellini/location">
     <locn:address>
-      <locn:Address rdf:about="http://opendatahacklab.org/agenda-unica/">
+      <locn:Address rdf:about="http://opendatahacklab.org/agenda-unica/Villa+Bellini/address">
         <rdfs:label>, Via Etnea, Catania, Italy</rdfs:label>
         <locn:fullAddress>, Via Etnea, Catania, Italy</locn:fullAddress>
         <locn:throughfare>Via Etnea</locn:throughfare>
@@ -511,9 +511,9 @@
       </locn:Address>
     </locn:address>
   </locn:Location>
-  <locn:Location rdf:about="http://opendatahacklab.org/agenda-unica/location/">
+  <locn:Location rdf:about="http://opendatahacklab.org/agenda-unica/Gammazita/location">
     <locn:address>
-      <locn:Address rdf:about="http://opendatahacklab.org/agenda-unica/">
+      <locn:Address rdf:about="http://opendatahacklab.org/agenda-unica/Gammazita/address">
         <rdfs:label>92, Piazza Federico di Svevia, Catania, Italy</rdfs:label>
         <locn:fullAddress>92, Piazza Federico di Svevia, Catania, Italy</locn:fullAddress>
         <locn:throughfare>Piazza Federico di Svevia</locn:throughfare>

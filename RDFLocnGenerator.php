@@ -72,11 +72,14 @@ class RDFLocnGenerator {
 	public function __construct($location) {
 		$this->location = $location;
 	}
-	public function generateLocation($xml, $rdfParent, $uri) {
+	public function generateLocation($xml, $rdfParent, $prefix) {
+		
+		$uri=RDFLocnGenerator::getLocationURI($prefix,$this->location->name);
+		
 		// Create RDF Node for location
 		$locnRDF = $xml->createElement ( "locn:Location" );
 		$locnRDFAttribute = $xml->createAttribute ( 'rdf:about' );
-		$locnRDFAttribute->value = $uri . "location/";
+		$locnRDFAttribute->value = $uri . "/location";
 		$locnRDF->appendChild ( $locnRDFAttribute );
 		
 		// Create NODE locn:address
@@ -84,7 +87,7 @@ class RDFLocnGenerator {
 		// Create NODE locn:Address
 		$locnAddress = $xml->createElement ( "locn:Address" );
 		$locnAddressAttribute = $xml->createAttribute ( 'rdf:about' );
-		$locnAddressAttribute->value = $uri;
+		$locnAddressAttribute->value = $uri. "/address";
 		$locnAddress->appendChild ( $locnAddressAttribute );
 		
 		// Create node rdfs:label
@@ -127,7 +130,7 @@ class RDFLocnGenerator {
 			// Create NODE locn:Geometry
 			$geoLocnGeometry = $xml->createElement ( "locn:Geometry" );
 			$geoAttribute = $xml->createAttribute ( "rdf:about" );
-			$geoAttribute->value = $uri . "location/geometry";
+			$geoAttribute->value = $uri . "/geometry";
 			$geoLocnGeometry->appendChild ( $geoAttribute );
 			
 			// Create node geo:lat

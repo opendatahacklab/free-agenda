@@ -22,35 +22,6 @@
 require('AgendaSheetParser.php');
 require('RDFXMLOntology.php');
 
-/**
- * Create an empty ontology with RDFXML serialization
- * 
- * @return the XML document corresponding to the ontology
- */
-function createRDFXMLontology(){
-	$rdfDocumentType = DOMImplementation::createDocumentType("rdf:RDF");
-	$ontology = DOMImplementation::createDocument("http://www.w3.org/1999/02/22-rdf-syntax-ns#", "rdf:RDF",$rdfDocumentType);
-	//$ontology = new DOMDocument("1.0", "UTF-8");
-	$ontology->preserveWhiteSpace = false;
-	$ontology->formatOutput = true;
-	$ontology->version="0.1";
-	$ontology->encoding="UTF-8";
-	addNamespaces($ontology, array('rdfs'=>'http://www.w3.org/2000/01/rdf-schema#',	
-		'owl'=>'http://www.w3.org/2002/07/owl#'));	
-	return $ontology;
-}
-
-/**
- * Declare a set of namespaces in the root of the ontology.
- *
- * @param unknown $ontology
- * @param unknown $namespaces a map nsprefix => uri
- */
-function addNamespaces($ontology, $namespaces){
-	foreach($namespaces as $prefix => $uri)
-		$ontology->documentElement->setAttributeNS('http://www.w3.org/2000/xmlns/' ,'xmlns:'.$prefix, $uri);
-}
-
 define('BASEURI', 'http://opendatahacklab.org/agenda-unica/');
 
 //Create a XML file
