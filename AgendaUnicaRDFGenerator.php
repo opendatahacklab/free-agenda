@@ -62,8 +62,10 @@ $ontology->addImports(RDFEventsGenerator::getRequiredVocabularies());
 $ontology->addImports(RDFLocnGenerator::getRequiredVocabularies());
 
 $agendaParser = new AgendaSheetParser();
-foreach ($agendaParser as $event)
-	(new RDFEventsGenerator($event))->generateEvent($ontology->getXML(), $ontology->getXML()->documentElement, BASEURI);
+foreach ($agendaParser as $event){
+	if ($event->start!=null)
+		(new RDFEventsGenerator($event))->generateEvent($ontology->getXML(), $ontology->getXML()->documentElement, BASEURI);	
+}
 $locations=$agendaParser->getAllParsedLocations();
 
 foreach($locations as $name => $location)

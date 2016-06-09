@@ -87,8 +87,8 @@ class RDFLocnGenerator {
 		$locnAddressAttribute->value = $uri;
 		$locnAddress->appendChild ( $locnAddressAttribute );
 		
-		// Create node rdf:label
-		$rdfLabel = $xml->createElement ( "rdf:label" );
+		// Create node rdfs:label
+		$rdfLabel = $xml->createElement ( "rdfs:label" );
 		$rdfLabel->appendChild ( $xml->createTextNode ( $this->formatLabel () ) );
 		// Create node locn:fullAddress
 		$fullAddress = $xml->createElement ( "locn:fullAddress" );
