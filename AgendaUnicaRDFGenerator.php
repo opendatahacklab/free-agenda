@@ -20,6 +20,7 @@
  * @author Cristiano Longo
  */
 require('AgendaSheetParser.php');
+require('RDFXMLOntology.php');
 
 /**
  * Create an empty ontology with RDFXML serialization
@@ -54,19 +55,19 @@ define('BASEURI', 'http://opendatahacklab.org/agenda-unica/');
 
 //Create a XML file
 
-//the root element
-$ontology=createRDFXMLOntology();
-$rdfElement = $ontology->documentElement;
-addNamespaces($ontology, RDFEventsGenerator::getRequiredNamespaces());
-addNamespaces($ontology, RDFLocnGenerator::getRequiredNamespaces());
+$ontology=new RDFXMLOntology(BASEURI.'ontology');
+$ontology->addNamespaces(RDFEventsGenerator::getRequiredNamespaces());
+$ontology->addNamespaces(RDFLocnGenerator::getRequiredNamespaces());
+$ontology->addImports(RDFEventsGenerator::getRequiredVocabularies());
+$ontology->addImports(RDFLocnGenerator::getRequiredVocabularies());
 
 $agendaParser = new AgendaSheetParser();
 foreach ($agendaParser as $event)
-	(new RDFEventsGenerator($event))->generateEvent($ontology, $rdfElement, BASEURI);
+	(new RDFEventsGenerator($event))->generateEvent($ontology->getXML(), $ontology->getXML()->documentElement, BASEURI);
 $locations=$agendaParser->getAllParsedLocations();
 
 foreach($locations as $name => $location)
-	(new RDFLocnGenerator($location))->generateLocation($ontology, $rdfElement, BASEURI);
+	(new RDFLocnGenerator($location))->generateLocation($ontology->getXML(), $ontology->getXML()->documentElement, BASEURI);
 
-echo $ontology->saveXML();
+echo $ontology->getXML()->saveXML();
 ?>

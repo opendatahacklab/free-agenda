@@ -1,0 +1,610 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE rdf:RDF>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:event="http://purl.org/NET/c4dm/event.owl#" xmlns:time="http://www.w3.org/2006/time#" xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#" xmlns:locn="http://www.w3.org/ns/locn#">
+  <owl:Ontology rdf:about="http://opendatahacklab.org/agenda-unica/ontology">
+    <owl:imports rdf:resource="http://motools.sf.net/event/event.n3"/>
+    <owl:imports rdf:resource="http://www.w3.org/ns/locn"/>
+    <owl:imports rdf:resource="https://www.w3.org/2003/01/geo/wgs84_pos"/>
+  </owl:Ontology>
+  <event:Event rdf:about="http://opendatahacklab.org/agenda-unica/20160624/Cena+Sociale+di+Sostegno+ai+Briganti+di+Librino/">
+    <event:place rdf:resource="http://opendatahacklab.org/agenda-unica/C.s.a.+Officina+Rebelde"/>
+    <event:time>
+      <time:Interval rdf:about="http://opendatahacklab.org/agenda-unica/20160624/Cena+Sociale+di+Sostegno+ai+Briganti+di+Librino/time">
+        <time:hasBeginning>
+          <time:Instant rdf:about="http://opendatahacklab.org/agenda-unica/20160624/Cena+Sociale+di+Sostegno+ai+Briganti+di+Librino/time/begin">
+            <time:inXSDDateTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2016-06-24T19:00:00+02:00</time:inXSDDateTime>
+          </time:Instant>
+        </time:hasBeginning>
+      </time:Interval>
+    </event:time>
+    <rdfs:label>Cena Sociale di Sostegno ai Briganti di Librino</rdfs:label>
+  </event:Event>
+  <event:Event rdf:about="http://opendatahacklab.org/agenda-unica/20160613/Riunione+Agenda+Unica/">
+    <event:place rdf:resource="http://opendatahacklab.org/agenda-unica/C.s.a.+Officina+Rebelde"/>
+    <event:time>
+      <time:Interval rdf:about="http://opendatahacklab.org/agenda-unica/20160613/Riunione+Agenda+Unica/time">
+        <time:hasBeginning>
+          <time:Instant rdf:about="http://opendatahacklab.org/agenda-unica/20160613/Riunione+Agenda+Unica/time/begin">
+            <time:inXSDDateTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2016-06-13T19:00:00+02:00</time:inXSDDateTime>
+          </time:Instant>
+        </time:hasBeginning>
+      </time:Interval>
+    </event:time>
+    <rdfs:label>Riunione Agenda Unica</rdfs:label>
+  </event:Event>
+  <event:Event rdf:about="http://opendatahacklab.org/agenda-unica/20160528/Presentazione+del+libro+di+Domenico+MOro+%22Globalizzazione+e+decadenza+industriale%22/">
+    <event:place rdf:resource="http://opendatahacklab.org/agenda-unica/Circolo+Rosa+Luxemburg"/>
+    <event:time>
+      <time:Interval rdf:about="http://opendatahacklab.org/agenda-unica/20160528/Presentazione+del+libro+di+Domenico+MOro+%22Globalizzazione+e+decadenza+industriale%22/time">
+        <time:hasBeginning>
+          <time:Instant rdf:about="http://opendatahacklab.org/agenda-unica/20160528/Presentazione+del+libro+di+Domenico+MOro+%22Globalizzazione+e+decadenza+industriale%22/time/begin">
+            <time:inXSDDateTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2016-05-28T18:30:00+02:00</time:inXSDDateTime>
+          </time:Instant>
+        </time:hasBeginning>
+      </time:Interval>
+    </event:time>
+    <rdfs:label>Presentazione del libro di Domenico MOro "Globalizzazione e decadenza industriale"</rdfs:label>
+  </event:Event>
+  <event:Event rdf:about="http://opendatahacklab.org/agenda-unica/20160527/Incontro+con+gli+autori+di+%22Come+il+colore+della+terra%22+Marco+Gastoni+e+Nicola+Gobbi/">
+    <event:place rdf:resource="http://opendatahacklab.org/agenda-unica/Club+House+Giuseppe+Cunsolo"/>
+    <event:time>
+      <time:Interval rdf:about="http://opendatahacklab.org/agenda-unica/20160527/Incontro+con+gli+autori+di+%22Come+il+colore+della+terra%22+Marco+Gastoni+e+Nicola+Gobbi/time">
+        <time:hasBeginning>
+          <time:Instant rdf:about="http://opendatahacklab.org/agenda-unica/20160527/Incontro+con+gli+autori+di+%22Come+il+colore+della+terra%22+Marco+Gastoni+e+Nicola+Gobbi/time/begin">
+            <time:inXSDDateTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2016-05-27T17:30:00+02:00</time:inXSDDateTime>
+          </time:Instant>
+        </time:hasBeginning>
+      </time:Interval>
+    </event:time>
+    <rdfs:label>Incontro con gli autori di "Come il colore della terra" Marco Gastoni e Nicola Gobbi</rdfs:label>
+  </event:Event>
+  <event:Event rdf:about="http://opendatahacklab.org/agenda-unica/20160526/Cuba%2C+tra+continuit%C3%A0+e+nuove+sfide/">
+    <event:place rdf:resource="http://opendatahacklab.org/agenda-unica/Pub+Nievski"/>
+    <event:time>
+      <time:Interval rdf:about="http://opendatahacklab.org/agenda-unica/20160526/Cuba%2C+tra+continuit%C3%A0+e+nuove+sfide/time">
+        <time:hasBeginning>
+          <time:Instant rdf:about="http://opendatahacklab.org/agenda-unica/20160526/Cuba%2C+tra+continuit%C3%A0+e+nuove+sfide/time/begin">
+            <time:inXSDDateTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2016-05-26T19:00:00+02:00</time:inXSDDateTime>
+          </time:Instant>
+        </time:hasBeginning>
+      </time:Interval>
+    </event:time>
+    <rdfs:label>Cuba, tra continuità e nuove sfide</rdfs:label>
+  </event:Event>
+  <event:Event rdf:about="http://opendatahacklab.org/agenda-unica/20160524/Campagna+di+sostegno+%22I+Briganti+si+meritano+un+prato%22.+%22Principessa%22+di+e+con+Luciano+Bruno/">
+    <event:place rdf:resource="http://opendatahacklab.org/agenda-unica/Club+House+Giuseppe+Cunsolo"/>
+    <event:time>
+      <time:Interval rdf:about="http://opendatahacklab.org/agenda-unica/20160524/Campagna+di+sostegno+%22I+Briganti+si+meritano+un+prato%22.+%22Principessa%22+di+e+con+Luciano+Bruno/time">
+        <time:hasBeginning>
+          <time:Instant rdf:about="http://opendatahacklab.org/agenda-unica/20160524/Campagna+di+sostegno+%22I+Briganti+si+meritano+un+prato%22.+%22Principessa%22+di+e+con+Luciano+Bruno/time/begin">
+            <time:inXSDDateTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2016-05-24T21:00:00+02:00</time:inXSDDateTime>
+          </time:Instant>
+        </time:hasBeginning>
+      </time:Interval>
+    </event:time>
+    <rdfs:label>Campagna di sostegno "I Briganti si meritano un prato". "Principessa" di e con Luciano Bruno</rdfs:label>
+  </event:Event>
+  <event:Event rdf:about="http://opendatahacklab.org/agenda-unica/20160523/CATANIA+STRANGOLATA+DAL+DEBITO+%22PUBBLICO%22%3A+DIETRO+I+NUMERI+IL+BILANCIO+DEI+DIRITTI+NEGATI.+ASSEMBLEA+PUBBLICA+con+Marco+Bersani+-+Attac+Italia+/">
+    <event:place rdf:resource="http://opendatahacklab.org/agenda-unica/Palestra+Lupo"/>
+    <event:time>
+      <time:Interval rdf:about="http://opendatahacklab.org/agenda-unica/20160523/CATANIA+STRANGOLATA+DAL+DEBITO+%22PUBBLICO%22%3A+DIETRO+I+NUMERI+IL+BILANCIO+DEI+DIRITTI+NEGATI.+ASSEMBLEA+PUBBLICA+con+Marco+Bersani+-+Attac+Italia+/time">
+        <time:hasBeginning>
+          <time:Instant rdf:about="http://opendatahacklab.org/agenda-unica/20160523/CATANIA+STRANGOLATA+DAL+DEBITO+%22PUBBLICO%22%3A+DIETRO+I+NUMERI+IL+BILANCIO+DEI+DIRITTI+NEGATI.+ASSEMBLEA+PUBBLICA+con+Marco+Bersani+-+Attac+Italia+/time/begin">
+            <time:inXSDDateTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2016-05-23T19:00:00+02:00</time:inXSDDateTime>
+          </time:Instant>
+        </time:hasBeginning>
+      </time:Interval>
+    </event:time>
+    <rdfs:label>CATANIA STRANGOLATA DAL DEBITO "PUBBLICO": DIETRO I NUMERI IL BILANCIO DEI DIRITTI NEGATI. ASSEMBLEA PUBBLICA con Marco Bersani - Attac Italia </rdfs:label>
+  </event:Event>
+  <event:Event rdf:about="http://opendatahacklab.org/agenda-unica/20160520/Campagna+di+Sostegno+%22I+Briganti+si+meritano+un+prato%22.+Cous+Cous+Fest./">
+    <event:place rdf:resource="http://opendatahacklab.org/agenda-unica/Club+House+Giuseppe+Cunsolo"/>
+    <event:time>
+      <time:Interval rdf:about="http://opendatahacklab.org/agenda-unica/20160520/Campagna+di+Sostegno+%22I+Briganti+si+meritano+un+prato%22.+Cous+Cous+Fest./time">
+        <time:hasBeginning>
+          <time:Instant rdf:about="http://opendatahacklab.org/agenda-unica/20160520/Campagna+di+Sostegno+%22I+Briganti+si+meritano+un+prato%22.+Cous+Cous+Fest./time/begin">
+            <time:inXSDDateTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2016-05-20T21:00:00+02:00</time:inXSDDateTime>
+          </time:Instant>
+        </time:hasBeginning>
+      </time:Interval>
+    </event:time>
+    <rdfs:label>Campagna di Sostegno "I Briganti si meritano un prato". Cous Cous Fest.</rdfs:label>
+  </event:Event>
+  <event:Event rdf:about="http://opendatahacklab.org/agenda-unica/20160514/Incontro+su+Charles+Bukowski+%22compagni+di+sbronze%22/">
+    <event:place rdf:resource="http://opendatahacklab.org/agenda-unica/Club+House+Giuseppe+Cunsolo"/>
+    <event:time>
+      <time:Interval rdf:about="http://opendatahacklab.org/agenda-unica/20160514/Incontro+su+Charles+Bukowski+%22compagni+di+sbronze%22/time">
+        <time:hasBeginning>
+          <time:Instant rdf:about="http://opendatahacklab.org/agenda-unica/20160514/Incontro+su+Charles+Bukowski+%22compagni+di+sbronze%22/time/begin">
+            <time:inXSDDateTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2016-05-14T17:30:00+02:00</time:inXSDDateTime>
+          </time:Instant>
+        </time:hasBeginning>
+      </time:Interval>
+    </event:time>
+    <rdfs:label>Incontro su Charles Bukowski "compagni di sbronze"</rdfs:label>
+  </event:Event>
+  <event:Event rdf:about="http://opendatahacklab.org/agenda-unica/20160510/Serata+No+Muos+al+C.s.a.+Officina+Rebelde/">
+    <event:place rdf:resource="http://opendatahacklab.org/agenda-unica/CSA+Officina+Rebelde"/>
+    <event:time>
+      <time:Interval rdf:about="http://opendatahacklab.org/agenda-unica/20160510/Serata+No+Muos+al+C.s.a.+Officina+Rebelde/time">
+        <time:hasBeginning>
+          <time:Instant rdf:about="http://opendatahacklab.org/agenda-unica/20160510/Serata+No+Muos+al+C.s.a.+Officina+Rebelde/time/begin">
+            <time:inXSDDateTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2016-05-10T19:30:00+02:00</time:inXSDDateTime>
+          </time:Instant>
+        </time:hasBeginning>
+      </time:Interval>
+    </event:time>
+    <rdfs:label>Serata No Muos al C.s.a. Officina Rebelde</rdfs:label>
+  </event:Event>
+  <event:Event rdf:about="http://opendatahacklab.org/agenda-unica/20160509/Contro+la+scuola+Spa/">
+    <event:time>
+      <time:Interval rdf:about="http://opendatahacklab.org/agenda-unica/20160509/Contro+la+scuola+Spa/time">
+        <time:hasBeginning>
+          <time:Instant rdf:about="http://opendatahacklab.org/agenda-unica/20160509/Contro+la+scuola+Spa/time/begin">
+            <time:inXSDDateTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2016-05-09T18:30:00+02:00</time:inXSDDateTime>
+          </time:Instant>
+        </time:hasBeginning>
+      </time:Interval>
+    </event:time>
+    <rdfs:label>Contro la scuola Spa</rdfs:label>
+  </event:Event>
+  <event:Event rdf:about="http://opendatahacklab.org/agenda-unica/20160506/Primavera+Referendaria/">
+    <event:place rdf:resource="http://opendatahacklab.org/agenda-unica/Circolo+Rosa+Luxemburg"/>
+    <event:time>
+      <time:Interval rdf:about="http://opendatahacklab.org/agenda-unica/20160506/Primavera+Referendaria/time">
+        <time:hasBeginning>
+          <time:Instant rdf:about="http://opendatahacklab.org/agenda-unica/20160506/Primavera+Referendaria/time/begin">
+            <time:inXSDDateTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2016-05-06T18:30:00+02:00</time:inXSDDateTime>
+          </time:Instant>
+        </time:hasBeginning>
+      </time:Interval>
+    </event:time>
+    <rdfs:label>Primavera Referendaria</rdfs:label>
+  </event:Event>
+  <event:Event rdf:about="http://opendatahacklab.org/agenda-unica/20160427/Vivere+la+storia+di%5Cattraverso%5Ccon+Tina+Modotti%3A+una+storia+rivoluzionaria/">
+    <event:place rdf:resource="http://opendatahacklab.org/agenda-unica/Sala+Cento+Fiori"/>
+    <event:time>
+      <time:Interval rdf:about="http://opendatahacklab.org/agenda-unica/20160427/Vivere+la+storia+di%5Cattraverso%5Ccon+Tina+Modotti%3A+una+storia+rivoluzionaria/time">
+        <time:hasBeginning>
+          <time:Instant rdf:about="http://opendatahacklab.org/agenda-unica/20160427/Vivere+la+storia+di%5Cattraverso%5Ccon+Tina+Modotti%3A+una+storia+rivoluzionaria/time/begin">
+            <time:inXSDDateTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2016-04-27T20:00:00+02:00</time:inXSDDateTime>
+          </time:Instant>
+        </time:hasBeginning>
+      </time:Interval>
+    </event:time>
+    <rdfs:label>Vivere la storia di\attraverso\con Tina Modotti: una storia rivoluzionaria</rdfs:label>
+  </event:Event>
+  <event:Event rdf:about="http://opendatahacklab.org/agenda-unica/20160426/presentazione+del+libro+%22Manifesto+per+la+Sinistra+e+l%27umanesimo+sociale+%22/">
+    <event:place rdf:resource="http://opendatahacklab.org/agenda-unica/Pgreco+bar"/>
+    <event:time>
+      <time:Interval rdf:about="http://opendatahacklab.org/agenda-unica/20160426/presentazione+del+libro+%22Manifesto+per+la+Sinistra+e+l%27umanesimo+sociale+%22/time">
+        <time:hasBeginning>
+          <time:Instant rdf:about="http://opendatahacklab.org/agenda-unica/20160426/presentazione+del+libro+%22Manifesto+per+la+Sinistra+e+l%27umanesimo+sociale+%22/time/begin">
+            <time:inXSDDateTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2016-04-26T17:00:00+02:00</time:inXSDDateTime>
+          </time:Instant>
+        </time:hasBeginning>
+      </time:Interval>
+    </event:time>
+    <rdfs:label>presentazione del libro "Manifesto per la Sinistra e l'umanesimo sociale "</rdfs:label>
+  </event:Event>
+  <event:Event rdf:about="http://opendatahacklab.org/agenda-unica/20160424/OLGA+%2C+un+grande+film+sulla+vita+di+Olga+Benario./">
+    <event:place rdf:resource="http://opendatahacklab.org/agenda-unica/Circolo+Comunista+%22Olga+Benario%22+"/>
+    <event:time>
+      <time:Interval rdf:about="http://opendatahacklab.org/agenda-unica/20160424/OLGA+%2C+un+grande+film+sulla+vita+di+Olga+Benario./time">
+        <time:hasBeginning>
+          <time:Instant rdf:about="http://opendatahacklab.org/agenda-unica/20160424/OLGA+%2C+un+grande+film+sulla+vita+di+Olga+Benario./time/begin">
+            <time:inXSDDateTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2016-04-24T20:00:00+02:00</time:inXSDDateTime>
+          </time:Instant>
+        </time:hasBeginning>
+      </time:Interval>
+    </event:time>
+    <rdfs:label>OLGA , un grande film sulla vita di Olga Benario.</rdfs:label>
+  </event:Event>
+  <event:Event rdf:about="http://opendatahacklab.org/agenda-unica/20160423/Siria+e+Palestina+nel+conflitto+mediorientale/">
+    <event:place rdf:resource="http://opendatahacklab.org/agenda-unica/Sala+Cento+Fiori+"/>
+    <event:time>
+      <time:Interval rdf:about="http://opendatahacklab.org/agenda-unica/20160423/Siria+e+Palestina+nel+conflitto+mediorientale/time">
+        <time:hasBeginning>
+          <time:Instant rdf:about="http://opendatahacklab.org/agenda-unica/20160423/Siria+e+Palestina+nel+conflitto+mediorientale/time/begin">
+            <time:inXSDDateTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2016-04-23T19:30:00+02:00</time:inXSDDateTime>
+          </time:Instant>
+        </time:hasBeginning>
+      </time:Interval>
+    </event:time>
+    <rdfs:label>Siria e Palestina nel conflitto mediorientale</rdfs:label>
+  </event:Event>
+  <event:Event rdf:about="http://opendatahacklab.org/agenda-unica/20160422/ILVA+La+tempesta+perfetta+-+Presentazione+libro+con+gli+autori/">
+    <event:place rdf:resource="http://opendatahacklab.org/agenda-unica/Centro+Popolare+Experia"/>
+    <event:time>
+      <time:Interval rdf:about="http://opendatahacklab.org/agenda-unica/20160422/ILVA+La+tempesta+perfetta+-+Presentazione+libro+con+gli+autori/time">
+        <time:hasBeginning>
+          <time:Instant rdf:about="http://opendatahacklab.org/agenda-unica/20160422/ILVA+La+tempesta+perfetta+-+Presentazione+libro+con+gli+autori/time/begin">
+            <time:inXSDDateTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2016-04-22T18:00:00+02:00</time:inXSDDateTime>
+          </time:Instant>
+        </time:hasBeginning>
+      </time:Interval>
+    </event:time>
+    <rdfs:label>ILVA La tempesta perfetta - Presentazione libro con gli autori</rdfs:label>
+  </event:Event>
+  <event:Event rdf:about="http://opendatahacklab.org/agenda-unica/20160420/Settimana+contro+lo+sfruttamento+del+lavoro+minorile/">
+    <event:place rdf:resource="http://opendatahacklab.org/agenda-unica/Campo+San+Teodoro"/>
+    <event:time>
+      <time:Interval rdf:about="http://opendatahacklab.org/agenda-unica/20160420/Settimana+contro+lo+sfruttamento+del+lavoro+minorile/time">
+        <time:hasBeginning>
+          <time:Instant rdf:about="http://opendatahacklab.org/agenda-unica/20160420/Settimana+contro+lo+sfruttamento+del+lavoro+minorile/time/begin">
+            <time:inXSDDateTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2016-04-20T15:00:00+02:00</time:inXSDDateTime>
+          </time:Instant>
+        </time:hasBeginning>
+      </time:Interval>
+    </event:time>
+    <rdfs:label>Settimana contro lo sfruttamento del lavoro minorile</rdfs:label>
+  </event:Event>
+  <event:Event rdf:about="http://opendatahacklab.org/agenda-unica/20160416/MANIFESTAZIONE+EUROMEDITERRANEA+NO+FRONTEX/">
+    <event:time>
+      <time:Interval rdf:about="http://opendatahacklab.org/agenda-unica/20160416/MANIFESTAZIONE+EUROMEDITERRANEA+NO+FRONTEX/time">
+        <time:hasBeginning>
+          <time:Instant rdf:about="http://opendatahacklab.org/agenda-unica/20160416/MANIFESTAZIONE+EUROMEDITERRANEA+NO+FRONTEX/time/begin">
+            <time:inXSDDateTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2016-04-16T15:00:00+02:00</time:inXSDDateTime>
+          </time:Instant>
+        </time:hasBeginning>
+      </time:Interval>
+    </event:time>
+    <rdfs:label>MANIFESTAZIONE EUROMEDITERRANEA NO FRONTEX</rdfs:label>
+  </event:Event>
+  <event:Event rdf:about="http://opendatahacklab.org/agenda-unica/20160414/I+comunisti+tra+passato+e+futuro.+Un+bilancio+storico+dagli+anni+%2790+ad+oggi/">
+    <event:place rdf:resource="http://opendatahacklab.org/agenda-unica/Arci+Comitato+Territoriale+Catania"/>
+    <event:time>
+      <time:Interval rdf:about="http://opendatahacklab.org/agenda-unica/20160414/I+comunisti+tra+passato+e+futuro.+Un+bilancio+storico+dagli+anni+%2790+ad+oggi/time">
+        <time:hasBeginning>
+          <time:Instant rdf:about="http://opendatahacklab.org/agenda-unica/20160414/I+comunisti+tra+passato+e+futuro.+Un+bilancio+storico+dagli+anni+%2790+ad+oggi/time/begin">
+            <time:inXSDDateTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2016-04-14T19:00:00+02:00</time:inXSDDateTime>
+          </time:Instant>
+        </time:hasBeginning>
+      </time:Interval>
+    </event:time>
+    <rdfs:label>I comunisti tra passato e futuro. Un bilancio storico dagli anni '90 ad oggi</rdfs:label>
+  </event:Event>
+  <event:Event rdf:about="http://opendatahacklab.org/agenda-unica/20160409/FACEVAMO+QUELLO+CHE+DOVEVAMO/">
+    <event:place rdf:resource="http://opendatahacklab.org/agenda-unica/Centro+Popolare+Experia"/>
+    <event:time>
+      <time:Interval rdf:about="http://opendatahacklab.org/agenda-unica/20160409/FACEVAMO+QUELLO+CHE+DOVEVAMO/time">
+        <time:hasBeginning>
+          <time:Instant rdf:about="http://opendatahacklab.org/agenda-unica/20160409/FACEVAMO+QUELLO+CHE+DOVEVAMO/time/begin">
+            <time:inXSDDateTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2016-04-09T19:30:00+02:00</time:inXSDDateTime>
+          </time:Instant>
+        </time:hasBeginning>
+      </time:Interval>
+    </event:time>
+    <rdfs:label>FACEVAMO QUELLO CHE DOVEVAMO</rdfs:label>
+  </event:Event>
+  <event:Event rdf:about="http://opendatahacklab.org/agenda-unica/20160409/i+briganti+si+meritano+un+prato%3A+l%27inizio.../">
+    <event:place rdf:resource="http://opendatahacklab.org/agenda-unica/Campo+San+Teodoro"/>
+    <event:time>
+      <time:Interval rdf:about="http://opendatahacklab.org/agenda-unica/20160409/i+briganti+si+meritano+un+prato%3A+l%27inizio.../time">
+        <time:hasBeginning>
+          <time:Instant rdf:about="http://opendatahacklab.org/agenda-unica/20160409/i+briganti+si+meritano+un+prato%3A+l%27inizio.../time/begin">
+            <time:inXSDDateTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2016-04-09T18:30:00+02:00</time:inXSDDateTime>
+          </time:Instant>
+        </time:hasBeginning>
+      </time:Interval>
+    </event:time>
+    <rdfs:label>i briganti si meritano un prato: l'inizio...</rdfs:label>
+  </event:Event>
+  <event:Event rdf:about="http://opendatahacklab.org/agenda-unica/20160407/Giornata+NO+Triv+/">
+    <event:place rdf:resource="http://opendatahacklab.org/agenda-unica/CSA+Officina+Rebelde"/>
+    <event:time>
+      <time:Interval rdf:about="http://opendatahacklab.org/agenda-unica/20160407/Giornata+NO+Triv+/time">
+        <time:hasBeginning>
+          <time:Instant rdf:about="http://opendatahacklab.org/agenda-unica/20160407/Giornata+NO+Triv+/time/begin">
+            <time:inXSDDateTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2016-04-07T18:00:00+02:00</time:inXSDDateTime>
+          </time:Instant>
+        </time:hasBeginning>
+      </time:Interval>
+    </event:time>
+    <rdfs:label>Giornata NO Triv </rdfs:label>
+  </event:Event>
+  <event:Event rdf:about="http://opendatahacklab.org/agenda-unica/20160405/Aperitivo+POP/">
+    <event:place rdf:resource="http://opendatahacklab.org/agenda-unica/Chilometro+Zero"/>
+    <event:time>
+      <time:Interval rdf:about="http://opendatahacklab.org/agenda-unica/20160405/Aperitivo+POP/time">
+        <time:hasBeginning>
+          <time:Instant rdf:about="http://opendatahacklab.org/agenda-unica/20160405/Aperitivo+POP/time/begin">
+            <time:inXSDDateTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2016-04-05T19:00:00+02:00</time:inXSDDateTime>
+          </time:Instant>
+        </time:hasBeginning>
+      </time:Interval>
+    </event:time>
+    <rdfs:label>Aperitivo POP</rdfs:label>
+  </event:Event>
+  <event:Event rdf:about="http://opendatahacklab.org/agenda-unica/20160403/Riunione+Agenda+Unica/">
+    <event:place rdf:resource="http://opendatahacklab.org/agenda-unica/CSA+Officina+Rebelde"/>
+    <event:time>
+      <time:Interval rdf:about="http://opendatahacklab.org/agenda-unica/20160403/Riunione+Agenda+Unica/time">
+        <time:hasBeginning>
+          <time:Instant rdf:about="http://opendatahacklab.org/agenda-unica/20160403/Riunione+Agenda+Unica/time/begin">
+            <time:inXSDDateTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2016-04-03T17:00:00+02:00</time:inXSDDateTime>
+          </time:Instant>
+        </time:hasBeginning>
+      </time:Interval>
+    </event:time>
+    <rdfs:label>Riunione Agenda Unica</rdfs:label>
+  </event:Event>
+  <event:Event rdf:about="http://opendatahacklab.org/agenda-unica/20160402/%E2%80%AA%23%E2%80%8EStreetParade%E2%80%AC/">
+    <event:place rdf:resource="http://opendatahacklab.org/agenda-unica/Villa+Bellini"/>
+    <event:time>
+      <time:Interval rdf:about="http://opendatahacklab.org/agenda-unica/20160402/%E2%80%AA%23%E2%80%8EStreetParade%E2%80%AC/time">
+        <time:hasBeginning>
+          <time:Instant rdf:about="http://opendatahacklab.org/agenda-unica/20160402/%E2%80%AA%23%E2%80%8EStreetParade%E2%80%AC/time/begin">
+            <time:inXSDDateTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2016-04-02T17:00:00+02:00</time:inXSDDateTime>
+          </time:Instant>
+        </time:hasBeginning>
+      </time:Interval>
+    </event:time>
+    <rdfs:label>‪#‎StreetParade‬</rdfs:label>
+  </event:Event>
+  <event:Event rdf:about="http://opendatahacklab.org/agenda-unica/20160331/Referendum+Day/">
+    <event:place rdf:resource="http://opendatahacklab.org/agenda-unica/Gammazita"/>
+    <event:time>
+      <time:Interval rdf:about="http://opendatahacklab.org/agenda-unica/20160331/Referendum+Day/time">
+        <time:hasBeginning>
+          <time:Instant rdf:about="http://opendatahacklab.org/agenda-unica/20160331/Referendum+Day/time/begin">
+            <time:inXSDDateTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2016-03-31T20:00:00+02:00</time:inXSDDateTime>
+          </time:Instant>
+        </time:hasBeginning>
+      </time:Interval>
+    </event:time>
+    <rdfs:label>Referendum Day</rdfs:label>
+  </event:Event>
+  <locn:Location rdf:about="http://opendatahacklab.org/agenda-unica/location/">
+    <locn:address>
+      <locn:Address rdf:about="http://opendatahacklab.org/agenda-unica/">
+        <rdf:label>89, Via Luigi Capuana, Catania, Italy</rdf:label>
+        <locn:FullAddress>89, Via Luigi Capuana, Catania, Italy</locn:FullAddress>
+        <locn:throughfare>Via Luigi Capuana</locn:throughfare>
+        <locn:locatorDesignator>89</locn:locatorDesignator>
+        <locn:postName>Catania</locn:postName>
+        <locn:adminUnitL1>IT</locn:adminUnitL1>
+      </locn:Address>
+    </locn:address>
+    <locn:geometry>
+      <locn:Geometry rdf:about="http://opendatahacklab.org/agenda-unica/location/geometry">
+        <geo:lat></geo:lat>
+        <geo:long></geo:long>
+      </locn:Geometry>
+    </locn:geometry>
+  </locn:Location>
+  <locn:Location rdf:about="http://opendatahacklab.org/agenda-unica/location/">
+    <locn:address>
+      <locn:Address rdf:about="http://opendatahacklab.org/agenda-unica/">
+        <rdf:label>17, Via Alessi, Catania, Italy</rdf:label>
+        <locn:FullAddress>17, Via Alessi, Catania, Italy</locn:FullAddress>
+        <locn:throughfare>Via Alessi</locn:throughfare>
+        <locn:locatorDesignator>17</locn:locatorDesignator>
+        <locn:postName>Catania</locn:postName>
+        <locn:adminUnitL1>IT</locn:adminUnitL1>
+      </locn:Address>
+    </locn:address>
+    <locn:geometry>
+      <locn:Geometry rdf:about="http://opendatahacklab.org/agenda-unica/location/geometry">
+        <geo:lat></geo:lat>
+        <geo:long></geo:long>
+      </locn:Geometry>
+    </locn:geometry>
+  </locn:Location>
+  <locn:Location rdf:about="http://opendatahacklab.org/agenda-unica/location/">
+    <locn:address>
+      <locn:Address rdf:about="http://opendatahacklab.org/agenda-unica/">
+        <rdf:label>25, Piazza Pietro Lupo, Catania, Italy</rdf:label>
+        <locn:FullAddress>25, Piazza Pietro Lupo, Catania, Italy</locn:FullAddress>
+        <locn:throughfare>Piazza Pietro Lupo</locn:throughfare>
+        <locn:locatorDesignator>25</locn:locatorDesignator>
+        <locn:postName>Catania</locn:postName>
+        <locn:adminUnitL1>IT</locn:adminUnitL1>
+      </locn:Address>
+    </locn:address>
+    <locn:geometry>
+      <locn:Geometry rdf:about="http://opendatahacklab.org/agenda-unica/location/geometry">
+        <geo:lat></geo:lat>
+        <geo:long></geo:long>
+      </locn:Geometry>
+    </locn:geometry>
+  </locn:Location>
+  <locn:Location rdf:about="http://opendatahacklab.org/agenda-unica/location/">
+    <locn:address>
+      <locn:Address rdf:about="http://opendatahacklab.org/agenda-unica/">
+        <rdf:label>, Via del Giaggiolo, Catania, Italy</rdf:label>
+        <locn:FullAddress>, Via del Giaggiolo, Catania, Italy</locn:FullAddress>
+        <locn:throughfare>Via del Giaggiolo</locn:throughfare>
+        <locn:locatorDesignator></locn:locatorDesignator>
+        <locn:postName>Catania</locn:postName>
+        <locn:adminUnitL1>IT</locn:adminUnitL1>
+      </locn:Address>
+    </locn:address>
+    <locn:geometry>
+      <locn:Geometry rdf:about="http://opendatahacklab.org/agenda-unica/location/geometry">
+        <geo:lat></geo:lat>
+        <geo:long></geo:long>
+      </locn:Geometry>
+    </locn:geometry>
+  </locn:Location>
+  <locn:Location rdf:about="http://opendatahacklab.org/agenda-unica/location/">
+    <locn:address>
+      <locn:Address rdf:about="http://opendatahacklab.org/agenda-unica/">
+        <rdf:label>234, Via Antonino di San Giuliano, Catania, Italy</rdf:label>
+        <locn:FullAddress>234, Via Antonino di San Giuliano, Catania, Italy</locn:FullAddress>
+        <locn:throughfare>Via Antonino di San Giuliano</locn:throughfare>
+        <locn:locatorDesignator>234</locn:locatorDesignator>
+        <locn:postName>Catania</locn:postName>
+        <locn:adminUnitL1>IT</locn:adminUnitL1>
+      </locn:Address>
+    </locn:address>
+    <locn:geometry>
+      <locn:Geometry rdf:about="http://opendatahacklab.org/agenda-unica/location/geometry">
+        <geo:lat></geo:lat>
+        <geo:long></geo:long>
+      </locn:Geometry>
+    </locn:geometry>
+  </locn:Location>
+  <locn:Location rdf:about="http://opendatahacklab.org/agenda-unica/location/">
+    <locn:address>
+      <locn:Address rdf:about="http://opendatahacklab.org/agenda-unica/">
+        <rdf:label>7, Vicolo Beritelli, Catania, Italy</rdf:label>
+        <locn:FullAddress>7, Vicolo Beritelli, Catania, Italy</locn:FullAddress>
+        <locn:throughfare>Vicolo Beritelli</locn:throughfare>
+        <locn:locatorDesignator>7</locn:locatorDesignator>
+        <locn:postName>Catania</locn:postName>
+        <locn:adminUnitL1>IT</locn:adminUnitL1>
+      </locn:Address>
+    </locn:address>
+    <locn:geometry>
+      <locn:Geometry rdf:about="http://opendatahacklab.org/agenda-unica/location/geometry">
+        <geo:lat></geo:lat>
+        <geo:long></geo:long>
+      </locn:Geometry>
+    </locn:geometry>
+  </locn:Location>
+  <locn:Location rdf:about="http://opendatahacklab.org/agenda-unica/location/">
+    <locn:address>
+      <locn:Address rdf:about="http://opendatahacklab.org/agenda-unica/">
+        <rdf:label>89, Via Campo Franco, Catania, Italy</rdf:label>
+        <locn:FullAddress>89, Via Campo Franco, Catania, Italy</locn:FullAddress>
+        <locn:throughfare>Via Campo Franco</locn:throughfare>
+        <locn:locatorDesignator>89</locn:locatorDesignator>
+        <locn:postName>Catania</locn:postName>
+        <locn:adminUnitL1>IT</locn:adminUnitL1>
+      </locn:Address>
+    </locn:address>
+    <locn:geometry>
+      <locn:Geometry rdf:about="http://opendatahacklab.org/agenda-unica/location/geometry">
+        <geo:lat></geo:lat>
+        <geo:long></geo:long>
+      </locn:Geometry>
+    </locn:geometry>
+  </locn:Location>
+  <locn:Location rdf:about="http://opendatahacklab.org/agenda-unica/location/">
+    <locn:address>
+      <locn:Address rdf:about="http://opendatahacklab.org/agenda-unica/">
+        <rdf:label>97, Corso Sicilia, Catania, Italy</rdf:label>
+        <locn:FullAddress>97, Corso Sicilia, Catania, Italy</locn:FullAddress>
+        <locn:throughfare>Corso Sicilia</locn:throughfare>
+        <locn:locatorDesignator>97</locn:locatorDesignator>
+        <locn:postName>Catania</locn:postName>
+        <locn:adminUnitL1>IT</locn:adminUnitL1>
+      </locn:Address>
+    </locn:address>
+    <locn:geometry>
+      <locn:Geometry rdf:about="http://opendatahacklab.org/agenda-unica/location/geometry">
+        <geo:lat></geo:lat>
+        <geo:long></geo:long>
+      </locn:Geometry>
+    </locn:geometry>
+  </locn:Location>
+  <locn:Location rdf:about="http://opendatahacklab.org/agenda-unica/location/">
+    <locn:address>
+      <locn:Address rdf:about="http://opendatahacklab.org/agenda-unica/">
+        <rdf:label>903, Via Plebiscito, Catania, Italy</rdf:label>
+        <locn:FullAddress>903, Via Plebiscito, Catania, Italy</locn:FullAddress>
+        <locn:throughfare>Via Plebiscito</locn:throughfare>
+        <locn:locatorDesignator>903</locn:locatorDesignator>
+        <locn:postName>Catania</locn:postName>
+        <locn:adminUnitL1>IT</locn:adminUnitL1>
+      </locn:Address>
+    </locn:address>
+    <locn:geometry>
+      <locn:Geometry rdf:about="http://opendatahacklab.org/agenda-unica/location/geometry">
+        <geo:lat></geo:lat>
+        <geo:long></geo:long>
+      </locn:Geometry>
+    </locn:geometry>
+  </locn:Location>
+  <locn:Location rdf:about="http://opendatahacklab.org/agenda-unica/location/">
+    <locn:address>
+      <locn:Address rdf:about="http://opendatahacklab.org/agenda-unica/">
+        <rdf:label>, Via del Giaggiolo, Catania, Italy</rdf:label>
+        <locn:FullAddress>, Via del Giaggiolo, Catania, Italy</locn:FullAddress>
+        <locn:throughfare>Via del Giaggiolo</locn:throughfare>
+        <locn:locatorDesignator></locn:locatorDesignator>
+        <locn:postName>Catania</locn:postName>
+        <locn:adminUnitL1>IT</locn:adminUnitL1>
+      </locn:Address>
+    </locn:address>
+    <locn:geometry>
+      <locn:Geometry rdf:about="http://opendatahacklab.org/agenda-unica/location/geometry">
+        <geo:lat></geo:lat>
+        <geo:long></geo:long>
+      </locn:Geometry>
+    </locn:geometry>
+  </locn:Location>
+  <locn:Location rdf:about="http://opendatahacklab.org/agenda-unica/location/">
+    <locn:address>
+      <locn:Address rdf:about="http://opendatahacklab.org/agenda-unica/">
+        <rdf:label>56, Via Grotte Bianche, Catania, Italy</rdf:label>
+        <locn:FullAddress>56, Via Grotte Bianche, Catania, Italy</locn:FullAddress>
+        <locn:throughfare>Via Grotte Bianche</locn:throughfare>
+        <locn:locatorDesignator>56</locn:locatorDesignator>
+        <locn:postName>Catania</locn:postName>
+        <locn:adminUnitL1>IT</locn:adminUnitL1>
+      </locn:Address>
+    </locn:address>
+    <locn:geometry>
+      <locn:Geometry rdf:about="http://opendatahacklab.org/agenda-unica/location/geometry">
+        <geo:lat></geo:lat>
+        <geo:long></geo:long>
+      </locn:Geometry>
+    </locn:geometry>
+  </locn:Location>
+  <locn:Location rdf:about="http://opendatahacklab.org/agenda-unica/location/">
+    <locn:address>
+      <locn:Address rdf:about="http://opendatahacklab.org/agenda-unica/">
+        <rdf:label>6, Via Pietro Antonio Coppola, Catania, Italy</rdf:label>
+        <locn:FullAddress>6, Via Pietro Antonio Coppola, Catania, Italy</locn:FullAddress>
+        <locn:throughfare>Via Pietro Antonio Coppola</locn:throughfare>
+        <locn:locatorDesignator>6</locn:locatorDesignator>
+        <locn:postName>Catania</locn:postName>
+        <locn:adminUnitL1>IT</locn:adminUnitL1>
+      </locn:Address>
+    </locn:address>
+    <locn:geometry>
+      <locn:Geometry rdf:about="http://opendatahacklab.org/agenda-unica/location/geometry">
+        <geo:lat></geo:lat>
+        <geo:long></geo:long>
+      </locn:Geometry>
+    </locn:geometry>
+  </locn:Location>
+  <locn:Location rdf:about="http://opendatahacklab.org/agenda-unica/location/">
+    <locn:address>
+      <locn:Address rdf:about="http://opendatahacklab.org/agenda-unica/">
+        <rdf:label>, Via Etnea, Catania, Italy</rdf:label>
+        <locn:FullAddress>, Via Etnea, Catania, Italy</locn:FullAddress>
+        <locn:throughfare>Via Etnea</locn:throughfare>
+        <locn:locatorDesignator></locn:locatorDesignator>
+        <locn:postName>Catania</locn:postName>
+        <locn:adminUnitL1>IT</locn:adminUnitL1>
+      </locn:Address>
+    </locn:address>
+    <locn:geometry>
+      <locn:Geometry rdf:about="http://opendatahacklab.org/agenda-unica/location/geometry">
+        <geo:lat></geo:lat>
+        <geo:long></geo:long>
+      </locn:Geometry>
+    </locn:geometry>
+  </locn:Location>
+  <locn:Location rdf:about="http://opendatahacklab.org/agenda-unica/location/">
+    <locn:address>
+      <locn:Address rdf:about="http://opendatahacklab.org/agenda-unica/">
+        <rdf:label>92, Piazza Federico di Svevia, Catania, Italy</rdf:label>
+        <locn:FullAddress>92, Piazza Federico di Svevia, Catania, Italy</locn:FullAddress>
+        <locn:throughfare>Piazza Federico di Svevia</locn:throughfare>
+        <locn:locatorDesignator>92</locn:locatorDesignator>
+        <locn:postName>Catania</locn:postName>
+        <locn:adminUnitL1>IT</locn:adminUnitL1>
+      </locn:Address>
+    </locn:address>
+    <locn:geometry>
+      <locn:Geometry rdf:about="http://opendatahacklab.org/agenda-unica/location/geometry">
+        <geo:lat></geo:lat>
+        <geo:long></geo:long>
+      </locn:Geometry>
+    </locn:geometry>
+  </locn:Location>
+</rdf:RDF>

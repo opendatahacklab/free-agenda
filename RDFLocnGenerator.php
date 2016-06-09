@@ -21,68 +21,67 @@
  * @author Michele Maresca
  */
 
+/**
+ * Define the output file
+ *
+ * @author Michele Maresca
+ *        
+ */
+if (basename ( __FILE__ ) == basename ( $argv [0] ))
+	define ( 'XML_FILE', 'demo.xml' );
 
 /**
-*  Define the output file
-*
-*  @author Michele Maresca
-*/
+ * Define rdf:label
+ *
+ * @author Michele Maresca
+ *        
+ */
 
-if(basename(__FILE__) == basename($argv[0]))
-	define('XML_FILE', 'demo.xml');
-
-
+define ( 'LABEL', 'rdf:label' );
 
 /**
-*  Define rdf:label
-*
-*  @author Michele Maresca
-*/
+ * Define RDF attribute rdf:About
+ *
+ * @author Michele Maresca
+ *        
+ */
 
-define('LABEL', 'rdf:label');
-
-/**
-*  Define RDF attribute rdf:About
-*
-*  @author Michele Maresca
-*/
-
-define('RDF_ATTRIBUTE', 'rdf:about');
+define ( 'RDF_ATTRIBUTE', 'rdf:about' );
 
 /**
-*  Define adminUnitL1 value
-*
-*  @author Michele Maresca
-*/
+ * Define adminUnitL1 value
+ *
+ * @author Michele Maresca
+ *        
+ */
 
-define('ADMIN_UNIT', 'IT');
+define ( 'ADMIN_UNIT', 'IT' );
 
 /**
  * Basic representation of a Location
  *
  * @author Michele Maresca
  */
-
-class Location
-{
+class Location {
 	public $name;
 	public $city;
 	public $address;
 	public $houseNumber;
 	public $lat;
 	public $long;
-
+	
 	/**
-	 * @param String $name not null, used to identify the location
-	 * @param String $city
-	 * @param String $address
-	 * @param String $houseNumber
-	 * @param double $lat
-	 * @param double $long
+	 *
+	 * @param String $name
+	 *        	not null, used to identify the location
+	 * @param String $city        	
+	 * @param String $address        	
+	 * @param String $houseNumber        	
+	 * @param double $lat        	
+	 * @param double $long        	
 	 */
-	public function __construct($name, $city, $address, $houseNumber, $lat, $long)
-	{
-		$this->name=$name;
+	public function __construct($name, $city, $address, $houseNumber, $lat, $long) {
+		$this->name = $name;
 		$this->city = $city;
 		$this->address = $address;
 		$this->houseNumber = $houseNumber;
@@ -93,115 +92,118 @@ class Location
 
 /**
  * Create a Locn RDFnode
- *  
+ *
  * @author Michele Maresca
  */
-
-class RDFLocnGenerator
-{
+class RDFLocnGenerator {
 	private $location;
-	
-	public function __construct($location)
-	{
+	public function __construct($location) {
 		$this->location = $location;
 	}
-
-	public function generateLocation($xml, $rdfParent, $uri)
-	{
-//Create RDF Node for location
-		$locnRDF = $xml->createElement("locn:Location");
-		$locnRDFAttribute = $xml->createAttribute(RDF_ATTRIBUTE);
-		$locnRDFAttribute->value = $uri."location/";
-		$locnRDF->appendChild($locnRDFAttribute);
-
-//Create NODE locn:address
-		$parentLocnAddress = $xml->createElement("locn:address");
-//Create NODE locn:Address		
-		$locnAddress = $xml->createElement("locn:Address");
-		$locnAddressAttribute = $xml->createAttribute(RDF_ATTRIBUTE);
+	public function generateLocation($xml, $rdfParent, $uri) {
+		// Create RDF Node for location
+		$locnRDF = $xml->createElement ( "locn:Location" );
+		$locnRDFAttribute = $xml->createAttribute ( RDF_ATTRIBUTE );
+		$locnRDFAttribute->value = $uri . "location/";
+		$locnRDF->appendChild ( $locnRDFAttribute );
+		
+		// Create NODE locn:address
+		$parentLocnAddress = $xml->createElement ( "locn:address" );
+		// Create NODE locn:Address
+		$locnAddress = $xml->createElement ( "locn:Address" );
+		$locnAddressAttribute = $xml->createAttribute ( RDF_ATTRIBUTE );
 		$locnAddressAttribute->value = $uri;
-		$locnAddress->appendChild($locnAddressAttribute);
-
-//Create node rdf:label
-		$rdfLabel = $xml->createElement(LABEL);		
-		$rdfLabel->appendChild($xml->createTextNode($this->formatLabel()));
-//Create node locn:fullAddress
-		$fullAddress = $xml->createElement("locn:FullAddress");
-		$fullAddress->appendChild($xml->createTextNode($this->formatLabel()));
-
-//Create node locn:throughfare
-		$locnThroughfare = $xml->createElement("locn:throughfare");
-		$locnThroughfare->appendChild($xml->createTextNode($this->location->address));
-
-//Create node locn:locatorDesignator
-		$locnDesignator = $xml->createElement("locn:locatorDesignator");
-		$locnDesignator->appendChild($xml->createTextNode($this->location->houseNumber));
-
-//Create node locn:locatorPostname
-		$locnPostName = $xml->createElement("locn:postName");
-		$locnPostName->appendChild($xml->createTextNode($this->location->city));
-
-//Create node locn:adminUnitL1
-		$locnAdminUnitL1 = $xml->createElement("locn:adminUnitL1");
-		$locnAdminUnitL1->appendChild($xml->createTextNode(ADMIN_UNIT));
-
-//Insert node in locn:Address
-		$locnAddress->appendChild($rdfLabel);
-		$locnAddress->appendChild($fullAddress);
-		$locnAddress->appendChild($locnThroughfare);
-		$locnAddress->appendChild($locnDesignator);
-		$locnAddress->appendChild($locnPostName );
-		$locnAddress->appendChild($locnAdminUnitL1);
-
-		$parentLocnAddress->appendChild($locnAddress);
-
-//Create locn:geometry
-		$parentGeometry= $xml->createElement("locn:geometry");
+		$locnAddress->appendChild ( $locnAddressAttribute );
 		
-//Create NODE locn:Geometry		
-		$geoLocnGeometry = $xml->createElement("locn:Geometry");
-		$geoAttribute = $xml->createAttribute(RDF_ATTRIBUTE);
-		$geoAttribute->value = $uri."location/geometry";
-		$geoLocnGeometry->appendChild($geoAttribute);
-
-//Create node geo:lat
-		$geoLat = $xml->createElement("geo:lat");
-		$geoLat->appendChild($xml->createTextNode($this->location->lat));
-
-//Create node geo:long
-		$geoLong = $xml->createElement("geo:long");
-		$geoLong->appendChild($xml->createTextNode($this->location->long));
-
-		$geoLocnGeometry->appendChild($geoLat);
-		$geoLocnGeometry->appendChild($geoLong);
-		$parentGeometry->appendChild($geoLocnGeometry);
-
-		$locnRDF->appendChild($parentLocnAddress);
-		$locnRDF->appendChild($parentGeometry);
+		// Create node rdf:label
+		$rdfLabel = $xml->createElement ( LABEL );
+		$rdfLabel->appendChild ( $xml->createTextNode ( $this->formatLabel () ) );
+		// Create node locn:fullAddress
+		$fullAddress = $xml->createElement ( "locn:FullAddress" );
+		$fullAddress->appendChild ( $xml->createTextNode ( $this->formatLabel () ) );
 		
-		$rdfParent->appendChild($locnRDF);
+		// Create node locn:throughfare
+		$locnThroughfare = $xml->createElement ( "locn:throughfare" );
+		$locnThroughfare->appendChild ( $xml->createTextNode ( $this->location->address ) );
+		
+		// Create node locn:locatorDesignator
+		$locnDesignator = $xml->createElement ( "locn:locatorDesignator" );
+		$locnDesignator->appendChild ( $xml->createTextNode ( $this->location->houseNumber ) );
+		
+		// Create node locn:locatorPostname
+		$locnPostName = $xml->createElement ( "locn:postName" );
+		$locnPostName->appendChild ( $xml->createTextNode ( $this->location->city ) );
+		
+		// Create node locn:adminUnitL1
+		$locnAdminUnitL1 = $xml->createElement ( "locn:adminUnitL1" );
+		$locnAdminUnitL1->appendChild ( $xml->createTextNode ( ADMIN_UNIT ) );
+		
+		// Insert node in locn:Address
+		$locnAddress->appendChild ( $rdfLabel );
+		$locnAddress->appendChild ( $fullAddress );
+		$locnAddress->appendChild ( $locnThroughfare );
+		$locnAddress->appendChild ( $locnDesignator );
+		$locnAddress->appendChild ( $locnPostName );
+		$locnAddress->appendChild ( $locnAdminUnitL1 );
+		
+		$parentLocnAddress->appendChild ( $locnAddress );
+		
+		// Create locn:geometry
+		$parentGeometry = $xml->createElement ( "locn:geometry" );
+		
+		// Create NODE locn:Geometry
+		$geoLocnGeometry = $xml->createElement ( "locn:Geometry" );
+		$geoAttribute = $xml->createAttribute ( RDF_ATTRIBUTE );
+		$geoAttribute->value = $uri . "location/geometry";
+		$geoLocnGeometry->appendChild ( $geoAttribute );
+		
+		// Create node geo:lat
+		$geoLat = $xml->createElement ( "geo:lat" );
+		$geoLat->appendChild ( $xml->createTextNode ( $this->location->lat ) );
+		
+		// Create node geo:long
+		$geoLong = $xml->createElement ( "geo:long" );
+		$geoLong->appendChild ( $xml->createTextNode ( $this->location->long ) );
+		
+		$geoLocnGeometry->appendChild ( $geoLat );
+		$geoLocnGeometry->appendChild ( $geoLong );
+		$parentGeometry->appendChild ( $geoLocnGeometry );
+		
+		$locnRDF->appendChild ( $parentLocnAddress );
+		$locnRDF->appendChild ( $parentGeometry );
+		
+		$rdfParent->appendChild ( $locnRDF );
 	}
-
+	
 	/**
 	 * Get the namespaces which are expected to be set (aside with respective
-	 * abbreviation prefixes) in the destination ontology. excluding the default ones
+	 * abbreviation prefixes) in the destination ontology.
+	 * excluding the default ones
 	 * rdf, rdfs and owl-
 	 *
 	 * @return a map prefix -> namespace
 	 */
-	public static function getRequiredNamespaces(){
-		return  array('geo'=>'http://www.w3.org/2003/01/geo/wgs84_pos#',
-     		'locn'=>'http://www.w3.org/ns/locn#');
+	public static function getRequiredNamespaces() {
+		return array (
+				'geo' => 'http://www.w3.org/2003/01/geo/wgs84_pos#',
+				'locn' => 'http://www.w3.org/ns/locn#' 
+		);
 	}
 	
-	public static function getLocationURI($prefix, $name)
-	{
-		return (string) $prefix.urlencode($name);
+	/**
+	 * Get the set of vocabulary iris to be imported in the target ontology
+	 */
+	public static function getRequiredVocabularies() {
+		return array (
+				'http://www.w3.org/ns/locn',
+				'https://www.w3.org/2003/01/geo/wgs84_pos' 
+		);
 	}
-
-	private function formatLabel()
-	{
-		return (string)($this->location->houseNumber.", ".$this->location->address.", ".$this->location->city.", Italy");
+	public static function getLocationURI($prefix, $name) {
+		return ( string ) $prefix . urlencode ( $name );
+	}
+	private function formatLabel() {
+		return ( string ) ($this->location->houseNumber . ", " . $this->location->address . ", " . $this->location->city . ", Italy");
 	}
 }
 

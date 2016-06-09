@@ -128,6 +128,13 @@ class RDFEventsGenerator
 		);		
 	}
 	
+	/**
+	 * Get the set of vocabulary iris to be imported in the target ontology
+	 */
+	public static function getRequiredVocabularies(){
+		return array('http://motools.sf.net/event/event.n3');
+	}
+	
 	public function generateEvent($xml, $rdfParent, $uri)
 	{
 //Contain the event URI
@@ -138,7 +145,7 @@ class RDFEventsGenerator
 		$eventAttribute = $xml->createAttribute(RDF_ATTRIBUTE);
 		$eventRDF->appendChild($eventAttribute);
 
-		$eventName = $xml->createElement("rdfs:Label");
+		$eventName = $xml->createElement("rdfs:label");
 
 		$eventTime = $xml->createElement("event:time");
 		$timeInterval = $xml->createElement("time:Interval");
