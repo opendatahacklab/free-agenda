@@ -119,7 +119,7 @@ class RDFLocnGenerator {
 		$rdfLabel = $xml->createElement ( LABEL );
 		$rdfLabel->appendChild ( $xml->createTextNode ( $this->formatLabel () ) );
 		// Create node locn:fullAddress
-		$fullAddress = $xml->createElement ( "locn:FullAddress" );
+		$fullAddress = $xml->createElement ( "locn:fullAddress" );
 		$fullAddress->appendChild ( $xml->createTextNode ( $this->formatLabel () ) );
 		
 		// Create node locn:throughfare
