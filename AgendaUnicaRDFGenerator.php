@@ -32,6 +32,13 @@ $ontology->addNamespaces(RDFLocnGenerator::getRequiredNamespaces());
 $ontology->addImports(RDFEventsGenerator::getRequiredVocabularies());
 $ontology->addImports(RDFLocnGenerator::getRequiredVocabularies());
 
+//additional semantics which provide bindings between vocabularies
+
+$ontology->addSubPropertyAxiom('org:hasSite', 'locn:location');
+$ontology->addSubPropertyAxiom('org:siteAddress', 'locn:address');
+$ontology->addSubPropertyAxiom('http://purl.org/NET/c4dm/event.owl#place', 'http://www.w3.org/ns/locn#location');
+
+
 $agendaParser = new AgendaSheetParser();
 foreach ($agendaParser as $event){
 	if ($event->start!=null)

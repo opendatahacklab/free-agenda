@@ -7,23 +7,34 @@
 
 #title, #maintitle{
 
- font-weight : normal;
+ font-weight : bold;
  color : white;
 }
 
 .back{
-	
 	margin-left: 1em;
 }
 #linkol{
 	color : white;
 }
 
-table, th , td {
-  border: 2px solid #c0c0c0;
-  border-collapse: collapse;
-  padding : 1em;
-  
+table{
+	margin-left : 10%;
+	margin-right : 10%;
+	border:none;
+    border-collapse: collapse;
+}
+
+th , td {
+  border-bottom: 1px solid #cccccc;
+  padding : 1em;  
+}
+
+td.date, td.time{
+	padding-right : 0;
+	font-family: Courier, monospace;
+	font-weight: bold;
+	color : #707070;
 }
 
 #eventdetail{
@@ -31,13 +42,10 @@ table, th , td {
 margin-left : 1em;	
 }
 
-table{
-	min-width : 70%;
-margin-left : 15%;
-}
 
 body{
 font-family : verdana,sans-serif;
 margin: 0;
 padding: 0;
 }
+

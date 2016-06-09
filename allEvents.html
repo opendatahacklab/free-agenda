@@ -3,105 +3,108 @@
 <head>
 <meta charset="utf-8">
 <title></title>
-<script type="text/javascript" src="http://opendatahacklab.org/sparql_suite/sparql_processor.js"></script>
-<script type="text/javascript" src="http://opendatahacklab.org/sparql_suite/event_sparql_processor.js"></script>
+<script type="text/javascript"
+	src="http://opendatahacklab.org/sparql_suite/sparql_processor.js"></script>
+<script type="text/javascript"
+	src="http://opendatahacklab.org/sparql_suite/event_sparql_processor.js"></script>
 <link rel="stylesheet" type="text/css" href="mystyle.css">
 </head>
 
 <body>
-<header class="main-header">
-<h1 id="title">Agenda Unica del Movimento Catanese</h1>
-<p>Inserire qui una breve descrizione</p>
-</header>
+	<header class="main-header">
+		<h1 id="title">Agenda Unica del Movimento Catanese</h1>
+		<p>Inserire qui una breve descrizione</p>
+	</header>
 
- <table  id="events">
- </table>
- 
- <section>
-  <h2>Credits</h2>
-  
-  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Loupe.svg/58px-Loupe.svg.png"> by <a href="https://commons.wikimedia.org/wiki/Magnifying_glass">Wikimedia commons</a> 
-  </section>
-  
-<script type="text/javascript">
-var container = document.getElementById("events");
-var processEventFunction = function(event, isNext){	
-	
-	function insertZero(x){
-		 
-		 if(x == "0" || x == "1" || x == "2" || x == "3" || x == "4" || x == "5" || x == "6" || x == "7" || x == "8" || x == "9"){
-				x = "0" + x;
+	<table id="events">
+	</table>
+
+	<section>
+		<h2>Credits</h2>
+
+		<img
+			src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Loupe.svg/58px-Loupe.svg.png">
+		by <a href="https://commons.wikimedia.org/wiki/Magnifying_glass">Wikimedia
+			commons</a>
+	</section>
+
+	<script type="text/javascript">
+		var container = document.getElementById("events");
+		var processEventFunction = function(event, isNext) {
+
+			function insertZero(x) {
+
+				if (x == "0" || x == "1" || x == "2" || x == "3" || x == "4"
+						|| x == "5" || x == "6" || x == "7" || x == "8"
+						|| x == "9") {
+					x = "0" + x;
+				}
+				return x;
 			}
-		 return x;
-	};
+			;
 
-	
+			var trevents = document.createElement("tr");
+			container.appendChild(trevents);
 
+			var tdData = document.createElement("td");
+			var data = new Date(event.timeStart);
+			var giorno = data.getDate();
+			giorno = insertZero(giorno);
+			var mese = data.getMonth();
+			mese = insertZero(mese);
+			var stringaData = document.createTextNode(giorno + "/" + mese + "/"
+					+ data.getFullYear());
+			tdData.appendChild(stringaData);
+			tdData.setAttribute('class', 'date');
+			trevents.appendChild(tdData);
 
-	var trevents = document.createElement("tr");
-	container.appendChild(trevents);
-	
-	var tdData = document.createElement("td");
-	var data = new Date(event.timeStart);
-	var giorno = data.getDate();
-	giorno = insertZero(giorno);
-	var mese = data.getMonth();
-	mese = insertZero(mese);
-	var stringaData=document.createTextNode(giorno  + "/" + mese + "/" + data.getFullYear());
-	tdData.appendChild(stringaData);
-	trevents.appendChild(tdData);
-	
-	var tdOra = document.createElement("td");
-	var data = new Date(event.timeStart);
-	var minuti = data.getMinutes();
-    minuti = insertZero(minuti);
-	var ore = data.getHours();
-	ore = insertZero(ore);
-	var ora=document.createTextNode( ore + ":" + minuti);
-	tdOra.appendChild(ora);
-	trevents.appendChild(tdOra);
-	
-	var tdTitolo = document.createElement("td");
-	var tdTestoTitolo = document.createTextNode(event.eventName);
-	tdTitolo.appendChild(tdTestoTitolo);
-	trevents.appendChild(tdTitolo);
-	
-	var tdLink = document.createElement("td");
-	var a = document.createElement("a");
-	a.href="eventdetails.html?iri="+encodeURIComponent(event.URI);
-	var lente = document.createElement("img");
-	lente.src ="https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Loupe.svg/58px-Loupe.svg.png";
-	lente.style.height = "1em";
-	a.appendChild(lente);
-	tdLink.appendChild(a);
-	trevents.appendChild(tdLink);
-	
-	
+			var tdOra = document.createElement("td");
+			var data = new Date(event.timeStart);
+			var minuti = data.getMinutes();
+			minuti = insertZero(minuti);
+			var ore = data.getHours();
+			ore = insertZero(ore);
+			var ora = document.createTextNode(ore + ":" + minuti);
+			tdOra.appendChild(ora);
+			tdOra.setAttribute('class', 'time');
+			trevents.appendChild(tdOra);
 
-};
+			var tdTitolo = document.createElement("td");
+			var tdTestoTitolo = document.createTextNode(event.eventName);
+			tdTitolo.appendChild(tdTestoTitolo);
+			trevents.appendChild(tdTitolo);
 
+			var tdLink = document.createElement("td");
+			var a = document.createElement("a");
+			a.href = "eventdetails.html?iri=" + encodeURIComponent(event.URI);
+			var lente = document.createElement("img");
+			lente.src = "https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Loupe.svg/58px-Loupe.svg.png";
+			lente.style.height = "1em";
+			a.appendChild(lente);
+			tdLink.appendChild(a);
+			trevents.appendChild(tdLink);
 
+		};
 
-function EventProcessor(){
-	this.processPast = function(event){
-		processEventFunction(event, false);
-	};
-	this.processNext = function(event){
-		processEventFunction(event, true);
-	};
-	this.processFuture = function(event){
-		processEventFunction(event, false);
-	};
-	this.flush = function(){ 
-	};
+		function EventProcessor() {
+			this.processPast = function(event) {
+				processEventFunction(event, false);
+			};
+			this.processNext = function(event) {
+				processEventFunction(event, true);
+			};
+			this.processFuture = function(event) {
+				processEventFunction(event, false);
+			};
+			this.flush = function() {
+			};
 
+		}
 
-}
+		var p = new EventQueryProcessor(new EventProcessor(), new Date());
 
-
-var p = new EventQueryProcessor(new EventProcessor(), new Date());
-
-sparql_query("http://dydra.com/cristianolongo/agenda-unica-ct/sparql", p);
+		sparql_query("http://dydra.com/cristianolongo/agenda-unica-ct/sparql",
+				p);
 	</script>
 </body>
 </html>

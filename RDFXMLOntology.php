@@ -77,10 +77,26 @@ class RDFXMLOntology{
 	 */
 	public function addImports($importIris){
 		foreach($importIris as $iri){
-			$importStm=$this->xmlDocument->createElement("owl:imports");
-			$importStm->setAttribute("rdf:resource", $iri);
+			$importStm=$this->xmlDocument->createElement('owl:imports');
+			$importStm->setAttribute('rdf:resource', $iri);
 			$this->ontologyElement->appendChild($importStm);
 		}
+	}
+	
+	/**
+	 * Add an axiom stating that $p1 is a subproperty of $p2
+	 * 
+	 * @param unknown $p1 iri of property p1
+	 * @param unknown $p2 iri of property p2
+	 */
+	public function addSubPropertyAxiom($p1, $p2){
+		$p1Element=$this->xmlDocument->createElement('rdf:Description');
+		$this->xmlDocument->documentElement->appendChild($p1Element);
+		$p1Element->setAttribute('rdf:about', $p1);
+		
+		$subPropertyElement=$this->xmlDocument->createElement('rdfs:subPropertyOf');
+		$p1Element->appendChild($subPropertyElement);
+		$subPropertyElement->setAttribute('rdf:resource',$p2);
 	}
 	
 	/**

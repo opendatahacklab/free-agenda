@@ -79,7 +79,7 @@ class RDFLocnGenerator {
 		// Create RDF Node for location
 		$locnRDF = $xml->createElement ( "locn:Location" );
 		$locnRDFAttribute = $xml->createAttribute ( 'rdf:about' );
-		$locnRDFAttribute->value = $uri . "/location";
+		$locnRDFAttribute->value = $uri;
 		$locnRDF->appendChild ( $locnRDFAttribute );
 		
 		// Create NODE locn:address
