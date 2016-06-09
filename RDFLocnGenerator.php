@@ -22,39 +22,11 @@
  */
 
 /**
- * Define the output file
- *
- * @author Michele Maresca
- *        
- */
-if (basename ( __FILE__ ) == basename ( $argv [0] ))
-	define ( 'XML_FILE', 'demo.xml' );
-
-/**
- * Define rdf:label
- *
- * @author Michele Maresca
- *        
- */
-
-define ( 'LABEL', 'rdf:label' );
-
-/**
- * Define RDF attribute rdf:About
- *
- * @author Michele Maresca
- *        
- */
-
-define ( 'RDF_ATTRIBUTE', 'rdf:about' );
-
-/**
  * Define adminUnitL1 value
  *
  * @author Michele Maresca
  *        
  */
-
 define ( 'ADMIN_UNIT', 'IT' );
 
 /**
@@ -103,7 +75,7 @@ class RDFLocnGenerator {
 	public function generateLocation($xml, $rdfParent, $uri) {
 		// Create RDF Node for location
 		$locnRDF = $xml->createElement ( "locn:Location" );
-		$locnRDFAttribute = $xml->createAttribute ( RDF_ATTRIBUTE );
+		$locnRDFAttribute = $xml->createAttribute ( 'rdf:about' );
 		$locnRDFAttribute->value = $uri . "location/";
 		$locnRDF->appendChild ( $locnRDFAttribute );
 		
@@ -111,12 +83,12 @@ class RDFLocnGenerator {
 		$parentLocnAddress = $xml->createElement ( "locn:address" );
 		// Create NODE locn:Address
 		$locnAddress = $xml->createElement ( "locn:Address" );
-		$locnAddressAttribute = $xml->createAttribute ( RDF_ATTRIBUTE );
+		$locnAddressAttribute = $xml->createAttribute ( 'rdf:about' );
 		$locnAddressAttribute->value = $uri;
 		$locnAddress->appendChild ( $locnAddressAttribute );
 		
 		// Create node rdf:label
-		$rdfLabel = $xml->createElement ( LABEL );
+		$rdfLabel = $xml->createElement ( "rdf:label" );
 		$rdfLabel->appendChild ( $xml->createTextNode ( $this->formatLabel () ) );
 		// Create node locn:fullAddress
 		$fullAddress = $xml->createElement ( "locn:fullAddress" );
@@ -149,28 +121,29 @@ class RDFLocnGenerator {
 		$parentLocnAddress->appendChild ( $locnAddress );
 		
 		// Create locn:geometry
-		$parentGeometry = $xml->createElement ( "locn:geometry" );
-		
-		// Create NODE locn:Geometry
-		$geoLocnGeometry = $xml->createElement ( "locn:Geometry" );
-		$geoAttribute = $xml->createAttribute ( RDF_ATTRIBUTE );
-		$geoAttribute->value = $uri . "location/geometry";
-		$geoLocnGeometry->appendChild ( $geoAttribute );
-		
-		// Create node geo:lat
-		$geoLat = $xml->createElement ( "geo:lat" );
-		$geoLat->appendChild ( $xml->createTextNode ( $this->location->lat ) );
-		
-		// Create node geo:long
-		$geoLong = $xml->createElement ( "geo:long" );
-		$geoLong->appendChild ( $xml->createTextNode ( $this->location->long ) );
-		
-		$geoLocnGeometry->appendChild ( $geoLat );
-		$geoLocnGeometry->appendChild ( $geoLong );
-		$parentGeometry->appendChild ( $geoLocnGeometry );
-		
+		if (isset ( $this->location->lat ) && strlen ( $this->location->lat ) > 0 && isset ( $this->location->long ) && strlen ( $this->location->long ) > 0) {
+			$parentGeometry = $xml->createElement ( "locn:geometry" );
+			
+			// Create NODE locn:Geometry
+			$geoLocnGeometry = $xml->createElement ( "locn:Geometry" );
+			$geoAttribute = $xml->createAttribute ( "rdf:about" );
+			$geoAttribute->value = $uri . "location/geometry";
+			$geoLocnGeometry->appendChild ( $geoAttribute );
+			
+			// Create node geo:lat
+			$geoLat = $xml->createElement ( "geo:lat" );
+			$geoLat->appendChild ( $xml->createTextNode ( $this->location->lat ) );
+			
+			// Create node geo:long
+			$geoLong = $xml->createElement ( "geo:long" );
+			$geoLong->appendChild ( $xml->createTextNode ( $this->location->long ) );
+			
+			$geoLocnGeometry->appendChild ( $geoLat );
+			$geoLocnGeometry->appendChild ( $geoLong );
+			$parentGeometry->appendChild ( $geoLocnGeometry );
+			$locnRDF->appendChild ( $parentGeometry );
+		}
 		$locnRDF->appendChild ( $parentLocnAddress );
-		$locnRDF->appendChild ( $parentGeometry );
 		
 		$rdfParent->appendChild ( $locnRDF );
 	}

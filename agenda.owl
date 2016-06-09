@@ -32,6 +32,34 @@
     </event:time>
     <rdfs:label>Riunione Agenda Unica</rdfs:label>
   </event:Event>
+  <event:Event rdf:about="http://opendatahacklab.org/agenda-unica//INIZIO+MESE+DI+GIUGNO/">
+    <event:time>
+      <time:Interval rdf:about="http://opendatahacklab.org/agenda-unica//INIZIO+MESE+DI+GIUGNO/time">
+        <time:hasBeginning>
+          <time:Instant rdf:about="http://opendatahacklab.org/agenda-unica//INIZIO+MESE+DI+GIUGNO/time/begin">
+            <time:inXSDDateTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">
+              <!--Data non valida!-->
+            </time:inXSDDateTime>
+          </time:Instant>
+        </time:hasBeginning>
+      </time:Interval>
+    </event:time>
+    <rdfs:label>INIZIO MESE DI GIUGNO</rdfs:label>
+  </event:Event>
+  <event:Event rdf:about="http://opendatahacklab.org/agenda-unica//FINE+MESE+DI+MAGGIO/">
+    <event:time>
+      <time:Interval rdf:about="http://opendatahacklab.org/agenda-unica//FINE+MESE+DI+MAGGIO/time">
+        <time:hasBeginning>
+          <time:Instant rdf:about="http://opendatahacklab.org/agenda-unica//FINE+MESE+DI+MAGGIO/time/begin">
+            <time:inXSDDateTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">
+              <!--Data non valida!-->
+            </time:inXSDDateTime>
+          </time:Instant>
+        </time:hasBeginning>
+      </time:Interval>
+    </event:time>
+    <rdfs:label>FINE MESE DI MAGGIO</rdfs:label>
+  </event:Event>
   <event:Event rdf:about="http://opendatahacklab.org/agenda-unica/20160528/Presentazione+del+libro+di+Domenico+MOro+%22Globalizzazione+e+decadenza+industriale%22/">
     <event:place rdf:resource="http://opendatahacklab.org/agenda-unica/Circolo+Rosa+Luxemburg"/>
     <event:time>
@@ -160,6 +188,34 @@
       </time:Interval>
     </event:time>
     <rdfs:label>Primavera Referendaria</rdfs:label>
+  </event:Event>
+  <event:Event rdf:about="http://opendatahacklab.org/agenda-unica//INIZIO+MESE+DI+MAGGIO/">
+    <event:time>
+      <time:Interval rdf:about="http://opendatahacklab.org/agenda-unica//INIZIO+MESE+DI+MAGGIO/time">
+        <time:hasBeginning>
+          <time:Instant rdf:about="http://opendatahacklab.org/agenda-unica//INIZIO+MESE+DI+MAGGIO/time/begin">
+            <time:inXSDDateTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">
+              <!--Data non valida!-->
+            </time:inXSDDateTime>
+          </time:Instant>
+        </time:hasBeginning>
+      </time:Interval>
+    </event:time>
+    <rdfs:label>INIZIO MESE DI MAGGIO</rdfs:label>
+  </event:Event>
+  <event:Event rdf:about="http://opendatahacklab.org/agenda-unica//APRILE/">
+    <event:time>
+      <time:Interval rdf:about="http://opendatahacklab.org/agenda-unica//APRILE/time">
+        <time:hasBeginning>
+          <time:Instant rdf:about="http://opendatahacklab.org/agenda-unica//APRILE/time/begin">
+            <time:inXSDDateTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">
+              <!--Data non valida!-->
+            </time:inXSDDateTime>
+          </time:Instant>
+        </time:hasBeginning>
+      </time:Interval>
+    </event:time>
+    <rdfs:label>APRILE</rdfs:label>
   </event:Event>
   <event:Event rdf:about="http://opendatahacklab.org/agenda-unica/20160427/Vivere+la+storia+di%5Cattraverso%5Ccon+Tina+Modotti%3A+una+storia+rivoluzionaria/">
     <event:place rdf:resource="http://opendatahacklab.org/agenda-unica/Sala+Cento+Fiori"/>
@@ -359,252 +415,168 @@
     <locn:address>
       <locn:Address rdf:about="http://opendatahacklab.org/agenda-unica/">
         <rdf:label>89, Via Luigi Capuana, Catania, Italy</rdf:label>
-        <locn:FullAddress>89, Via Luigi Capuana, Catania, Italy</locn:FullAddress>
+        <locn:fullAddress>89, Via Luigi Capuana, Catania, Italy</locn:fullAddress>
         <locn:throughfare>Via Luigi Capuana</locn:throughfare>
         <locn:locatorDesignator>89</locn:locatorDesignator>
         <locn:postName>Catania</locn:postName>
         <locn:adminUnitL1>IT</locn:adminUnitL1>
       </locn:Address>
     </locn:address>
-    <locn:geometry>
-      <locn:Geometry rdf:about="http://opendatahacklab.org/agenda-unica/location/geometry">
-        <geo:lat></geo:lat>
-        <geo:long></geo:long>
-      </locn:Geometry>
-    </locn:geometry>
   </locn:Location>
   <locn:Location rdf:about="http://opendatahacklab.org/agenda-unica/location/">
     <locn:address>
       <locn:Address rdf:about="http://opendatahacklab.org/agenda-unica/">
         <rdf:label>17, Via Alessi, Catania, Italy</rdf:label>
-        <locn:FullAddress>17, Via Alessi, Catania, Italy</locn:FullAddress>
+        <locn:fullAddress>17, Via Alessi, Catania, Italy</locn:fullAddress>
         <locn:throughfare>Via Alessi</locn:throughfare>
         <locn:locatorDesignator>17</locn:locatorDesignator>
         <locn:postName>Catania</locn:postName>
         <locn:adminUnitL1>IT</locn:adminUnitL1>
       </locn:Address>
     </locn:address>
-    <locn:geometry>
-      <locn:Geometry rdf:about="http://opendatahacklab.org/agenda-unica/location/geometry">
-        <geo:lat></geo:lat>
-        <geo:long></geo:long>
-      </locn:Geometry>
-    </locn:geometry>
   </locn:Location>
   <locn:Location rdf:about="http://opendatahacklab.org/agenda-unica/location/">
     <locn:address>
       <locn:Address rdf:about="http://opendatahacklab.org/agenda-unica/">
         <rdf:label>25, Piazza Pietro Lupo, Catania, Italy</rdf:label>
-        <locn:FullAddress>25, Piazza Pietro Lupo, Catania, Italy</locn:FullAddress>
+        <locn:fullAddress>25, Piazza Pietro Lupo, Catania, Italy</locn:fullAddress>
         <locn:throughfare>Piazza Pietro Lupo</locn:throughfare>
         <locn:locatorDesignator>25</locn:locatorDesignator>
         <locn:postName>Catania</locn:postName>
         <locn:adminUnitL1>IT</locn:adminUnitL1>
       </locn:Address>
     </locn:address>
-    <locn:geometry>
-      <locn:Geometry rdf:about="http://opendatahacklab.org/agenda-unica/location/geometry">
-        <geo:lat></geo:lat>
-        <geo:long></geo:long>
-      </locn:Geometry>
-    </locn:geometry>
   </locn:Location>
   <locn:Location rdf:about="http://opendatahacklab.org/agenda-unica/location/">
     <locn:address>
       <locn:Address rdf:about="http://opendatahacklab.org/agenda-unica/">
         <rdf:label>, Via del Giaggiolo, Catania, Italy</rdf:label>
-        <locn:FullAddress>, Via del Giaggiolo, Catania, Italy</locn:FullAddress>
+        <locn:fullAddress>, Via del Giaggiolo, Catania, Italy</locn:fullAddress>
         <locn:throughfare>Via del Giaggiolo</locn:throughfare>
         <locn:locatorDesignator></locn:locatorDesignator>
         <locn:postName>Catania</locn:postName>
         <locn:adminUnitL1>IT</locn:adminUnitL1>
       </locn:Address>
     </locn:address>
-    <locn:geometry>
-      <locn:Geometry rdf:about="http://opendatahacklab.org/agenda-unica/location/geometry">
-        <geo:lat></geo:lat>
-        <geo:long></geo:long>
-      </locn:Geometry>
-    </locn:geometry>
   </locn:Location>
   <locn:Location rdf:about="http://opendatahacklab.org/agenda-unica/location/">
     <locn:address>
       <locn:Address rdf:about="http://opendatahacklab.org/agenda-unica/">
         <rdf:label>234, Via Antonino di San Giuliano, Catania, Italy</rdf:label>
-        <locn:FullAddress>234, Via Antonino di San Giuliano, Catania, Italy</locn:FullAddress>
+        <locn:fullAddress>234, Via Antonino di San Giuliano, Catania, Italy</locn:fullAddress>
         <locn:throughfare>Via Antonino di San Giuliano</locn:throughfare>
         <locn:locatorDesignator>234</locn:locatorDesignator>
         <locn:postName>Catania</locn:postName>
         <locn:adminUnitL1>IT</locn:adminUnitL1>
       </locn:Address>
     </locn:address>
-    <locn:geometry>
-      <locn:Geometry rdf:about="http://opendatahacklab.org/agenda-unica/location/geometry">
-        <geo:lat></geo:lat>
-        <geo:long></geo:long>
-      </locn:Geometry>
-    </locn:geometry>
   </locn:Location>
   <locn:Location rdf:about="http://opendatahacklab.org/agenda-unica/location/">
     <locn:address>
       <locn:Address rdf:about="http://opendatahacklab.org/agenda-unica/">
         <rdf:label>7, Vicolo Beritelli, Catania, Italy</rdf:label>
-        <locn:FullAddress>7, Vicolo Beritelli, Catania, Italy</locn:FullAddress>
+        <locn:fullAddress>7, Vicolo Beritelli, Catania, Italy</locn:fullAddress>
         <locn:throughfare>Vicolo Beritelli</locn:throughfare>
         <locn:locatorDesignator>7</locn:locatorDesignator>
         <locn:postName>Catania</locn:postName>
         <locn:adminUnitL1>IT</locn:adminUnitL1>
       </locn:Address>
     </locn:address>
-    <locn:geometry>
-      <locn:Geometry rdf:about="http://opendatahacklab.org/agenda-unica/location/geometry">
-        <geo:lat></geo:lat>
-        <geo:long></geo:long>
-      </locn:Geometry>
-    </locn:geometry>
   </locn:Location>
   <locn:Location rdf:about="http://opendatahacklab.org/agenda-unica/location/">
     <locn:address>
       <locn:Address rdf:about="http://opendatahacklab.org/agenda-unica/">
         <rdf:label>89, Via Campo Franco, Catania, Italy</rdf:label>
-        <locn:FullAddress>89, Via Campo Franco, Catania, Italy</locn:FullAddress>
+        <locn:fullAddress>89, Via Campo Franco, Catania, Italy</locn:fullAddress>
         <locn:throughfare>Via Campo Franco</locn:throughfare>
         <locn:locatorDesignator>89</locn:locatorDesignator>
         <locn:postName>Catania</locn:postName>
         <locn:adminUnitL1>IT</locn:adminUnitL1>
       </locn:Address>
     </locn:address>
-    <locn:geometry>
-      <locn:Geometry rdf:about="http://opendatahacklab.org/agenda-unica/location/geometry">
-        <geo:lat></geo:lat>
-        <geo:long></geo:long>
-      </locn:Geometry>
-    </locn:geometry>
   </locn:Location>
   <locn:Location rdf:about="http://opendatahacklab.org/agenda-unica/location/">
     <locn:address>
       <locn:Address rdf:about="http://opendatahacklab.org/agenda-unica/">
         <rdf:label>97, Corso Sicilia, Catania, Italy</rdf:label>
-        <locn:FullAddress>97, Corso Sicilia, Catania, Italy</locn:FullAddress>
+        <locn:fullAddress>97, Corso Sicilia, Catania, Italy</locn:fullAddress>
         <locn:throughfare>Corso Sicilia</locn:throughfare>
         <locn:locatorDesignator>97</locn:locatorDesignator>
         <locn:postName>Catania</locn:postName>
         <locn:adminUnitL1>IT</locn:adminUnitL1>
       </locn:Address>
     </locn:address>
-    <locn:geometry>
-      <locn:Geometry rdf:about="http://opendatahacklab.org/agenda-unica/location/geometry">
-        <geo:lat></geo:lat>
-        <geo:long></geo:long>
-      </locn:Geometry>
-    </locn:geometry>
   </locn:Location>
   <locn:Location rdf:about="http://opendatahacklab.org/agenda-unica/location/">
     <locn:address>
       <locn:Address rdf:about="http://opendatahacklab.org/agenda-unica/">
         <rdf:label>903, Via Plebiscito, Catania, Italy</rdf:label>
-        <locn:FullAddress>903, Via Plebiscito, Catania, Italy</locn:FullAddress>
+        <locn:fullAddress>903, Via Plebiscito, Catania, Italy</locn:fullAddress>
         <locn:throughfare>Via Plebiscito</locn:throughfare>
         <locn:locatorDesignator>903</locn:locatorDesignator>
         <locn:postName>Catania</locn:postName>
         <locn:adminUnitL1>IT</locn:adminUnitL1>
       </locn:Address>
     </locn:address>
-    <locn:geometry>
-      <locn:Geometry rdf:about="http://opendatahacklab.org/agenda-unica/location/geometry">
-        <geo:lat></geo:lat>
-        <geo:long></geo:long>
-      </locn:Geometry>
-    </locn:geometry>
   </locn:Location>
   <locn:Location rdf:about="http://opendatahacklab.org/agenda-unica/location/">
     <locn:address>
       <locn:Address rdf:about="http://opendatahacklab.org/agenda-unica/">
         <rdf:label>, Via del Giaggiolo, Catania, Italy</rdf:label>
-        <locn:FullAddress>, Via del Giaggiolo, Catania, Italy</locn:FullAddress>
+        <locn:fullAddress>, Via del Giaggiolo, Catania, Italy</locn:fullAddress>
         <locn:throughfare>Via del Giaggiolo</locn:throughfare>
         <locn:locatorDesignator></locn:locatorDesignator>
         <locn:postName>Catania</locn:postName>
         <locn:adminUnitL1>IT</locn:adminUnitL1>
       </locn:Address>
     </locn:address>
-    <locn:geometry>
-      <locn:Geometry rdf:about="http://opendatahacklab.org/agenda-unica/location/geometry">
-        <geo:lat></geo:lat>
-        <geo:long></geo:long>
-      </locn:Geometry>
-    </locn:geometry>
   </locn:Location>
   <locn:Location rdf:about="http://opendatahacklab.org/agenda-unica/location/">
     <locn:address>
       <locn:Address rdf:about="http://opendatahacklab.org/agenda-unica/">
         <rdf:label>56, Via Grotte Bianche, Catania, Italy</rdf:label>
-        <locn:FullAddress>56, Via Grotte Bianche, Catania, Italy</locn:FullAddress>
+        <locn:fullAddress>56, Via Grotte Bianche, Catania, Italy</locn:fullAddress>
         <locn:throughfare>Via Grotte Bianche</locn:throughfare>
         <locn:locatorDesignator>56</locn:locatorDesignator>
         <locn:postName>Catania</locn:postName>
         <locn:adminUnitL1>IT</locn:adminUnitL1>
       </locn:Address>
     </locn:address>
-    <locn:geometry>
-      <locn:Geometry rdf:about="http://opendatahacklab.org/agenda-unica/location/geometry">
-        <geo:lat></geo:lat>
-        <geo:long></geo:long>
-      </locn:Geometry>
-    </locn:geometry>
   </locn:Location>
   <locn:Location rdf:about="http://opendatahacklab.org/agenda-unica/location/">
     <locn:address>
       <locn:Address rdf:about="http://opendatahacklab.org/agenda-unica/">
         <rdf:label>6, Via Pietro Antonio Coppola, Catania, Italy</rdf:label>
-        <locn:FullAddress>6, Via Pietro Antonio Coppola, Catania, Italy</locn:FullAddress>
+        <locn:fullAddress>6, Via Pietro Antonio Coppola, Catania, Italy</locn:fullAddress>
         <locn:throughfare>Via Pietro Antonio Coppola</locn:throughfare>
         <locn:locatorDesignator>6</locn:locatorDesignator>
         <locn:postName>Catania</locn:postName>
         <locn:adminUnitL1>IT</locn:adminUnitL1>
       </locn:Address>
     </locn:address>
-    <locn:geometry>
-      <locn:Geometry rdf:about="http://opendatahacklab.org/agenda-unica/location/geometry">
-        <geo:lat></geo:lat>
-        <geo:long></geo:long>
-      </locn:Geometry>
-    </locn:geometry>
   </locn:Location>
   <locn:Location rdf:about="http://opendatahacklab.org/agenda-unica/location/">
     <locn:address>
       <locn:Address rdf:about="http://opendatahacklab.org/agenda-unica/">
         <rdf:label>, Via Etnea, Catania, Italy</rdf:label>
-        <locn:FullAddress>, Via Etnea, Catania, Italy</locn:FullAddress>
+        <locn:fullAddress>, Via Etnea, Catania, Italy</locn:fullAddress>
         <locn:throughfare>Via Etnea</locn:throughfare>
         <locn:locatorDesignator></locn:locatorDesignator>
         <locn:postName>Catania</locn:postName>
         <locn:adminUnitL1>IT</locn:adminUnitL1>
       </locn:Address>
     </locn:address>
-    <locn:geometry>
-      <locn:Geometry rdf:about="http://opendatahacklab.org/agenda-unica/location/geometry">
-        <geo:lat></geo:lat>
-        <geo:long></geo:long>
-      </locn:Geometry>
-    </locn:geometry>
   </locn:Location>
   <locn:Location rdf:about="http://opendatahacklab.org/agenda-unica/location/">
     <locn:address>
       <locn:Address rdf:about="http://opendatahacklab.org/agenda-unica/">
         <rdf:label>92, Piazza Federico di Svevia, Catania, Italy</rdf:label>
-        <locn:FullAddress>92, Piazza Federico di Svevia, Catania, Italy</locn:FullAddress>
+        <locn:fullAddress>92, Piazza Federico di Svevia, Catania, Italy</locn:fullAddress>
         <locn:throughfare>Piazza Federico di Svevia</locn:throughfare>
         <locn:locatorDesignator>92</locn:locatorDesignator>
         <locn:postName>Catania</locn:postName>
         <locn:adminUnitL1>IT</locn:adminUnitL1>
       </locn:Address>
     </locn:address>
-    <locn:geometry>
-      <locn:Geometry rdf:about="http://opendatahacklab.org/agenda-unica/location/geometry">
-        <geo:lat></geo:lat>
-        <geo:long></geo:long>
-      </locn:Geometry>
-    </locn:geometry>
   </locn:Location>
 </rdf:RDF>
