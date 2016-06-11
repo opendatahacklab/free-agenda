@@ -46,13 +46,13 @@
 			container.appendChild(trevents);
 
 			var tdData = document.createElement("td");
-			var data = new Date(event.timeStart);
-			var giorno = data.getDate();
-			giorno = insertZero(giorno);
-			var mese = data.getMonth();
-			mese = insertZero(mese);
-			var stringaData = document.createTextNode(giorno + "/" + mese + "/"
-					+ data.getFullYear());
+ 			var data = new Date(event.timeStart);
+ 			var giorno = data.getDate();
+ 			giorno = insertZero(giorno);
+ 			var mese = data.getMonth()+1;
+ 			mese = insertZero(mese);
+ 			var stringaData = document.createTextNode(giorno + "/" + mese + "/"
+ 					+ data.getFullYear());
 			tdData.appendChild(stringaData);
 			tdData.setAttribute('class', 'date');
 			trevents.appendChild(tdData);
