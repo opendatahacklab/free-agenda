@@ -1,5 +1,12 @@
 body{
 	background-color : #fefefe;
+	font-family : verdana,sans-serif;
+	margin: 0;
+	padding: 0;
+}
+
+img{
+	vertical-align : middle;
 }
 
 .main-header{
@@ -17,6 +24,18 @@ h1{
  font-size : 2.5em;
  padding: 0.3em 0.5em 0.3em 1em; 
  margin:0;
+}
+
+h2{
+	color : #991f00;
+	margin : 0;
+	padding : 1em;
+	font-size : 2em;
+}
+
+p{
+	margin : 0;
+	padding-left : 2em;
 }
 
 nav{
@@ -67,9 +86,42 @@ margin-left : 1em;
 }
 
 
-body{
-font-family : verdana,sans-serif;
-margin: 0;
-padding: 0;
+
+ol.iconlist{
+	list-style-type : none;
+}
+
+ol.iconlist img {
+	height : 3em;
+	vertical-align : middle;
+	margin : 0.3em 1em 1em 1em;
+	float : left;
+}
+
+ol.iconlist li{
+	clear:left;
+	margin-bottom : 1em;
+}
+
+img#odhllogo{
+	max-height : 5em;
+	padding:1em;
+}
+
+img#dydralogo{
+	height : 2em;
+}
+
+a.wt-tech:link, a.wt-tech:visited,  a.wt-tech:active, a.wt-tech:hover{
+	color : #ffffff;
+	background-color : #2b2e32;
+	text-decoration : none;
+	font-size:1em;
+	font-weight : normal;
+	font-family: Verdana,Geneva,sans-serif; 	
+	padding: 0.5em 0.5em 0.5em 0.5em;
+	margin: 0 0 0 0.5em;
+	vertical-align: middle;
+	border-radius: 0.2em;
 }
 

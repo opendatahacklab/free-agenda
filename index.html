@@ -15,22 +15,61 @@
 		<h1>Agenda Unica del Movimento Catanese</h1>
 		<nav>
 			<a href="https://github.com/opendatahacklab/agenda-unica.git"
-				title="Source Code">
-					<img src="../commons/imgs/GitHub-Mark-64px.png" />
-			</a>		
+				title="Source Code"> <img
+				src="../commons/imgs/GitHub-Mark-64px.png" />
+			</a>
 		</nav>
 	</header>
 
 	<table id="events">
 	</table>
 
-	<section>
-		<h2>Credits</h2>
+	<section id="credits">
+		<header>
+			<h2>Riconoscimenti</h2>
+		</header>
 
-		<img
-			src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Loupe.svg/58px-Loupe.svg.png">
-		by <a href="https://commons.wikimedia.org/wiki/Magnifying_glass">Wikimedia
-			commons</a>
+		<p>
+		Il sito risiede su un <em>hosting</em> gentilmente offerto da <a class="wt-tech"
+				target="_blank" href="http://wt-tech.it">WT-TECH</a>
+		</p>
+		<p>
+			La base di conoscenza che contiene l'elenco degli eventi &egrave;
+			gentilmente offerta da <a href="http://dydra.com" target="_blank"><img
+				id="dydralogo" alt="dydra.com" src="../commons/imgs/dydra-logo-24pt.png" /></a>
+		</p>
+		<p>
+			Questo sito &egrave; stato realizzato da <a
+				href="http://hackspacecatania.it" target="_blank">Hackspace
+				Catania</a> nell'ambito del progetto
+			<code>
+				<a href="http://opendatahacklab.org" title="opendatahacklab"
+					target="_blank">opendatahacklab</a>
+			</code>
+			<a href="http://opendatahacklab.org" title="opendatahacklab"
+				target="_blank"> <img id="odhllogo"
+				src="../commons/imgs/logo_cog4_ter.png" />
+			</a>
+		</p>
+
+		<p>Riportiamo nel seguito i riconoscimenti per le immagini utilizzate nel sito.</p>
+		<ol class="iconlist">
+			<li><img src="../commons/imgs/logo_cog4_ter.png" /> &egrave; stato  realizzato a partire dal
+			 logo di <a href="http://opendatasicilia.it">Open
+					Data Sicilia</a> (vedi il  <em>communication kit</em> nel <a
+				href="https://github.com/SiciliaHub/opendatasicilia-blog">repository di Open Data Sicilia</a>)
+				ed il file <a
+				href="https://commons.wikimedia.org/wiki/File%3ACog%2C_Web_Fundamentals.svg">Cog,
+					Web Fundamentals.svg</a> by Google (Google Web Fundamentals) [Apache
+				License 2.0 (http://www.apache.org/licenses/LICENSE-2.0)], via
+				Wikimedia Commons;</li>
+			<li><img
+				src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Loupe.svg/58px-Loupe.svg.png">
+				by <a href="https://commons.wikimedia.org/wiki/Magnifying_glass">Wikimedia
+					commons</a>;</li>
+			<li><img src="../commons/imgs/GitHub-Mark-64px.png" /> <a
+				href="https://github.com/logos">GitHub Mark</a>.</li>
+		</ol>
 	</section>
 
 	<script type="text/javascript">
@@ -52,13 +91,13 @@
 			container.appendChild(trevents);
 
 			var tdData = document.createElement("td");
- 			var data = new Date(event.timeStart);
- 			var giorno = data.getDate();
- 			giorno = insertZero(giorno);
- 			var mese = data.getMonth()+1;
- 			mese = insertZero(mese);
- 			var stringaData = document.createTextNode(giorno + "/" + mese + "/"
- 					+ data.getFullYear());
+			var data = new Date(event.timeStart);
+			var giorno = data.getDate();
+			giorno = insertZero(giorno);
+			var mese = data.getMonth() + 1;
+			mese = insertZero(mese);
+			var stringaData = document.createTextNode(giorno + "/" + mese + "/"
+					+ data.getFullYear());
 			tdData.appendChild(stringaData);
 			tdData.setAttribute('class', 'date');
 			trevents.appendChild(tdData);
