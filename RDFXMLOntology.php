@@ -84,6 +84,15 @@ class RDFXMLOntology{
 	}
 	
 	/**
+	 * Add the specified license to the ontology element
+	 */
+	public function addLicense($license_url){
+		$this->addNamespaces(array('dcterms'=>'http://purl.org/dc/terms/'));
+		$licenseEl = $this->xmlDocument->createElement('dcterms:license');
+		$this->ontologyElement->appendChild($licenseEl);
+		$licenseEl->setAttribute('rdf:resource',$license_url);
+	}
+	/**
 	 * Add an axiom stating that $p1 is a subproperty of $p2
 	 * 
 	 * @param unknown $p1 iri of property p1

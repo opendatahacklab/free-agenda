@@ -31,6 +31,7 @@ $ontology->addNamespaces(RDFEventsGenerator::getRequiredNamespaces());
 $ontology->addNamespaces(RDFLocnGenerator::getRequiredNamespaces());
 $ontology->addImports(RDFEventsGenerator::getRequiredVocabularies());
 $ontology->addImports(RDFLocnGenerator::getRequiredVocabularies());
+$ontology->addLicense('https://creativecommons.org/licenses/by/4.0/');
 
 //additional semantics which provide bindings between vocabularies
 

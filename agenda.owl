@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE rdf:RDF>
-<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:event="http://purl.org/NET/c4dm/event.owl#" xmlns:time="http://www.w3.org/2006/time#" xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#" xmlns:locn="http://www.w3.org/ns/locn#">
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:event="http://purl.org/NET/c4dm/event.owl#" xmlns:time="http://www.w3.org/2006/time#" xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#" xmlns:locn="http://www.w3.org/ns/locn#" xmlns:dcterms="http://purl.org/dc/terms/">
   <owl:Ontology rdf:about="http://opendatahacklab.org/agenda-unica/ontology">
     <owl:imports rdf:resource="http://motools.sf.net/event/event.n3"/>
     <owl:imports rdf:resource="http://www.w3.org/ns/locn"/>
     <owl:imports rdf:resource="https://www.w3.org/2003/01/geo/wgs84_pos"/>
+    <dcterms:license rdf:resource="https://creativecommons.org/licenses/by/4.0/"/>
   </owl:Ontology>
   <rdf:Description rdf:about="org:hasSite">
     <rdfs:subPropertyOf rdf:resource="locn:location"/>
@@ -15,13 +16,13 @@
   <rdf:Description rdf:about="http://purl.org/NET/c4dm/event.owl#place">
     <rdfs:subPropertyOf rdf:resource="http://www.w3.org/ns/locn#location"/>
   </rdf:Description>
-  <event:Event rdf:about="http://opendatahacklab.org/agenda-unica/20160624/Cena+Sociale+di+Sostegno+ai+Briganti+di+Librino/">
+  <event:Event rdf:about="http://opendatahacklab.org/agenda-unica/20160622/Cena+Sociale+di+Sostegno+ai+Briganti+di+Librino/">
     <event:place rdf:resource="http://opendatahacklab.org/agenda-unica/C.s.a.+Officina+Rebelde"/>
     <event:time>
-      <time:Interval rdf:about="http://opendatahacklab.org/agenda-unica/20160624/Cena+Sociale+di+Sostegno+ai+Briganti+di+Librino/time">
+      <time:Interval rdf:about="http://opendatahacklab.org/agenda-unica/20160622/Cena+Sociale+di+Sostegno+ai+Briganti+di+Librino/time">
         <time:hasBeginning>
-          <time:Instant rdf:about="http://opendatahacklab.org/agenda-unica/20160624/Cena+Sociale+di+Sostegno+ai+Briganti+di+Librino/time/begin">
-            <time:inXSDDateTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2016-06-24T19:00:00+02:00</time:inXSDDateTime>
+          <time:Instant rdf:about="http://opendatahacklab.org/agenda-unica/20160622/Cena+Sociale+di+Sostegno+ai+Briganti+di+Librino/time/begin">
+            <time:inXSDDateTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2016-06-22T19:00:00+02:00</time:inXSDDateTime>
           </time:Instant>
         </time:hasBeginning>
       </time:Interval>
