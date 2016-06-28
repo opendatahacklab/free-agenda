@@ -46,6 +46,10 @@ nav{
 	margin: 0;
 }
 
+nav a{
+	text-decoration : none;
+}
+
 nav img{
 	height : 2em;
 	padding-top:0;
