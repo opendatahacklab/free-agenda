@@ -80,7 +80,6 @@ class AgendaSheetParser implements Iterator{
 	 * @return the corresponding Location object or null if the location name is not provided.
 	 */
 	private function parseLocation($row){
-		echo "Parsing location ".$row[8]."\n";
 		$name=trim($row[8]);
 		$city=$row[9];
 		$address=$row[10];
