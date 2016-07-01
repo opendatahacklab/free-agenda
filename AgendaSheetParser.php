@@ -21,7 +21,7 @@
  */
 
 
-define('AGEND_UNICA_URL','https://docs.google.com/spreadsheets/d/1bzVASM5_JjCgvNp3Vs0GJ4vDgYsKo_ig5NHU1QI5USc/export?format=tsv&exportFormat=tsv');
+define('AGEND_UNICA_URL','https://docs.google.com/spreadsheets/d/1zls9A4FnTBOwlTnUtfwyIXzeSh8DKvgmbk4f2KyU_Jc/export?format=tsv&exportFormat=tsv');
 define('DATE_FORMAT','d/m/Y H:i');
 require('RDFLocnGenerator.php');
 require('RDFEventsGenerator.php');
@@ -39,10 +39,10 @@ class Event{
 	public $locationName;
 	
 	public function __construct($row){
-		$this->name=$row[0];
-		$this->start=$row[1]==null || $row[2]==null ? null : DateTime::createFromFormat(DATE_FORMAT, $row[1].' '.$row[2], new DateTimeZone('Europe/Rome')); 
-		$this->organizedBy=isset($row[5]) ? explode(',', $row[5]) : null;
-		$this->locationName=isset($row[7]) ? $row[7] : null;
+		$this->name=$row[1];
+		$this->start=$row[2]==null || $row[3]==null ? null : DateTime::createFromFormat(DATE_FORMAT, $row[2].' '.$row[3], new DateTimeZone('Europe/Rome')); 
+		$this->organizedBy=isset($row[6]) ? explode(',', $row[6]) : null;
+		$this->locationName=isset($row[8]) ? $row[8] : null;
 	}
 }
 
