@@ -3,7 +3,8 @@ require('AgendaSheetParser.php');
 $p = new AgendaSheetParser();
 foreach ($p as $e)
 {
-	echo $e->name." ".$e->locationName."\n";
+	if ($e->start!=null)
+		echo $e->name." ".$e->locationName."\n";
 }
 
 

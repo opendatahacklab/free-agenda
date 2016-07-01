@@ -21,7 +21,7 @@
  */
 
 
-define('AGEND_UNICA_URL','https://docs.google.com/spreadsheets/d/1zls9A4FnTBOwlTnUtfwyIXzeSh8DKvgmbk4f2KyU_Jc/export?format=tsv&exportFormat=tsv');
+define('AGEND_UNICA_URL','https://docs.google.com/spreadsheets/d/1zls9A4FnTBOwlTnUtfwyIXzeSh8DKvgmbk4f2KyU_Jc/export?format=tsv&exportFormat=tsv&ndplr=1');
 define('DATE_FORMAT','d/m/Y H:i');
 require('RDFLocnGenerator.php');
 require('RDFEventsGenerator.php');
@@ -80,10 +80,11 @@ class AgendaSheetParser implements Iterator{
 	 * @return the corresponding Location object or null if the location name is not provided.
 	 */
 	private function parseLocation($row){
-		$name=trim($row[7]);
-		$city=$row[8];
-		$address=$row[9];
-		$houseNumber=$row[10];
+		echo "Parsing location ".$row[8]."\n";
+		$name=trim($row[8]);
+		$city=$row[9];
+		$address=$row[10];
+		$houseNumber=$row[11];
 		
 		if (!isset($name) || $name==null || strlen($name)==0 || 
 			$city==null || strlen($city)==0 ||
