@@ -129,3 +129,28 @@ a.wt-tech:link, a.wt-tech:visited,  a.wt-tech:active, a.wt-tech:hover{
 	border-radius: 0.2em;
 }
 
+p.note{
+	padding:2em 2em 2em 2em;
+}
+
+p.buttonList{
+	text-align: center;
+	font-size:1.2em;
+}
+
+*.button {
+	margin:1em 1em 1em 1em;
+	display: inline-block;
+	padding: 1em 1em 1em 1em;
+	border : solid #e62e00 2px;
+	text-decoration : none;
+	font-weight:normal;
+	font-size:1.2em;
+	color : inherit;
+	border-radius: 0.2em;
+}
+
+*.button:hover{
+	background-color : #e62e00;
+	color: #fefefe;
+}

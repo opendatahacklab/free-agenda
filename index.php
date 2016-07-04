@@ -30,7 +30,7 @@ fclose($handle);
 			</a>
 			<a href="#data" title="dati"><img src="../commons/imgs/rdf.png" /></a> 	
 			<a href="#info" title="informazioni"><img src="../commons/imgs/Info_Simple_bw.svg.png" /></a>
-			<a href="#info" title="aggiungi evento"><img src="../commons/imgs/plus.png" /></a>
+			<a href="add.php" title="aggiungi evento"><img src="../commons/imgs/plus.png" /></a>
 		</nav>
 	</header>
 
