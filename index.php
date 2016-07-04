@@ -28,9 +28,9 @@ fclose($handle);
 				title="Source Code"> <img
 				src="../commons/imgs/GitHub-Mark-64px.png" />
 			</a>
-			<a href="#data" title="dati"><img src="../commons/imgs/rdf.png" /></a> 
-			
+			<a href="#data" title="dati"><img src="../commons/imgs/rdf.png" /></a> 	
 			<a href="#info" title="informazioni"><img src="../commons/imgs/Info_Simple_bw.svg.png" /></a>
+			<a href="#info" title="aggiungi evento"><img src="../commons/imgs/plus.png" /></a>
 		</nav>
 	</header>
 
@@ -101,8 +101,10 @@ fclose($handle);
 			<li><img src="../commons/imgs/GitHub-Mark-64px.png" /> <a
 				href="https://github.com/logos">GitHub Mark</a>;</li>
 			<li><img src="../commons/imgs/rdf.png" /> derivata da <a href="http://www.w3.org/RDF/icons/">W3C RDF Resource
-					Description Framework Icons</a>.</li>				
-			<li><img src="../commons/imgs/Info_Simple_bw.svg.png" /> via <a href="https://commons.wikimedia.org/wiki/File:Info_Simple_bw.svg">Wikimedia Commons</a>.
+					Description Framework Icons</a>;</li>				
+			<li><img src="../commons/imgs/Info_Simple_bw.svg.png" /> via <a href="https://commons.wikimedia.org/wiki/File:Info_Simple_bw.svg">Wikimedia Commons</a>;
+			<li><img src="../commons/imgs/plus.png" /> 
+			by see <a href="https://commons.wikimedia.org/wiki/File%3AHigh-contrast-list-add.svg">Talk:GNOME High contrast icons</a> (download.gnome.org) [<a href="http://www.gnu.org/licenses/lgpl.html">LGPL</a>], via Wikimedia Commons.
 			</li>			
 		</ol>
 	</section>
