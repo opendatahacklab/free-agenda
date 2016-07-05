@@ -21,8 +21,9 @@
  */
 
 
-define('AGEND_UNICA_URL','https://docs.google.com/spreadsheets/d/1zls9A4FnTBOwlTnUtfwyIXzeSh8DKvgmbk4f2KyU_Jc/export?format=tsv&exportFormat=tsv&ndplr=1');
+define('AGEND_UNICA_URL','https://docs.google.com/spreadsheets/d/1bzVASM5_JjCgvNp3Vs0GJ4vDgYsKo_ig5NHU1QI5USc/export?format=tsv&exportFormat=tsv&ndplr=1');
 define('DATE_FORMAT','d/m/Y H:i');
+define('DATE_FORMAT_bis','d/m/Y H.i.s');
 require('RDFLocnGenerator.php');
 require('RDFEventsGenerator.php');
 
@@ -40,10 +41,20 @@ class Event{
 	
 	public function __construct($row){
 		$this->name=$row[1];
-		$this->start=$row[2]==null || $row[3]==null ? null : DateTime::createFromFormat(DATE_FORMAT, $row[2].' '.$row[3], new DateTimeZone('Europe/Rome')); 
+		$this->start=$row[2]==null || $row[3]==null ? null : Event::parseTime($row[2], $row[3]); 
 		$this->organizedBy=isset($row[6]) ? explode(',', $row[6]) : null;
 		$this->locationName=isset($row[8]) ? $row[8] : null;
 	}
+	
+	/**
+	 * Get a date object from two strings representing date and time.
+	 * Consider that time mmay be in two different formats.
+	 */
+	private static function parseTime($date, $time){
+		$fullDate=$date.' '.$time;
+		$ret=DateTime::createFromFormat(DATE_FORMAT, $fullDate, new DateTimeZone('Europe/Rome'));
+		return $ret!=FALSE ? $ret : DateTime::createFromFormat(DATE_FORMAT_bis, $fullDate, new DateTimeZone('Europe/Rome'));
+	} 
 }
 
 class AgendaSheetParser implements Iterator{

@@ -30,7 +30,7 @@ fclose($handle);
 			</a>
 			<a href="#data" title="dati"><img src="../commons/imgs/rdf.png" /></a> 	
 			<a href="#info" title="informazioni"><img src="../commons/imgs/Info_Simple_bw.svg.png" /></a>
-			<a href="add.php" title="aggiungi evento"><img src="../commons/imgs/plus.png" /></a>
+			<a href="https://docs.google.com/forms/d/1QL7C46f4Csc_uAKVjkyWIgXEi3C2hE0GSAXCaX_dPpE/viewform?ndplr=1" title="aggiungi evento" target="_blank"><img src="../commons/imgs/plus.png" /></a>
 		</nav>
 	</header>
 
@@ -47,7 +47,7 @@ fclose($handle);
 		l'unica limitazione di dover citare questa pagina come fonte.
 		Sono accessibili nelle seguenti modalit&agrave;:</p>
 		<ul>
-			<li><a href="https://docs.google.com/spreadsheets/d/1bzVASM5_JjCgvNp3Vs0GJ4vDgYsKo_ig5NHU1QI5USc/view">google sheet</a></li>
+			<li><a target="_blank" href="https://docs.google.com/spreadsheets/d/1bzVASM5_JjCgvNp3Vs0GJ4vDgYsKo_ig5NHU1QI5USc/view?ndplr=1">google sheet</a></li>
 			<li><a href="agenda.owl" type="application/rdf+xml">ontologia OWL in RDF/XML</a></li>
 			<li><a href="http://dydra.com/cristianolongo/agenda-unica-ct/sparql">SPARQL endpoint</a>.</li>
 		</ul>
