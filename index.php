@@ -81,6 +81,9 @@ fclose($handle);
 			</a>
 		</p>
 
+		<p>Il modulo di inserimento eventi &egrave; stato realizzato in collaborazione col <em>Google Developer Group</em>
+		di Catania.
+		</p>
 		<p>Riportiamo nel seguito i riconoscimenti per le immagini
 			utilizzate nel sito.</p>
 		<ol class="iconlist">
