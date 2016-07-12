@@ -29,6 +29,19 @@
     </event:time>
     <rdfs:label>Chi non ha memoria non ha futuro - reading, video &amp; dibattito</rdfs:label>
   </event:Event>
+  <event:Event rdf:about="http://opendatahacklab.org/agenda-unica/20160720/Briganti+Rugby+Librino/">
+    <event:place rdf:resource="http://opendatahacklab.org/agenda-unica/Campo+San+Teodoro"/>
+    <event:time>
+      <time:Interval rdf:about="http://opendatahacklab.org/agenda-unica/20160720/Briganti+Rugby+Librino/time">
+        <time:hasBeginning>
+          <time:Instant rdf:about="http://opendatahacklab.org/agenda-unica/20160720/Briganti+Rugby+Librino/time/begin">
+            <time:inXSDDateTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2016-07-20T19:30:00+02:00</time:inXSDDateTime>
+          </time:Instant>
+        </time:hasBeginning>
+      </time:Interval>
+    </event:time>
+    <rdfs:label>Briganti Rugby Librino</rdfs:label>
+  </event:Event>
   <event:Event rdf:about="http://opendatahacklab.org/agenda-unica/20160624/Cena+Sociale+di+Sostegno+ai+Briganti+di+Librino/">
     <event:place rdf:resource="http://opendatahacklab.org/agenda-unica/C.s.a.+Officina+Rebelde"/>
     <event:time>
@@ -391,6 +404,19 @@
       </locn:Address>
     </locn:address>
   </locn:Location>
+  <locn:Location rdf:about="http://opendatahacklab.org/agenda-unica/Campo+San+Teodoro">
+    <rdfs:label>Campo San Teodoro</rdfs:label>
+    <locn:address>
+      <locn:Address rdf:about="http://opendatahacklab.org/agenda-unica/Campo+San+Teodoro/address">
+        <rdfs:label>, Via del Giaggiolo, Catania, Italy</rdfs:label>
+        <locn:fullAddress>, Via del Giaggiolo, Catania, Italy</locn:fullAddress>
+        <locn:throughfare>Via del Giaggiolo</locn:throughfare>
+        <locn:locatorDesignator></locn:locatorDesignator>
+        <locn:postName>Catania</locn:postName>
+        <locn:adminUnitL1>IT</locn:adminUnitL1>
+      </locn:Address>
+    </locn:address>
+  </locn:Location>
   <locn:Location rdf:about="http://opendatahacklab.org/agenda-unica/Circolo+Rosa+Luxemburg">
     <rdfs:label>Circolo Rosa Luxemburg</rdfs:label>
     <locn:address>
@@ -503,19 +529,6 @@
         <locn:fullAddress>903, Via Plebiscito, Catania, Italy</locn:fullAddress>
         <locn:throughfare>Via Plebiscito</locn:throughfare>
         <locn:locatorDesignator>903</locn:locatorDesignator>
-        <locn:postName>Catania</locn:postName>
-        <locn:adminUnitL1>IT</locn:adminUnitL1>
-      </locn:Address>
-    </locn:address>
-  </locn:Location>
-  <locn:Location rdf:about="http://opendatahacklab.org/agenda-unica/Campo+San+Teodoro">
-    <rdfs:label>Campo San Teodoro</rdfs:label>
-    <locn:address>
-      <locn:Address rdf:about="http://opendatahacklab.org/agenda-unica/Campo+San+Teodoro/address">
-        <rdfs:label>, Via del Giaggiolo, Catania, Italy</rdfs:label>
-        <locn:fullAddress>, Via del Giaggiolo, Catania, Italy</locn:fullAddress>
-        <locn:throughfare>Via del Giaggiolo</locn:throughfare>
-        <locn:locatorDesignator></locn:locatorDesignator>
         <locn:postName>Catania</locn:postName>
         <locn:adminUnitL1>IT</locn:adminUnitL1>
       </locn:Address>

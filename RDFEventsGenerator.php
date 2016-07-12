@@ -221,12 +221,12 @@ class RDFEventsGenerator
 		$text = $tmp = [];
 		$str1 = $str2 = "";
 //Split the date and the time of the Event
-		$text = split("T",$date->wholeText);
+		$text = explode("T",$date->wholeText);
 //Here obtaine the date
-		$str1 = join(split("-", $text[0]));
+		$str1 = join(explode("-", $text[0]));
 //Here the time
-		$tmp = split("\+", $text[1]);
-		$tmp = join(split(":", $tmp[0]));
+		$tmp = explode("\+", $text[1]);
+		$tmp = join(explode(":", $tmp[0]));
 		$str2 = substr($tmp, 0, 4);
 
 		return [$str1, $str2];
