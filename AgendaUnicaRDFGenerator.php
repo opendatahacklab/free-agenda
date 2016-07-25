@@ -19,38 +19,11 @@
  *
  * @author Cristiano Longo
  */
-require('AgendaSheetParser.php');
-require('RDFXMLOntology.php');
+require('AgendaRDFGenerator.php');
 
-define('BASEURI', 'http://opendatahacklab.org/free-agenda/');
-define('AGEND_UNICA_URL','https://docs.google.com/spreadsheets/d/1bzVASM5_JjCgvNp3Vs0GJ4vDgYsKo_ig5NHU1QI5USc/export?format=tsv&exportFormat=tsv&ndplr=1');
-
-
-//Create a XML file
-
-$ontology=new RDFXMLOntology(BASEURI.'ontology');
-$ontology->addNamespaces(RDFEventsGenerator::getRequiredNamespaces());
-$ontology->addNamespaces(RDFLocnGenerator::getRequiredNamespaces());
-$ontology->addImports(RDFEventsGenerator::getRequiredVocabularies());
-$ontology->addImports(RDFLocnGenerator::getRequiredVocabularies());
-$ontology->addLicense('https://creativecommons.org/licenses/by/4.0/');
-
-//additional semantics which provide bindings between vocabularies
-
-$ontology->addSubPropertyAxiom('org:hasSite', 'locn:location');
-$ontology->addSubPropertyAxiom('org:siteAddress', 'locn:address');
-$ontology->addSubPropertyAxiom('http://purl.org/NET/c4dm/event.owl#place', 'http://www.w3.org/ns/locn#location');
+define('ONTOLOGY_URL', 'http://opendatahacklab.org/free-agenda/agenda-unica-ct');
+define('AGENDA_UNICA_URL','https://docs.google.com/spreadsheets/d/1bzVASM5_JjCgvNp3Vs0GJ4vDgYsKo_ig5NHU1QI5USc/export?format=tsv&exportFormat=tsv&ndplr=1');
 
 
-$agendaParser = new AgendaSheetParser(AGEND_UNICA_URL);
-foreach ($agendaParser as $event){
-	if ($event->start!=null)
-		(new RDFEventsGenerator($event))->generateEvent($ontology->getXML(), $ontology->getXML()->documentElement, BASEURI);	
-}
-$locations=$agendaParser->getAllParsedLocations();
-
-foreach($locations as $name => $location)
-	(new RDFLocnGenerator($location))->generateLocation($ontology->getXML(), $ontology->getXML()->documentElement, BASEURI);
-
-echo $ontology->getXML()->saveXML();
+(new AgendaRDFGenerator(ONTOLOGY_URL, AGENDA_UNICA_URL))->generate();
 ?>
