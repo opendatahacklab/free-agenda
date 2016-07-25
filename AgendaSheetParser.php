@@ -19,144 +19,135 @@
  *
  * @author Cristiano Longo
  */
-
-
-define('AGEND_UNICA_URL','https://docs.google.com/spreadsheets/d/1bzVASM5_JjCgvNp3Vs0GJ4vDgYsKo_ig5NHU1QI5USc/export?format=tsv&exportFormat=tsv&ndplr=1');
-define('DATE_FORMAT','d/m/Y H:i');
-define('DATE_FORMAT_bis','d/m/Y H.i.s');
-require('RDFLocnGenerator.php');
-require('RDFEventsGenerator.php');
+define ( 'DATE_FORMAT', 'd/m/Y H:i' );
+define ( 'DATE_FORMAT_bis', 'd/m/Y H.i.s' );
+require ('RDFLocnGenerator.php');
+require ('RDFEventsGenerator.php');
 
 /**
  * Basic representation of a Event
  *
  * @author Cristiano Longo
  */
-class Event{
+class Event {
 	public $name;
 	public $start;
-	//array organizations
+	// array organizations
 	public $organizedBy;
 	public $locationName;
-	
-	public function __construct($row){
-		$this->name=$row[1];
-		$this->start=$row[2]==null || $row[3]==null ? null : Event::parseTime($row[2], $row[3]); 
-		$this->organizedBy=isset($row[6]) ? explode(',', $row[6]) : null;
-		$this->locationName=isset($row[8]) ? $row[8] : null;
+	public function __construct($row) {
+		$this->name = $row [1];
+		$this->start = $row [2] == null || $row [3] == null ? null : Event::parseTime ( $row [2], $row [3] );
+		$this->organizedBy = isset ( $row [6] ) ? explode ( ',', $row [6] ) : null;
+		$this->locationName = isset ( $row [8] ) ? $row [8] : null;
 	}
 	
 	/**
 	 * Get a date object from two strings representing date and time.
 	 * Consider that time mmay be in two different formats.
 	 */
-	private static function parseTime($date, $time){
-		$fullDate=$date.' '.$time;
-		$ret=DateTime::createFromFormat(DATE_FORMAT, $fullDate, new DateTimeZone('Europe/Rome'));
-		return $ret!=FALSE ? $ret : DateTime::createFromFormat(DATE_FORMAT_bis, $fullDate, new DateTimeZone('Europe/Rome'));
-	} 
+	private static function parseTime($date, $time) {
+		$fullDate = $date . ' ' . $time;
+		$ret = DateTime::createFromFormat ( DATE_FORMAT, $fullDate, new DateTimeZone ( 'Europe/Rome' ) );
+		return $ret != FALSE ? $ret : DateTime::createFromFormat ( DATE_FORMAT_bis, $fullDate, new DateTimeZone ( 'Europe/Rome' ) );
+	}
 }
-
-class AgendaSheetParser implements Iterator{
-
+class AgendaSheetParser implements Iterator {
 	private $rows;
 	private $numItems;
 	private $index;
 	
-	//this is a map location name -> location,l populated during the parsing
+	// this is a map location name -> location,l populated during the parsing
 	private $locations;
-
+	
 	/**
-	 * Retrieve and parse the Agenda Unica Sheet
+	 * Retrieve and parse an Agenda Sheet
 	 *
+	 * @param $url address
+	 *        	of the sheet
+	 *        	
 	 * @throws Exception
 	 */
-	public function __construct(){
-		$h=curl_init(AGEND_UNICA_URL);
-		if (!$h) throw new Exception("Unable to initialize cURL session");
-		curl_setopt($h, CURLOPT_RETURNTRANSFER, TRUE);
-		$retrievedData=curl_exec($h);
-		if($retrievedData==FALSE)
-			throw new Exception("Unable to execute request: ".curl_error($h));
-		curl_close($h);
-		$this->rows=explode("\n", $retrievedData);
-		$this->numItems=count($this->rows)-1;
-		$this->index=0;
-		$this->locations=array();
+	public function __construct($url) {
+		$h = curl_init ( $url );
+		if (! $h)
+			throw new Exception ( "Unable to initialize cURL session" );
+		curl_setopt ( $h, CURLOPT_RETURNTRANSFER, TRUE );
+		$retrievedData = curl_exec ( $h );
+		if ($retrievedData == FALSE)
+			throw new Exception ( "Unable to execute request: " . curl_error ( $h ) );
+		curl_close ( $h );
+		$this->rows = explode ( "\n", $retrievedData );
+		$this->numItems = count ( $this->rows ) - 1;
+		$this->index = 0;
+		$this->locations = array ();
 	}
-
+	
 	/**
 	 * Create a location by parsing a row of the sheet.
 	 *
 	 * @return the corresponding Location object or null if the location name is not provided.
 	 */
-	private function parseLocation($row){
-		$name=trim($row[8]);
-		$city=$row[9];
-		$address=$row[10];
-		$houseNumber=$row[11];
+	private function parseLocation($row) {
+		$name = trim ( $row [8] );
+		$city = $row [9];
+		$address = $row [10];
+		$houseNumber = $row [11];
 		
-		if (!isset($name) || $name==null || strlen($name)==0 || 
-			$city==null || strlen($city)==0 ||
-			$address==null || strlen($address)==0)
+		if (! isset ( $name ) || $name == null || strlen ( $name ) == 0 || $city == null || strlen ( $city ) == 0 || $address == null || strlen ( $address ) == 0)
 			return null;
-		//coordinates not available in this release
-		$lat=null;
-		$lon=null;
+			// coordinates not available in this release
+		$lat = null;
+		$lon = null;
 		
-		return new Location($name, $city, $address, $houseNumber, $lat, $lon);
+		return new Location ( $name, $city, $address, $houseNumber, $lat, $lon );
 	}
-
-	//locations parsing
+	
+	// locations parsing
 	
 	/**
 	 * Store the location in the locations map, if not already present.
 	 */
-	private function storeLocation($location){
-		//keep the more recent location description in the sheet
-		//assuming that events are listed in ascending order ordered by time
-		if (!array_key_exists($location->name, $this->locations)){
-			$this->locations[$location->name]=$location;
+	private function storeLocation($location) {
+		// keep the more recent location description in the sheet
+		// assuming that events are listed in ascending order ordered by time
+		if (! array_key_exists ( $location->name, $this->locations )) {
+			$this->locations [$location->name] = $location;
 		}
 	}
 	
 	/**
 	 * Get a map location name -> location of all the locations met during the parsing
 	 * until now.
-	 *
 	 */
-	public function getAllParsedLocations(){
-		$r=array();
-		foreach($this->locations as $n => $l)
-			$r[$n]=$l;
+	public function getAllParsedLocations() {
+		$r = array ();
+		foreach ( $this->locations as $n => $l )
+			$r [$n] = $l;
 		return $r;
 	}
 	
-	//Iterator functions,  see http://php.net/manual/en/class.iterator.php
-	public function current(){
-		$rowStr=$this->rows[$this->index+1];
-		$row=str_getcsv($rowStr,"\t","\"");
-		$event=new Event($row);
-		$location=$this->parseLocation($row);
-		if ($location!=null) $this->storeLocation($location);
+	// Iterator functions, see http://php.net/manual/en/class.iterator.php
+	public function current() {
+		$rowStr = $this->rows [$this->index + 1];
+		$row = str_getcsv ( $rowStr, "\t", "\"" );
+		$event = new Event ( $row );
+		$location = $this->parseLocation ( $row );
+		if ($location != null)
+			$this->storeLocation ( $location );
 		return $event;
 	}
-
-
-	public function key (){
+	public function key() {
 		return $this->index;
 	}
-
-	public function next(){
-		++$this->index;
+	public function next() {
+		++ $this->index;
 	}
-
-	public function rewind(){
-		$this->index=0;
+	public function rewind() {
+		$this->index = 0;
 	}
-
-	public function valid(){
-		return $this->numItems>0 && $this->index<$this->numItems;
+	public function valid() {
+		return $this->numItems > 0 && $this->index < $this->numItems;
 	}
 }
 ?>

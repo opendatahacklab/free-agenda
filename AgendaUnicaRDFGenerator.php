@@ -22,7 +22,9 @@
 require('AgendaSheetParser.php');
 require('RDFXMLOntology.php');
 
-define('BASEURI', 'http://opendatahacklab.org/agenda-unica/');
+define('BASEURI', 'http://opendatahacklab.org/free-agenda/');
+define('AGEND_UNICA_URL','https://docs.google.com/spreadsheets/d/1bzVASM5_JjCgvNp3Vs0GJ4vDgYsKo_ig5NHU1QI5USc/export?format=tsv&exportFormat=tsv&ndplr=1');
+
 
 //Create a XML file
 
@@ -40,7 +42,7 @@ $ontology->addSubPropertyAxiom('org:siteAddress', 'locn:address');
 $ontology->addSubPropertyAxiom('http://purl.org/NET/c4dm/event.owl#place', 'http://www.w3.org/ns/locn#location');
 
 
-$agendaParser = new AgendaSheetParser();
+$agendaParser = new AgendaSheetParser(AGEND_UNICA_URL);
 foreach ($agendaParser as $event){
 	if ($event->start!=null)
 		(new RDFEventsGenerator($event))->generateEvent($ontology->getXML(), $ontology->getXML()->documentElement, BASEURI);	
