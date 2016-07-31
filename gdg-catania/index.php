@@ -187,9 +187,8 @@ fclose($handle);
 
 		var p = new EventQueryProcessor(new EventProcessor(), new Date());
 
-		var q = sparql_query("http://dydra.com/cristianolongo/agenda-gdg-catania/sparql",
+		sparql_query("http://dydra.com/cristianolongo/agenda-gdg-catania/sparql",
 				p);
-		window.alert(q);
 	</script>
 </body>
 </html>
