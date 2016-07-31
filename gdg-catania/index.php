@@ -41,13 +41,13 @@ fclose($handle);
 		<header>
 			<h2>Accesso ai Dati</h2>
 		</header>
-		<p>I dati dell'agenda unica sono rilasciati come <a href="http://opendefinition.org/">open
+		<p>I dati dell'agenda sono rilasciati come <a href="http://opendefinition.org/">open
 		data</a> con licenza <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>,
 		ossia possono essere scaricati e riutilizzati in qualsiasi modo e a qualsiasi fine con
 		l'unica limitazione di dover citare questa pagina come fonte.
 		Sono accessibili nelle seguenti modalit&agrave;:</p>
 		<ul>
-			<li><a target="_blank" href="https://docs.google.com/spreadsheets/d/1bzVASM5_JjCgvNp3Vs0GJ4vDgYsKo_ig5NHU1QI5USc/view?ndplr=1">google sheet</a></li>
+			<li><a target="_blank" href="https://docs.google.com/spreadsheets/d/1-ROgDxqRnh4Nknih_oPZeaTIoXHY3GRJQdSxpq4XMhA/view?ndplr=1">google sheet</a></li>
 			<li><a href="agenda.owl" type="application/rdf+xml">ontologia OWL in RDF/XML</a></li>
 			<li><a href="http://dydra.com/cristianolongo/agenda-unica-ct/sparql">SPARQL endpoint</a>.</li>
 		</ul>
@@ -187,8 +187,9 @@ fclose($handle);
 
 		var p = new EventQueryProcessor(new EventProcessor(), new Date());
 
-		sparql_query("http://dydra.com/cristianolongo/agenda-gdg-catania/sparql",
+		var q = sparql_query("http://dydra.com/cristianolongo/agenda-gdg-catania/sparql",
 				p);
+		window.alert(q);
 	</script>
 </body>
 </html>
