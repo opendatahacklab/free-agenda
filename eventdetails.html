@@ -4,8 +4,8 @@
 		<meta charset="UTF-8">
 		<title>Agenda Unica del Movimento Catanese</title>
 		<link rel="alternate" type="application/rss+xml"  href="rdfevents2rss.php" title="opendatahacklab events feed">
-		<script type="text/javascript" src="http://opendatahacklab.org/sparql_suite/sparql_processor.js"></script>
-		<script type="text/javascript" src="http://opendatahacklab.org/sparql_suite/event_sparql_processor.js"></script>
+		<script type="text/javascript" src="./sparql_processor.js"></script>
+		<script type="text/javascript" src="./event_sparql_processor.js"></script>
         <link rel="stylesheet" type="text/css" href="mystyle.css"> 	
 	</head>
 <body>
@@ -19,8 +19,10 @@
 	<script type="text/javascript">
 	
 //the function responsible to print event information
-var processEventFunction = function(event){
-	
+var processEventFunction = function(event)
+{
+	//check if the event has a event place
+	var isEventPlaceHere = false;
 	//replace titles 
 	var titleLower=event.eventName;
 	document.getElementById("maintitle").appendChild(document.createTextNode(titleLower));
@@ -28,8 +30,10 @@ var processEventFunction = function(event){
 	//		document.createTextNode(titleLower));
     
 	//put event details in the specified section
+
 	var container = document.getElementById("eventdetail");
 	container.removeChild(document.getElementById("loading"));
+
 	
 	var time = document.createElement("p");
 	var timeStart = new Date(event.timeStart);
@@ -39,10 +43,26 @@ var processEventFunction = function(event){
 	container.appendChild(time);
 
 	var address = document.createElement("p");
-	address.className="eventaddress";
-	address.appendChild(document.createTextNode(event.address));
-	container.appendChild(address);	
+
+	if(event.eventPlace)
+	{
+		var eventPlace = document.createElement("em");
+		eventPlace.appendChild(document.createTextNode(event.eventPlace));
+		isEventPlaceHere = true;
+	}
 	
+	address.className="eventaddress";
+
+	//address.appendChild(document.createTextNode(event.address));
+	isEventPlaceHere == true ? address.appendChild(document.createTextNode(event.address + " - ")) : address.appendChild(document.createTextNode(event.address));
+
+	if(isEventPlaceHere)
+	{
+		address.appendChild(eventPlace);
+	}
+	
+	container.appendChild(address);
+
 	if(event.description != null){
 		var description = document.createElement("p");
 		description.className="eventdescription";

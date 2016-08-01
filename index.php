@@ -14,9 +14,9 @@ fclose($handle);
 <meta charset="utf-8">
 <title>Agenda Unica del Movimento - Catania</title>
 <script type="text/javascript"
-	src="http://opendatahacklab.org/sparql_suite/sparql_processor.js"></script>
+	src="./sparql_processor.js"></script>
 <script type="text/javascript"
-	src="http://opendatahacklab.org/sparql_suite/event_sparql_processor.js"></script>
+	src="./event_sparql_processor.js"></script>
 <link rel="stylesheet" type="text/css" href="mystyle.css">
 </head>
 
@@ -142,6 +142,7 @@ fclose($handle);
 			tdData.setAttribute('class', 'date');
 			trevents.appendChild(tdData);
 
+
 			var tdOra = document.createElement("td");
 			var data = new Date(event.timeStart);
 			var minuti = data.getMinutes();
@@ -152,6 +153,10 @@ fclose($handle);
 			tdOra.appendChild(ora);
 			tdOra.setAttribute('class', 'time');
 			trevents.appendChild(tdOra);
+
+			var tdLocn = document.createElement("td");
+			tdLocn.appendChild(document.createTextNode(event.eventPlace));
+			trevents.appendChild(tdLocn);
 
 			var tdTitolo = document.createElement("td");
 			var tdTestoTitolo = document.createTextNode(event.eventName);
