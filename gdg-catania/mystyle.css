@@ -1,0 +1,156 @@
+body{
+	background-color : #fefefe;
+	font-family : verdana,sans-serif;
+	margin: 0;
+	padding: 0;
+}
+
+img{
+	vertical-align : middle;
+}
+
+.main-header{
+ padding: 0;
+ color: #fefefe;
+ margin-bottom: 1em;
+ padding : 0;
+ 
+}
+
+h1{
+ background-color : #e62e00;
+ font-weight : bold;
+ color : white;
+ font-size : 2.5em;
+ padding: 0.3em 0.5em 0.3em 1em; 
+ margin:0;
+}
+
+h2{
+	color : #991f00;
+	margin : 0;
+	padding : 1em;
+	font-size : 2em;
+}
+
+p{
+	margin : 0;
+	padding-left : 2em;
+}
+
+nav{
+	text-align:right;
+	padding-right : 1em;
+	padding-top :0.2em;
+	padding-bottom :0.2em;
+	margin: 0;
+}
+
+nav a{
+	text-decoration : none;
+}
+
+nav img{
+	height : 2em;
+	padding-top:0;
+	padding-bottom:0;	
+	padding-left : 0.2em; 
+	padding-right : 0; 
+	margin : 0;
+}
+.back{
+	margin-left: 1em;
+}
+#linkol{
+	color : white;
+}
+
+table{
+	margin-left : 10%;
+	margin-right : 10%;
+	border:none;
+    border-collapse: collapse;
+}
+
+th , td {
+  border-bottom: 1px solid #cccccc;
+  padding : 1em;  
+}
+
+td.date, td.time{
+	padding-right : 0;
+	font-family: Courier, monospace;
+	font-weight: bold;
+	color : #707070;
+}
+
+#eventdetail{
+	padding : 1em;
+margin-left : 1em;	
+}
+
+
+
+ol.iconlist{
+	list-style-type : none;
+}
+
+ol.iconlist img {
+	height : 3em;
+	vertical-align : middle;
+	margin : 0.3em 1em 1em 1em;
+	float : left;
+}
+
+ol.iconlist li{
+	clear:left;
+	margin-bottom : 1em;
+}
+
+img#odhllogo{
+	max-height : 5em;
+	padding:1em;
+}
+
+img#dydralogo{
+	height : 2em;
+}
+
+a.wt-tech:link, a.wt-tech:visited,  a.wt-tech:active, a.wt-tech:hover{
+	color : #ffffff;
+	background-color : #2b2e32;
+	text-decoration : none;
+	font-size:1em;
+	font-weight : normal;
+	font-family: Verdana,Geneva,sans-serif; 	
+	padding: 0.5em 0.5em 0.5em 0.5em;
+	margin: 0 0 0 0.5em;
+	vertical-align: middle;
+	border-radius: 0.2em;
+}
+
+p.note{
+	padding:2em 2em 2em 2em;
+}
+
+p.buttonList{
+	text-align: center;
+	font-size:1.2em;
+}
+
+*.button {
+	margin:1em 1em 1em 1em;
+	display: inline-block;
+	padding: 1em 1em 1em 1em;
+	border : solid #e62e00 2px;
+	text-decoration : none;
+	font-weight:normal;
+	font-size:1.2em;
+	color : inherit;
+	border-radius: 0.2em;
+}
+
+*.button:hover{
+	background-color : #e62e00;
+	color: #fefefe;
+}
