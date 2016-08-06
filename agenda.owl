@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE rdf:RDF>
 <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:event="http://purl.org/NET/c4dm/event.owl#" xmlns:time="http://www.w3.org/2006/time#" xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#" xmlns:locn="http://www.w3.org/ns/locn#" xmlns:dcterms="http://purl.org/dc/terms/">
-  <owl:Ontology rdf:about="http://opendatahacklab.org/free-agenda/agenda-unica-ct/">
+  <owl:Ontology rdf:about="http://opendatahacklab.org/free-agenda/agenda-unica-ct/ontology">
     <owl:imports rdf:resource="http://motools.sf.net/event/event.n3"/>
     <owl:imports rdf:resource="http://www.w3.org/ns/locn"/>
     <owl:imports rdf:resource="https://www.w3.org/2003/01/geo/wgs84_pos"/>
@@ -54,6 +54,18 @@
       </time:Interval>
     </event:time>
     <rdfs:label>Festa di Autofinanziamento</rdfs:label>
+  </event:Event>
+  <event:Event rdf:about="http://opendatahacklab.org/free-agenda/agenda-unica-ct/07210401/Raccolta+Firme+Legalizziamo%21+LA+CANNABIS+-+il+proibizionismo+ha+fallito/">
+    <event:time>
+      <time:Interval rdf:about="http://opendatahacklab.org/free-agenda/agenda-unica-ct/07210401/Raccolta+Firme+Legalizziamo%21+LA+CANNABIS+-+il+proibizionismo+ha+fallito/time">
+        <time:hasBeginning>
+          <time:Instant rdf:about="http://opendatahacklab.org/free-agenda/agenda-unica-ct/07210401/Raccolta+Firme+Legalizziamo%21+LA+CANNABIS+-+il+proibizionismo+ha+fallito/time/begin">
+            <time:inXSDDateTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">0721-04-01T20:00:00+01:00</time:inXSDDateTime>
+          </time:Instant>
+        </time:hasBeginning>
+      </time:Interval>
+    </event:time>
+    <rdfs:label>Raccolta Firme Legalizziamo! LA CANNABIS - il proibizionismo ha fallito</rdfs:label>
   </event:Event>
   <event:Event rdf:about="http://opendatahacklab.org/free-agenda/agenda-unica-ct/20160624/Cena+Sociale+di+Sostegno+ai+Briganti+di+Librino/">
     <event:place rdf:resource="http://opendatahacklab.org/free-agenda/agenda-unica-ct/C.s.a.+Officina+Rebelde"/>
