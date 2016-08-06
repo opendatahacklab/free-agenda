@@ -6,12 +6,12 @@
 		
 		function Calendar($name) {
 			$this->name=$name;
-			$this->data = "BEGIN:VCALENDAR\nVERSION:2.0\nCALSCALE:GREGORIAN\nMETHOD:PUBLISH\n";
+			$this->data = "BEGIN:VCALENDAR\r\nPRODID:-//Opendatahacklab Catania//Agenda Unica//IT\r\nVERSION:2.0\r\nCALSCALE:GREGORIAN\r\nMETHOD:PUBLISH\r\n";
 		}
 			//FUNZIONE PER AGGIUNGERE EVENTI
-		function add_event($start,$end,$name_,$description,$location) {
+		function add_event($start,$end,$uid,$name_,$description,$location) {
 			
-			$this->data .= "BEGIN:VEVENT\nDTSTART:".date("Ymd\THis\Z",strtotime($start))."\nDTEND:".date("Ymd\THis\Z",strtotime($end))."\nDTSTAMP:".date("Ymd\THis\Z")."\nUID:\nDESCRIPTION:".$description."\nLOCATION:".$location."\nSEQUENCE:0\nSTATUS:CONFIRMED\nSUMMARY:".$name_."\nTRANSP: OPAQUE\nEND:VEVENT\n";
+			$this->data .= "BEGIN:VEVENT\r\nDTSTART:".date("Ymd\THis\Z",strtotime($start))."\r\nDTEND:".date("Ymd\THis\Z",strtotime($end))."\r\nDTSTAMP:".date("Ymd\THis\Z")."\r\nUID:".$uid."\r\nDESCRIPTION:".$description."\r\nLOCATION:".$location."\r\nSEQUENCE:0\r\nSTATUS:CONFIRMED\r\nSUMMARY:".$name_."\r\nTRANSP:OPAQUE\r\nEND:VEVENT\r\n";
 		}
 			//FUNZIONE PER CHIUDERE IL FILE E SCARICARLO
 		function show() {

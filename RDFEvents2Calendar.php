@@ -20,7 +20,7 @@
  *  @author Michele Maresca
  */
 
-header("Content-type:text/calendar");
+//header("Content-type:text/calendar");
 
 require_once( "sparqllib.php" );
 require_once('Calendar.php');
@@ -78,8 +78,8 @@ if( !$result ) {
 
 	//Aggiungo gli eventi al calendario
 while( $row = $result->fetch_array()) {
-	$calendar->add_event($row['timeStart'],$row['timeStart'], $row['itemlabel'],"",$row['address']);
+	$calendar->add_event($row['timeStart'],$row['timeStart'], $row['item'], $row['itemlabel'],"",$row['address']);
 }
 	//Chiusura e download del calendario
-$calendar->show();
+	$calendar->show();
 
