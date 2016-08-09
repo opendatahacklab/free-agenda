@@ -1,24 +1,4 @@
 <?php
-/**
- * Generate an RDF/XML representation of an event.
- *
- * Copyright 2016 Michele Maresca
- *
- * This program is free software: you can redistribute it and/or modify
- * it under the terms of the GNU Lesser General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
- *
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- * GNU Lesser General Public License for more details.
- *
- * You should have received a copy of the GNU Lesser General Public License
- * along with this program.  If not, see <http://www.gnu.org/licenses/>.
- *
- *  @author Michele Maresca
- */
 
 header("Content-type:text/calendar");
 
@@ -78,7 +58,8 @@ if( !$result ) {
 
 	//Aggiungo gli eventi al calendario
 while( $row = $result->fetch_array()) {
-	$calendar->add_event($row['timeStart'],$row['timeStart'], $row['item'], $row['itemlabel'],"",$row['address']);
+	$uid=sha1($row['item']);
+	$calendar->add_event($row['timeStart'],$row['timeStart'], $uid, $row['itemlabel'],"",$row['address']);
 }
 	//Chiusura e download del calendario
 	$calendar->show();
