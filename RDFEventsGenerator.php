@@ -161,11 +161,11 @@ class RDFEventsGenerator
 
 		$eventName->appendChild($xml->createTextNode($this->event->name));
 
-		if($this->event->locationName)
+		if($this->event->locationId)
 		{
 			$eventPlace = $xml->createElement("event:place");
 		    $eventPlaceAttribute = $xml->createAttribute("rdf:resource");
-			$eventPlaceAttribute->value = RDFLocnGenerator::getLocationURI($uri, $this->event->locationName);
+			$eventPlaceAttribute->value = RDFLocnGenerator::getLocationURI($uri, $this->event->locationId);
 			$eventPlace->appendChild($eventPlaceAttribute);
 			$eventRDF->appendChild($eventPlace);
 		}

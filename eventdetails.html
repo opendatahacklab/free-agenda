@@ -98,7 +98,7 @@ if (eventIRI==null)
 else{
 	var eventIRIdecoded=decodeURIComponent(eventIRI);
 	var p = new SingleEventQueryProcessor(eventIRIdecoded, processEventFunction, function(event){
-		window.alert("No such event!"+eventIRIdecoded);
+		window.alert("No such event "+eventIRIdecoded);
 	});
 
 	sparql_query("http://dydra.com/cristianolongo/agenda-unica-ct/sparql", p);

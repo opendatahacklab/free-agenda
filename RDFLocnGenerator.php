@@ -41,6 +41,7 @@ class Location {
 	public $houseNumber;
 	public $lat;
 	public $long;
+	public $id;
 	
 	/**
 	 *
@@ -59,7 +60,32 @@ class Location {
 		$this->houseNumber = $houseNumber;
 		$this->lat = $lat;
 		$this->long = $long;
+		$this->id = Location::generateId($name, $city, $address, $houseNumber);
 	}
+
+	/**
+	 * Create a unique identifier for this location
+	 */
+	private static function generateId($name, $city, $address, $houseNumber){
+		if ($name!=null && strlen($name)>0)
+			return $name;
+		$city=$city==null ? '' : $city;
+		$address=$address==null ? '' : $address;
+		$houseNumber=$houseNumber==null ? '' : $houseNumber;
+		return "$city-$address-$houseNumber";
+	}
+	
+// 	/**
+// 	 * Create a unique identifier for this location
+// 	 */
+// 	public function getId(){
+// 		if ($this->name!=null && strlen($this->name)>0)
+// 			return $this->name;
+// 		$city=$this->city==null ? '' : $this->city;
+// 		$address=$this->address==null ? '' : $this->address;
+// 		$houseNumber=$this->houseNumber==null ? '' : $this->houseNumber;
+// 		return "$city-$address-$houseNumber";		
+// 	}
 }
 
 /**
@@ -73,8 +99,8 @@ class RDFLocnGenerator {
 		$this->location = $location;
 	}
 	public function generateLocation($xml, $rdfParent, $prefix) {
-		
-		$uri=RDFLocnGenerator::getLocationURI($prefix,$this->location->name);
+		$locationId=
+		$uri=RDFLocnGenerator::getLocationURI($prefix,$this->location->id);
 		
 		// Create RDF Node for location
 		$locnRDF = $xml->createElement ( "locn:Location" );
@@ -184,6 +210,7 @@ class RDFLocnGenerator {
 	public static function getLocationURI($prefix, $name) {
 		return ( string ) $prefix . urlencode ( $name );
 	}
+	
 	private function formatLabel() {
 		return ( string ) ($this->location->houseNumber . ", " . $this->location->address . ", " . $this->location->city . ", Italy");
 	}

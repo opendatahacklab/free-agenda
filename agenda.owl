@@ -55,12 +55,16 @@
     </event:time>
     <rdfs:label>Festa di Autofinanziamento</rdfs:label>
   </event:Event>
-  <event:Event rdf:about="http://opendatahacklab.org/free-agenda/agenda-unica-ct/07210401/Raccolta+Firme+Legalizziamo%21+LA+CANNABIS+-+il+proibizionismo+ha+fallito/">
+  <event:Event rdf:about="http://opendatahacklab.org/free-agenda/agenda-unica-ct/20160807/Raccolta+Firme+Legalizziamo%21+LA+CANNABIS+-+il+proibizionismo+ha+fallito/">
+http://opendatahacklab.org/free-agenda/agenda-unica-ct/20160807/Raccolta+Firme+Legalizziamo%21+LA+CANNABIS+-+il+proibizionismo+ha+fallito/
+http://opendatahacklab.org/free-agenda/agenda-unica-ct/20160807/Raccolta+Firme+Legalizziamo%21+LA+CANNABIS+-+il+proibizionismo+ha+fallito/ 
+http://opendatahacklab.org/free-agenda/agenda-unica-ct/20160807/Raccolta+Firme+Legalizziamo%21+LA+CANNABIS+-+il+proibizionismo+ha+fallito/
+   <event:place rdf:resource="http://opendatahacklab.org/free-agenda/agenda-unica-ct/Aci+Trezza-Piazza+Vittime+del+terrorismo+internazionale-"/>
     <event:time>
-      <time:Interval rdf:about="http://opendatahacklab.org/free-agenda/agenda-unica-ct/07210401/Raccolta+Firme+Legalizziamo%21+LA+CANNABIS+-+il+proibizionismo+ha+fallito/time">
+      <time:Interval rdf:about="http://opendatahacklab.org/free-agenda/agenda-unica-ct/20160807/Raccolta+Firme+Legalizziamo%21+LA+CANNABIS+-+il+proibizionismo+ha+fallito/time">
         <time:hasBeginning>
-          <time:Instant rdf:about="http://opendatahacklab.org/free-agenda/agenda-unica-ct/07210401/Raccolta+Firme+Legalizziamo%21+LA+CANNABIS+-+il+proibizionismo+ha+fallito/time/begin">
-            <time:inXSDDateTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">0721-04-01T20:00:00+01:00</time:inXSDDateTime>
+          <time:Instant rdf:about="http://opendatahacklab.org/free-agenda/agenda-unica-ct/20160807/Raccolta+Firme+Legalizziamo%21+LA+CANNABIS+-+il+proibizionismo+ha+fallito/time/begin">
+            <time:inXSDDateTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2016-08-07T17:30:00+02:00</time:inXSDDateTime>
           </time:Instant>
         </time:hasBeginning>
       </time:Interval>
@@ -68,6 +72,7 @@
     <rdfs:label>Raccolta Firme Legalizziamo! LA CANNABIS - il proibizionismo ha fallito</rdfs:label>
   </event:Event>
   <event:Event rdf:about="http://opendatahacklab.org/free-agenda/agenda-unica-ct/20160624/Cena+Sociale+di+Sostegno+ai+Briganti+di+Librino/">
+ 
     <event:place rdf:resource="http://opendatahacklab.org/free-agenda/agenda-unica-ct/C.s.a.+Officina+Rebelde"/>
     <event:time>
       <time:Interval rdf:about="http://opendatahacklab.org/free-agenda/agenda-unica-ct/20160624/Cena+Sociale+di+Sostegno+ai+Briganti+di+Librino/time">
@@ -198,6 +203,7 @@
     <rdfs:label>Serata No Muos al C.s.a. Officina Rebelde</rdfs:label>
   </event:Event>
   <event:Event rdf:about="http://opendatahacklab.org/free-agenda/agenda-unica-ct/20160509/Contro+la+scuola+Spa/">
+    <event:place rdf:resource="http://opendatahacklab.org/free-agenda/agenda-unica-ct/Catania-Via+Beritelli-7"/>
     <event:time>
       <time:Interval rdf:about="http://opendatahacklab.org/free-agenda/agenda-unica-ct/20160509/Contro+la+scuola+Spa/time">
         <time:hasBeginning>
@@ -249,7 +255,7 @@
     <rdfs:label>presentazione del libro "Manifesto per la Sinistra e l'umanesimo sociale "</rdfs:label>
   </event:Event>
   <event:Event rdf:about="http://opendatahacklab.org/free-agenda/agenda-unica-ct/20160424/OLGA+%2C+un+grande+film+sulla+vita+di+Olga+Benario./">
-    <event:place rdf:resource="http://opendatahacklab.org/free-agenda/agenda-unica-ct/Circolo+Comunista+%22Olga+Benario%22+"/>
+    <event:place rdf:resource="http://opendatahacklab.org/free-agenda/agenda-unica-ct/Circolo+Comunista+%22Olga+Benario%22"/>
     <event:time>
       <time:Interval rdf:about="http://opendatahacklab.org/free-agenda/agenda-unica-ct/20160424/OLGA+%2C+un+grande+film+sulla+vita+di+Olga+Benario./time">
         <time:hasBeginning>
@@ -262,7 +268,7 @@
     <rdfs:label>OLGA , un grande film sulla vita di Olga Benario.</rdfs:label>
   </event:Event>
   <event:Event rdf:about="http://opendatahacklab.org/free-agenda/agenda-unica-ct/20160423/Siria+e+Palestina+nel+conflitto+mediorientale/">
-    <event:place rdf:resource="http://opendatahacklab.org/free-agenda/agenda-unica-ct/Sala+Cento+Fiori+"/>
+    <event:place rdf:resource="http://opendatahacklab.org/free-agenda/agenda-unica-ct/Sala+Cento+Fiori"/>
     <event:time>
       <time:Interval rdf:about="http://opendatahacklab.org/free-agenda/agenda-unica-ct/20160423/Siria+e+Palestina+nel+conflitto+mediorientale/time">
         <time:hasBeginning>
@@ -442,6 +448,18 @@
       </locn:Address>
     </locn:address>
   </locn:Location>
+  <locn:Location rdf:about="http://opendatahacklab.org/free-agenda/agenda-unica-ct/Aci+Trezza-Piazza+Vittime+del+terrorismo+internazionale-">
+    <locn:address>
+      <locn:Address rdf:about="http://opendatahacklab.org/free-agenda/agenda-unica-ct/Aci+Trezza-Piazza+Vittime+del+terrorismo+internazionale-/address">
+        <rdfs:label>, Piazza Vittime del terrorismo internazionale, Aci Trezza, Italy</rdfs:label>
+        <locn:fullAddress>, Piazza Vittime del terrorismo internazionale, Aci Trezza, Italy</locn:fullAddress>
+        <locn:throughfare>Piazza Vittime del terrorismo internazionale</locn:throughfare>
+        <locn:locatorDesignator></locn:locatorDesignator>
+        <locn:postName>Aci Trezza</locn:postName>
+        <locn:adminUnitL1>IT</locn:adminUnitL1>
+      </locn:Address>
+    </locn:address>
+  </locn:Location>
   <locn:Location rdf:about="http://opendatahacklab.org/free-agenda/agenda-unica-ct/Circolo+Rosa+Luxemburg">
     <rdfs:label>Circolo Rosa Luxemburg</rdfs:label>
     <locn:address>
@@ -489,6 +507,18 @@
         <locn:fullAddress>, Via del Giaggiolo, Catania, Italy</locn:fullAddress>
         <locn:throughfare>Via del Giaggiolo</locn:throughfare>
         <locn:locatorDesignator></locn:locatorDesignator>
+        <locn:postName>Catania</locn:postName>
+        <locn:adminUnitL1>IT</locn:adminUnitL1>
+      </locn:Address>
+    </locn:address>
+  </locn:Location>
+  <locn:Location rdf:about="http://opendatahacklab.org/free-agenda/agenda-unica-ct/Catania-Via+Beritelli-7">
+    <locn:address>
+      <locn:Address rdf:about="http://opendatahacklab.org/free-agenda/agenda-unica-ct/Catania-Via+Beritelli-7/address">
+        <rdfs:label>7, Via Beritelli, Catania, Italy</rdfs:label>
+        <locn:fullAddress>7, Via Beritelli, Catania, Italy</locn:fullAddress>
+        <locn:throughfare>Via Beritelli</locn:throughfare>
+        <locn:locatorDesignator>7</locn:locatorDesignator>
         <locn:postName>Catania</locn:postName>
         <locn:adminUnitL1>IT</locn:adminUnitL1>
       </locn:Address>

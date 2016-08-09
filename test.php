@@ -6,7 +6,7 @@ $p = new AgendaSheetParser(AGEND_UNICA_URL);
 foreach ($p as $e)
 {
 	if ($e->start!=null)
-		echo $e->name." ".$e->locationName."\n";
+		echo $e->name." location id=".$e->locationId."\n";
 }
 
 
@@ -14,6 +14,6 @@ echo "LOCATIONS\n\n";
 $locations=$p->getAllParsedLocations();
 foreach ($locations as $n => $l)
 {
-	echo $l->name.", ".$l->city." ".$l->houseNumber." ".$l->address."\n";
+	echo "$n >> ".$l->city." ".$l->houseNumber." ".$l->address."\n";
 }
 ?>

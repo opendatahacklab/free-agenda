@@ -34,12 +34,21 @@ class Event {
 	public $start;
 	// array organizations
 	public $organizedBy;
-	public $locationName;
-	public function __construct($row) {
+	public $locationId;
+	
+	/**
+	 * 
+	 * @param unknown $row the row representing the event
+	 * @param unknown $locationId the unique identifier of the location. 
+	 * Null if no location is associated
+	 * to the event.
+	 */
+	public function __construct($row, $locationId=null) {
 		$this->name = $row [1];
 		$this->start = $row [2] == null || $row [3] == null ? null : Event::parseTime ( $row [2], $row [3] );
 		$this->organizedBy = isset ( $row [6] ) ? explode ( ',', $row [6] ) : null;
-		$this->locationName = isset ( $row [8] ) ? $row [8] : null;
+		$locationName = isset ( $row [8] ) ? $row [8] : null;
+		$this->locationId=$locationId==null ? $locationName : $locationId;
 	}
 	
 	/**
@@ -94,7 +103,7 @@ class AgendaSheetParser implements Iterator {
 		$address = $row [10];
 		$houseNumber = $row [11];
 		
-		if (! isset ( $name ) || $name == null || strlen ( $name ) == 0 || $city == null || strlen ( $city ) == 0 || $address == null || strlen ( $address ) == 0)
+		if ($city == null || strlen ( $city ) == 0 || $address == null || strlen ( $address ) == 0)
 			return null;
 			// coordinates not available in this release
 		$lat = null;
@@ -111,8 +120,9 @@ class AgendaSheetParser implements Iterator {
 	private function storeLocation($location) {
 		// keep the more recent location description in the sheet
 		// assuming that events are listed in ascending order ordered by time
-		if (! array_key_exists ( $location->name, $this->locations )) {
-			$this->locations [$location->name] = $location;
+		$locationId=$location->id;
+		if (! array_key_exists ( $locationId, $this->locations )) {
+			$this->locations [$locationId] = $location;
 		}
 	}
 	
@@ -133,10 +143,13 @@ class AgendaSheetParser implements Iterator {
 		$row = str_getcsv ( $rowStr, "\t", "\"" );
 		$event = new Event ( $row );
 		$location = $this->parseLocation ( $row );
-		if ($location != null)
+		if ($location != null){
 			$this->storeLocation ( $location );
-		return $event;
+			return new Event($row, $location->id);
+		}
+		return new Event($row);
 	}
+	
 	public function key() {
 		return $this->index;
 	}
