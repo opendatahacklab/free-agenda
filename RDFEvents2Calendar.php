@@ -20,7 +20,7 @@
  *  @author Michele Maresca
  */
 
-//header("Content-type:text/calendar");
+header("Content-type:text/calendar");
 
 require_once( "sparqllib.php" );
 require_once('Calendar.php');
