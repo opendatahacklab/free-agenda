@@ -155,9 +155,13 @@ fclose($handle);
 			trevents.appendChild(tdOra);
 
 			var tdLocn = document.createElement("td");
-			tdLocn.appendChild(document.createTextNode(event.eventPlace));
-			trevents.appendChild(tdLocn);
 
+//Verify the prescence of the event place
+
+			event.eventPlace !== null ?  tdLocn.appendChild(document.createTextNode(event.eventPlace)) : tdLocn.appendChild(document.createTextNode("")); 
+
+			trevents.appendChild(tdLocn);	
+			
 			var tdTitolo = document.createElement("td");
 			var tdTestoTitolo = document.createTextNode(event.eventName);
 			tdTitolo.appendChild(tdTestoTitolo);
