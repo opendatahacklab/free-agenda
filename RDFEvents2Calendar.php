@@ -48,7 +48,8 @@ $calendar = new Calendar("agenda-unica-calendar");
 while( $row = $result->fetch_array()) {
 	$uid=rtrim(chunk_split( $row['item'], 65, "\r\n "),"\r\n ");	
 	$summary=rtrim(chunk_split( $row['itemlabel'], 65, "\r\n "),"\r\n ");	
-	$calendar->add_event($row['timeStart'],$row['timeStart'],$uid,$summary,$row['address']);
+	$location=rtrim(chunk_split( $row['address'], 65, "\r\n "),"\r\n ");
+	$calendar->add_event($row['timeStart'],$row['timeStart'],$uid,$location,$summary);
 }
 	//Chiusura e download del calendario
 	$calendar->show();
