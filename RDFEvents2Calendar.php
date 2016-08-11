@@ -25,27 +25,15 @@ $db->ns( "sioc","http://rdfs.org/sioc/ns#");
 $db->ns( "dc","http://purl.org/dc/elements/1.1/");
 
 //Imposto ed eseguo la query per estrarre tutti gli eventi, in caso di errore esco
-$query = "SELECT DISTINCT ?item ?agent ?post ?depiction ?itemlabel ?logo ?timeStart ?address ?description ?homepage ?partname ?ptitle ?plabel ?pcreat WHERE {
+$query = "SELECT DISTINCT ?item ?itemlabel ?timeStart ?address WHERE {
   ?item locn:location ?site .
 	?item rdfs:label ?itemlabel .
 	?item event:time ?t .
-	OPTIONAL {?item event:agent ?agent} .
 	?t time:hasBeginning ?hasB .
 	?hasB time:inXSDDateTime ?timeStart .
 	?site locn:address ?a .
 	?a locn:fullAddress ?address .
-	OPTIONAL {?item rdfs:comment ?description} .
-	OPTIONAL {?item foaf:homepage ?homepage} .
-	OPTIONAL {?agent rdfs:label ?partname} .
-	OPTIONAL {?item foaf:depiction ?depiction} .
-	OPTIONAL {?hasB time:xsdDateTime ?timeEnd} .
-	OPTIONAL {?item foaf:logo ?logo} .
-	OPTIONAL {?post sioc:about ?item .
-		?post dc:title ?ptitle .
-		?post rdfs:label ?plabel .
-		?post sioc:has_creator ?pc .
-		?pc rdfs:label ?pcreat .
-	}
+
 } ORDER BY DESC(?timeStart) ?item";
 
 $result = $db->query( $query );
@@ -54,12 +42,13 @@ if( !$result ) {
 	exit;
 }
 	//Creazione di un nuovo calendario
-	$calendar = new Calendar("agenda-unica-calendar");
+$calendar = new Calendar("agenda-unica-calendar");
 
 	//Aggiungo gli eventi al calendario
 while( $row = $result->fetch_array()) {
-	$uid=sha1($row['item']);
-	$calendar->add_event($row['timeStart'],$row['timeStart'], $uid, $row['itemlabel'],"",$row['address']);
+	$uid=rtrim(chunk_split( $row['item'], 65, "\r\n "),"\r\n ");	
+	$summary=rtrim(chunk_split( $row['itemlabel'], 65, "\r\n "),"\r\n ");	
+	$calendar->add_event($row['timeStart'],$row['timeStart'],$uid,$summary,$row['address']);
 }
 	//Chiusura e download del calendario
 	$calendar->show();
