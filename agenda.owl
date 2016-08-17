@@ -56,10 +56,7 @@
     <rdfs:label>Festa di Autofinanziamento</rdfs:label>
   </event:Event>
   <event:Event rdf:about="http://opendatahacklab.org/free-agenda/agenda-unica-ct/20160807/Raccolta+Firme+Legalizziamo%21+LA+CANNABIS+-+il+proibizionismo+ha+fallito/">
-http://opendatahacklab.org/free-agenda/agenda-unica-ct/20160807/Raccolta+Firme+Legalizziamo%21+LA+CANNABIS+-+il+proibizionismo+ha+fallito/
-http://opendatahacklab.org/free-agenda/agenda-unica-ct/20160807/Raccolta+Firme+Legalizziamo%21+LA+CANNABIS+-+il+proibizionismo+ha+fallito/ 
-http://opendatahacklab.org/free-agenda/agenda-unica-ct/20160807/Raccolta+Firme+Legalizziamo%21+LA+CANNABIS+-+il+proibizionismo+ha+fallito/
-   <event:place rdf:resource="http://opendatahacklab.org/free-agenda/agenda-unica-ct/Aci+Trezza-Piazza+Vittime+del+terrorismo+internazionale-"/>
+    <event:place rdf:resource="http://opendatahacklab.org/free-agenda/agenda-unica-ct/Aci+Trezza-Piazza+Vittime+del+terrorismo+internazionale-"/>
     <event:time>
       <time:Interval rdf:about="http://opendatahacklab.org/free-agenda/agenda-unica-ct/20160807/Raccolta+Firme+Legalizziamo%21+LA+CANNABIS+-+il+proibizionismo+ha+fallito/time">
         <time:hasBeginning>
@@ -71,8 +68,20 @@ http://opendatahacklab.org/free-agenda/agenda-unica-ct/20160807/Raccolta+Firme+L
     </event:time>
     <rdfs:label>Raccolta Firme Legalizziamo! LA CANNABIS - il proibizionismo ha fallito</rdfs:label>
   </event:Event>
+  <event:Event rdf:about="http://opendatahacklab.org/free-agenda/agenda-unica-ct/20160819/Aleppo+live+loveinthetimeofrevolution/">
+    <event:place rdf:resource="http://opendatahacklab.org/free-agenda/agenda-unica-ct/Sala+Cento+Fiori"/>
+    <event:time>
+      <time:Interval rdf:about="http://opendatahacklab.org/free-agenda/agenda-unica-ct/20160819/Aleppo+live+loveinthetimeofrevolution/time">
+        <time:hasBeginning>
+          <time:Instant rdf:about="http://opendatahacklab.org/free-agenda/agenda-unica-ct/20160819/Aleppo+live+loveinthetimeofrevolution/time/begin">
+            <time:inXSDDateTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2016-08-19T18:00:00+02:00</time:inXSDDateTime>
+          </time:Instant>
+        </time:hasBeginning>
+      </time:Interval>
+    </event:time>
+    <rdfs:label>Aleppo live loveinthetimeofrevolution</rdfs:label>
+  </event:Event>
   <event:Event rdf:about="http://opendatahacklab.org/free-agenda/agenda-unica-ct/20160624/Cena+Sociale+di+Sostegno+ai+Briganti+di+Librino/">
- 
     <event:place rdf:resource="http://opendatahacklab.org/free-agenda/agenda-unica-ct/C.s.a.+Officina+Rebelde"/>
     <event:time>
       <time:Interval rdf:about="http://opendatahacklab.org/free-agenda/agenda-unica-ct/20160624/Cena+Sociale+di+Sostegno+ai+Briganti+di+Librino/time">
