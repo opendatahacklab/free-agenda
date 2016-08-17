@@ -16,6 +16,45 @@
   <rdf:Description rdf:about="http://purl.org/NET/c4dm/event.owl#place">
     <rdfs:subPropertyOf rdf:resource="http://www.w3.org/ns/locn#location"/>
   </rdf:Description>
+  <event:Event rdf:about="http://opendatahacklab.org/free-agenda/agenda-unica-ct/20160820/Assemblea+contro+Renzi/">
+    <event:place rdf:resource="http://opendatahacklab.org/free-agenda/agenda-unica-ct/Cso+Liotru"/>
+    <event:time>
+      <time:Interval rdf:about="http://opendatahacklab.org/free-agenda/agenda-unica-ct/20160820/Assemblea+contro+Renzi/time">
+        <time:hasBeginning>
+          <time:Instant rdf:about="http://opendatahacklab.org/free-agenda/agenda-unica-ct/20160820/Assemblea+contro+Renzi/time/begin">
+            <time:inXSDDateTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2016-08-20T18:00:00+02:00</time:inXSDDateTime>
+          </time:Instant>
+        </time:hasBeginning>
+      </time:Interval>
+    </event:time>
+    <rdfs:label>Assemblea contro Renzi</rdfs:label>
+  </event:Event>
+  <event:Event rdf:about="http://opendatahacklab.org/free-agenda/agenda-unica-ct/20160819/Aleppo+live+loveinthetimeofrevolution/">
+    <event:place rdf:resource="http://opendatahacklab.org/free-agenda/agenda-unica-ct/Sala+Cento+Fiori"/>
+    <event:time>
+      <time:Interval rdf:about="http://opendatahacklab.org/free-agenda/agenda-unica-ct/20160819/Aleppo+live+loveinthetimeofrevolution/time">
+        <time:hasBeginning>
+          <time:Instant rdf:about="http://opendatahacklab.org/free-agenda/agenda-unica-ct/20160819/Aleppo+live+loveinthetimeofrevolution/time/begin">
+            <time:inXSDDateTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2016-08-19T18:00:00+02:00</time:inXSDDateTime>
+          </time:Instant>
+        </time:hasBeginning>
+      </time:Interval>
+    </event:time>
+    <rdfs:label>Aleppo live loveinthetimeofrevolution</rdfs:label>
+  </event:Event>
+  <event:Event rdf:about="http://opendatahacklab.org/free-agenda/agenda-unica-ct/20160807/Raccolta+Firme+Legalizziamo%21+LA+CANNABIS+-+il+proibizionismo+ha+fallito/">
+    <event:place rdf:resource="http://opendatahacklab.org/free-agenda/agenda-unica-ct/Aci+Trezza-Piazza+Vittime+del+terrorismo+internazionale-"/>
+    <event:time>
+      <time:Interval rdf:about="http://opendatahacklab.org/free-agenda/agenda-unica-ct/20160807/Raccolta+Firme+Legalizziamo%21+LA+CANNABIS+-+il+proibizionismo+ha+fallito/time">
+        <time:hasBeginning>
+          <time:Instant rdf:about="http://opendatahacklab.org/free-agenda/agenda-unica-ct/20160807/Raccolta+Firme+Legalizziamo%21+LA+CANNABIS+-+il+proibizionismo+ha+fallito/time/begin">
+            <time:inXSDDateTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2016-08-07T17:30:00+02:00</time:inXSDDateTime>
+          </time:Instant>
+        </time:hasBeginning>
+      </time:Interval>
+    </event:time>
+    <rdfs:label>Raccolta Firme Legalizziamo! LA CANNABIS - il proibizionismo ha fallito</rdfs:label>
+  </event:Event>
   <event:Event rdf:about="http://opendatahacklab.org/free-agenda/agenda-unica-ct/20160720/Chi+non+ha+memoria+non+ha+futuro+-+reading%2C+video+%26+dibattito/">
     <event:place rdf:resource="http://opendatahacklab.org/free-agenda/agenda-unica-ct/Circolo+Citt%C3%A0+Futura"/>
     <event:time>
@@ -54,32 +93,6 @@
       </time:Interval>
     </event:time>
     <rdfs:label>Festa di Autofinanziamento</rdfs:label>
-  </event:Event>
-  <event:Event rdf:about="http://opendatahacklab.org/free-agenda/agenda-unica-ct/20160807/Raccolta+Firme+Legalizziamo%21+LA+CANNABIS+-+il+proibizionismo+ha+fallito/">
-    <event:place rdf:resource="http://opendatahacklab.org/free-agenda/agenda-unica-ct/Aci+Trezza-Piazza+Vittime+del+terrorismo+internazionale-"/>
-    <event:time>
-      <time:Interval rdf:about="http://opendatahacklab.org/free-agenda/agenda-unica-ct/20160807/Raccolta+Firme+Legalizziamo%21+LA+CANNABIS+-+il+proibizionismo+ha+fallito/time">
-        <time:hasBeginning>
-          <time:Instant rdf:about="http://opendatahacklab.org/free-agenda/agenda-unica-ct/20160807/Raccolta+Firme+Legalizziamo%21+LA+CANNABIS+-+il+proibizionismo+ha+fallito/time/begin">
-            <time:inXSDDateTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2016-08-07T17:30:00+02:00</time:inXSDDateTime>
-          </time:Instant>
-        </time:hasBeginning>
-      </time:Interval>
-    </event:time>
-    <rdfs:label>Raccolta Firme Legalizziamo! LA CANNABIS - il proibizionismo ha fallito</rdfs:label>
-  </event:Event>
-  <event:Event rdf:about="http://opendatahacklab.org/free-agenda/agenda-unica-ct/20160819/Aleppo+live+loveinthetimeofrevolution/">
-    <event:place rdf:resource="http://opendatahacklab.org/free-agenda/agenda-unica-ct/Sala+Cento+Fiori"/>
-    <event:time>
-      <time:Interval rdf:about="http://opendatahacklab.org/free-agenda/agenda-unica-ct/20160819/Aleppo+live+loveinthetimeofrevolution/time">
-        <time:hasBeginning>
-          <time:Instant rdf:about="http://opendatahacklab.org/free-agenda/agenda-unica-ct/20160819/Aleppo+live+loveinthetimeofrevolution/time/begin">
-            <time:inXSDDateTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2016-08-19T18:00:00+02:00</time:inXSDDateTime>
-          </time:Instant>
-        </time:hasBeginning>
-      </time:Interval>
-    </event:time>
-    <rdfs:label>Aleppo live loveinthetimeofrevolution</rdfs:label>
   </event:Event>
   <event:Event rdf:about="http://opendatahacklab.org/free-agenda/agenda-unica-ct/20160624/Cena+Sociale+di+Sostegno+ai+Briganti+di+Librino/">
     <event:place rdf:resource="http://opendatahacklab.org/free-agenda/agenda-unica-ct/C.s.a.+Officina+Rebelde"/>
@@ -431,6 +444,31 @@
     </event:time>
     <rdfs:label>Referendum Day</rdfs:label>
   </event:Event>
+  <locn:Location rdf:about="http://opendatahacklab.org/free-agenda/agenda-unica-ct/Cso+Liotru">
+    <rdfs:label>Cso Liotru</rdfs:label>
+    <locn:address>
+      <locn:Address rdf:about="http://opendatahacklab.org/free-agenda/agenda-unica-ct/Cso+Liotru/address">
+        <rdfs:label>8, Via Montevergine, Catania, Italy</rdfs:label>
+        <locn:fullAddress>8, Via Montevergine, Catania, Italy</locn:fullAddress>
+        <locn:throughfare>Via Montevergine</locn:throughfare>
+        <locn:locatorDesignator>8</locn:locatorDesignator>
+        <locn:postName>Catania</locn:postName>
+        <locn:adminUnitL1>IT</locn:adminUnitL1>
+      </locn:Address>
+    </locn:address>
+  </locn:Location>
+  <locn:Location rdf:about="http://opendatahacklab.org/free-agenda/agenda-unica-ct/Aci+Trezza-Piazza+Vittime+del+terrorismo+internazionale-">
+    <locn:address>
+      <locn:Address rdf:about="http://opendatahacklab.org/free-agenda/agenda-unica-ct/Aci+Trezza-Piazza+Vittime+del+terrorismo+internazionale-/address">
+        <rdfs:label>, Piazza Vittime del terrorismo internazionale, Aci Trezza, Italy</rdfs:label>
+        <locn:fullAddress>, Piazza Vittime del terrorismo internazionale, Aci Trezza, Italy</locn:fullAddress>
+        <locn:throughfare>Piazza Vittime del terrorismo internazionale</locn:throughfare>
+        <locn:locatorDesignator></locn:locatorDesignator>
+        <locn:postName>Aci Trezza</locn:postName>
+        <locn:adminUnitL1>IT</locn:adminUnitL1>
+      </locn:Address>
+    </locn:address>
+  </locn:Location>
   <locn:Location rdf:about="http://opendatahacklab.org/free-agenda/agenda-unica-ct/Circolo+Citt%C3%A0+Futura">
     <rdfs:label>Circolo Città Futura</rdfs:label>
     <locn:address>
@@ -453,18 +491,6 @@
         <locn:throughfare>Via del Giaggiolo</locn:throughfare>
         <locn:locatorDesignator></locn:locatorDesignator>
         <locn:postName>Catania</locn:postName>
-        <locn:adminUnitL1>IT</locn:adminUnitL1>
-      </locn:Address>
-    </locn:address>
-  </locn:Location>
-  <locn:Location rdf:about="http://opendatahacklab.org/free-agenda/agenda-unica-ct/Aci+Trezza-Piazza+Vittime+del+terrorismo+internazionale-">
-    <locn:address>
-      <locn:Address rdf:about="http://opendatahacklab.org/free-agenda/agenda-unica-ct/Aci+Trezza-Piazza+Vittime+del+terrorismo+internazionale-/address">
-        <rdfs:label>, Piazza Vittime del terrorismo internazionale, Aci Trezza, Italy</rdfs:label>
-        <locn:fullAddress>, Piazza Vittime del terrorismo internazionale, Aci Trezza, Italy</locn:fullAddress>
-        <locn:throughfare>Piazza Vittime del terrorismo internazionale</locn:throughfare>
-        <locn:locatorDesignator></locn:locatorDesignator>
-        <locn:postName>Aci Trezza</locn:postName>
         <locn:adminUnitL1>IT</locn:adminUnitL1>
       </locn:Address>
     </locn:address>
