@@ -146,6 +146,9 @@ class RDFEventsGenerator
 		$eventRDF->appendChild($eventAttribute);
 
 		$eventName = $xml->createElement("rdfs:label");
+		
+		if ($this->event->description!=null && strlen($this->event->description))
+			$this->addEventDescriptionElement($xml, $eventRDF, $this->event->description);
 
 		$eventTime = $xml->createElement("event:time");
 		$timeInterval = $xml->createElement("time:Interval");
@@ -206,6 +209,20 @@ class RDFEventsGenerator
 //Append RDFNode to the RDF Parent
 		$rdfParent->appendChild($eventRDF);
 
+	}
+	
+	/**
+	 * Add descrption as rdfs:comment to an individual representing an event
+	 * 
+	 * @param unknown $xml the xml document
+	 * @param unknown $eventElement
+	 * @param unknown $descrpition
+	 */
+	private function addEventDescriptionElement($xml, $eventElement, $descrpition){
+		$textEl=$xml->createTextNode($descrpition);
+		$commentEl=$xml->createElement("rdfs:comment");
+		$eventElement->appendChild($commentEl);
+		$commentEl->appendChild($textEl);
 	}
 
 /**

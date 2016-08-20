@@ -43,6 +43,7 @@
     <rdfs:label>Aleppo live loveinthetimeofrevolution</rdfs:label>
   </event:Event>
   <event:Event rdf:about="http://opendatahacklab.org/free-agenda/agenda-unica-ct/20160807/Raccolta+Firme+Legalizziamo%21+LA+CANNABIS+-+il+proibizionismo+ha+fallito/">
+    <rdfs:comment>Tavolo per la raccolta firme nazionale legalizzazione cannabis</rdfs:comment>
     <event:place rdf:resource="http://opendatahacklab.org/free-agenda/agenda-unica-ct/Aci+Trezza-Piazza+Vittime+del+terrorismo+internazionale-"/>
     <event:time>
       <time:Interval rdf:about="http://opendatahacklab.org/free-agenda/agenda-unica-ct/20160807/Raccolta+Firme+Legalizziamo%21+LA+CANNABIS+-+il+proibizionismo+ha+fallito/time">
@@ -82,6 +83,7 @@
     <rdfs:label>Briganti Rugby Librino</rdfs:label>
   </event:Event>
   <event:Event rdf:about="http://opendatahacklab.org/free-agenda/agenda-unica-ct/20160727/Festa+di+Autofinanziamento/">
+    <rdfs:comment>Festa di Autofinanziamento della Palestra Lupo: </rdfs:comment>
     <event:place rdf:resource="http://opendatahacklab.org/free-agenda/agenda-unica-ct/Palestra+Lupo"/>
     <event:time>
       <time:Interval rdf:about="http://opendatahacklab.org/free-agenda/agenda-unica-ct/20160727/Festa+di+Autofinanziamento/time">

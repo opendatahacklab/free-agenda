@@ -31,6 +31,7 @@ require ('RDFEventsGenerator.php');
  */
 class Event {
 	public $name;
+	public $description;
 	public $start;
 	// array organizations
 	public $organizedBy;
@@ -49,6 +50,7 @@ class Event {
 		$this->organizedBy = isset ( $row [6] ) ? explode ( ',', $row [6] ) : null;
 		$locationName = isset ( $row [8] ) ? $row [8] : null;
 		$this->locationId=$locationId==null ? $locationName : $locationId;
+		$this->description= $row[12];
 	}
 	
 	/**
