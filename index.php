@@ -30,6 +30,7 @@ fclose($handle);
 			</a>
 			<a href="#data" title="dati"><img src="../commons/imgs/rdf.png" /></a> 	
 			<a href="#info" title="informazioni"><img src="../commons/imgs/Info_Simple_bw.svg.png" /></a>
+			<a title="Internet Calendar"><img src="../commons/imgs/Octicons-calendar.svg.png" height="80px" /></a>
 			<a href="https://docs.google.com/forms/d/1QL7C46f4Csc_uAKVjkyWIgXEi3C2hE0GSAXCaX_dPpE/viewform?ndplr=1" title="aggiungi evento" target="_blank"><img src="../commons/imgs/plus.png" /></a>
 		</nav>
 	</header>
@@ -101,6 +102,8 @@ fclose($handle);
 				src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Loupe.svg/58px-Loupe.svg.png">
 				by <a href="https://commons.wikimedia.org/wiki/Magnifying_glass">Wikimedia
 					commons</a>;</li>
+			<li><img src="../commons/imgs/Octicons-calendar.svg.png" /> by Stefania Servidio (The Noun Project) <a href="http://creativecommons.org/licenses/by/3.0/us/deed.en">CC BY 3.0</a>, 
+				via <a href="https://commons.wikimedia.org/wiki/File%3ANoun_project_-_Calendar.svg">Wikimedia Commons</a>;</li>
 			<li><img src="../commons/imgs/GitHub-Mark-64px.png" /> <a
 				href="https://github.com/logos">GitHub Mark</a>;</li>
 			<li><img src="../commons/imgs/rdf.png" /> derivata da <a href="http://www.w3.org/RDF/icons/">W3C RDF Resource
