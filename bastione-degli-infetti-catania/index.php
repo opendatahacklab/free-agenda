@@ -17,8 +17,8 @@
  *
  * @author Cristiano Longo
  */
-$title='Agenda Google Developers Group Catania';
-$sparql='http://dydra.com/cristianolongo/agenda-gdg-catania/sparql';
-$sheet='https://docs.google.com/forms/d/e/1FAIpQLScoF3Msh4kOoAMWeNxWg_a4VoRLkYBSedxk_xjUgE_Qskh-3w';
+$title='Agenda Bastione degli Infetti Catania';
+$sparql='https://dydra.com/cristianolongo/agenda-bastione-degli-infetti-catania/sparql';
+$sheet='https://docs.google.com/spreadsheets/d/1mNJ2I-QldzoxCR-EkTJ-K7xvzlurZC0vge224FD3gnY';
 require('../agendaTemplate.php');
 ?>

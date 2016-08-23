@@ -69,6 +69,7 @@ class AgendaRDFGenerator {
 		foreach ( $locations as $name => $location )
 			(new RDFLocnGenerator ( $location ))->generateLocation ( $ontology->getXML (), $ontology->getXML ()->documentElement, AgendaRDFGenerator::$BASEURI );
 		
+		header("Content-type:application/rdf+xml");		
 		echo $ontology->getXML ()->saveXML ();
 	}
 }
