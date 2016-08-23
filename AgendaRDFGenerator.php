@@ -22,23 +22,23 @@
 require ('AgendaSheetParser.php');
 require ('RDFXMLOntology.php');
 
-// a unique base uri to handle that some events may be in different agendas
-define ( 'BASEURI', 'http://opendatahacklab.org/free-agenda/' );
 class AgendaRDFGenerator {
-	private $ontologyBaseUrl;
+	// a unique base uri to handle that some events may be in different agendas
+	public static $BASEURI = 'http://opendatahacklab.org/free-agenda/';
+	
+	private $ontologyUrl;
 	private $sheetUrl;
 	
 	/**
 	 * Prepare to generate an ontology from the
 	 * 
 	 * @param $ontologyURL url
-	 *        	of the ontology element and base url for all the other
-	 *        	generated individuals
+	 *        	of the ontology element 
 	 * @param $sheetUrl url
 	 *        	to a google sheet with the source data
 	 */
-	public function __construct($ontologyBaseUrl, $sheetUrl) {
-		$this->ontologyBaseUrl = $ontologyBaseUrl;
+	public function __construct($ontologyUrl, $sheetUrl) {
+		$this->ontologyUrl = $ontologyUrl;
 		$this->sheetUrl = $sheetUrl;
 	}
 	
@@ -46,7 +46,7 @@ class AgendaRDFGenerator {
 	 * Generate the ontology and send it to the standard output.
 	 */
 	public function generate() {
-		$ontology = new RDFXMLOntology ( $this->ontologyBaseUrl.'ontology' );
+		$ontology = new RDFXMLOntology ( $this->ontologyUrl);
 		$ontology->addNamespaces ( RDFEventsGenerator::getRequiredNamespaces () );
 		$ontology->addNamespaces ( RDFLocnGenerator::getRequiredNamespaces () );
 		$ontology->addImports ( RDFEventsGenerator::getRequiredVocabularies () );
@@ -62,12 +62,12 @@ class AgendaRDFGenerator {
 		$agendaParser = new AgendaSheetParser ( $this->sheetUrl );
 		foreach ( $agendaParser as $event ) {
 			if ($event->start != null)
-				(new RDFEventsGenerator ( $event ))->generateEvent ( $ontology->getXML (), $ontology->getXML ()->documentElement, $this->ontologyBaseUrl );
+				(new RDFEventsGenerator ( $event ))->generateEvent ( $ontology->getXML (), $ontology->getXML ()->documentElement, AgendaRDFGenerator::$BASEURI );
 		}
 		$locations = $agendaParser->getAllParsedLocations ();
 		
 		foreach ( $locations as $name => $location )
-			(new RDFLocnGenerator ( $location ))->generateLocation ( $ontology->getXML (), $ontology->getXML ()->documentElement, $this->ontologyBaseUrl );
+			(new RDFLocnGenerator ( $location ))->generateLocation ( $ontology->getXML (), $ontology->getXML ()->documentElement, AgendaRDFGenerator::$BASEURI );
 		
 		echo $ontology->getXML ()->saveXML ();
 	}

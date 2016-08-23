@@ -16,12 +16,13 @@
   <rdf:Description rdf:about="http://purl.org/NET/c4dm/event.owl#place">
     <rdfs:subPropertyOf rdf:resource="http://www.w3.org/ns/locn#location"/>
   </rdf:Description>
-  <event:Event rdf:about="http://opendatahacklab.org/free-agenda/gdg-catania/20160729/OpenMeetup%3A+GDG+Garages+Opening/">
-    <event:place rdf:resource="http://opendatahacklab.org/free-agenda/gdg-catania/Dipartimento+di+Ingegneria+Elettrica%2C+Elettronica+e+Informatica+%28DIEEI%29+--+Cittadella+Universitaria"/>
+  <event:Event rdf:about="http://opendatahacklab.org/free-agenda/20160729/OpenMeetup%3A+GDG+Garages+Opening/">
+    <rdfs:comment>GDG Garages, Women Techmakers, forum GDG, e-zine, Telegram group &amp; channel, IRC channel (https://drive.google.com/open?id=0BzA_0tVEkZusbVI2QVVRei1JQms)</rdfs:comment>
+    <event:place rdf:resource="http://opendatahacklab.org/free-agenda/Dipartimento+di+Ingegneria+Elettrica%2C+Elettronica+e+Informatica+%28DIEEI%29+--+Cittadella+Universitaria"/>
     <event:time>
-      <time:Interval rdf:about="http://opendatahacklab.org/free-agenda/gdg-catania/20160729/OpenMeetup%3A+GDG+Garages+Opening/time">
+      <time:Interval rdf:about="http://opendatahacklab.org/free-agenda/20160729/OpenMeetup%3A+GDG+Garages+Opening/time">
         <time:hasBeginning>
-          <time:Instant rdf:about="http://opendatahacklab.org/free-agenda/gdg-catania/20160729/OpenMeetup%3A+GDG+Garages+Opening/time/begin">
+          <time:Instant rdf:about="http://opendatahacklab.org/free-agenda/20160729/OpenMeetup%3A+GDG+Garages+Opening/time/begin">
             <time:inXSDDateTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2016-07-29T16:45:00+02:00</time:inXSDDateTime>
           </time:Instant>
         </time:hasBeginning>
@@ -29,10 +30,10 @@
     </event:time>
     <rdfs:label>OpenMeetup: GDG Garages Opening</rdfs:label>
   </event:Event>
-  <locn:Location rdf:about="http://opendatahacklab.org/free-agenda/gdg-catania/Dipartimento+di+Ingegneria+Elettrica%2C+Elettronica+e+Informatica+%28DIEEI%29+--+Cittadella+Universitaria">
+  <locn:Location rdf:about="http://opendatahacklab.org/free-agenda/Dipartimento+di+Ingegneria+Elettrica%2C+Elettronica+e+Informatica+%28DIEEI%29+--+Cittadella+Universitaria">
     <rdfs:label>Dipartimento di Ingegneria Elettrica, Elettronica e Informatica (DIEEI) -- Cittadella Universitaria</rdfs:label>
     <locn:address>
-      <locn:Address rdf:about="http://opendatahacklab.org/free-agenda/gdg-catania/Dipartimento+di+Ingegneria+Elettrica%2C+Elettronica+e+Informatica+%28DIEEI%29+--+Cittadella+Universitaria/address">
+      <locn:Address rdf:about="http://opendatahacklab.org/free-agenda/Dipartimento+di+Ingegneria+Elettrica%2C+Elettronica+e+Informatica+%28DIEEI%29+--+Cittadella+Universitaria/address">
         <rdfs:label>6, Viale Andrea Doria, Catania, Italy</rdfs:label>
         <locn:fullAddress>6, Viale Andrea Doria, Catania, Italy</locn:fullAddress>
         <locn:throughfare>Viale Andrea Doria</locn:throughfare>

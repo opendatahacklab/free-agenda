@@ -21,9 +21,8 @@
  */
 require('../AgendaRDFGenerator.php');
 
-define('ONTOLOGY_URL', 'http://opendatahacklab.org/free-agenda/gdg-catania/');
-define('AGENDA_URL','https://docs.google.com/spreadsheets/d/1-ROgDxqRnh4Nknih_oPZeaTIoXHY3GRJQdSxpq4XMhA/export?format=tsv&exportFormat=tsv&ndplr=1');
+define('ONTOLOGY_URL', 'http://opendatahacklab.org/free-agenda/bastione-infetti/ontology');
+define('SHEET_URL','https://docs.google.com/spreadsheets/d/1mNJ2I-QldzoxCR-EkTJ-K7xvzlurZC0vge224FD3gnY/export?format=tsv&exportFormat=tsv&ndplr=1');
 
-
-(new AgendaRDFGenerator(ONTOLOGY_URL, AGENDA_URL))->generate();
+(new AgendaRDFGenerator(ONTOLOGY_URL, SHEET_URL))->generate();
 ?>
