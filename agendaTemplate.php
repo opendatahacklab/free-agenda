@@ -56,7 +56,7 @@ fclose($handle);
 			</a>
 			<a href="#data" title="dati"><img src="../../commons/imgs/rdf.png" /></a> 	
 			<a href="#info" title="informazioni"><img src="../../commons/imgs/Info_Simple_bw.svg.png" /></a>
-			<a title="Internet Calendar"><img src="../../commons/imgs/Octicons-calendar.svg.png" height="80px" /></a>
+			<a title="Internet Calendar" href="calendar.php" type="text/calendar"><img src="../../commons/imgs/Octicons-calendar.svg.png" height="80px" /></a>
 			<a href="https://docs.google.com/forms/d/1QL7C46f4Csc_uAKVjkyWIgXEi3C2hE0GSAXCaX_dPpE/viewform?ndplr=1" title="aggiungi evento" target="_blank"><img src="../../commons/imgs/plus.png" /></a>
 		</nav>
 	</header>
