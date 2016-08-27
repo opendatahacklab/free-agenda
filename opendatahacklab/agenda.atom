@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <id>tag:opendatahacklab.org,2016-06-12:/free-agenda/opendatahacklab/rssfeed.php</id>
+  <title>Agenda opendatahacklab</title>
+  <updated>2016-06-12T17:00:00+01:00</updated>
+  <link rel="self" href="http://opendatahacklab.org/free-agenda/opendatahacklab/rssfeed.php"/>
+  <author>
+    <name>opendatahacklab</name>
+    <uri>http://opendatahacklab.org</uri>
+  </author>
+  <logo>http://opendatahacklab.org/commons/imgs/logo_cog4_ter.png</logo>
+  <entry>
+    <id>tag:opendatahacklab.org,2016-06-12:/ontology/events/02072016</id>
+    <title>Aperitivo POP a Belpasso</title>
+    <updated>2016-06-12T17:00:00+01:00</updated>
+    <content type="text">Aperitivo POP a Belpasso - 66, Via XIX traversa, Belpasso, CT, Italy - 02 July 2016 20:00
+ 
+Belpasso è un importante paese sull’Etna che unisce alla vocazione agricola tipica di quelle zone una più recente sfociata nella realizzazione di una importante e funzionale zona industriale. Il tema degli Open Data e della trasparenza in questo paese viene portato avanti da un coraggioso e agguerrito manipolo che ha elaborato e sottoposto, con la collaborazione di Open Data Sicilia ma senza successo, al consiglio comunale un insieme di linee guida Open Data per il comune sulla scia di quelle di Palermo. Succede di recente che un cittadino di Belpasso, membro storico di Hackspace Catania ed esponente del movimento dei makers, decide di donare un albo POP ai cittadini di Belpasso, incaricando noi dell’opendatahacklab di realizzarlo. 
+
+Avevo già nella mia lista di luoghi da visitare il comune di Belpasso da un po. Ho deciso quindi, con la collaborazione degli attivisti sul territorio, di cogliere questa occasione per incontrare le associazioni di cittadinanza attiva e la popolazione di questo paese in un incontro informale come un Aperitivo POP, che si terrà il 2 Luglio alle ore 19:00 presso il Wine Bar Efesto in via XIX traversa numero 66.
+
+Siete tutti invitati!  		
+		</content>
+    <link href="http://www.opendatahacklab.org/site/eventdetails.html?iri=http%3A%2F%2Fopendatahacklab.org%2Fontology%2Fevents%2F02072016"/>
+  </entry>
+  <entry>
+    <id>tag:opendatahacklab.org,2016-03-22:/ontology/events/05042016</id>
+    <title>Primo Aperitivo POP a Catania</title>
+    <updated>2016-03-22T12:00:00+01:00</updated>
+    <content type="text">Primo Aperitivo POP a Catania - 56, Via Grotte Bianche, Catania, Italy - 05 April 2016 20:00
+ 
+L'Albo Pretorio indica in Italia un apposito spazio presso il quale le pubbliche 
+amministrazioni italiane affiggono per legge notizie ed avvisi di interesse 
+pubblico per la collettività. (Wikipedia)
+
+Sull'albo pretorio viaggiano gli avvisi riguardanti tutte le attività di
+una pubblica amministrazione: dalle concessioni per il suolo pubblico alle 
+pubblicazioni di matrimonio, dai bandi di gara alle varianti al piano regolatore, 
+dalle sanatorie alle informazioni e modifiche alla viabilità.
+
+Il progetto Albo POP (http://albopop.it) si propone di rendere "popolari"
+gli albi pretori attraverso la realizzazione di opportuni strumenti 
+informatici.
+
+Dopo una breve introduzione sugli open data, daremo uno sguardo ad alcuni degli albi
+pop disponibili, in particolare quelli relativi al Comune e all'Università
+di Catania, e verranno mostrati alcuni strumenti per una fruizione "aumentata"
+degli stessi. In particolare, vedremo come ricevere avvisi e notifiche dagli
+albi pretori direttamente sul proprio computer.
+
+Si consiglia quindi di venire armati di portatili!
+
+Aperitivo POP Catania è organizzato da Hackspace Catania e chilometro zero
+nell'ambito del progetto #opendatahacklab (http://opendatahacklab.org). 
+L'ingresso è gratuito per i soci di Chilometro Zero. L'iscrizione 
+all'associazione Chilometro Zero è gratuita. Durante l'incontro sarà servito
+un aperitivo al costo di 5 euro. 		
+		</content>
+    <link href="http://opendatahacklab.org/site/eventdetails.html?iri=http://opendatahacklab.org/ontology/events/05042016"/>
+  </entry>
+  <entry>
+    <id>tag:opendatahacklab.org,2016-01-25:/ontology/events/26022016</id>
+    <title>2nd Open Knowledge Open Arts Workshop</title>
+    <updated>2016-01-25T23:30:00+01:00</updated>
+    <content type="text">2nd Open Knowledge Open Arts Workshop - Dipartimento di Matematica ed Informatica, Cittadella Universitaria, 6, Viale Andrea Doria, Catania, Italy - 26 February 2016 09:00
+ 
+Open Knowledge Open Arts 2016 (OKOA16) is an informal workshop about open data, open source and cultural heritage. 
+The aim of the OKOA16 is to investigate how the open sharing of the data, in a readable form for all 
+people and with no limitation reuse can help research, production and fruition of Cultural Heritage.
+		</content>
+    <link href="http://www.dmi.unict.it/~longo/okoa16"/>
+  </entry>
+  <entry>
+    <id>tag:opendatahacklab.org,2015-12-13:/ontology/events/29122015</id>
+    <title>RADUNO INVERNALE (SCHITICCHIO) DI OPEN DATA SICILIA</title>
+    <updated>2015-12-13T23:00:00+01:00</updated>
+    <content type="text">RADUNO INVERNALE (SCHITICCHIO) DI OPEN DATA SICILIA - Area EXPO, Piazza del Popolo, Pedara, CT, Italy - 29 December 2015 09:00
+ 
+Open Data Sicilia è un gruppo informale di persone che condividono l’interesse per la tematica dei dati aperti (vedi definizione dell’Agenzia per l’Italia Digitale), con particolare riguardo ai dati generati e gestiti dalla Pubblica Amministrazione. In Open Data Sicilia sono presenti personalità e professionalità variegate: esponenti del mondo accademico, dipendenti della Pubblica Amministrazione, giornalisti, geomatici, etc. Il gruppo inoltre ha stabilito forti sinergie con organizzazioni presenti sul territorio.
+
+Per dar seguito a quanto maturato nell’ambito di #iovotopendata ed alla luce dell’apertura dimostrata in quella occasione dalla pubblica amministrazione e della società civile, all’interno di Open Data Sicilia è maturata la decisione di svolgere il raduno invernale a Pedara con una iniziativa aperta ai dipendenti del comune e alla cittadinanza in generale. Questa decisione deve essere letta nell’ottica di coinvolgimento e partecipazione della cittadinanza nei processi di apertura dei dati. 
+
+L’obiettivo principale dell’evento è quindi mostrare, con casi concreti o ipotetici, quali applicazioni hanno gli open data e quali sono le ricadute attese dalle operazioni di apertura dei dati.
+		</content>
+    <link href="http://pedara2015.opendatasicilia.it/"/>
+  </entry>
+  <entry>
+    <id>tag:opendatahacklab.org,2015-11-15:/ontology/events/26112015</id>
+    <title>Obiezione senza Coscienza</title>
+    <updated>2015-11-15T23:00:00+02:00</updated>
+    <content type="text">Obiezione senza Coscienza - 6, Via Pietro Antonio Coppola, Catania, Italy - 26 November 2015 19:30
+ 
+È possibile l’utilizzo degli open data a sostegno della lotta per i diritti delle donne? Noi Rebeldesse pensiamo di sì e lo abbiamo sperimentato.
+
+Per questi motivi abbiamo voluto, con un’attività di inchiesta sul campo, censire alcune farmacie catanesi e scoprire quali prescrivono la pillola del giorno dopo e se vi sono casi di obiezione.
+L’elenco ha due finalità. Da un lato vuole essere di aiuto alle donne che, trovandosi in una situazione di emergenza, necessitano di sapere dove è possibile comprare la pillola. Dall’altro lato ha finalità di denuncia sia riguardo l’obiezione e sia rispetto l’attuale situazione di degrado in cui si trova il sistema di prevenzione ed educazione sessuale.
+
+Un’adeguata prevenzione è tra i metodi più efficaci per evitare le gravidanze indesiderate e rappresenta un ottimo strumento di distruzione degli stereotipi di genere. Inoltre riteniamo che una buona educazione sessuale non si debba basare sulla costruzione di rigide strutture binarie, baluardo del sistema patriarcale.
+La pillola del giorno dopo permette di evitare la gravidanza in seguito a un rapporto a rischio. La sua vendita è obbligatoria e non è legale praticare l’obiezione di coscienza su di essa, ma secondo le statistiche in Italia almeno 2 farmacisti su 10 non la vendono. Ma come funziona veramente la pillola, cosa la rende diversa dall’aborto e perché c’è ancora tanta ignoranza sull’argomento?
+
+Durante la serata del 26 Novembre, al C.s.a. Officina Rebelde, le militanti del Collettivo Le Rebeldesse presenteranno il loro lavoro.
+
+interverranno: Cristiano Longo, esponente del movimento Open Data, e
+Gioia Cacciatore, medico abilitato, che ci parlerà della pillola del giorno dopo e dell’aborto.
+		</content>
+    <link href="http://opendatahacklab.org/site/eventdetails.html?iri=http://opendatahacklab.org/ontology/events/26112015"/>
+  </entry>
+  <entry>
+    <id>tag:opendatahacklab.org,2015-10-08:/ontology/events/30102015</id>
+    <title>Beni Confiscati a Catania - per riappropriarsi dei beni
+			confiscati alla mafia</title>
+    <updated>2015-10-08T13:00:00+02:00</updated>
+    <content type="text">Beni Confiscati a Catania - per riappropriarsi dei beni
+			confiscati alla mafia - Chiesa di San Michele Minore, Piazza Manganelli,
+					Catania, Italy - 30 October 2015 17:30
+ 
+Negli ultimi anni si è sviluppata una discussione articolata sul tema dei beni comuni,
+con particolare attenzione a quelli che ricadono nel patrimonio pubblico, e sulla
+riappropriazione degli stessi da parte della comunità. Tra questi, i beni confiscati alla
+criminalità organizzata hanno una valenza particolare: l'atto stesso di confisca infatti
+toglie definitivamente questi beni dalla disponibilità delle organizzazioni criminali.
+Tuttavia, affinchè quest'atto esplichi in pieno le proprie potenzialità è necessario
+che la comunità si riappropri del bene gestendolo e impiegandolo in maniera aperta e
+trasparente in attività che abbiano ricadute positive sulla società.
+
+Giorno 30 Ottobre 2015 alle 17.30 presso la chiesa di San Michele Minore in piazza
+Manganelli a Catania discuteremo di processi, pratiche e strategie per la riappropriazione
+dei beni confiscati a Catania. Gli interventi previsti sono i seguenti:
+Cristiano Longo (opendatahacklab - Hackspace Catania)
+"Iniziative civiche per l'apertura di dati";
+Andrea Borruso (Open Data Sicilia - ConfiscatiBene)
+"ConfiscatiBene - open data dell'agenzia per i beni confiscati";
+Maria Luisa Barrera (Libera. Associazioni, Nomi e Numeri contro le mafie)
+"Il regolamento per l'assegnazione dei beni confiscati alle Mafie";
+Giovanni Caruso (I Siciliani Giovani - GAPA)
+"Solo una unità della società civile ci renderà i beni confiscati";
+Collettivo Scatto Sociale
+"Un'inchiesta sui beni confiscati a Catania". 		
+		</content>
+    <link href="http://opendatahacklab.org/site/eventdetails.html?iri=http://opendatahacklab.org/ontology/events/30102015"/>
+  </entry>
+  <entry>
+    <id>tag:opendatahacklab.org,2015-09-29:/ontology/events/meeting5</id>
+    <title>opendatahacklab - sui beni confiscati</title>
+    <updated>2015-09-29T19:00:00+02:00</updated>
+    <content type="text">opendatahacklab - sui beni confiscati - 112, Via Grotte Bianche, Catania, Italy - 29 September 2015 19:00</content>
+    <link href="http://opendatahacklab.org/site/eventdetails.html?iri=http://opendatahacklab.org/ontology/events/meeting5"/>
+  </entry>
+  <entry>
+    <id>tag:opendatahacklab.org,2015-07-26:/ontology/events/meeting4</id>
+    <title>opendatahacklab - sulla gestione dei rifiuti</title>
+    <updated>2015-07-26T19:00:00+02:00</updated>
+    <content type="text">opendatahacklab - sulla gestione dei rifiuti - 112, Via Grotte Bianche, Catania, Italy - 30 July 2015 19:00</content>
+    <link href="http://opendatahacklab.org/site/eventdetails.html?iri=http://opendatahacklab.org/ontology/events/meeting4"/>
+  </entry>
+  <entry>
+    <id>tag:opendatahacklab.org,2015-06-20:/ontology/events/meeting3</id>
+    <title>opendatahacklab - incontro al comune di Catania sui
+			contratti pubblici</title>
+    <updated>2015-06-20T19:00:00+02:00</updated>
+    <content type="text">opendatahacklab - incontro al comune di Catania sui
+			contratti pubblici - 34, Piazza San Domenico, Catania, Italy - 24 June 2015 11:00</content>
+    <link href="http://opendatahacklab.org/site/eventdetails.html?iri=http://opendatahacklab.org/ontology/events/meeting3"/>
+  </entry>
+  <entry>
+    <id>tag:opendatahacklab.org,2015-06-12:/ontology/events/meeting2</id>
+    <title>opendatahacklab - sui contratti pubblici</title>
+    <updated>2015-06-12T19:00:00+02:00</updated>
+    <content type="text">opendatahacklab - sui contratti pubblici - 112, Via Grotte Bianche, Catania, Italy - 19 June 2015 19:00</content>
+    <link href="http://opendatahacklab.org/site/eventdetails.html?iri=http://opendatahacklab.org/ontology/events/meeting2"/>
+  </entry>
+  <entry>
+    <id>tag:opendatahacklab.org,2015-05-20:/ontology/events/meeting1</id>
+    <title>opendatahacklab - incontro con mobilita.org</title>
+    <updated>2015-05-20T19:00:00+02:00</updated>
+    <content type="text">opendatahacklab - incontro con mobilita.org - 112, Via Grotte Bianche, Catania, Italy - 26 May 2015 19:00</content>
+    <link href="http://opendatahacklab.org/site/eventdetails.html?iri=http://opendatahacklab.org/ontology/events/meeting1"/>
+  </entry>
+</feed>
+?>

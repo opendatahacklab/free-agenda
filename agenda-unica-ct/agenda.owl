@@ -96,6 +96,20 @@
     </event:time>
     <rdfs:label>Festa di Autofinanziamento</rdfs:label>
   </event:Event>
+  <event:Event rdf:about="http://opendatahacklab.org/free-agenda/20160905/Lagaan%2C+c%27era+una+volta+in+India+-+film+e+cena+vegan+indiana/">
+    <rdfs:comment>Lunedì 5 settembre, dalle ore 20, all’Arena Argentina di Catania, il circolo città futura presenta: Lagaan, c’era una volta in India, di Ashutosh Gowariker, con Aamir Khan.  India, 1893. In un piccolo villaggio vicino a Champaner, nel Gujarat, si piantano pacificamente i primi semi della rivolta contro l’oppressione coloniale.  Mentre una grande siccità metta a dura prova i contadini, il capitano delle truppe imperiali decide di raddoppiare le tasse sul raccolto per punire il rifiuto del rajah, tradizionalmente vegetariano, di mangiare carne insieme a lui. Il giovane Bhuvan, che non esita a rischiare la vita per difendere antilopi e lepri dal “passatempo” preferito degli ufficiali britannici, non si piega all’arroganza del potere e sfida i dominatori sul loro stesso terreno: il gioco del cricket. Dalla partita dipenderanno le sorti dell’intera provincia. Così, superando ogni divisione di casta e pregiudizio sociale, la resistenza scende in campo...  Lagaan, capolavoro del cinema indiano contemporaneo, candidato all’oscar per il miglior film straniero, è un affascinate affresco corale della presa di parola dei subalterni, un appassionante esempio di come la storia ai limiti della storia del mondo si costruisca dal basso.  apertura ore 20, proiezione film ore 20,50 (spettacolo unico) ingresso € 3, ridotto € 2,50, soci cinestudio € 2  durante la serata nell’area ristoro cena di VeganOsteria con le specialità indiane del Gujarat, per informazioni tel. 349.3983255. menu degustazione € 6: Samosa, fagottini ripieni di patate cremose al garam masala Panchmahal bhakarwadi, girelle soffici alle cinque spezie Gandhinagar pakora, sformatini in pastella di ceci al tamarindo Gujarati undhiyu, specialità di melanzane fritte con verdure saltate e legumi freschi Champaner biryani, basmati profumato con verdure e salsa allo zafferano con mandorle e anacardi</rdfs:comment>
+    <event:place rdf:resource="http://opendatahacklab.org/free-agenda/Arena+Argentina"/>
+    <event:time>
+      <time:Interval rdf:about="http://opendatahacklab.org/free-agenda/20160905/Lagaan%2C+c%27era+una+volta+in+India+-+film+e+cena+vegan+indiana/time">
+        <time:hasBeginning>
+          <time:Instant rdf:about="http://opendatahacklab.org/free-agenda/20160905/Lagaan%2C+c%27era+una+volta+in+India+-+film+e+cena+vegan+indiana/time/begin">
+            <time:inXSDDateTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2016-09-05T20:50:00+02:00</time:inXSDDateTime>
+          </time:Instant>
+        </time:hasBeginning>
+      </time:Interval>
+    </event:time>
+    <rdfs:label>Lagaan, c'era una volta in India - film e cena vegan indiana</rdfs:label>
+  </event:Event>
   <event:Event rdf:about="http://opendatahacklab.org/free-agenda/20160624/Cena+Sociale+di+Sostegno+ai+Briganti+di+Librino/">
     <event:place rdf:resource="http://opendatahacklab.org/free-agenda/C.s.a.+Officina+Rebelde"/>
     <event:time>
@@ -492,6 +506,19 @@
         <locn:fullAddress>, Via del Giaggiolo, Catania, Italy</locn:fullAddress>
         <locn:throughfare>Via del Giaggiolo</locn:throughfare>
         <locn:locatorDesignator></locn:locatorDesignator>
+        <locn:postName>Catania</locn:postName>
+        <locn:adminUnitL1>IT</locn:adminUnitL1>
+      </locn:Address>
+    </locn:address>
+  </locn:Location>
+  <locn:Location rdf:about="http://opendatahacklab.org/free-agenda/Arena+Argentina">
+    <rdfs:label>Arena Argentina</rdfs:label>
+    <locn:address>
+      <locn:Address rdf:about="http://opendatahacklab.org/free-agenda/Arena+Argentina/address">
+        <rdfs:label>10, Via Vanasco, Catania, Italy</rdfs:label>
+        <locn:fullAddress>10, Via Vanasco, Catania, Italy</locn:fullAddress>
+        <locn:throughfare>Via Vanasco</locn:throughfare>
+        <locn:locatorDesignator>10</locn:locatorDesignator>
         <locn:postName>Catania</locn:postName>
         <locn:adminUnitL1>IT</locn:adminUnitL1>
       </locn:Address>

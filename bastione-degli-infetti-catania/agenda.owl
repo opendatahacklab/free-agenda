@@ -72,6 +72,48 @@
     </event:time>
     <rdfs:label>Catania, che cosa c'è sotto?</rdfs:label>
   </event:Event>
+  <event:Event rdf:about="http://opendatahacklab.org/free-agenda/20160715/Da+donna+a+donna%3A+saperi%2C+racconti+e+percorsi+di+libert%C3%A0+femminile./">
+    <rdfs:comment>Il Bastione degli Infetti, la cinta muraria cinquecentesca di Catania, diventa contenitore artistico per una due giorni dedicata alle donne ed alla loro arte. Sulla base del principio dell'interazione fra le arti, un incontro di artiste delle arti visive e figurative crea percorsi di libertà femminile.  PROGRAMMA Venerdi 15 luglio h. 18,00 Saluti e presentazione dell'evento; h. 19.00 Conversazione sul libro di Consuelo Consoli "Un solo abraccio", a cura di Cettina Tiralosi - digital painter; h. 20,00 Concerto di Laura Marchese "Arpa, remote voci di civiltà"; h. 21,00 rinfresco ad offerta libera.  Sabato 16 luglio h. 18.00 apertura al pubblico del bastione e delle mostre allestite; h. 19,00 Concerto per chitarra classica e soprano Estrelita duo "La lirica del Sur"; A seguire giro alla scoperta del quartiere e rinfresco ad offerta libera.  Venerdi 15 e sabato 16 luglio aperte al pubblico le seguenti mostre ed installazioni: Cettina Tiralosi, digital painter - "Lacrime sciolgono muri e aprono orizzonti alla coscienza "; Anna Nolfo, pittrice - "Paesaggi dell'anima"; Giovanna Tomasello, scultrice - "Io e la creta... un incontro".</rdfs:comment>
+    <event:place rdf:resource="http://opendatahacklab.org/free-agenda/Bastione+degli+Infetti"/>
+    <event:time>
+      <time:Interval rdf:about="http://opendatahacklab.org/free-agenda/20160715/Da+donna+a+donna%3A+saperi%2C+racconti+e+percorsi+di+libert%C3%A0+femminile./time">
+        <time:hasBeginning>
+          <time:Instant rdf:about="http://opendatahacklab.org/free-agenda/20160715/Da+donna+a+donna%3A+saperi%2C+racconti+e+percorsi+di+libert%C3%A0+femminile./time/begin">
+            <time:inXSDDateTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2016-07-15T18:00:00+02:00</time:inXSDDateTime>
+          </time:Instant>
+        </time:hasBeginning>
+      </time:Interval>
+    </event:time>
+    <rdfs:label>Da donna a donna: saperi, racconti e percorsi di libertà femminile.</rdfs:label>
+  </event:Event>
+  <event:Event rdf:about="http://opendatahacklab.org/free-agenda/20160507/7MAG+%23Invasioni+Digitali+%40+Bastione+degli+Infetti/">
+    <rdfs:comment>Invasioni Digitali sbarca al Bastione degli Infetti. Macchine fotografiche, video camere, smartphone e tablet saranno i protagonisti del racconto della visita dell'unico bastione dell'antica cinta delle mura di Catania cinquecentesta rimasto visitabile. La scoperta della storia del bastione degli infetti si accompagnerà alla diffusione della visita attraverso i nuovi messi di comunicazione digitale... perchè la cultura si deve diffondere e vedere! Sono previste due invasioni: h. 09.30 e h. 15.30. In entrambi i casi l'ingresso è gratuito ma bisogna prenotare al link: http://www.invasionidigitali.it/invasione/invasione-al-bastione-degli-infetti-le-difese-rinascimentali-e-medioevali-di-catania-2/  Hastag ufficiali dell'evento: #bastioneinfetti #invasionidigitali #siciliainvasa2016 @invasionidigita </rdfs:comment>
+    <event:place rdf:resource="http://opendatahacklab.org/free-agenda/Bastione+degli+Infetti"/>
+    <event:time>
+      <time:Interval rdf:about="http://opendatahacklab.org/free-agenda/20160507/7MAG+%23Invasioni+Digitali+%40+Bastione+degli+Infetti/time">
+        <time:hasBeginning>
+          <time:Instant rdf:about="http://opendatahacklab.org/free-agenda/20160507/7MAG+%23Invasioni+Digitali+%40+Bastione+degli+Infetti/time/begin">
+            <time:inXSDDateTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2016-05-07T09:30:00+02:00</time:inXSDDateTime>
+          </time:Instant>
+        </time:hasBeginning>
+      </time:Interval>
+    </event:time>
+    <rdfs:label>7MAG #Invasioni Digitali @ Bastione degli Infetti</rdfs:label>
+  </event:Event>
+  <event:Event rdf:about="http://opendatahacklab.org/free-agenda/20160127/Giornata+della+Memoria/">
+    <rdfs:comment>PASSEGGIATA ALLA SCOPERTA DEI QUARTIERI EBRAICI con il patrocinio del Comune di Catania  Passeggiando per gli antichi quartieri si possono scoprire segni e resti di architetture che ci rimandano al passato, agli abitanti ed ai popoli che ci hanno preceduto. Che cosa è il quartiere chiamato Ghetto? Dove si trova la Giudecca? Tra i tanti popoli che si sono insediati a Catania, dopo Greci e Romani, accanto ad arabi e Mussulmani troviamo anche gli Ebrei. Il Comitato popolare Antico Corso, in occasione della GIORNATA DELLA MEMORIA organizza una passeggiata alla ricerca di questi luoghi per riscoprire una civiltà ed una cultura che nel corso del tempo ha contribuito alla prosperità della nostra città. Appuntamento al Bastione degli Infetti alle 15,30 Il percorso si concluderà al Museo Emilio Greco  La quota di partecipazione di 7 €</rdfs:comment>
+    <event:place rdf:resource="http://opendatahacklab.org/free-agenda/Bastione+degli+Infetti"/>
+    <event:time>
+      <time:Interval rdf:about="http://opendatahacklab.org/free-agenda/20160127/Giornata+della+Memoria/time">
+        <time:hasBeginning>
+          <time:Instant rdf:about="http://opendatahacklab.org/free-agenda/20160127/Giornata+della+Memoria/time/begin">
+            <time:inXSDDateTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2016-01-27T15:30:00+01:00</time:inXSDDateTime>
+          </time:Instant>
+        </time:hasBeginning>
+      </time:Interval>
+    </event:time>
+    <rdfs:label>Giornata della Memoria</rdfs:label>
+  </event:Event>
   <locn:Location rdf:about="http://opendatahacklab.org/free-agenda/Bastione+degli+Infetti">
     <rdfs:label>Bastione degli Infetti</rdfs:label>
     <locn:address>
