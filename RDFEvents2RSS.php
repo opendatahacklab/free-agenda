@@ -181,11 +181,4 @@ class RDFEvents2RSS{
 	}
 	
 }
-
-
-
-
-
-
-//Imposto e stampo le informazioni da inserire nei campi del feed
 ?>

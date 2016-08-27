@@ -22,7 +22,6 @@
 require('../RDFEvents2RSS.php');
 require('constants.php');
 
-(new RDFEvents2RSS(SPARQL_ENDPOINT, TITLE, 'http://opendatahacklab.org/free-agenda/opendatahacklab/', 'http://opendatahacklab.org/free-agenda/opendatahacklab/rssfeed.php','opendatahacklab', 
+(new RDFEvents2RSS(SPARQL_ENDPOINT, TITLE, 'http://www.opendatahacklab.org/free-agenda/opendatahacklab/', 'http://opendatahacklab.org/free-agenda/opendatahacklab/rssfeed.php','opendatahacklab', 
 		'http://opendatahacklab.org', null, 'http://opendatahacklab.org/commons/imgs/logo_cog4_ter.png'))->generate();
-?>
 ?>
