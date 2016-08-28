@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <id>tag:opendatahacklab.org,2016-08-25:/free-agenda/agenda-bastione-degli-infetti-catania/agenda.atom</id>
+  <id>tag:opendatahacklab.org,2016-08-25:/free-agenda/bastione-degli-infetti-catania/agenda.atom</id>
   <title>Agenda Bastione degli Infetti Catania</title>
   <updated>2016-08-25T17:48:18+02:00</updated>
-  <link rel="self" href="http://opendatahacklab.org/free-agenda/agenda-bastione-degli-infetti-catania/agenda.atom"/>
+  <link rel="self" href="http://opendatahacklab.org/free-agenda/bastione-degli-infetti-catania/agenda.atom"/>
   <author>
     <name>Comitato Popolare Antico Corso</name>
     <email>cpacorsoct@gmail.com</email>

@@ -30,6 +30,7 @@ require ('RDFEventsGenerator.php');
  * @author Cristiano Longo
  */
 class Event {
+	public static $DEFAULT_DATE='01/01/2016 00.00.00';
 	public $name;
 	public $description;
 	public $start;
@@ -54,7 +55,7 @@ class Event {
 		$this->description= $row[12];
 		$this->creationTime=(isset($row[0]) && strlen($row[0])>0) ? 
 			DateTime::createFromFormat ( DATE_FORMAT_bis, $row[0], new DateTimeZone ( 'Europe/Rome' ) ) : 
-					null;
+			DateTime::createFromFormat ( DATE_FORMAT_bis, Event::$DEFAULT_DATE, new DateTimeZone ( 'Europe/Rome' ) );
 	}
 	
 	/**

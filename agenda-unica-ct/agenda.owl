@@ -118,6 +118,7 @@
     <rdfs:label>Lagaan, c'era una volta in India - film e cena vegan indiana</rdfs:label>
   </event:Event>
   <event:Event rdf:about="http://opendatahacklab.org/free-agenda/20160624/Cena+Sociale+di+Sostegno+ai+Briganti+di+Librino/">
+    <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2016-01-01T00:00:00+01:00</dcterms:modified>
     <event:place rdf:resource="http://opendatahacklab.org/free-agenda/C.s.a.+Officina+Rebelde"/>
     <event:time>
       <time:Interval rdf:about="http://opendatahacklab.org/free-agenda/20160624/Cena+Sociale+di+Sostegno+ai+Briganti+di+Librino/time">
@@ -131,6 +132,7 @@
     <rdfs:label>Cena Sociale di Sostegno ai Briganti di Librino</rdfs:label>
   </event:Event>
   <event:Event rdf:about="http://opendatahacklab.org/free-agenda/20160613/Riunione+Agenda+Unica/">
+    <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2016-01-01T00:00:00+01:00</dcterms:modified>
     <event:place rdf:resource="http://opendatahacklab.org/free-agenda/C.s.a.+Officina+Rebelde"/>
     <event:time>
       <time:Interval rdf:about="http://opendatahacklab.org/free-agenda/20160613/Riunione+Agenda+Unica/time">
@@ -144,6 +146,7 @@
     <rdfs:label>Riunione Agenda Unica</rdfs:label>
   </event:Event>
   <event:Event rdf:about="http://opendatahacklab.org/free-agenda/20160528/Presentazione+del+libro+di+Domenico+MOro+%22Globalizzazione+e+decadenza+industriale%22/">
+    <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2016-01-01T00:00:00+01:00</dcterms:modified>
     <event:place rdf:resource="http://opendatahacklab.org/free-agenda/Circolo+Rosa+Luxemburg"/>
     <event:time>
       <time:Interval rdf:about="http://opendatahacklab.org/free-agenda/20160528/Presentazione+del+libro+di+Domenico+MOro+%22Globalizzazione+e+decadenza+industriale%22/time">
@@ -157,6 +160,7 @@
     <rdfs:label>Presentazione del libro di Domenico MOro "Globalizzazione e decadenza industriale"</rdfs:label>
   </event:Event>
   <event:Event rdf:about="http://opendatahacklab.org/free-agenda/20160527/Incontro+con+gli+autori+di+%22Come+il+colore+della+terra%22+Marco+Gastoni+e+Nicola+Gobbi/">
+    <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2016-01-01T00:00:00+01:00</dcterms:modified>
     <event:place rdf:resource="http://opendatahacklab.org/free-agenda/Club+House+Giuseppe+Cunsolo"/>
     <event:time>
       <time:Interval rdf:about="http://opendatahacklab.org/free-agenda/20160527/Incontro+con+gli+autori+di+%22Come+il+colore+della+terra%22+Marco+Gastoni+e+Nicola+Gobbi/time">
@@ -170,6 +174,7 @@
     <rdfs:label>Incontro con gli autori di "Come il colore della terra" Marco Gastoni e Nicola Gobbi</rdfs:label>
   </event:Event>
   <event:Event rdf:about="http://opendatahacklab.org/free-agenda/20160526/Cuba%2C+tra+continuit%C3%A0+e+nuove+sfide/">
+    <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2016-01-01T00:00:00+01:00</dcterms:modified>
     <event:place rdf:resource="http://opendatahacklab.org/free-agenda/Pub+Nievski"/>
     <event:time>
       <time:Interval rdf:about="http://opendatahacklab.org/free-agenda/20160526/Cuba%2C+tra+continuit%C3%A0+e+nuove+sfide/time">
@@ -183,6 +188,7 @@
     <rdfs:label>Cuba, tra continuità e nuove sfide</rdfs:label>
   </event:Event>
   <event:Event rdf:about="http://opendatahacklab.org/free-agenda/20160524/Campagna+di+sostegno+%22I+Briganti+si+meritano+un+prato%22.+%22Principessa%22+di+e+con+Luciano+Bruno/">
+    <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2016-01-01T00:00:00+01:00</dcterms:modified>
     <event:place rdf:resource="http://opendatahacklab.org/free-agenda/Club+House+Giuseppe+Cunsolo"/>
     <event:time>
       <time:Interval rdf:about="http://opendatahacklab.org/free-agenda/20160524/Campagna+di+sostegno+%22I+Briganti+si+meritano+un+prato%22.+%22Principessa%22+di+e+con+Luciano+Bruno/time">
@@ -196,6 +202,7 @@
     <rdfs:label>Campagna di sostegno "I Briganti si meritano un prato". "Principessa" di e con Luciano Bruno</rdfs:label>
   </event:Event>
   <event:Event rdf:about="http://opendatahacklab.org/free-agenda/20160523/CATANIA+STRANGOLATA+DAL+DEBITO+%22PUBBLICO%22%3A+DIETRO+I+NUMERI+IL+BILANCIO+DEI+DIRITTI+NEGATI.+ASSEMBLEA+PUBBLICA+con+Marco+Bersani+-+Attac+Italia+/">
+    <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2016-01-01T00:00:00+01:00</dcterms:modified>
     <event:place rdf:resource="http://opendatahacklab.org/free-agenda/Palestra+Lupo"/>
     <event:time>
       <time:Interval rdf:about="http://opendatahacklab.org/free-agenda/20160523/CATANIA+STRANGOLATA+DAL+DEBITO+%22PUBBLICO%22%3A+DIETRO+I+NUMERI+IL+BILANCIO+DEI+DIRITTI+NEGATI.+ASSEMBLEA+PUBBLICA+con+Marco+Bersani+-+Attac+Italia+/time">
@@ -209,6 +216,7 @@
     <rdfs:label>CATANIA STRANGOLATA DAL DEBITO "PUBBLICO": DIETRO I NUMERI IL BILANCIO DEI DIRITTI NEGATI. ASSEMBLEA PUBBLICA con Marco Bersani - Attac Italia </rdfs:label>
   </event:Event>
   <event:Event rdf:about="http://opendatahacklab.org/free-agenda/20160520/Campagna+di+Sostegno+%22I+Briganti+si+meritano+un+prato%22.+Cous+Cous+Fest./">
+    <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2016-01-01T00:00:00+01:00</dcterms:modified>
     <event:place rdf:resource="http://opendatahacklab.org/free-agenda/Club+House+Giuseppe+Cunsolo"/>
     <event:time>
       <time:Interval rdf:about="http://opendatahacklab.org/free-agenda/20160520/Campagna+di+Sostegno+%22I+Briganti+si+meritano+un+prato%22.+Cous+Cous+Fest./time">
@@ -222,6 +230,7 @@
     <rdfs:label>Campagna di Sostegno "I Briganti si meritano un prato". Cous Cous Fest.</rdfs:label>
   </event:Event>
   <event:Event rdf:about="http://opendatahacklab.org/free-agenda/20160514/Incontro+su+Charles+Bukowski+%22compagni+di+sbronze%22/">
+    <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2016-01-01T00:00:00+01:00</dcterms:modified>
     <event:place rdf:resource="http://opendatahacklab.org/free-agenda/Club+House+Giuseppe+Cunsolo"/>
     <event:time>
       <time:Interval rdf:about="http://opendatahacklab.org/free-agenda/20160514/Incontro+su+Charles+Bukowski+%22compagni+di+sbronze%22/time">
@@ -235,6 +244,7 @@
     <rdfs:label>Incontro su Charles Bukowski "compagni di sbronze"</rdfs:label>
   </event:Event>
   <event:Event rdf:about="http://opendatahacklab.org/free-agenda/20160510/Serata+No+Muos+al+C.s.a.+Officina+Rebelde/">
+    <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2016-01-01T00:00:00+01:00</dcterms:modified>
     <event:place rdf:resource="http://opendatahacklab.org/free-agenda/C.s.a.+Officina+Rebelde"/>
     <event:time>
       <time:Interval rdf:about="http://opendatahacklab.org/free-agenda/20160510/Serata+No+Muos+al+C.s.a.+Officina+Rebelde/time">
@@ -248,6 +258,7 @@
     <rdfs:label>Serata No Muos al C.s.a. Officina Rebelde</rdfs:label>
   </event:Event>
   <event:Event rdf:about="http://opendatahacklab.org/free-agenda/20160509/Contro+la+scuola+Spa/">
+    <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2016-01-01T00:00:00+01:00</dcterms:modified>
     <event:place rdf:resource="http://opendatahacklab.org/free-agenda/Catania-Via+Beritelli-7"/>
     <event:time>
       <time:Interval rdf:about="http://opendatahacklab.org/free-agenda/20160509/Contro+la+scuola+Spa/time">
@@ -261,6 +272,7 @@
     <rdfs:label>Contro la scuola Spa</rdfs:label>
   </event:Event>
   <event:Event rdf:about="http://opendatahacklab.org/free-agenda/20160506/Primavera+Referendaria/">
+    <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2016-01-01T00:00:00+01:00</dcterms:modified>
     <event:place rdf:resource="http://opendatahacklab.org/free-agenda/Circolo+Rosa+Luxemburg"/>
     <event:time>
       <time:Interval rdf:about="http://opendatahacklab.org/free-agenda/20160506/Primavera+Referendaria/time">
@@ -274,6 +286,7 @@
     <rdfs:label>Primavera Referendaria</rdfs:label>
   </event:Event>
   <event:Event rdf:about="http://opendatahacklab.org/free-agenda/20160427/Vivere+la+storia+di%5Cattraverso%5Ccon+Tina+Modotti%3A+una+storia+rivoluzionaria/">
+    <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2016-01-01T00:00:00+01:00</dcterms:modified>
     <event:place rdf:resource="http://opendatahacklab.org/free-agenda/Sala+Cento+Fiori"/>
     <event:time>
       <time:Interval rdf:about="http://opendatahacklab.org/free-agenda/20160427/Vivere+la+storia+di%5Cattraverso%5Ccon+Tina+Modotti%3A+una+storia+rivoluzionaria/time">
@@ -287,6 +300,7 @@
     <rdfs:label>Vivere la storia di\attraverso\con Tina Modotti: una storia rivoluzionaria</rdfs:label>
   </event:Event>
   <event:Event rdf:about="http://opendatahacklab.org/free-agenda/20160426/presentazione+del+libro+%22Manifesto+per+la+Sinistra+e+l%27umanesimo+sociale+%22/">
+    <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2016-01-01T00:00:00+01:00</dcterms:modified>
     <event:place rdf:resource="http://opendatahacklab.org/free-agenda/Pgreco+bar"/>
     <event:time>
       <time:Interval rdf:about="http://opendatahacklab.org/free-agenda/20160426/presentazione+del+libro+%22Manifesto+per+la+Sinistra+e+l%27umanesimo+sociale+%22/time">
@@ -300,6 +314,7 @@
     <rdfs:label>presentazione del libro "Manifesto per la Sinistra e l'umanesimo sociale "</rdfs:label>
   </event:Event>
   <event:Event rdf:about="http://opendatahacklab.org/free-agenda/20160424/OLGA+%2C+un+grande+film+sulla+vita+di+Olga+Benario./">
+    <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2016-01-01T00:00:00+01:00</dcterms:modified>
     <event:place rdf:resource="http://opendatahacklab.org/free-agenda/Circolo+Comunista+%22Olga+Benario%22"/>
     <event:time>
       <time:Interval rdf:about="http://opendatahacklab.org/free-agenda/20160424/OLGA+%2C+un+grande+film+sulla+vita+di+Olga+Benario./time">
@@ -313,6 +328,7 @@
     <rdfs:label>OLGA , un grande film sulla vita di Olga Benario.</rdfs:label>
   </event:Event>
   <event:Event rdf:about="http://opendatahacklab.org/free-agenda/20160423/Siria+e+Palestina+nel+conflitto+mediorientale/">
+    <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2016-01-01T00:00:00+01:00</dcterms:modified>
     <event:place rdf:resource="http://opendatahacklab.org/free-agenda/Sala+Cento+Fiori"/>
     <event:time>
       <time:Interval rdf:about="http://opendatahacklab.org/free-agenda/20160423/Siria+e+Palestina+nel+conflitto+mediorientale/time">
@@ -326,6 +342,7 @@
     <rdfs:label>Siria e Palestina nel conflitto mediorientale</rdfs:label>
   </event:Event>
   <event:Event rdf:about="http://opendatahacklab.org/free-agenda/20160422/ILVA+La+tempesta+perfetta+-+Presentazione+libro+con+gli+autori/">
+    <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2016-01-01T00:00:00+01:00</dcterms:modified>
     <event:place rdf:resource="http://opendatahacklab.org/free-agenda/Centro+Popolare+Experia"/>
     <event:time>
       <time:Interval rdf:about="http://opendatahacklab.org/free-agenda/20160422/ILVA+La+tempesta+perfetta+-+Presentazione+libro+con+gli+autori/time">
@@ -339,6 +356,7 @@
     <rdfs:label>ILVA La tempesta perfetta - Presentazione libro con gli autori</rdfs:label>
   </event:Event>
   <event:Event rdf:about="http://opendatahacklab.org/free-agenda/20160420/Settimana+contro+lo+sfruttamento+del+lavoro+minorile/">
+    <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2016-01-01T00:00:00+01:00</dcterms:modified>
     <event:place rdf:resource="http://opendatahacklab.org/free-agenda/Campo+San+Teodoro"/>
     <event:time>
       <time:Interval rdf:about="http://opendatahacklab.org/free-agenda/20160420/Settimana+contro+lo+sfruttamento+del+lavoro+minorile/time">
@@ -352,6 +370,7 @@
     <rdfs:label>Settimana contro lo sfruttamento del lavoro minorile</rdfs:label>
   </event:Event>
   <event:Event rdf:about="http://opendatahacklab.org/free-agenda/20160416/MANIFESTAZIONE+EUROMEDITERRANEA+NO+FRONTEX/">
+    <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2016-01-01T00:00:00+01:00</dcterms:modified>
     <event:time>
       <time:Interval rdf:about="http://opendatahacklab.org/free-agenda/20160416/MANIFESTAZIONE+EUROMEDITERRANEA+NO+FRONTEX/time">
         <time:hasBeginning>
@@ -364,6 +383,7 @@
     <rdfs:label>MANIFESTAZIONE EUROMEDITERRANEA NO FRONTEX</rdfs:label>
   </event:Event>
   <event:Event rdf:about="http://opendatahacklab.org/free-agenda/20160414/I+comunisti+tra+passato+e+futuro.+Un+bilancio+storico+dagli+anni+%2790+ad+oggi/">
+    <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2016-01-01T00:00:00+01:00</dcterms:modified>
     <event:place rdf:resource="http://opendatahacklab.org/free-agenda/Arci+Comitato+Territoriale+Catania"/>
     <event:time>
       <time:Interval rdf:about="http://opendatahacklab.org/free-agenda/20160414/I+comunisti+tra+passato+e+futuro.+Un+bilancio+storico+dagli+anni+%2790+ad+oggi/time">
@@ -377,6 +397,7 @@
     <rdfs:label>I comunisti tra passato e futuro. Un bilancio storico dagli anni '90 ad oggi</rdfs:label>
   </event:Event>
   <event:Event rdf:about="http://opendatahacklab.org/free-agenda/20160409/FACEVAMO+QUELLO+CHE+DOVEVAMO/">
+    <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2016-01-01T00:00:00+01:00</dcterms:modified>
     <event:place rdf:resource="http://opendatahacklab.org/free-agenda/Centro+Popolare+Experia"/>
     <event:time>
       <time:Interval rdf:about="http://opendatahacklab.org/free-agenda/20160409/FACEVAMO+QUELLO+CHE+DOVEVAMO/time">
@@ -390,6 +411,7 @@
     <rdfs:label>FACEVAMO QUELLO CHE DOVEVAMO</rdfs:label>
   </event:Event>
   <event:Event rdf:about="http://opendatahacklab.org/free-agenda/20160409/i+briganti+si+meritano+un+prato%3A+l%27inizio.../">
+    <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2016-01-01T00:00:00+01:00</dcterms:modified>
     <event:place rdf:resource="http://opendatahacklab.org/free-agenda/Campo+San+Teodoro"/>
     <event:time>
       <time:Interval rdf:about="http://opendatahacklab.org/free-agenda/20160409/i+briganti+si+meritano+un+prato%3A+l%27inizio.../time">
@@ -403,6 +425,7 @@
     <rdfs:label>i briganti si meritano un prato: l'inizio...</rdfs:label>
   </event:Event>
   <event:Event rdf:about="http://opendatahacklab.org/free-agenda/20160407/Giornata+NO+Triv+/">
+    <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2016-01-01T00:00:00+01:00</dcterms:modified>
     <event:place rdf:resource="http://opendatahacklab.org/free-agenda/C.s.a.+Officina+Rebelde"/>
     <event:time>
       <time:Interval rdf:about="http://opendatahacklab.org/free-agenda/20160407/Giornata+NO+Triv+/time">
@@ -416,6 +439,7 @@
     <rdfs:label>Giornata NO Triv </rdfs:label>
   </event:Event>
   <event:Event rdf:about="http://opendatahacklab.org/free-agenda/20160405/Aperitivo+POP/">
+    <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2016-01-01T00:00:00+01:00</dcterms:modified>
     <event:place rdf:resource="http://opendatahacklab.org/free-agenda/Chilometro+Zero"/>
     <event:time>
       <time:Interval rdf:about="http://opendatahacklab.org/free-agenda/20160405/Aperitivo+POP/time">
@@ -429,6 +453,7 @@
     <rdfs:label>Aperitivo POP</rdfs:label>
   </event:Event>
   <event:Event rdf:about="http://opendatahacklab.org/free-agenda/20160403/Riunione+Agenda+Unica/">
+    <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2016-01-01T00:00:00+01:00</dcterms:modified>
     <event:place rdf:resource="http://opendatahacklab.org/free-agenda/C.s.a.+Officina+Rebelde"/>
     <event:time>
       <time:Interval rdf:about="http://opendatahacklab.org/free-agenda/20160403/Riunione+Agenda+Unica/time">
@@ -442,6 +467,7 @@
     <rdfs:label>Riunione Agenda Unica</rdfs:label>
   </event:Event>
   <event:Event rdf:about="http://opendatahacklab.org/free-agenda/20160402/%E2%80%AA%23%E2%80%8EStreetParade%E2%80%AC/">
+    <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2016-01-01T00:00:00+01:00</dcterms:modified>
     <event:place rdf:resource="http://opendatahacklab.org/free-agenda/Villa+Bellini"/>
     <event:time>
       <time:Interval rdf:about="http://opendatahacklab.org/free-agenda/20160402/%E2%80%AA%23%E2%80%8EStreetParade%E2%80%AC/time">
@@ -455,6 +481,7 @@
     <rdfs:label>‪#‎StreetParade‬</rdfs:label>
   </event:Event>
   <event:Event rdf:about="http://opendatahacklab.org/free-agenda/20160331/Referendum+Day/">
+    <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2016-01-01T00:00:00+01:00</dcterms:modified>
     <event:place rdf:resource="http://opendatahacklab.org/free-agenda/Gammazita"/>
     <event:time>
       <time:Interval rdf:about="http://opendatahacklab.org/free-agenda/20160331/Referendum+Day/time">
