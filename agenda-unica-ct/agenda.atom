@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <id>tag:opendatahacklab.org,2016-08-26:/free-agenda/agenda-unica-ct/rssfeed.php</id>
+  <id>tag:opendatahacklab.org,2016-08-26:/free-agenda/agenda-unica-ct/agenda.atom</id>
   <title>Agenda Unica del Movimento - Catania</title>
   <updated>2016-08-26T13:54:50+02:00</updated>
-  <link rel="self" href="http://opendatahacklab.org/free-agenda/agenda-unica-ct/rssfeed.php"/>
+  <link rel="self" href="http://www.opendatahacklab.org/free-agenda/agenda-unica-ct/agenda.atom"/>
   <author>
     <name>Agenda Unica</name>
   </author>
