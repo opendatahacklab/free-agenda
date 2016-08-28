@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE rdf:RDF>
-<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:event="http://purl.org/NET/c4dm/event.owl#" xmlns:time="http://www.w3.org/2006/time#" xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#" xmlns:locn="http://www.w3.org/ns/locn#" xmlns:dcterms="http://purl.org/dc/terms/">
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:event="http://purl.org/NET/c4dm/event.owl#" xmlns:time="http://www.w3.org/2006/time#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#" xmlns:locn="http://www.w3.org/ns/locn#">
   <owl:Ontology rdf:about="http://opendatahacklab.org/free-agenda/bastione-infetti/ontology">
     <owl:imports rdf:resource="http://motools.sf.net/event/event.n3"/>
     <owl:imports rdf:resource="http://www.w3.org/ns/locn"/>
@@ -18,6 +18,7 @@
   </rdf:Description>
   <event:Event rdf:about="http://opendatahacklab.org/free-agenda/20160717/Gammazita+in+love+al+Bastione+degli+Infetti/">
     <rdfs:comment>Dopo il grande successo alla corte del Castello Ursino, la compagnia teatrale di Marzia Ciulla, porta lo spettacolo di commedia dell'arte "Gammazita in love", nel medievalissimo bastione degli infetti, che per una sera diventa palcoscenico naturale per dar voce a Gammazita rendendole giustizia e donandone un lieto fine tipico della commedia dell'arte, senza morti nè perdenti, attraverso l'improvvisazione, le maschere e gli schemi drammaturgici tipici di questa antica arte teatrale. Il mito della fanciulla che al tempo dei vespri si ribellò alla corte di un giovane cavaliere francese rivive quindi a poche centinaia di metri dall' omonimo pozzo, all'interno del più integro fra gli antichi bastioni della cinta muraria cinquecentesca di Catania.  Un evento in collaborazione fra Comitato Popolare Antico Corso, Officina Rebelde e Ass. Guide turistiche Catania, che vi accompagnerà prima dello spettacolo alla scoperta del quartiere dell'Antico Corso e dell'antica cinta muraria di Catania.  PROGRAMMA h. 18,30 visita guidata del quartiere a cura di Ass. Guide Turistiche di Catania. Le visite partiranno a scaglioni a partire dalle 19,00; h. 20,30 cena sociale a cura di Comitato Popolare Antico Corso e Officina rebelde; h. 21.00 Gammazita in love. Spettacolo di commedia dell'arte a cura della Compagnia teatrale di Marzia Ciulla.  Personaggi e Interpreti Pantalone - Padre di Giordano: Roberto Vitriolo Togna – Serva di Pantalone: Francesca Aiesi Innamorata - Gammazita: Marzia Ciulla Innamorato - Giordano: Niall Dowling Signora - Donna Macalda: Francesca Aiesi Pedrolino – Servo di Macalda: Bianca Villari Capitano – San Victor, l’angioino: Andrea Arena</rdfs:comment>
+    <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2016-07-16T15:36:05+02:00</dcterms:modified>
     <event:place rdf:resource="http://opendatahacklab.org/free-agenda/Bastione+degli+Infetti"/>
     <event:time>
       <time:Interval rdf:about="http://opendatahacklab.org/free-agenda/20160717/Gammazita+in+love+al+Bastione+degli+Infetti/time">
@@ -32,6 +33,7 @@
   </event:Event>
   <event:Event rdf:about="http://opendatahacklab.org/free-agenda/20160827/CACCIA+AL+TESORO+CULTURALE/">
     <rdfs:comment>Sabato 27 agosto 2016 il Bastione degli Infetti ospiterà la CACCIA AL TESORO CULTURALE organizzata da Sicilia Antica. Il Bastione sarà il punto di partenza e di arrivo di questa interessante iniziativa rivolta a coppie ( che possono essere formate da amici in varie combinazioni) che andranno in giro per la città a cercare di catturare il "TESORO" nascosto tra le pieghe delle sue strade. Sarà anche l'occasione per partecipare al censimento del FAI e votare per il Bastione come luogo del cuore.</rdfs:comment>
+    <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2016-08-22T17:32:47+02:00</dcterms:modified>
     <event:place rdf:resource="http://opendatahacklab.org/free-agenda/Bastione+degli+Infetti"/>
     <event:time>
       <time:Interval rdf:about="http://opendatahacklab.org/free-agenda/20160827/CACCIA+AL+TESORO+CULTURALE/time">
@@ -46,6 +48,7 @@
   </event:Event>
   <event:Event rdf:about="http://opendatahacklab.org/free-agenda/20160728/Comics+and+Friends+-+al+Bastione+degli+Infetti/">
     <rdfs:comment>All'interno della campagna del FAI - I luoghi del cuore in favore del Bastione degli Infetti, il Comitato Popolare Antico Corso organizza "Comics and Friends. Spazio alla creatività!". Una vetrina delle varie realtà fumettistiche ed arti visive catanesi. Grandi e piccini potranno cimentarsi nell'arte del bastione siciliano ed assistere ad estemporanee fumettistiche ed artistiche . Un pomeriggio dedicato alle arti fumettistiche e non solo!  PARTECIPANTI: Iano - di Massimilano Raciti e Lorenzo Patanè; Van Helsing di Barbara Daniele e Salvo Coniglione Collettivo Zazzamita - con Chiara Filincieri e Salvo Callerami; Spazio giovani artisti - Roberta Renna Saggio di arte del bastone siciliano - a cusa dell'Ass. nazionale del bastone siciliano. Fondazione Marco Montalbano - Bruno Caporlingua Bonelliani Siculi Monica Maimone della Maimone Editore, Grazia Di Bella della Fumettolibreria Angelo Pavone cofondatore de " Fumetti al cubo" Scuola del fumetto di Catania di Nino e Ottavio Rocca e con Marco Grasso curatore artistico area mostre di Etna Comics Antonio Mannino Direttore di Etna Comics  h. 18,00 escursione per il quartiere a cura di Guide turistiche Catania h. 19.00 Jam Session con Francesco Oliva &amp;co. h. 20,30 Marco Grasso discuterà con gli intervenuti su : "Il fumetto, una forma d'arte sottovalutata " h.22,00 Drums circle con Romina Pincha ed allievi  In copertina Silvia Castro</rdfs:comment>
+    <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2016-08-22T18:51:26+02:00</dcterms:modified>
     <event:place rdf:resource="http://opendatahacklab.org/free-agenda/Bastione+degli+Infetti"/>
     <event:time>
       <time:Interval rdf:about="http://opendatahacklab.org/free-agenda/20160728/Comics+and+Friends+-+al+Bastione+degli+Infetti/time">
@@ -60,6 +63,7 @@
   </event:Event>
   <event:Event rdf:about="http://opendatahacklab.org/free-agenda/20160805/Catania%2C+che+cosa+c%27%C3%A8+sotto%3F/">
     <rdfs:comment>Catania, nel corso della sua millenaria storia è stata distrutta tante volte , qualcuno dice sette volte dalla lava e sette volte di terremoti. C'è chi favoleggia di passaggi segreti che permetterebbero il collegamento sotterraneo tra varie zone della città pre terremoto: l'anfiteatro romano è collegato con il mare? Cosa c'è sotto piazza Duomo? Dove conduce il canale della fontana dell'Amenano Franco Politano ci racconterà delle esplorazioni effettuate nel corso del tempo nel sottosuolo della nostra città con splendide ed esclusive immagini   PROGRAMMA h. 19,30 Apertura e visita guidata al Bastione degli Infetti h. 20,20 Conversazione e videoproiezione a cura di Franco Politano h. 21,30 Aperitivo sociale</rdfs:comment>
+    <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2016-08-22T19:04:07+02:00</dcterms:modified>
     <event:place rdf:resource="http://opendatahacklab.org/free-agenda/Bastione+degli+Infetti"/>
     <event:time>
       <time:Interval rdf:about="http://opendatahacklab.org/free-agenda/20160805/Catania%2C+che+cosa+c%27%C3%A8+sotto%3F/time">
@@ -74,6 +78,7 @@
   </event:Event>
   <event:Event rdf:about="http://opendatahacklab.org/free-agenda/20160715/Da+donna+a+donna%3A+saperi%2C+racconti+e+percorsi+di+libert%C3%A0+femminile./">
     <rdfs:comment>Il Bastione degli Infetti, la cinta muraria cinquecentesca di Catania, diventa contenitore artistico per una due giorni dedicata alle donne ed alla loro arte. Sulla base del principio dell'interazione fra le arti, un incontro di artiste delle arti visive e figurative crea percorsi di libertà femminile.  PROGRAMMA Venerdi 15 luglio h. 18,00 Saluti e presentazione dell'evento; h. 19.00 Conversazione sul libro di Consuelo Consoli "Un solo abraccio", a cura di Cettina Tiralosi - digital painter; h. 20,00 Concerto di Laura Marchese "Arpa, remote voci di civiltà"; h. 21,00 rinfresco ad offerta libera.  Sabato 16 luglio h. 18.00 apertura al pubblico del bastione e delle mostre allestite; h. 19,00 Concerto per chitarra classica e soprano Estrelita duo "La lirica del Sur"; A seguire giro alla scoperta del quartiere e rinfresco ad offerta libera.  Venerdi 15 e sabato 16 luglio aperte al pubblico le seguenti mostre ed installazioni: Cettina Tiralosi, digital painter - "Lacrime sciolgono muri e aprono orizzonti alla coscienza "; Anna Nolfo, pittrice - "Paesaggi dell'anima"; Giovanna Tomasello, scultrice - "Io e la creta... un incontro".</rdfs:comment>
+    <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2016-08-25T17:40:23+02:00</dcterms:modified>
     <event:place rdf:resource="http://opendatahacklab.org/free-agenda/Bastione+degli+Infetti"/>
     <event:time>
       <time:Interval rdf:about="http://opendatahacklab.org/free-agenda/20160715/Da+donna+a+donna%3A+saperi%2C+racconti+e+percorsi+di+libert%C3%A0+femminile./time">
@@ -88,6 +93,7 @@
   </event:Event>
   <event:Event rdf:about="http://opendatahacklab.org/free-agenda/20160507/7MAG+%23Invasioni+Digitali+%40+Bastione+degli+Infetti/">
     <rdfs:comment>Invasioni Digitali sbarca al Bastione degli Infetti. Macchine fotografiche, video camere, smartphone e tablet saranno i protagonisti del racconto della visita dell'unico bastione dell'antica cinta delle mura di Catania cinquecentesta rimasto visitabile. La scoperta della storia del bastione degli infetti si accompagnerà alla diffusione della visita attraverso i nuovi messi di comunicazione digitale... perchè la cultura si deve diffondere e vedere! Sono previste due invasioni: h. 09.30 e h. 15.30. In entrambi i casi l'ingresso è gratuito ma bisogna prenotare al link: http://www.invasionidigitali.it/invasione/invasione-al-bastione-degli-infetti-le-difese-rinascimentali-e-medioevali-di-catania-2/  Hastag ufficiali dell'evento: #bastioneinfetti #invasionidigitali #siciliainvasa2016 @invasionidigita </rdfs:comment>
+    <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2016-08-25T17:44:51+02:00</dcterms:modified>
     <event:place rdf:resource="http://opendatahacklab.org/free-agenda/Bastione+degli+Infetti"/>
     <event:time>
       <time:Interval rdf:about="http://opendatahacklab.org/free-agenda/20160507/7MAG+%23Invasioni+Digitali+%40+Bastione+degli+Infetti/time">
@@ -102,6 +108,7 @@
   </event:Event>
   <event:Event rdf:about="http://opendatahacklab.org/free-agenda/20160127/Giornata+della+Memoria/">
     <rdfs:comment>PASSEGGIATA ALLA SCOPERTA DEI QUARTIERI EBRAICI con il patrocinio del Comune di Catania  Passeggiando per gli antichi quartieri si possono scoprire segni e resti di architetture che ci rimandano al passato, agli abitanti ed ai popoli che ci hanno preceduto. Che cosa è il quartiere chiamato Ghetto? Dove si trova la Giudecca? Tra i tanti popoli che si sono insediati a Catania, dopo Greci e Romani, accanto ad arabi e Mussulmani troviamo anche gli Ebrei. Il Comitato popolare Antico Corso, in occasione della GIORNATA DELLA MEMORIA organizza una passeggiata alla ricerca di questi luoghi per riscoprire una civiltà ed una cultura che nel corso del tempo ha contribuito alla prosperità della nostra città. Appuntamento al Bastione degli Infetti alle 15,30 Il percorso si concluderà al Museo Emilio Greco  La quota di partecipazione di 7 €</rdfs:comment>
+    <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2016-08-25T17:48:18+02:00</dcterms:modified>
     <event:place rdf:resource="http://opendatahacklab.org/free-agenda/Bastione+degli+Infetti"/>
     <event:time>
       <time:Interval rdf:about="http://opendatahacklab.org/free-agenda/20160127/Giornata+della+Memoria/time">

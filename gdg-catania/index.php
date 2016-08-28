@@ -17,8 +17,9 @@
  *
  * @author Cristiano Longo
  */
-$title='Agenda Google Developers Group Catania';
-$sparql='http://dydra.com/cristianolongo/agenda-gdg-catania/sparql';
+require('constants.php');
+$title=TITLE;
+$sparql=SPARQL_ENDPOINT;
 $sheet='https://docs.google.com/forms/d/e/1FAIpQLScoF3Msh4kOoAMWeNxWg_a4VoRLkYBSedxk_xjUgE_Qskh-3w';
 require('../agendaTemplate.php');
 ?>

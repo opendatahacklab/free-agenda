@@ -17,8 +17,9 @@
  *
  * @author Cristiano Longo
  */
-$title='Agenda Bastione degli Infetti Catania';
-$sparql='https://dydra.com/cristianolongo/agenda-bastione-degli-infetti-catania/sparql';
+require('constants.php');
+$title=TITLE;
+$sparql=SPARQL_ENDPOINT;
 $sheet='https://docs.google.com/spreadsheets/d/1mNJ2I-QldzoxCR-EkTJ-K7xvzlurZC0vge224FD3gnY';
 require('../agendaTemplate.php');
 ?>

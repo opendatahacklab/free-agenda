@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <id>tag:opendatahacklab.org,2016-07-19:/free-agenda/gdg-catania/agenda.atom</id>
+  <title>Agenda Google Developers Group Catania</title>
+  <updated>2016-07-19T09:55:40+02:00</updated>
+  <link rel="self" href="http://opendatahacklab.org/free-agenda/gdg-catania/agenda.atom"/>
+  <author>
+    <name>GDGCatania</name>
+  </author>
+  <logo>http://opendatahacklab.org/commons/imgs/logo_cog4_ter.png</logo>
+  <entry>
+    <id>tag:dydra.com,2016-07-19:/free-agenda/20160729/OpenMeetup%3A+GDG+Garages+Opening/</id>
+    <title>OpenMeetup: GDG Garages Opening</title>
+    <updated>2016-07-19T09:55:40+02:00</updated>
+    <content type="text"/>
+  </entry>
+</feed>

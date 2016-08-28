@@ -22,6 +22,6 @@
 require('../RDFEvents2RSS.php');
 require('constants.php');
 
-(new RDFEvents2RSS(SPARQL_ENDPOINT, TITLE, 'http://www.opendatahacklab.org/free-agenda/agenda-unica-ct/', 'http://opendatahacklab.org/free-agenda/agenda-unica-ct/agenda.atom','Agenda Unica', 
-		null, null, null))->generate();
+(new RDFEvents2RSS(SPARQL_ENDPOINT, TITLE, 'http://www.opendatahacklab.org/free-agenda/gdg-catania/', 'http://opendatahacklab.org/free-agenda/gdg-catania/agenda.atom','GDGCatania', 
+		null, null, 'http://forum.gdgcatania.org/uploads/system/site-logo.png'))->generate();
 ?>

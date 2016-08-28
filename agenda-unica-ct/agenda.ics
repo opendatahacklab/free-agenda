@@ -1,0 +1,437 @@
+BEGIN:VCALENDAR
+PRODID:-//Opendatahacklab Catania//Agenda Unica//IT
+VERSION:2.0
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+DTSTART:20160905T205000Z
+DTEND:20160905T205000Z
+DTSTAMP:20160828T163256Z
+UID:http://dydra.com/free-agenda/20160905/Lagaan%2C+c%27era+una+volta
+ +in+India+-+film+e+cena+vegan+indiana/
+DESCRIPTION:
+LOCATION:10, Via Vanasco, Catania, Italy
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Lagaan, c'era una volta in India - film e cena vegan indiana
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20160820T180000Z
+DTEND:20160820T180000Z
+DTSTAMP:20160828T163256Z
+UID:http://dydra.com/free-agenda/20160820/Assemblea+contro+Renzi/
+DESCRIPTION:
+LOCATION:8, Via Montevergine, Catania, Italy
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Assemblea contro Renzi
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20160819T180000Z
+DTEND:20160819T180000Z
+DTSTAMP:20160828T163256Z
+UID:http://dydra.com/free-agenda/20160819/Aleppo+live+loveinthetimeof
+ revolution/
+DESCRIPTION:
+LOCATION:89, Via Campo Franco, Catania, Italy
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Aleppo live loveinthetimeofrevolution
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20160807T173000Z
+DTEND:20160807T173000Z
+DTSTAMP:20160828T163256Z
+UID:http://dydra.com/free-agenda/20160807/Raccolta+Firme+Legalizziamo
+ %21+LA+CANNABIS+-+il+proibizionismo+ha+fallito/
+DESCRIPTION:
+LOCATION:, Piazza Vittime del terrorismo internazionale, Aci Trezza, Italy
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Raccolta Firme Legalizziamo! LA CANNABIS - il proibizionismo ha f
+ allito
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20160727T180000Z
+DTEND:20160727T180000Z
+DTSTAMP:20160828T163256Z
+UID:http://dydra.com/free-agenda/20160727/Festa+di+Autofinanziamento/
+DESCRIPTION:
+LOCATION:25, Piazza Pietro Lupo, Catania, Italy
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Festa di Autofinanziamento
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20160720T200000Z
+DTEND:20160720T200000Z
+DTSTAMP:20160828T163256Z
+UID:http://dydra.com/free-agenda/20160720/Chi+non+ha+memoria+non+ha+f
+ uturo+-+reading%2C+video+%26+dibattito/
+DESCRIPTION:
+LOCATION:147, Via Caronda, Catania, Italy
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Chi non ha memoria non ha futuro - reading, video & dibattito
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20160720T193000Z
+DTEND:20160720T193000Z
+DTSTAMP:20160828T163256Z
+UID:http://dydra.com/free-agenda/20160720/Briganti+Rugby+Librino/
+DESCRIPTION:
+LOCATION:, Via del Giaggiolo, Catania, Italy
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Briganti Rugby Librino
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20160624T190000Z
+DTEND:20160624T190000Z
+DTSTAMP:20160828T163256Z
+UID:http://dydra.com/free-agenda/20160624/Cena+Sociale+di+Sostegno+ai
+ +Briganti+di+Librino/
+DESCRIPTION:
+LOCATION:6, Via Pietro Antonio Coppola, Catania, Italy
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Cena Sociale di Sostegno ai Briganti di Librino
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20160613T190000Z
+DTEND:20160613T190000Z
+DTSTAMP:20160828T163256Z
+UID:http://dydra.com/free-agenda/20160613/Riunione+Agenda+Unica/
+DESCRIPTION:
+LOCATION:6, Via Pietro Antonio Coppola, Catania, Italy
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Riunione Agenda Unica
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20160528T183000Z
+DTEND:20160528T183000Z
+DTSTAMP:20160828T163256Z
+UID:http://dydra.com/free-agenda/20160528/Presentazione+del+libro+di+
+ Domenico+MOro+%22Globalizzazione+e+decadenza+industriale%22/
+DESCRIPTION:
+LOCATION:89, Via Luigi Capuana, Catania, Italy
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Presentazione del libro di Domenico MOro "Globalizzazione e decad
+ enza industriale"
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20160527T173000Z
+DTEND:20160527T173000Z
+DTSTAMP:20160828T163256Z
+UID:http://dydra.com/free-agenda/20160527/Incontro+con+gli+autori+di+
+ %22Come+il+colore+della+terra%22+Marco+Gastoni+e+Nicola+Gobbi/
+DESCRIPTION:
+LOCATION:, Via del Giaggiolo, Catania, Italy
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Incontro con gli autori di "Come il colore della terra" Marco Gas
+ toni e Nicola Gobbi
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20160526T190000Z
+DTEND:20160526T190000Z
+DTSTAMP:20160828T163256Z
+UID:http://dydra.com/free-agenda/20160526/Cuba%2C+tra+continuit%C3%A0
+ +e+nuove+sfide/
+DESCRIPTION:
+LOCATION:17, Via Alessi, Catania, Italy
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Cuba, tra continuità e nuove sfide
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20160524T210000Z
+DTEND:20160524T210000Z
+DTSTAMP:20160828T163256Z
+UID:http://dydra.com/free-agenda/20160524/Campagna+di+sostegno+%22I+B
+ riganti+si+meritano+un+prato%22.+%22Principessa%22+di+e+con+Lucia
+ no+Bruno/
+DESCRIPTION:
+LOCATION:, Via del Giaggiolo, Catania, Italy
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Campagna di sostegno "I Briganti si meritano un prato". "Principe
+ ssa" di e con Luciano Bruno
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20160523T190000Z
+DTEND:20160523T190000Z
+DTSTAMP:20160828T163256Z
+UID:http://dydra.com/free-agenda/20160523/CATANIA+STRANGOLATA+DAL+DEB
+ ITO+%22PUBBLICO%22%3A+DIETRO+I+NUMERI+IL+BILANCIO+DEI+DIRITTI+NEG
+ ATI.+ASSEMBLEA+PUBBLICA+con+Marco+Bersani+-+Attac+Italia+/
+DESCRIPTION:
+LOCATION:25, Piazza Pietro Lupo, Catania, Italy
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:CATANIA STRANGOLATA DAL DEBITO "PUBBLICO": DIETRO I NUMERI IL BIL
+ ANCIO DEI DIRITTI NEGATI. ASSEMBLEA PUBBLICA con Marco Bersani - 
+ Attac Italia
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20160520T210000Z
+DTEND:20160520T210000Z
+DTSTAMP:20160828T163256Z
+UID:http://dydra.com/free-agenda/20160520/Campagna+di+Sostegno+%22I+B
+ riganti+si+meritano+un+prato%22.+Cous+Cous+Fest./
+DESCRIPTION:
+LOCATION:, Via del Giaggiolo, Catania, Italy
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Campagna di Sostegno "I Briganti si meritano un prato". Cous Cous
+  Fest.
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20160514T173000Z
+DTEND:20160514T173000Z
+DTSTAMP:20160828T163256Z
+UID:http://dydra.com/free-agenda/20160514/Incontro+su+Charles+Bukowsk
+ i+%22compagni+di+sbronze%22/
+DESCRIPTION:
+LOCATION:, Via del Giaggiolo, Catania, Italy
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Incontro su Charles Bukowski "compagni di sbronze"
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20160510T193000Z
+DTEND:20160510T193000Z
+DTSTAMP:20160828T163256Z
+UID:http://dydra.com/free-agenda/20160510/Serata+No+Muos+al+C.s.a.+Of
+ ficina+Rebelde/
+DESCRIPTION:
+LOCATION:6, Via Pietro Antonio Coppola, Catania, Italy
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Serata No Muos al C.s.a. Officina Rebelde
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20160509T183000Z
+DTEND:20160509T183000Z
+DTSTAMP:20160828T163256Z
+UID:http://dydra.com/free-agenda/20160509/Contro+la+scuola+Spa/
+DESCRIPTION:
+LOCATION:7, Via Beritelli, Catania, Italy
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Contro la scuola Spa
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20160506T183000Z
+DTEND:20160506T183000Z
+DTSTAMP:20160828T163256Z
+UID:http://dydra.com/free-agenda/20160506/Primavera+Referendaria/
+DESCRIPTION:
+LOCATION:89, Via Luigi Capuana, Catania, Italy
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Primavera Referendaria
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20160427T200000Z
+DTEND:20160427T200000Z
+DTSTAMP:20160828T163256Z
+UID:http://dydra.com/free-agenda/20160427/Vivere+la+storia+di%5Cattra
+ verso%5Ccon+Tina+Modotti%3A+una+storia+rivoluzionaria/
+DESCRIPTION:
+LOCATION:89, Via Campo Franco, Catania, Italy
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Vivere la storia di\attraverso\con Tina Modotti: una storia rivol
+ uzionaria
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20160426T170000Z
+DTEND:20160426T170000Z
+DTSTAMP:20160828T163256Z
+UID:http://dydra.com/free-agenda/20160426/presentazione+del+libro+%22
+ Manifesto+per+la+Sinistra+e+l%27umanesimo+sociale+%22/
+DESCRIPTION:
+LOCATION:234, Via Antonino di San Giuliano, Catania, Italy
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:presentazione del libro "Manifesto per la Sinistra e l'umanesimo 
+ sociale "
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20160424T200000Z
+DTEND:20160424T200000Z
+DTSTAMP:20160828T163256Z
+UID:http://dydra.com/free-agenda/20160424/OLGA+%2C+un+grande+film+sul
+ la+vita+di+Olga+Benario./
+DESCRIPTION:
+LOCATION:7, Vicolo Beritelli, Catania, Italy
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:OLGA , un grande film sulla vita di Olga Benario.
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20160423T193000Z
+DTEND:20160423T193000Z
+DTSTAMP:20160828T163256Z
+UID:http://dydra.com/free-agenda/20160423/Siria+e+Palestina+nel+confl
+ itto+mediorientale/
+DESCRIPTION:
+LOCATION:89, Via Campo Franco, Catania, Italy
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Siria e Palestina nel conflitto mediorientale
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20160422T180000Z
+DTEND:20160422T180000Z
+DTSTAMP:20160828T163256Z
+UID:http://dydra.com/free-agenda/20160422/ILVA+La+tempesta+perfetta+-
+ +Presentazione+libro+con+gli+autori/
+DESCRIPTION:
+LOCATION:903, Via Plebiscito, Catania, Italy
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:ILVA La tempesta perfetta - Presentazione libro con gli autori
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20160420T150000Z
+DTEND:20160420T150000Z
+DTSTAMP:20160828T163256Z
+UID:http://dydra.com/free-agenda/20160420/Settimana+contro+lo+sfrutta
+ mento+del+lavoro+minorile/
+DESCRIPTION:
+LOCATION:, Via del Giaggiolo, Catania, Italy
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Settimana contro lo sfruttamento del lavoro minorile
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20160414T190000Z
+DTEND:20160414T190000Z
+DTSTAMP:20160828T163256Z
+UID:http://dydra.com/free-agenda/20160414/I+comunisti+tra+passato+e+f
+ uturo.+Un+bilancio+storico+dagli+anni+%2790+ad+oggi/
+DESCRIPTION:
+LOCATION:97, Corso Sicilia, Catania, Italy
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:I comunisti tra passato e futuro. Un bilancio storico dagli anni 
+ '90 ad oggi
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20160409T193000Z
+DTEND:20160409T193000Z
+DTSTAMP:20160828T163256Z
+UID:http://dydra.com/free-agenda/20160409/FACEVAMO+QUELLO+CHE+DOVEVAM
+ O/
+DESCRIPTION:
+LOCATION:903, Via Plebiscito, Catania, Italy
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:FACEVAMO QUELLO CHE DOVEVAMO
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20160409T183000Z
+DTEND:20160409T183000Z
+DTSTAMP:20160828T163256Z
+UID:http://dydra.com/free-agenda/20160409/i+briganti+si+meritano+un+p
+ rato%3A+l%27inizio.../
+DESCRIPTION:
+LOCATION:, Via del Giaggiolo, Catania, Italy
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:i briganti si meritano un prato: l'inizio...
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20160407T180000Z
+DTEND:20160407T180000Z
+DTSTAMP:20160828T163256Z
+UID:http://dydra.com/free-agenda/20160407/Giornata+NO+Triv+/
+DESCRIPTION:
+LOCATION:6, Via Pietro Antonio Coppola, Catania, Italy
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Giornata NO Triv
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20160405T190000Z
+DTEND:20160405T190000Z
+DTSTAMP:20160828T163256Z
+UID:http://dydra.com/free-agenda/20160405/Aperitivo+POP/
+DESCRIPTION:
+LOCATION:56, Via Grotte Bianche, Catania, Italy
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Aperitivo POP
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20160403T170000Z
+DTEND:20160403T170000Z
+DTSTAMP:20160828T163256Z
+UID:http://dydra.com/free-agenda/20160403/Riunione+Agenda+Unica/
+DESCRIPTION:
+LOCATION:6, Via Pietro Antonio Coppola, Catania, Italy
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Riunione Agenda Unica
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20160402T170000Z
+DTEND:20160402T170000Z
+DTSTAMP:20160828T163256Z
+UID:http://dydra.com/free-agenda/20160402/%E2%80%AA%23%E2%80%8EStreet
+ Parade%E2%80%AC/
+DESCRIPTION:
+LOCATION:, Via Etnea, Catania, Italy
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:‪#‎StreetParade‬
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20160331T200000Z
+DTEND:20160331T200000Z
+DTSTAMP:20160828T163256Z
+UID:http://dydra.com/free-agenda/20160331/Referendum+Day/
+DESCRIPTION:
+LOCATION:92, Piazza Federico di Svevia, Catania, Italy
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Referendum Day
+TRANSP:OPAQUE
+END:VEVENT
+END:VCALENDAR
