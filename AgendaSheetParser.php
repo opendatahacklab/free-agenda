@@ -36,6 +36,7 @@ class Event {
 	// array organizations
 	public $organizedBy;
 	public $locationId;
+	public $creationTime;
 	
 	/**
 	 * 
@@ -51,6 +52,9 @@ class Event {
 		$locationName = isset ( $row [8] ) ? $row [8] : null;
 		$this->locationId=$locationId==null ? $locationName : $locationId;
 		$this->description= $row[12];
+		$this->creationTime=(isset($row[0]) && strlen($row[0])>0) ? 
+			DateTime::createFromFormat ( DATE_FORMAT_bis, $row[0], new DateTimeZone ( 'Europe/Rome' ) ) : 
+					null;
 	}
 	
 	/**
@@ -63,6 +67,7 @@ class Event {
 		return $ret != FALSE ? $ret : DateTime::createFromFormat ( DATE_FORMAT_bis, $fullDate, new DateTimeZone ( 'Europe/Rome' ) );
 	}
 }
+
 class AgendaSheetParser implements Iterator {
 	private $rows;
 	private $numItems;

@@ -5,8 +5,10 @@ require('AgendaSheetParser.php');
 $p = new AgendaSheetParser(AGEND_UNICA_URL);
 foreach ($p as $e)
 {
-	if ($e->start!=null)
-		echo $e->name." location id=$e->locationId ; Description=$e->description\n";
+	if ($e->creationTime!=null)
+		echo $e->name." Creation=".$e->creationTime->format('d/m/Y H.i.s')."\n";
+	else
+		echo $e->name."\n";
 }
 
 
