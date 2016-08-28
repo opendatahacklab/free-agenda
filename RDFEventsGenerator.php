@@ -124,8 +124,7 @@ class RDFEventsGenerator
 	 */
 	public static function getRequiredNamespaces(){
 		return  array('event'=>'http://purl.org/NET/c4dm/event.owl#',
-    		'time'=>'http://www.w3.org/2006/time#'
-		);		
+    		'time'=>'http://www.w3.org/2006/time#', 'dcterms'=>DCTERMS_VALUE);		
 	}
 	
 	/**
@@ -149,6 +148,9 @@ class RDFEventsGenerator
 		
 		if ($this->event->description!=null && strlen($this->event->description))
 			$this->addEventDescriptionElement($xml, $eventRDF, $this->event->description);
+		
+		if ($this->event->creationTime!=null)
+			$this->addEventModificationTime($xml, $eventRDF, $this->event->creationTime);
 
 		$eventTime = $xml->createElement("event:time");
 		$timeInterval = $xml->createElement("time:Interval");
@@ -223,6 +225,23 @@ class RDFEventsGenerator
 		$commentEl=$xml->createElement("rdfs:comment");
 		$eventElement->appendChild($commentEl);
 		$commentEl->appendChild($textEl);
+	}
+	
+	/**
+	 * Add dcterm:modified to an event.
+	 * 
+	 * @param unknown $xml
+	 * @param unknown $eventElement the xml element representing the event
+	 * @param unknown $creationTime a DateTime object
+	 */
+	private function addEventModificationTime($xml, $eventElement, $creationTime){
+		$modifiedElement=$xml->createElement('dcterms:modified');
+		$eventElement->appendChild($modifiedElement);
+		$timeTextNode=$xml->createTextNode(date("c", $creationTime->getTimestamp()));
+		$modifiedElement->appendChild($timeTextNode);
+		$rdfXSDAttribute = $xml->createAttribute(DATATYPE_ATTRIBUTE);
+		$rdfXSDAttribute->value = RDF_DATATYPE;
+		$modifiedElement->appendChild($rdfXSDAttribute);
 	}
 
 /**

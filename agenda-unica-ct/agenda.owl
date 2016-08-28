@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE rdf:RDF>
-<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:event="http://purl.org/NET/c4dm/event.owl#" xmlns:time="http://www.w3.org/2006/time#" xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#" xmlns:locn="http://www.w3.org/ns/locn#" xmlns:dcterms="http://purl.org/dc/terms/">
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:event="http://purl.org/NET/c4dm/event.owl#" xmlns:time="http://www.w3.org/2006/time#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#" xmlns:locn="http://www.w3.org/ns/locn#">
   <owl:Ontology rdf:about="http://opendatahacklab.org/free-agenda/agenda-unica-ct/ontology">
     <owl:imports rdf:resource="http://motools.sf.net/event/event.n3"/>
     <owl:imports rdf:resource="http://www.w3.org/ns/locn"/>
@@ -17,6 +17,7 @@
     <rdfs:subPropertyOf rdf:resource="http://www.w3.org/ns/locn#location"/>
   </rdf:Description>
   <event:Event rdf:about="http://opendatahacklab.org/free-agenda/20160820/Assemblea+contro+Renzi/">
+    <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2016-08-20T22:00:00+02:00</dcterms:modified>
     <event:place rdf:resource="http://opendatahacklab.org/free-agenda/Cso+Liotru"/>
     <event:time>
       <time:Interval rdf:about="http://opendatahacklab.org/free-agenda/20160820/Assemblea+contro+Renzi/time">
@@ -30,6 +31,7 @@
     <rdfs:label>Assemblea contro Renzi</rdfs:label>
   </event:Event>
   <event:Event rdf:about="http://opendatahacklab.org/free-agenda/20160819/Aleppo+live+loveinthetimeofrevolution/">
+    <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2016-08-17T21:41:05+02:00</dcterms:modified>
     <event:place rdf:resource="http://opendatahacklab.org/free-agenda/Sala+Cento+Fiori"/>
     <event:time>
       <time:Interval rdf:about="http://opendatahacklab.org/free-agenda/20160819/Aleppo+live+loveinthetimeofrevolution/time">
@@ -44,6 +46,7 @@
   </event:Event>
   <event:Event rdf:about="http://opendatahacklab.org/free-agenda/20160807/Raccolta+Firme+Legalizziamo%21+LA+CANNABIS+-+il+proibizionismo+ha+fallito/">
     <rdfs:comment>Tavolo per la raccolta firme nazionale legalizzazione cannabis</rdfs:comment>
+    <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2016-08-03T14:45:51+02:00</dcterms:modified>
     <event:place rdf:resource="http://opendatahacklab.org/free-agenda/Aci+Trezza-Piazza+Vittime+del+terrorismo+internazionale-"/>
     <event:time>
       <time:Interval rdf:about="http://opendatahacklab.org/free-agenda/20160807/Raccolta+Firme+Legalizziamo%21+LA+CANNABIS+-+il+proibizionismo+ha+fallito/time">
@@ -57,6 +60,7 @@
     <rdfs:label>Raccolta Firme Legalizziamo! LA CANNABIS - il proibizionismo ha fallito</rdfs:label>
   </event:Event>
   <event:Event rdf:about="http://opendatahacklab.org/free-agenda/20160720/Chi+non+ha+memoria+non+ha+futuro+-+reading%2C+video+%26+dibattito/">
+    <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2016-07-05T23:14:41+02:00</dcterms:modified>
     <event:place rdf:resource="http://opendatahacklab.org/free-agenda/Circolo+Citt%C3%A0+Futura"/>
     <event:time>
       <time:Interval rdf:about="http://opendatahacklab.org/free-agenda/20160720/Chi+non+ha+memoria+non+ha+futuro+-+reading%2C+video+%26+dibattito/time">
@@ -70,6 +74,7 @@
     <rdfs:label>Chi non ha memoria non ha futuro - reading, video &amp; dibattito</rdfs:label>
   </event:Event>
   <event:Event rdf:about="http://opendatahacklab.org/free-agenda/20160720/Briganti+Rugby+Librino/">
+    <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2016-07-12T16:35:09+02:00</dcterms:modified>
     <event:place rdf:resource="http://opendatahacklab.org/free-agenda/Campo+San+Teodoro"/>
     <event:time>
       <time:Interval rdf:about="http://opendatahacklab.org/free-agenda/20160720/Briganti+Rugby+Librino/time">
@@ -84,6 +89,7 @@
   </event:Event>
   <event:Event rdf:about="http://opendatahacklab.org/free-agenda/20160727/Festa+di+Autofinanziamento/">
     <rdfs:comment>Festa di Autofinanziamento della Palestra Lupo: </rdfs:comment>
+    <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2016-07-22T12:11:06+02:00</dcterms:modified>
     <event:place rdf:resource="http://opendatahacklab.org/free-agenda/Palestra+Lupo"/>
     <event:time>
       <time:Interval rdf:about="http://opendatahacklab.org/free-agenda/20160727/Festa+di+Autofinanziamento/time">
@@ -98,6 +104,7 @@
   </event:Event>
   <event:Event rdf:about="http://opendatahacklab.org/free-agenda/20160905/Lagaan%2C+c%27era+una+volta+in+India+-+film+e+cena+vegan+indiana/">
     <rdfs:comment>Lunedì 5 settembre, dalle ore 20, all’Arena Argentina di Catania, il circolo città futura presenta: Lagaan, c’era una volta in India, di Ashutosh Gowariker, con Aamir Khan.  India, 1893. In un piccolo villaggio vicino a Champaner, nel Gujarat, si piantano pacificamente i primi semi della rivolta contro l’oppressione coloniale.  Mentre una grande siccità metta a dura prova i contadini, il capitano delle truppe imperiali decide di raddoppiare le tasse sul raccolto per punire il rifiuto del rajah, tradizionalmente vegetariano, di mangiare carne insieme a lui. Il giovane Bhuvan, che non esita a rischiare la vita per difendere antilopi e lepri dal “passatempo” preferito degli ufficiali britannici, non si piega all’arroganza del potere e sfida i dominatori sul loro stesso terreno: il gioco del cricket. Dalla partita dipenderanno le sorti dell’intera provincia. Così, superando ogni divisione di casta e pregiudizio sociale, la resistenza scende in campo...  Lagaan, capolavoro del cinema indiano contemporaneo, candidato all’oscar per il miglior film straniero, è un affascinate affresco corale della presa di parola dei subalterni, un appassionante esempio di come la storia ai limiti della storia del mondo si costruisca dal basso.  apertura ore 20, proiezione film ore 20,50 (spettacolo unico) ingresso € 3, ridotto € 2,50, soci cinestudio € 2  durante la serata nell’area ristoro cena di VeganOsteria con le specialità indiane del Gujarat, per informazioni tel. 349.3983255. menu degustazione € 6: Samosa, fagottini ripieni di patate cremose al garam masala Panchmahal bhakarwadi, girelle soffici alle cinque spezie Gandhinagar pakora, sformatini in pastella di ceci al tamarindo Gujarati undhiyu, specialità di melanzane fritte con verdure saltate e legumi freschi Champaner biryani, basmati profumato con verdure e salsa allo zafferano con mandorle e anacardi</rdfs:comment>
+    <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2016-08-26T13:54:50+02:00</dcterms:modified>
     <event:place rdf:resource="http://opendatahacklab.org/free-agenda/Arena+Argentina"/>
     <event:time>
       <time:Interval rdf:about="http://opendatahacklab.org/free-agenda/20160905/Lagaan%2C+c%27era+una+volta+in+India+-+film+e+cena+vegan+indiana/time">
