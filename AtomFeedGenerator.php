@@ -116,7 +116,7 @@ class AtomFeedGenerator{
 	 */
 	public function addEntryWithTextContent($id, $title, $updated, $content, $link){
 		$entryEl=$this->addEntry($id, $title, $updated);
-		$contentEl=$this->doc->createElement("content", $content);
+		$contentEl=$this->createEscapedElement("content", $content);
 		$contentEl->setAttribute('type', 'text');
 		$entryEl->appendChild($contentEl);		
 		
@@ -140,11 +140,22 @@ class AtomFeedGenerator{
 		$entryEl=$this->doc->createElement("entry");
 		$this->feedEl->appendChild($entryEl);
 		$entryEl->appendChild($this->doc->createElement("id", $id));
-		$entryEl->appendChild($this->doc->createElement("title", $title));
+		$entryEl->appendChild($this->createEscapedElement("title", $title));
 		$entryEl->appendChild($this->doc->createElement("updated", 
 				$updated->format(DateTime::ATOM)));
 		return $entryEl; 
 	}
+	
+	/**
+	 * Create a DOM element with the specified tag name and a text child with the specified content.
+	 * The text child is xml-escaped.
+	 */
+	private function createEscapedElement($elementName, $textContent){
+		$el=$this->doc->createElement($elementName);
+		$el->appendChild($this->doc->createTextNode($textContent));
+		return $el;
+	}
+	
 	/**
 	 * Get the feed as string
 	 */

@@ -121,6 +121,36 @@
     </event:time>
     <rdfs:label>Giornata della Memoria</rdfs:label>
   </event:Event>
+  <event:Event rdf:about="http://opendatahacklab.org/free-agenda/20170101/Prova%3A+Prossimo+Evento/">
+    <rdfs:comment>evento di prova</rdfs:comment>
+    <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2016-08-31T10:21:58+02:00</dcterms:modified>
+    <event:place rdf:resource="http://opendatahacklab.org/free-agenda/Bastione+degli+Infetti"/>
+    <event:time>
+      <time:Interval rdf:about="http://opendatahacklab.org/free-agenda/20170101/Prova%3A+Prossimo+Evento/time">
+        <time:hasBeginning>
+          <time:Instant rdf:about="http://opendatahacklab.org/free-agenda/20170101/Prova%3A+Prossimo+Evento/time/begin">
+            <time:inXSDDateTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-01-01T20:00:00+01:00</time:inXSDDateTime>
+          </time:Instant>
+        </time:hasBeginning>
+      </time:Interval>
+    </event:time>
+    <rdfs:label>Prova: Prossimo Evento</rdfs:label>
+  </event:Event>
+  <event:Event rdf:about="http://opendatahacklab.org/free-agenda/20170202/Prova+evento+futuro/">
+    <rdfs:comment>Prova evento futuro</rdfs:comment>
+    <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2016-08-31T11:30:52+02:00</dcterms:modified>
+    <event:place rdf:resource="http://opendatahacklab.org/free-agenda/Bastione+degli+Infetti"/>
+    <event:time>
+      <time:Interval rdf:about="http://opendatahacklab.org/free-agenda/20170202/Prova+evento+futuro/time">
+        <time:hasBeginning>
+          <time:Instant rdf:about="http://opendatahacklab.org/free-agenda/20170202/Prova+evento+futuro/time/begin">
+            <time:inXSDDateTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-02-02T21:00:00+01:00</time:inXSDDateTime>
+          </time:Instant>
+        </time:hasBeginning>
+      </time:Interval>
+    </event:time>
+    <rdfs:label>Prova evento futuro</rdfs:label>
+  </event:Event>
   <locn:Location rdf:about="http://opendatahacklab.org/free-agenda/Bastione+degli+Infetti">
     <rdfs:label>Bastione degli Infetti</rdfs:label>
     <locn:address>

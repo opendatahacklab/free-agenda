@@ -1,13 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <id>tag:opendatahacklab.org,2016-08-25:/free-agenda/bastione-degli-infetti-catania/agenda.atom</id>
+  <id>tag:opendatahacklab.org,2016-08-31:/free-agenda/bastione-degli-infetti-catania/agenda.atom</id>
   <title>Agenda Bastione degli Infetti Catania</title>
-  <updated>2016-08-25T17:48:18+02:00</updated>
+  <updated>2016-08-31T11:30:52+02:00</updated>
   <link rel="self" href="http://opendatahacklab.org/free-agenda/bastione-degli-infetti-catania/agenda.atom"/>
   <author>
     <name>Comitato Popolare Antico Corso</name>
     <email>cpacorsoct@gmail.com</email>
   </author>
+  <entry>
+    <id>tag:dydra.com,2016-08-31:/free-agenda/20170202/Prova+evento+futuro/</id>
+    <title>Prova evento futuro</title>
+    <updated>2016-08-31T11:30:52+02:00</updated>
+    <content type="text">Prova evento futuro - , Via Torre del Vescovo, Catania, Italy - 02 February 2017 21:00
+ Prova evento futuro</content>
+  </entry>
+  <entry>
+    <id>tag:dydra.com,2016-08-31:/free-agenda/20170101/Prova%3A+Prossimo+Evento/</id>
+    <title>Prova: Prossimo Evento</title>
+    <updated>2016-08-31T10:21:58+02:00</updated>
+    <content type="text">Prova: Prossimo Evento - , Via Torre del Vescovo, Catania, Italy - 01 January 2017 20:00
+ evento di prova</content>
+  </entry>
   <entry>
     <id>tag:dydra.com,2016-08-25:/free-agenda/20160127/Giornata+della+Memoria/</id>
     <title>Giornata della Memoria</title>

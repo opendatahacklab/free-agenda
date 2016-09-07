@@ -159,9 +159,9 @@ class RDFEvents2RSS{
 			$entryContent = trim($entryTitle) . ' - '
 					. trim($row['address']) .
 					' - ' . strftime("%d %B %Y %H:%M" , strtotime($row['time']));
-					if (isset($row['description'])) $entryContent.="\n ".$row['description'];
-		
-					$feed->addEntryWithTextContent($entryId, $entryTitle, new DateTime($entryUpdated), $entryContent, $row['homepage']);
+			if (isset($row['description'])) $entryContent.="\n ".$row['description'];
+			$homepage=array_key_exists('homepage',$row) && isset($row['homepage'])? $row['homepage'] : null; 				
+			$feed->addEntryWithTextContent($entryId, $entryTitle, new DateTime($entryUpdated), $entryContent, null);
 		}while( $row = $result->fetch_array() );		
 	}
 	
