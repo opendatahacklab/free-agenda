@@ -147,6 +147,9 @@ class RDFEvents2RSS{
 	 * @param unknown $fstRow the first result row
 	 */
 	private function populate($feed, $result, $fstRow){
+		if (!$result || !$fstRow)
+			return;
+		
 		$row=$fstRow;
 		//Imposta e stampa un entry del feed per ciascun evento ottenuto dalla query precedente
 		// Usa un ciclo while perchè il primo "$row = $result->fetch_array()" è stato chiamato sopra

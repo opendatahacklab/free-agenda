@@ -1,0 +1,1434 @@
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:vs="http://www.w3.org/2003/06/sw-vocab-status/ns#"
+    xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#"
+    xmlns:wdrs="http://www.w3.org/2007/05/powder-s#"
+    xmlns:locn="http://www.w3.org/ns/locn#"
+    xmlns:schema="http://schema.org/"
+    xmlns:voaf="http://purl.org/vocommons/voaf#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:sf="http://www.opengis.net/ont/sf#"
+    xmlns:dcterms="http://purl.org/dc/terms/"
+    xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xmlns:time="http://www.w3.org/2006/time#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:event="http://purl.org/NET/c4dm/event.owl#"
+    xmlns:sioc="http://rdfs.org/sioc/ns#"
+    xmlns:rec="http://www.w3.org/2001/02pd/rec54#"
+    xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+    xmlns:gsp="http://www.opengis.net/ont/geosparql#"
+    xmlns:dcat="http://www.w3.org/ns/dcat#"
+    xmlns:cc="http://creativecommons.org/ns#"
+    xmlns:vann="http://purl.org/vocab/vann/"
+    xmlns:foaf="http://xmlns.com/foaf/0.1/"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
+  <owl:Class rdf:about="http://www.w3.org/2002/07/owl#Thing">
+    <owl:equivalentClass rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <owl:complementOf>
+      <owl:Class rdf:about="http://www.w3.org/2002/07/owl#Nothing"/>
+    </owl:complementOf>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://www.w3.org/2002/07/owl#Nothing"/>
+    </owl:disjointWith>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.w3.org/2002/07/owl#Nothing">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://purl.org/vocommons/voaf#Vocabulary"/>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <rdfs:subClassOf>
+      <owl:Thing rdf:about="http://www.w3.org/ns/locn#Address">
+        <owl:sameAs rdf:resource="http://www.w3.org/ns/locn#Address"/>
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <owl:equivalentClass rdf:resource="http://www.w3.org/ns/locn#Address"/>
+        <owl:disjointWith rdf:resource="http://www.w3.org/2002/07/owl#Nothing"/>
+        <wdrs:describedby>
+          <owl:Thing rdf:about="https://joinup.ec.europa.eu/node/55858">
+            <owl:sameAs rdf:resource="https://joinup.ec.europa.eu/node/55858"/>
+            <dcterms:title>Core Vocabularies Specification</dcterms:title>
+          </owl:Thing>
+        </wdrs:describedby>
+        <dcterms:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >locn:Address</dcterms:identifier>
+        <vs:term_status xml:lang="en">testing</vs:term_status>
+        <rdfs:isDefinedBy>
+          <voaf:Vocabulary rdf:about="http://www.w3.org/ns/locn">
+            <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+            <owl:sameAs rdf:resource="http://www.w3.org/ns/locn"/>
+            <voaf:propertyNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
+            >16</voaf:propertyNumber>
+            <vann:preferredNamespacePrefix rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >locn</vann:preferredNamespacePrefix>
+            <wdrs:describedby rdf:resource="https://joinup.ec.europa.eu/node/55858"/>
+            <foaf:depiction>
+              <owl:Thing rdf:about="http://www.w3.org/ns/locn.svg">
+                <owl:sameAs rdf:resource="http://www.w3.org/ns/locn.svg"/>
+                <rdfs:label>Class and property diagram of the LOCN vocabulary</rdfs:label>
+              </owl:Thing>
+            </foaf:depiction>
+            <rec:editor>
+              <owl:Thing rdf:nodeID="A0">
+                <owl:sameAs rdf:nodeID="A0"/>
+                <schema:affiliation>
+                  <owl:Thing rdf:nodeID="A1">
+                    <owl:sameAs rdf:nodeID="A1"/>
+                    <foaf:homepage>
+                      <owl:Thing rdf:about="https://ec.europa.eu/jrc/">
+                        <owl:sameAs rdf:resource="https://ec.europa.eu/jrc/"/>
+                      </owl:Thing>
+                    </foaf:homepage>
+                    <foaf:name xml:lang="en">European Commission - Joint Research Centre (JRC)</foaf:name>
+                  </owl:Thing>
+                </schema:affiliation>
+                <foaf:homepage>
+                  <owl:Thing rdf:about="http://about.me/andrea.perego">
+                    <owl:sameAs rdf:resource="http://about.me/andrea.perego"/>
+                  </owl:Thing>
+                </foaf:homepage>
+                <foaf:name>Andrea Perego</foaf:name>
+                <rdfs:seeAlso rdf:resource="http://andrea-perego.name/foaf/#me"/>
+              </owl:Thing>
+            </rec:editor>
+            <rec:editor>
+              <owl:Thing rdf:nodeID="A2">
+                <owl:sameAs rdf:nodeID="A2"/>
+                <schema:affiliation>
+                  <owl:Thing rdf:nodeID="A3">
+                    <owl:sameAs rdf:nodeID="A3"/>
+                    <foaf:homepage>
+                      <owl:Thing rdf:about="http://www.w3.org/">
+                        <owl:sameAs rdf:resource="http://www.w3.org/"/>
+                      </owl:Thing>
+                    </foaf:homepage>
+                    <foaf:name>W3C/ERCIM</foaf:name>
+                  </owl:Thing>
+                </schema:affiliation>
+                <foaf:homepage>
+                  <owl:Thing rdf:about="http://philarcher.org/">
+                    <owl:sameAs rdf:resource="http://philarcher.org/"/>
+                  </owl:Thing>
+                </foaf:homepage>
+                <foaf:name>Phil Archer</foaf:name>
+                <rdfs:seeAlso rdf:resource="http://philarcher.org/foaf.rdf#me"/>
+              </owl:Thing>
+            </rec:editor>
+            <rec:editor>
+              <owl:Thing rdf:nodeID="A4">
+                <owl:sameAs rdf:nodeID="A4"/>
+                <schema:affiliation>
+                  <owl:Thing rdf:nodeID="A5">
+                    <owl:sameAs rdf:nodeID="A5"/>
+                    <foaf:homepage rdf:resource="https://ec.europa.eu/jrc/"/>
+                    <foaf:name xml:lang="en">European Commission - Joint Research Centre (JRC)</foaf:name>
+                  </owl:Thing>
+                </schema:affiliation>
+                <foaf:name>Michael Lutz</foaf:name>
+              </owl:Thing>
+            </rec:editor>
+            <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date"
+            >2015-03-23</dcterms:modified>
+            <voaf:reliesOn>
+              <owl:Thing rdf:about="http://www.w3.org/2000/01/rdf-schema#">
+                <owl:sameAs rdf:resource="http://www.w3.org/2000/01/rdf-schema#"/>
+              </owl:Thing>
+            </voaf:reliesOn>
+            <voaf:reliesOn>
+              <owl:Thing rdf:about="http://purl.org/dc/terms/">
+                <owl:sameAs rdf:resource="http://purl.org/dc/terms/"/>
+              </owl:Thing>
+            </voaf:reliesOn>
+            <vann:changes xml:lang="en">
+2015-03-23: Updates in the namespace document and in the RDF/XML and Turtle schemas:
+- Fixed copyright notice.
+- Added class and property diagram.
+- Updated GeoSPARQL (a) namespace URIs  and (b) datatype names in the examples of property locn:geometry, based on version 1.0 of the GeoSPARQL specification, and added a note in the examples.
+  - prefix ogc (http://www.opengis.net/rdf#) replaced with gsp (http://www.opengis.net/ont/geosparql#) and sf (http://www.opengis.net/ont/sf#)
+  - ogc:WKTLiteral → gsp:wktLiteral
+  - ogc:GMLLiteral → gsp:gmlLiteral
+- Added namespace declarations for all namespace prefixes used in LOCN namespace document, even though they are not used in class/property definitions.
+- Corrected the endonym of the Greek capital written in the Greek script in the definition of class locn:geographicName (Aθnνa → Αθήνα).
+- Fixed links and typos, minor revisions made to the textual descriptions.
+2013-12-21: (PhilA) Update in RDF/XML and Turtle schemas:
+- Updated voaf namespace.
+- Corrected links to different distributions of the schema.
+- Removed xml:base and used http://www/w3/org/ns/locn as the schema URI cf. original which used the namespace URI (with the final # character).
+2013-11-25: Changes since final draft version released by the EU ISA Programme Core Vocabularies Working Group (Location Task Force)
+- Revised usage note of class locn:Geometry. The text describing its recommended usage has been moved to usage note of property locn:geometry.
+- Dropped domain/range restriction for locn:geographicName.
+- Dropped domain/range restriction for locn:locatorDesignator. Free text definition updated accordingly.
+- Dropped domain/range restriction for locn:locatorName. Free text definition updated accordingly.
+- Corrected free text definition of property locn:geometry (its domain is "any resource", and not a "location").
+- Revised usage note of property locn:geometry to include text about recommended usage, formerly included in the usage note of class locn:Geometry.
+- Revised usage note and examples of property locn:geometry to include support to geocoded URIs (e.g., geo URIs, GeoHash URIs).
+- Added term status. All terms have been set to "testing", with the exception of class locn:Geometry and properties rdfs:seeAlso (geographic identifier) and locn:addressId.
+- Renamed subject in Turtle examples (ex:a → :Resource).
+- Fixed links and typos, minor revisions made to the textual descriptions.
+    </vann:changes>
+            <foaf:maker>
+              <owl:Thing rdf:nodeID="A6">
+                <owl:sameAs rdf:nodeID="A6"/>
+                <foaf:homepage>
+                  <owl:Thing rdf:about="https://joinup.ec.europa.eu/node/42444">
+                    <owl:sameAs rdf:resource="https://joinup.ec.europa.eu/node/42444"/>
+                  </owl:Thing>
+                </foaf:homepage>
+                <foaf:name>EU ISA Programme Core Vocabularies Working Group (Location Task Force)</foaf:name>
+              </owl:Thing>
+            </foaf:maker>
+            <voaf:classNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
+            >3</voaf:classNumber>
+            <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date"
+            >2013-11-25</dcterms:issued>
+            <vann:preferredNamespaceUri rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
+            >http://www.w3.org/ns/locn#</vann:preferredNamespaceUri>
+            <dcterms:title xml:lang="en">ISA Programme Location Core Vocabulary</dcterms:title>
+            <dcterms:conformsTo>
+              <owl:Thing rdf:about="https://joinup.ec.europa.eu/node/43160">
+                <owl:sameAs rdf:resource="https://joinup.ec.europa.eu/node/43160"/>
+                <dcterms:title>Process and Methodology for Developing Core Vocabularies</dcterms:title>
+              </owl:Thing>
+            </dcterms:conformsTo>
+            <dcterms:mediator>
+              <owl:Thing rdf:nodeID="A7">
+                <owl:sameAs rdf:nodeID="A7"/>
+                <foaf:mbox>
+                  <owl:Thing rdf:about="mailto:public-locadd@w3.org">
+                    <owl:sameAs rdf:resource="mailto:public-locadd@w3.org"/>
+                  </owl:Thing>
+                </foaf:mbox>
+                <foaf:homepage>
+                  <owl:Thing rdf:about="http://www.w3.org/community/locadd/">
+                    <owl:sameAs rdf:resource="http://www.w3.org/community/locadd/"/>
+                  </owl:Thing>
+                </foaf:homepage>
+                <foaf:name>Locations and Addresses Community Group</foaf:name>
+              </owl:Thing>
+            </dcterms:mediator>
+            <dcterms:abstract xml:lang="en">The ISA Programme Location Core Vocabulary provides a minimum set of classes and properties for describing any place in terms of its name, address or geometry. The vocabulary is specifically designed to aid the publication of data that is interoperable with EU INSPIRE Directive. It is closely integrated with the Business and Person Core Vocabularies of the EU ISA Programme, now available in W3C space as, respectively, the Registered Organization vocabulary and ISA Person Core Vocabulary.</dcterms:abstract>
+            <dcterms:hasFormat>
+              <owl:Thing rdf:about="http://www.w3.org/ns/locn.ttl">
+                <owl:sameAs rdf:resource="http://www.w3.org/ns/locn.ttl"/>
+                <dcterms:format>
+                  <owl:Thing rdf:about="http://www.w3.org/ns/formats/data/Turtle">
+                    <owl:sameAs rdf:resource="http://www.w3.org/ns/formats/data/Turtle"/>
+                  </owl:Thing>
+                </dcterms:format>
+                <dcat:mediaType rdf:datatype="http://purl.org/dc/terms/IMT"
+                >text/turtle</dcat:mediaType>
+                <rdfs:label xml:lang="en">Turtle version of the ISA Programme Location Core Vocabulary</rdfs:label>
+              </owl:Thing>
+            </dcterms:hasFormat>
+            <dcterms:hasFormat>
+              <owl:Thing rdf:about="http://www.w3.org/ns/locn.rdf">
+                <owl:sameAs rdf:resource="http://www.w3.org/ns/locn.rdf"/>
+                <dcterms:format>
+                  <owl:Thing rdf:about="http://www.w3.org/ns/formats/data/RDF_XML">
+                    <owl:sameAs rdf:resource="http://www.w3.org/ns/formats/data/RDF_XML"/>
+                  </owl:Thing>
+                </dcterms:format>
+                <dcat:mediaType rdf:datatype="http://purl.org/dc/terms/IMT"
+                >application/rdf+xml</dcat:mediaType>
+                <rdfs:label xml:lang="en">RDF/XML version of the ISA Programme Location Core Vocabulary</rdfs:label>
+              </owl:Thing>
+            </dcterms:hasFormat>
+            <dcterms:hasFormat>
+              <owl:Thing rdf:about="http://www.w3.org/ns/locn.html">
+                <owl:sameAs rdf:resource="http://www.w3.org/ns/locn.html"/>
+                <dcat:mediaType rdf:datatype="http://purl.org/dc/terms/IMT"
+                >text/html</dcat:mediaType>
+                <rdfs:label xml:lang="en">HTML version of the ISA Programme Location Core Vocabulary</rdfs:label>
+              </owl:Thing>
+            </dcterms:hasFormat>
+            <dcterms:license>
+              <owl:Thing rdf:about="https://joinup.ec.europa.eu/category/licence/isa-open-metadata-licence-v11">
+                <owl:sameAs rdf:resource="https://joinup.ec.europa.eu/category/licence/isa-open-metadata-licence-v11"/>
+                <dcterms:title>ISA Open Metadata Licence v1.1</dcterms:title>
+                <cc:attributionURL>
+                  <owl:Thing rdf:about="http://ec.europa.eu/">
+                    <owl:sameAs rdf:resource="http://ec.europa.eu/"/>
+                  </owl:Thing>
+                </cc:attributionURL>
+                <cc:attributionName xml:lang="en">European Commission</cc:attributionName>
+              </owl:Thing>
+            </dcterms:license>
+            <cc:attributionURL rdf:resource="http://ec.europa.eu/"/>
+            <cc:attributionName xml:lang="en">European Commission</cc:attributionName>
+            <dcterms:rights xml:lang="en">Copyright © European Union, 2012-2015.</dcterms:rights>
+            <owl:versionInfo xml:lang="en">First version in w3.org/ns space</owl:versionInfo>
+            <rdfs:label xml:lang="en">ISA Programme Location Core Vocabulary</rdfs:label>
+            <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+            <rdfs:comment xml:lang="en">This is a new version of the final draft published by the European Commission in May 2012, revised according to the results of the ISA Core Location Pilot (see Section Change History for the list of changes). It is currently under the control of the Locations and Addresses Community Group, but is not under active development or review. Comments and queries should be sent to that group via public-locadd@w3.org. Terms defined here may be deprecated by that or future groups but will not disappear or their definition change.</rdfs:comment>
+          </voaf:Vocabulary>
+        </rdfs:isDefinedBy>
+        <rdfs:comment xml:lang="en">An "address representation" as conceptually defined by the INSPIRE Address Representation data type. The locn:addressId property may be used to link this locn:Address to other representations.</rdfs:comment>
+        <rdfs:label xml:lang="en">Address</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+      </owl:Thing>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://www.w3.org/2003/01/geo/wgs84_pos#Point"/>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Thing rdf:about="http://www.w3.org/ns/locn#Geometry">
+        <owl:sameAs rdf:resource="http://www.w3.org/ns/locn#Geometry"/>
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <owl:equivalentClass rdf:resource="http://www.w3.org/ns/locn#Geometry"/>
+        <owl:disjointWith rdf:resource="http://www.w3.org/2002/07/owl#Nothing"/>
+        <dcterms:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >locn:Geometry</dcterms:identifier>
+        <vann:usageNote xml:lang="en">This class defines the notion of "geometry" at the conceptual level, and it shall be encoded by using different formats (see usage note of the locn:geometry property).</vann:usageNote>
+        <vs:term_status xml:lang="en">unstable</vs:term_status>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/locn"/>
+        <rdfs:comment xml:lang="en">The locn:Geometry class provides the means to identify a location as a point, line, polygon, etc. expressed using coordinates in some coordinate reference system.</rdfs:comment>
+        <rdfs:label xml:lang="en">Geometry</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+      </owl:Thing>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing"/>
+    </rdfs:subClassOf>
+    <owl:equivalentClass rdf:resource="http://www.w3.org/2002/07/owl#Nothing"/>
+    <owl:complementOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://purl.org/vocommons/voaf#Vocabulary"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <owl:disjointWith rdf:resource="http://www.w3.org/2002/07/owl#Nothing"/>
+    <owl:disjointWith rdf:resource="http://www.w3.org/ns/locn#Address"/>
+    <owl:disjointWith rdf:resource="http://www.w3.org/ns/locn#Geometry"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://www.w3.org/2003/01/geo/wgs84_pos#Point"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing"/>
+    </owl:disjointWith>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing">
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <owl:equivalentClass rdf:resource="http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing"/>
+    <owl:disjointWith rdf:resource="http://www.w3.org/2002/07/owl#Nothing"/>
+    <rdfs:comment>Anything with spatial extent, i.e. size, shape, or position.
+ e.g. people, places, bowling balls, as well as abstract areas like cubes.
+</rdfs:comment>
+    <rdfs:label>SpatialThing</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/vocommons/voaf#Vocabulary">
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <owl:equivalentClass rdf:resource="http://purl.org/vocommons/voaf#Vocabulary"/>
+    <owl:disjointWith rdf:resource="http://www.w3.org/2002/07/owl#Nothing"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.w3.org/2003/01/geo/wgs84_pos#Point">
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing"/>
+    <owl:equivalentClass rdf:resource="http://www.w3.org/2003/01/geo/wgs84_pos#Point"/>
+    <owl:disjointWith rdf:resource="http://www.w3.org/2002/07/owl#Nothing"/>
+    <rdfs:comment> 
+Uniquely identified by lat/long/alt. i.e.
+
+spaciallyIntersects(P1, P2) :- lat(P1, LAT), long(P1, LONG), alt(P1, ALT),
+  lat(P2, LAT), long(P2, LONG), alt(P2, ALT).
+
+sameThing(P1, P2) :- type(P1, Point), type(P2, Point), spaciallyIntersects(P1, P2).
+  </rdfs:comment>
+    <rdfs:comment>A point, typically described using a coordinate system relative to Earth, such as WGS84.
+  </rdfs:comment>
+    <rdfs:label>point</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </owl:Class>
+  <owl:ObjectProperty rdf:about="http://purl.org/dc/terms/mediator">
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/mediator"/>
+    <rdfs:subPropertyOf>
+      <owl:ObjectProperty rdf:about="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    </rdfs:subPropertyOf>
+    <owl:equivalentProperty rdf:resource="http://purl.org/dc/terms/mediator"/>
+    <owl:propertyDisjointWith>
+      <owl:ObjectProperty rdf:about="http://www.w3.org/2002/07/owl#bottomObjectProperty"/>
+    </owl:propertyDisjointWith>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://www.w3.org/2003/01/geo/wgs84_pos#location">
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2003/01/geo/wgs84_pos#location"/>
+    <rdfs:subPropertyOf>
+      <owl:ObjectProperty rdf:about="http://xmlns.com/foaf/0.1/based_near"/>
+    </rdfs:subPropertyOf>
+    <rdfs:subPropertyOf>
+      <owl:ObjectProperty rdf:about="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    </rdfs:subPropertyOf>
+    <owl:equivalentProperty rdf:resource="http://www.w3.org/2003/01/geo/wgs84_pos#location"/>
+    <owl:propertyDisjointWith>
+      <owl:ObjectProperty rdf:about="http://www.w3.org/2002/07/owl#bottomObjectProperty"/>
+    </owl:propertyDisjointWith>
+    <rdfs:range rdf:resource="http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing"/>
+    <rdfs:comment>The relation between something and the point, 
+ or other geometrical thing in space, where it is.  For example, the realtionship between
+ a radio tower and a Point with a given lat and long.
+ Or a relationship between a park and its outline as a closed arc of points, or a road and
+ its location as a arc (a sequence of points).
+ Clearly in practice there will be limit to the accuracy of any such statement, but one would expect
+ an accuracy appropriate for the size of the object and uses such as mapping .
+ </rdfs:comment>
+    <rdfs:label>location</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://xmlns.com/foaf/0.1/mbox">
+    <rdfs:subPropertyOf rdf:resource="http://xmlns.com/foaf/0.1/mbox"/>
+    <rdfs:subPropertyOf>
+      <owl:ObjectProperty rdf:about="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    </rdfs:subPropertyOf>
+    <owl:equivalentProperty rdf:resource="http://xmlns.com/foaf/0.1/mbox"/>
+    <owl:propertyDisjointWith>
+      <owl:ObjectProperty rdf:about="http://www.w3.org/2002/07/owl#bottomObjectProperty"/>
+    </owl:propertyDisjointWith>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://purl.org/NET/c4dm/event.owl#place">
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/NET/c4dm/event.owl#place"/>
+    <rdfs:subPropertyOf>
+      <owl:Thing rdf:about="http://www.w3.org/ns/locn#location">
+        <owl:sameAs rdf:resource="http://www.w3.org/ns/locn#location"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/ns/locn#location"/>
+        <rdfs:subPropertyOf>
+          <owl:ObjectProperty rdf:about="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        </rdfs:subPropertyOf>
+        <owl:equivalentProperty rdf:resource="http://www.w3.org/ns/locn#location"/>
+        <owl:propertyDisjointWith>
+          <owl:ObjectProperty rdf:about="http://www.w3.org/2002/07/owl#bottomObjectProperty"/>
+        </owl:propertyDisjointWith>
+        <rdfs:range>
+          <owl:Thing rdf:about="http://purl.org/dc/terms/Location">
+            <owl:sameAs rdf:resource="http://purl.org/dc/terms/Location"/>
+            <dcterms:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >dcterms:Location</dcterms:identifier>
+            <vann:usageNote xml:lang="en">This is the key class for the ISA Programme Location Core Vocabulary and represents any location, irrespective of size or other restriction.</vann:usageNote>
+            <vs:term_status xml:lang="en">testing</vs:term_status>
+            <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
+            <rdfs:comment xml:lang="en">dcterms:Location class fully represents the ISA Programme Location Core Vocabulary class of Location.</rdfs:comment>
+            <rdfs:label xml:lang="en">Location</rdfs:label>
+          </owl:Thing>
+        </rdfs:range>
+        <dcterms:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >locn:location</dcterms:identifier>
+        <vs:term_status xml:lang="en">testing</vs:term_status>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/locn"/>
+        <rdfs:comment xml:lang="en">The location property links any resource to the Location Class. Asserting the location relationship implies only that the domain has some connection to a Location in time or space. It does not imply that the resource is necessarily at that location at the time when the assertion is made.</rdfs:comment>
+        <rdfs:label xml:lang="en">location</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+      </owl:Thing>
+    </rdfs:subPropertyOf>
+    <rdfs:subPropertyOf>
+      <owl:ObjectProperty rdf:about="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    </rdfs:subPropertyOf>
+    <owl:equivalentProperty rdf:resource="http://purl.org/NET/c4dm/event.owl#place"/>
+    <owl:propertyDisjointWith>
+      <owl:ObjectProperty rdf:about="http://www.w3.org/2002/07/owl#bottomObjectProperty"/>
+    </owl:propertyDisjointWith>
+    <rdfs:range rdf:resource="http://purl.org/dc/terms/Location"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://creativecommons.org/ns#attributionURL">
+    <rdfs:subPropertyOf rdf:resource="http://creativecommons.org/ns#attributionURL"/>
+    <rdfs:subPropertyOf>
+      <owl:ObjectProperty rdf:about="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    </rdfs:subPropertyOf>
+    <owl:equivalentProperty rdf:resource="http://creativecommons.org/ns#attributionURL"/>
+    <owl:propertyDisjointWith>
+      <owl:ObjectProperty rdf:about="http://www.w3.org/2002/07/owl#bottomObjectProperty"/>
+    </owl:propertyDisjointWith>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://www.w3.org/2003/01/geo/wgs84_pos#long">
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2003/01/geo/wgs84_pos#long"/>
+    <rdfs:subPropertyOf>
+      <owl:ObjectProperty rdf:about="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    </rdfs:subPropertyOf>
+    <owl:equivalentProperty rdf:resource="http://www.w3.org/2003/01/geo/wgs84_pos#long"/>
+    <owl:propertyDisjointWith>
+      <owl:ObjectProperty rdf:about="http://www.w3.org/2002/07/owl#bottomObjectProperty"/>
+    </owl:propertyDisjointWith>
+    <rdfs:domain rdf:resource="http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing"/>
+    <rdfs:comment>The WGS84 longitude of a SpatialThing (decimal degrees).</rdfs:comment>
+    <rdfs:label>longitude</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://www.w3.org/2003/01/geo/wgs84_pos#alt">
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2003/01/geo/wgs84_pos#alt"/>
+    <rdfs:subPropertyOf>
+      <owl:ObjectProperty rdf:about="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    </rdfs:subPropertyOf>
+    <owl:equivalentProperty rdf:resource="http://www.w3.org/2003/01/geo/wgs84_pos#alt"/>
+    <owl:propertyDisjointWith>
+      <owl:ObjectProperty rdf:about="http://www.w3.org/2002/07/owl#bottomObjectProperty"/>
+    </owl:propertyDisjointWith>
+    <rdfs:domain rdf:resource="http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing"/>
+    <rdfs:comment>The WGS84 altitude of a SpatialThing (decimal meters 
+above the local reference ellipsoid).</rdfs:comment>
+    <rdfs:label>altitude</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://purl.org/dc/terms/conformsTo">
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/conformsTo"/>
+    <rdfs:subPropertyOf>
+      <owl:ObjectProperty rdf:about="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    </rdfs:subPropertyOf>
+    <owl:equivalentProperty rdf:resource="http://purl.org/dc/terms/conformsTo"/>
+    <owl:propertyDisjointWith>
+      <owl:ObjectProperty rdf:about="http://www.w3.org/2002/07/owl#bottomObjectProperty"/>
+    </owl:propertyDisjointWith>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://xmlns.com/foaf/0.1/homepage">
+    <rdfs:subPropertyOf rdf:resource="http://xmlns.com/foaf/0.1/homepage"/>
+    <rdfs:subPropertyOf>
+      <owl:ObjectProperty rdf:about="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    </rdfs:subPropertyOf>
+    <owl:equivalentProperty rdf:resource="http://xmlns.com/foaf/0.1/homepage"/>
+    <owl:propertyDisjointWith>
+      <owl:ObjectProperty rdf:about="http://www.w3.org/2002/07/owl#bottomObjectProperty"/>
+    </owl:propertyDisjointWith>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://purl.org/vocommons/voaf#reliesOn">
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/vocommons/voaf#reliesOn"/>
+    <rdfs:subPropertyOf>
+      <owl:ObjectProperty rdf:about="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    </rdfs:subPropertyOf>
+    <owl:equivalentProperty rdf:resource="http://purl.org/vocommons/voaf#reliesOn"/>
+    <owl:propertyDisjointWith>
+      <owl:ObjectProperty rdf:about="http://www.w3.org/2002/07/owl#bottomObjectProperty"/>
+    </owl:propertyDisjointWith>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://www.w3.org/2002/07/owl#bottomObjectProperty">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+    <rdfs:subPropertyOf>
+      <owl:ObjectProperty rdf:about="http://schema.org/affiliation"/>
+    </rdfs:subPropertyOf>
+    <rdfs:subPropertyOf>
+      <owl:ObjectProperty rdf:about="http://www.w3.org/2007/05/powder-s#describedby"/>
+    </rdfs:subPropertyOf>
+    <rdfs:subPropertyOf>
+      <owl:ObjectProperty rdf:about="http://xmlns.com/foaf/0.1/depiction"/>
+    </rdfs:subPropertyOf>
+    <rdfs:subPropertyOf>
+      <owl:Thing rdf:about="http://www.w3.org/ns/locn#adminUnitL2">
+        <owl:sameAs rdf:resource="http://www.w3.org/ns/locn#adminUnitL2"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/ns/locn#adminUnitL2"/>
+        <rdfs:subPropertyOf>
+          <owl:ObjectProperty rdf:about="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        </rdfs:subPropertyOf>
+        <owl:equivalentProperty rdf:resource="http://www.w3.org/ns/locn#adminUnitL2"/>
+        <owl:propertyDisjointWith rdf:resource="http://www.w3.org/2002/07/owl#bottomObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/locn#Address"/>
+        <dcterms:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >locn:adminUnitL2</dcterms:identifier>
+        <vs:term_status xml:lang="en">testing</vs:term_status>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/locn"/>
+        <rdfs:comment xml:lang="en">The region of the address, usually a county, state or other such area that typically encompasses several localities. The domain of  locn:adminUnitL2 is locn:Address and the range is a literal, conceptually defined by the INSPIRE Geographical Name data type.</rdfs:comment>
+        <rdfs:label xml:lang="en">admin unit level 2</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+      </owl:Thing>
+    </rdfs:subPropertyOf>
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2003/01/geo/wgs84_pos#alt"/>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/conformsTo"/>
+    <rdfs:subPropertyOf>
+      <owl:ObjectProperty rdf:about="locn:address"/>
+    </rdfs:subPropertyOf>
+    <rdfs:subPropertyOf>
+      <owl:Thing rdf:about="http://www.w3.org/ns/locn#address">
+        <owl:sameAs rdf:resource="http://www.w3.org/ns/locn#address"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/ns/locn#address"/>
+        <rdfs:subPropertyOf>
+          <owl:ObjectProperty rdf:about="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        </rdfs:subPropertyOf>
+        <owl:equivalentProperty rdf:resource="http://www.w3.org/ns/locn#address"/>
+        <owl:propertyDisjointWith rdf:resource="http://www.w3.org/2002/07/owl#bottomObjectProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/ns/locn#Address"/>
+        <dcterms:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >locn:address</dcterms:identifier>
+        <vs:term_status xml:lang="en">testing</vs:term_status>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/locn"/>
+        <rdfs:comment xml:lang="en">The locn:address property relationship associates any resource with the locn:Address class </rdfs:comment>
+        <rdfs:label xml:lang="en">address</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+      </owl:Thing>
+    </rdfs:subPropertyOf>
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/ns/locn#location"/>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/mediator"/>
+    <rdfs:subPropertyOf>
+      <owl:ObjectProperty rdf:about="http://www.w3.org/2003/01/geo/wgs84_pos#lat"/>
+    </rdfs:subPropertyOf>
+    <rdfs:subPropertyOf>
+      <owl:ObjectProperty rdf:about="http://purl.org/dc/terms/format"/>
+    </rdfs:subPropertyOf>
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2003/01/geo/wgs84_pos#long"/>
+    <rdfs:subPropertyOf>
+      <owl:ObjectProperty rdf:about="http://www.w3.org/2001/02pd/rec54#editor"/>
+    </rdfs:subPropertyOf>
+    <rdfs:subPropertyOf>
+      <owl:Thing rdf:about="http://www.w3.org/ns/locn#locatorDesignator">
+        <owl:sameAs rdf:resource="http://www.w3.org/ns/locn#locatorDesignator"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/ns/locn#locatorDesignator"/>
+        <rdfs:subPropertyOf>
+          <owl:ObjectProperty rdf:about="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        </rdfs:subPropertyOf>
+        <owl:equivalentProperty rdf:resource="http://www.w3.org/ns/locn#locatorDesignator"/>
+        <owl:propertyDisjointWith rdf:resource="http://www.w3.org/2002/07/owl#bottomObjectProperty"/>
+        <dcterms:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >locn:locatorDesignator</dcterms:identifier>
+        <vs:term_status xml:lang="en">testing</vs:term_status>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/locn"/>
+        <rdfs:comment xml:lang="en">A number or a sequence of characters that uniquely identifies the locator within the relevant scope(s). The full identification of the locator could include one or more locator designators.
+    </rdfs:comment>
+        <rdfs:label xml:lang="en">locator designator</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+      </owl:Thing>
+    </rdfs:subPropertyOf>
+    <rdfs:subPropertyOf rdf:resource="http://xmlns.com/foaf/0.1/mbox"/>
+    <rdfs:subPropertyOf>
+      <owl:ObjectProperty rdf:about="http://purl.org/dc/terms/hasFormat"/>
+    </rdfs:subPropertyOf>
+    <rdfs:subPropertyOf>
+      <owl:ObjectProperty rdf:about="http://xmlns.com/foaf/0.1/based_near"/>
+    </rdfs:subPropertyOf>
+    <rdfs:subPropertyOf>
+      <owl:Thing rdf:about="http://www.w3.org/ns/locn#geometry">
+        <owl:sameAs rdf:resource="http://www.w3.org/ns/locn#geometry"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/ns/locn#geometry"/>
+        <rdfs:subPropertyOf>
+          <owl:ObjectProperty rdf:about="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        </rdfs:subPropertyOf>
+        <owl:equivalentProperty rdf:resource="http://www.w3.org/ns/locn#geometry"/>
+        <owl:propertyDisjointWith rdf:resource="http://www.w3.org/2002/07/owl#bottomObjectProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/ns/locn#Geometry"/>
+        <wdrs:describedby rdf:resource="https://joinup.ec.europa.eu/node/55858"/>
+        <vann:example xml:lang="en">
+The following are examples of equivalent statements using different geometry encodings. In the examples, prefix gsp is used for namespace URI http://www.opengis.net/ont/geosparql#, whereas prefix sf is used for namespace URI http://www.opengis.net/ont/sf#.
+- WKT (GeoSPARQL)
+:Resource locn:geometry
+  "&lt;http://www.opengis.net/def/crs/OGC/1.3/CRS84&gt; Point(-0.001475 51.477811)"^^gsp:wktLiteral .
+- GML
+:Resource locn:geometry
+  "&lt;gml:Point srsName='http://www.opengis.net/def/crs/OGC/1.3/CRS84'&gt;
+  &lt;gml:coordinates&gt;-0.001475, 51.477811&lt;/gml:coordinates&gt;&lt;/gml:Point&gt;"^^gsp:gmlLiteral .
+- RDF+WKT (GeoSPARQL)
+:Resource locn:geometry
+  [ a sf:Point; gsp:asWKT "&lt;http://www.opengis.net/def/crs/OGC/1.3/CRS84&gt; Point(-0.001475 51.477811)"^^gsp:wktLiteral ] .
+- RDF+GML (GeoSPARQL)
+:Resource locn:geometry
+  [ a sf:Point; gsp:asGML
+     "&lt;gml:Point srsName='http://www.opengis.net/def/crs/OGC/1.3/CRS84'&gt;
+      &lt;gml:coordinates&gt;-0.001475, 51.477811&lt;/gml:coordinates&gt;&lt;/gml:Point&gt;"^^gsp:gmlLiteral ] .
+- RDF (WGS84 lat/long)
+:Resource locn:geometry [ a geo:Point; geo:lat "51.477811"; geo:long "-0.001475" ] .
+- RDF (schema.org)
+:Resource locn:geometry [ a schema:GeoCoordinates; schema:latitude "51.477811"; schema:longitude "-0.001475" ] .
+- geo URI
+:Resource locn:geometry &lt;geo:51.477811,-0.001475;u=0;crs=wgs84&gt; .
+- GeoHash URI
+:Resource locn:geometry &lt;http://geohash.org/gcpuzgnzvxkp&gt; .
+    </vann:example>
+        <dcterms:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >locn:geometry</dcterms:identifier>
+        <vann:usageNote xml:lang="en">
+Depending on how a geometry is encoded, the range of this property may be one of the following:
+- a literal (e.g., WKT - string literal -, GML, KML - XML literal)
+- a geometry class, as those defined in the OGC's GeoSPARQL specification, in the W3C's Basic Geo (WGS84 lat/long) vocabulary, and at schema.org;
+- geocoded URIs, as geo or GeoHash URIs, treated as URI references.
+For interoperability reasons, it is recommended using one of the following:
+- Any geometry:
+  - WKT, GML, and RDF+WKT/GML, as per the GeoSPARQL specification.
+  - KML (Keyhole Markup Language) - note that KML supports the following geometries only: point, line string, linear ring, and polygon.
+  - RDF as per the schema.org vocabulary (see classes schema:GeoCoordinates and schema:GeoShape).
+- Points: one of the above, or:
+  - RDF as per the W3C Basic Geo (WGS84 lat/long) vocabulary.
+  - GeoHash URIs.
+  - geo URIs.
+    </vann:usageNote>
+        <vs:term_status xml:lang="en">testing</vs:term_status>
+        <rdfs:label xml:lang="en">geometry</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/locn"/>
+        <rdfs:comment xml:lang="en">Associates any resource with the corresponding geometry.</rdfs:comment>
+      </owl:Thing>
+    </rdfs:subPropertyOf>
+    <rdfs:subPropertyOf>
+      <owl:ObjectProperty rdf:about="locn:location"/>
+    </rdfs:subPropertyOf>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/NET/c4dm/event.owl#place"/>
+    <rdfs:subPropertyOf>
+      <owl:Thing rdf:about="http://www.w3.org/ns/locn#adminUnitL1">
+        <owl:sameAs rdf:resource="http://www.w3.org/ns/locn#adminUnitL1"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/ns/locn#adminUnitL1"/>
+        <rdfs:subPropertyOf>
+          <owl:ObjectProperty rdf:about="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        </rdfs:subPropertyOf>
+        <owl:equivalentProperty rdf:resource="http://www.w3.org/ns/locn#adminUnitL1"/>
+        <owl:propertyDisjointWith rdf:resource="http://www.w3.org/2002/07/owl#bottomObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/locn#Address"/>
+        <dcterms:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >locn:adminUnitL1</dcterms:identifier>
+        <vann:usageNote xml:lang="en">Best practice is to use the ISO 3166-1 code but if this is inappropriate for the context, country names should be provided in a consistent manner to reduce ambiguity. For example, either write 'United Kingdom' or 'UK' consistently throughout the data set and avoid mixing the two.</vann:usageNote>
+        <vs:term_status xml:lang="en">testing</vs:term_status>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/locn"/>
+        <rdfs:comment xml:lang="en">The uppermost administrative unit for the address, almost always a country. The domain of locn:adminUnitL1 is locn:Address and the range is a literal, conceptually defined by the INSPIRE Geographical Name data type.</rdfs:comment>
+        <rdfs:label xml:lang="en">admin unit level 1</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+      </owl:Thing>
+    </rdfs:subPropertyOf>
+    <rdfs:subPropertyOf>
+      <owl:ObjectProperty rdf:about="http://purl.org/dc/terms/license"/>
+    </rdfs:subPropertyOf>
+    <rdfs:subPropertyOf>
+      <owl:ObjectProperty rdf:about="org:hasSite"/>
+    </rdfs:subPropertyOf>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/vocommons/voaf#reliesOn"/>
+    <rdfs:subPropertyOf>
+      <owl:ObjectProperty rdf:about="org:siteAddress"/>
+    </rdfs:subPropertyOf>
+    <rdfs:subPropertyOf>
+      <owl:Thing rdf:about="http://www.w3.org/ns/locn#locatorName">
+        <owl:sameAs rdf:resource="http://www.w3.org/ns/locn#locatorName"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/ns/locn#locatorName"/>
+        <rdfs:subPropertyOf>
+          <owl:ObjectProperty rdf:about="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        </rdfs:subPropertyOf>
+        <owl:equivalentProperty rdf:resource="http://www.w3.org/ns/locn#locatorName"/>
+        <owl:propertyDisjointWith rdf:resource="http://www.w3.org/2002/07/owl#bottomObjectProperty"/>
+        <dcterms:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >locn:locatorName</dcterms:identifier>
+        <vs:term_status xml:lang="en">testing</vs:term_status>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/locn"/>
+        <rdfs:comment xml:lang="en">Proper noun(s) applied to the real world entity identified by the locator. The locator name could be the name of the property or complex, of the building or part of the building, or it could be the name of a room inside a building. 
+    </rdfs:comment>
+        <rdfs:label xml:lang="en">locator name</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+      </owl:Thing>
+    </rdfs:subPropertyOf>
+    <rdfs:subPropertyOf rdf:resource="http://creativecommons.org/ns#attributionURL"/>
+    <rdfs:subPropertyOf>
+      <owl:Thing rdf:about="http://www.w3.org/ns/locn#geographicName">
+        <owl:sameAs rdf:resource="http://www.w3.org/ns/locn#geographicName"/>
+        <rdfs:subPropertyOf>
+          <owl:ObjectProperty rdf:about="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        </rdfs:subPropertyOf>
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/ns/locn#geographicName"/>
+        <owl:equivalentProperty rdf:resource="http://www.w3.org/ns/locn#geographicName"/>
+        <owl:propertyDisjointWith rdf:resource="http://www.w3.org/2002/07/owl#bottomObjectProperty"/>
+        <wdrs:describedby rdf:resource="https://joinup.ec.europa.eu/node/55858"/>
+        <dcterms:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >locn:geographicName</dcterms:identifier>
+        <vs:term_status xml:lang="en">testing</vs:term_status>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/locn"/>
+        <rdfs:comment xml:lang="en">
+A geographic name is a proper noun applied to a spatial object. Taking the example used in the relevant INSPIRE data specification (page 18), the following are all valid geographic names for the Greek capital:
+- Αθήνα (the Greek endonym written in the Greek script)
+- Athína (the standard Romanisation of the endonym)
+- Athens (the English language exonym)
+For INSPIRE-conformant data, provide the metadata for the geographic name using a skos:Concept as a datatype.
+</rdfs:comment>
+        <rdfs:label xml:lang="en">geographic name</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+      </owl:Thing>
+    </rdfs:subPropertyOf>
+    <rdfs:subPropertyOf>
+      <owl:ObjectProperty rdf:about="http://www.w3.org/2003/01/geo/wgs84_pos#lat_long"/>
+    </rdfs:subPropertyOf>
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#bottomObjectProperty"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2003/01/geo/wgs84_pos#location"/>
+    <rdfs:subPropertyOf>
+      <owl:ObjectProperty rdf:about="http://xmlns.com/foaf/0.1/maker"/>
+    </rdfs:subPropertyOf>
+    <rdfs:subPropertyOf rdf:resource="http://xmlns.com/foaf/0.1/homepage"/>
+    <rdfs:subPropertyOf>
+      <owl:ObjectProperty rdf:about="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    </rdfs:subPropertyOf>
+    <owl:equivalentProperty rdf:resource="http://www.w3.org/2002/07/owl#bottomObjectProperty"/>
+    <owl:propertyDisjointWith>
+      <owl:ObjectProperty rdf:about="http://schema.org/affiliation"/>
+    </owl:propertyDisjointWith>
+    <owl:propertyDisjointWith>
+      <owl:ObjectProperty rdf:about="http://www.w3.org/2007/05/powder-s#describedby"/>
+    </owl:propertyDisjointWith>
+    <owl:propertyDisjointWith>
+      <owl:ObjectProperty rdf:about="http://xmlns.com/foaf/0.1/depiction"/>
+    </owl:propertyDisjointWith>
+    <owl:propertyDisjointWith rdf:resource="http://www.w3.org/ns/locn#adminUnitL2"/>
+    <owl:propertyDisjointWith rdf:resource="http://www.w3.org/2003/01/geo/wgs84_pos#alt"/>
+    <owl:propertyDisjointWith>
+      <owl:ObjectProperty rdf:about="locn:address"/>
+    </owl:propertyDisjointWith>
+    <owl:propertyDisjointWith rdf:resource="http://purl.org/dc/terms/conformsTo"/>
+    <owl:propertyDisjointWith rdf:resource="http://www.w3.org/ns/locn#address"/>
+    <owl:propertyDisjointWith rdf:resource="http://www.w3.org/ns/locn#location"/>
+    <owl:propertyDisjointWith rdf:resource="http://purl.org/dc/terms/mediator"/>
+    <owl:propertyDisjointWith>
+      <owl:ObjectProperty rdf:about="http://www.w3.org/2003/01/geo/wgs84_pos#lat"/>
+    </owl:propertyDisjointWith>
+    <owl:propertyDisjointWith>
+      <owl:ObjectProperty rdf:about="http://purl.org/dc/terms/format"/>
+    </owl:propertyDisjointWith>
+    <owl:propertyDisjointWith rdf:resource="http://www.w3.org/2003/01/geo/wgs84_pos#long"/>
+    <owl:propertyDisjointWith>
+      <owl:ObjectProperty rdf:about="http://www.w3.org/2001/02pd/rec54#editor"/>
+    </owl:propertyDisjointWith>
+    <owl:propertyDisjointWith rdf:resource="http://www.w3.org/ns/locn#locatorDesignator"/>
+    <owl:propertyDisjointWith rdf:resource="http://xmlns.com/foaf/0.1/mbox"/>
+    <owl:propertyDisjointWith>
+      <owl:ObjectProperty rdf:about="http://purl.org/dc/terms/hasFormat"/>
+    </owl:propertyDisjointWith>
+    <owl:propertyDisjointWith>
+      <owl:ObjectProperty rdf:about="http://xmlns.com/foaf/0.1/based_near"/>
+    </owl:propertyDisjointWith>
+    <owl:propertyDisjointWith rdf:resource="http://www.w3.org/ns/locn#geometry"/>
+    <owl:propertyDisjointWith>
+      <owl:ObjectProperty rdf:about="locn:location"/>
+    </owl:propertyDisjointWith>
+    <owl:propertyDisjointWith rdf:resource="http://purl.org/NET/c4dm/event.owl#place"/>
+    <owl:propertyDisjointWith rdf:resource="http://www.w3.org/ns/locn#adminUnitL1"/>
+    <owl:propertyDisjointWith>
+      <owl:ObjectProperty rdf:about="http://purl.org/dc/terms/license"/>
+    </owl:propertyDisjointWith>
+    <owl:propertyDisjointWith rdf:resource="http://purl.org/vocommons/voaf#reliesOn"/>
+    <owl:propertyDisjointWith>
+      <owl:ObjectProperty rdf:about="org:hasSite"/>
+    </owl:propertyDisjointWith>
+    <owl:propertyDisjointWith>
+      <owl:ObjectProperty rdf:about="org:siteAddress"/>
+    </owl:propertyDisjointWith>
+    <owl:propertyDisjointWith rdf:resource="http://www.w3.org/ns/locn#locatorName"/>
+    <owl:propertyDisjointWith rdf:resource="http://creativecommons.org/ns#attributionURL"/>
+    <owl:propertyDisjointWith rdf:resource="http://www.w3.org/ns/locn#geographicName"/>
+    <owl:propertyDisjointWith>
+      <owl:ObjectProperty rdf:about="http://www.w3.org/2003/01/geo/wgs84_pos#lat_long"/>
+    </owl:propertyDisjointWith>
+    <owl:propertyDisjointWith rdf:resource="http://www.w3.org/2002/07/owl#bottomObjectProperty"/>
+    <owl:propertyDisjointWith rdf:resource="http://www.w3.org/2003/01/geo/wgs84_pos#location"/>
+    <owl:propertyDisjointWith>
+      <owl:ObjectProperty rdf:about="http://xmlns.com/foaf/0.1/maker"/>
+    </owl:propertyDisjointWith>
+    <owl:propertyDisjointWith rdf:resource="http://xmlns.com/foaf/0.1/homepage"/>
+    <owl:propertyDisjointWith>
+      <owl:ObjectProperty rdf:about="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    </owl:propertyDisjointWith>
+    <rdfs:domain rdf:resource="http://www.w3.org/ns/locn#Address"/>
+    <rdfs:domain rdf:resource="http://www.w3.org/ns/locn#Geometry"/>
+    <rdfs:domain rdf:resource="http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing"/>
+    <rdfs:domain rdf:resource="http://purl.org/dc/terms/Location"/>
+    <rdfs:range rdf:resource="http://www.w3.org/ns/locn#Address"/>
+    <rdfs:range rdf:resource="http://www.w3.org/ns/locn#Geometry"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing"/>
+    <rdfs:range rdf:resource="http://purl.org/dc/terms/Location"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="org:hasSite">
+    <rdfs:subPropertyOf rdf:resource="org:hasSite"/>
+    <rdfs:subPropertyOf>
+      <owl:ObjectProperty rdf:about="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    </rdfs:subPropertyOf>
+    <rdfs:subPropertyOf>
+      <owl:ObjectProperty rdf:about="locn:location"/>
+    </rdfs:subPropertyOf>
+    <owl:equivalentProperty rdf:resource="org:hasSite"/>
+    <owl:propertyDisjointWith rdf:resource="http://www.w3.org/2002/07/owl#bottomObjectProperty"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://xmlns.com/foaf/0.1/based_near">
+    <rdfs:subPropertyOf rdf:resource="http://xmlns.com/foaf/0.1/based_near"/>
+    <rdfs:subPropertyOf>
+      <owl:ObjectProperty rdf:about="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    </rdfs:subPropertyOf>
+    <owl:equivalentProperty rdf:resource="http://xmlns.com/foaf/0.1/based_near"/>
+    <owl:propertyDisjointWith rdf:resource="http://www.w3.org/2002/07/owl#bottomObjectProperty"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://www.w3.org/2007/05/powder-s#describedby">
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2007/05/powder-s#describedby"/>
+    <rdfs:subPropertyOf>
+      <owl:ObjectProperty rdf:about="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    </rdfs:subPropertyOf>
+    <owl:equivalentProperty rdf:resource="http://www.w3.org/2007/05/powder-s#describedby"/>
+    <owl:propertyDisjointWith rdf:resource="http://www.w3.org/2002/07/owl#bottomObjectProperty"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://purl.org/dc/terms/format">
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/format"/>
+    <rdfs:subPropertyOf>
+      <owl:ObjectProperty rdf:about="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    </rdfs:subPropertyOf>
+    <owl:equivalentProperty rdf:resource="http://purl.org/dc/terms/format"/>
+    <owl:propertyDisjointWith rdf:resource="http://www.w3.org/2002/07/owl#bottomObjectProperty"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://www.w3.org/2001/02pd/rec54#editor">
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2001/02pd/rec54#editor"/>
+    <rdfs:subPropertyOf>
+      <owl:ObjectProperty rdf:about="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    </rdfs:subPropertyOf>
+    <owl:equivalentProperty rdf:resource="http://www.w3.org/2001/02pd/rec54#editor"/>
+    <owl:propertyDisjointWith rdf:resource="http://www.w3.org/2002/07/owl#bottomObjectProperty"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://www.w3.org/2003/01/geo/wgs84_pos#lat_long">
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2003/01/geo/wgs84_pos#lat_long"/>
+    <rdfs:subPropertyOf>
+      <owl:ObjectProperty rdf:about="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    </rdfs:subPropertyOf>
+    <owl:equivalentProperty rdf:resource="http://www.w3.org/2003/01/geo/wgs84_pos#lat_long"/>
+    <owl:propertyDisjointWith rdf:resource="http://www.w3.org/2002/07/owl#bottomObjectProperty"/>
+    <rdfs:comment>A comma-separated representation of a latitude, longitude coordinate.</rdfs:comment>
+    <rdfs:label>lat/long</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://purl.org/dc/terms/hasFormat">
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/hasFormat"/>
+    <rdfs:subPropertyOf>
+      <owl:ObjectProperty rdf:about="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    </rdfs:subPropertyOf>
+    <owl:equivalentProperty rdf:resource="http://purl.org/dc/terms/hasFormat"/>
+    <owl:propertyDisjointWith rdf:resource="http://www.w3.org/2002/07/owl#bottomObjectProperty"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="org:siteAddress">
+    <rdfs:subPropertyOf rdf:resource="org:siteAddress"/>
+    <rdfs:subPropertyOf>
+      <owl:ObjectProperty rdf:about="locn:address"/>
+    </rdfs:subPropertyOf>
+    <rdfs:subPropertyOf>
+      <owl:ObjectProperty rdf:about="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    </rdfs:subPropertyOf>
+    <owl:equivalentProperty rdf:resource="org:siteAddress"/>
+    <owl:propertyDisjointWith rdf:resource="http://www.w3.org/2002/07/owl#bottomObjectProperty"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://www.w3.org/2002/07/owl#topObjectProperty">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ReflexiveProperty"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    <owl:equivalentProperty rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    <owl:propertyDisjointWith rdf:resource="http://www.w3.org/2002/07/owl#bottomObjectProperty"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="locn:address">
+    <rdfs:subPropertyOf rdf:resource="locn:address"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    <owl:equivalentProperty rdf:resource="locn:address"/>
+    <owl:propertyDisjointWith rdf:resource="http://www.w3.org/2002/07/owl#bottomObjectProperty"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://www.w3.org/2003/01/geo/wgs84_pos#lat">
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2003/01/geo/wgs84_pos#lat"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    <owl:equivalentProperty rdf:resource="http://www.w3.org/2003/01/geo/wgs84_pos#lat"/>
+    <owl:propertyDisjointWith rdf:resource="http://www.w3.org/2002/07/owl#bottomObjectProperty"/>
+    <rdfs:domain rdf:resource="http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing"/>
+    <rdfs:comment>The WGS84 latitude of a SpatialThing (decimal degrees).</rdfs:comment>
+    <rdfs:label>latitude</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://xmlns.com/foaf/0.1/depiction">
+    <rdfs:subPropertyOf rdf:resource="http://xmlns.com/foaf/0.1/depiction"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    <owl:equivalentProperty rdf:resource="http://xmlns.com/foaf/0.1/depiction"/>
+    <owl:propertyDisjointWith rdf:resource="http://www.w3.org/2002/07/owl#bottomObjectProperty"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://xmlns.com/foaf/0.1/maker">
+    <rdfs:subPropertyOf rdf:resource="http://xmlns.com/foaf/0.1/maker"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    <owl:equivalentProperty rdf:resource="http://xmlns.com/foaf/0.1/maker"/>
+    <owl:propertyDisjointWith rdf:resource="http://www.w3.org/2002/07/owl#bottomObjectProperty"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://schema.org/affiliation">
+    <rdfs:subPropertyOf rdf:resource="http://schema.org/affiliation"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    <owl:equivalentProperty rdf:resource="http://schema.org/affiliation"/>
+    <owl:propertyDisjointWith rdf:resource="http://www.w3.org/2002/07/owl#bottomObjectProperty"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://purl.org/dc/terms/license">
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/license"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    <owl:equivalentProperty rdf:resource="http://purl.org/dc/terms/license"/>
+    <owl:propertyDisjointWith rdf:resource="http://www.w3.org/2002/07/owl#bottomObjectProperty"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="locn:location">
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    <rdfs:subPropertyOf rdf:resource="locn:location"/>
+    <owl:equivalentProperty rdf:resource="locn:location"/>
+    <owl:propertyDisjointWith rdf:resource="http://www.w3.org/2002/07/owl#bottomObjectProperty"/>
+  </owl:ObjectProperty>
+  <owl:DatatypeProperty rdf:about="http://purl.org/dc/terms/abstract">
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/abstract"/>
+    <rdfs:subPropertyOf>
+      <owl:DatatypeProperty rdf:about="http://www.w3.org/2002/07/owl#topDataProperty"/>
+    </rdfs:subPropertyOf>
+    <owl:equivalentProperty rdf:resource="http://purl.org/dc/terms/abstract"/>
+    <owl:propertyDisjointWith>
+      <owl:DatatypeProperty rdf:about="http://www.w3.org/2002/07/owl#bottomDataProperty"/>
+    </owl:propertyDisjointWith>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://creativecommons.org/ns#attributionName">
+    <rdfs:subPropertyOf rdf:resource="http://creativecommons.org/ns#attributionName"/>
+    <rdfs:subPropertyOf>
+      <owl:DatatypeProperty rdf:about="http://www.w3.org/2002/07/owl#topDataProperty"/>
+    </rdfs:subPropertyOf>
+    <owl:equivalentProperty rdf:resource="http://creativecommons.org/ns#attributionName"/>
+    <owl:propertyDisjointWith>
+      <owl:DatatypeProperty rdf:about="http://www.w3.org/2002/07/owl#bottomDataProperty"/>
+    </owl:propertyDisjointWith>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.w3.org/2002/07/owl#topDataProperty">
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+    <owl:equivalentProperty rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+    <owl:propertyDisjointWith>
+      <owl:DatatypeProperty rdf:about="http://www.w3.org/2002/07/owl#bottomDataProperty"/>
+    </owl:propertyDisjointWith>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://purl.org/dc/elements/1.1/title">
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/title"/>
+    <owl:equivalentProperty rdf:resource="http://purl.org/dc/elements/1.1/title"/>
+    <owl:propertyDisjointWith>
+      <owl:DatatypeProperty rdf:about="http://www.w3.org/2002/07/owl#bottomDataProperty"/>
+    </owl:propertyDisjointWith>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://purl.org/dc/terms/rights">
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/rights"/>
+    <owl:equivalentProperty rdf:resource="http://purl.org/dc/terms/rights"/>
+    <owl:propertyDisjointWith>
+      <owl:DatatypeProperty rdf:about="http://www.w3.org/2002/07/owl#bottomDataProperty"/>
+    </owl:propertyDisjointWith>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://xmlns.com/foaf/0.1/name">
+    <rdfs:subPropertyOf rdf:resource="http://xmlns.com/foaf/0.1/name"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+    <owl:equivalentProperty rdf:resource="http://xmlns.com/foaf/0.1/name"/>
+    <owl:propertyDisjointWith>
+      <owl:DatatypeProperty rdf:about="http://www.w3.org/2002/07/owl#bottomDataProperty"/>
+    </owl:propertyDisjointWith>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.w3.org/ns/dcat#mediaType">
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/ns/dcat#mediaType"/>
+    <owl:equivalentProperty rdf:resource="http://www.w3.org/ns/dcat#mediaType"/>
+    <owl:propertyDisjointWith>
+      <owl:DatatypeProperty rdf:about="http://www.w3.org/2002/07/owl#bottomDataProperty"/>
+    </owl:propertyDisjointWith>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://purl.org/dc/terms/modified">
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/modified"/>
+    <owl:equivalentProperty rdf:resource="http://purl.org/dc/terms/modified"/>
+    <owl:propertyDisjointWith>
+      <owl:DatatypeProperty rdf:about="http://www.w3.org/2002/07/owl#bottomDataProperty"/>
+    </owl:propertyDisjointWith>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.w3.org/2003/06/sw-vocab-status/ns#term_status">
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2003/06/sw-vocab-status/ns#term_status"/>
+    <owl:equivalentProperty rdf:resource="http://www.w3.org/2003/06/sw-vocab-status/ns#term_status"/>
+    <owl:propertyDisjointWith>
+      <owl:DatatypeProperty rdf:about="http://www.w3.org/2002/07/owl#bottomDataProperty"/>
+    </owl:propertyDisjointWith>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://purl.org/dc/elements/1.1/date">
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/date"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+    <owl:equivalentProperty rdf:resource="http://purl.org/dc/elements/1.1/date"/>
+    <owl:propertyDisjointWith>
+      <owl:DatatypeProperty rdf:about="http://www.w3.org/2002/07/owl#bottomDataProperty"/>
+    </owl:propertyDisjointWith>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://purl.org/vocab/vann/changes">
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/vocab/vann/changes"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+    <owl:equivalentProperty rdf:resource="http://purl.org/vocab/vann/changes"/>
+    <owl:propertyDisjointWith>
+      <owl:DatatypeProperty rdf:about="http://www.w3.org/2002/07/owl#bottomDataProperty"/>
+    </owl:propertyDisjointWith>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.w3.org/2002/07/owl#bottomDataProperty">
+    <rdfs:subPropertyOf>
+      <owl:Thing rdf:about="http://www.w3.org/ns/locn#addressArea">
+        <owl:sameAs rdf:resource="http://www.w3.org/ns/locn#addressArea"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/ns/locn#addressArea"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <owl:equivalentProperty rdf:resource="http://www.w3.org/ns/locn#addressArea"/>
+        <owl:propertyDisjointWith rdf:resource="http://www.w3.org/2002/07/owl#bottomDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/locn#Address"/>
+        <rdfs:range>
+          <rdfs:Datatype rdf:about="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        </rdfs:range>
+        <dcterms:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >locn:addressArea</dcterms:identifier>
+        <vs:term_status xml:lang="en">testing</vs:term_status>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/locn"/>
+        <rdfs:comment xml:lang="en">The name or names of a geographic area or locality that groups a number of addressable objects for addressing purposes, without being an administrative unit. This would typically be part of a city, a neighbourhood or village. The domain of locn:addressArea is locn:Address.</rdfs:comment>
+        <rdfs:label xml:lang="en">address area</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+      </owl:Thing>
+    </rdfs:subPropertyOf>
+    <rdfs:subPropertyOf>
+      <owl:DatatypeProperty rdf:about="http://purl.org/vocommons/voaf#propertyNumber"/>
+    </rdfs:subPropertyOf>
+    <rdfs:subPropertyOf>
+      <owl:DatatypeProperty rdf:about="http://purl.org/dc/terms/issued"/>
+    </rdfs:subPropertyOf>
+    <rdfs:subPropertyOf>
+      <owl:DatatypeProperty rdf:about="http://purl.org/vocab/vann/preferredNamespaceUri"/>
+    </rdfs:subPropertyOf>
+    <rdfs:subPropertyOf>
+      <owl:DatatypeProperty rdf:about="http://purl.org/dc/terms/title"/>
+    </rdfs:subPropertyOf>
+    <rdfs:subPropertyOf>
+      <owl:DatatypeProperty rdf:about="http://purl.org/vocab/vann/preferredNamespacePrefix"/>
+    </rdfs:subPropertyOf>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/date"/>
+    <rdfs:subPropertyOf>
+      <owl:DatatypeProperty rdf:about="http://purl.org/dc/terms/identifier"/>
+    </rdfs:subPropertyOf>
+    <rdfs:subPropertyOf>
+      <owl:Thing rdf:about="http://www.w3.org/ns/locn#fullAddress">
+        <owl:sameAs rdf:resource="http://www.w3.org/ns/locn#fullAddress"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/ns/locn#fullAddress"/>
+        <owl:equivalentProperty rdf:resource="http://www.w3.org/ns/locn#fullAddress"/>
+        <owl:propertyDisjointWith rdf:resource="http://www.w3.org/2002/07/owl#bottomDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/locn#Address"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <dcterms:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >locn:fullAddress</dcterms:identifier>
+        <vs:term_status xml:lang="en">testing</vs:term_status>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/locn"/>
+        <rdfs:comment xml:lang="en">The complete address written as a string, with or without formatting. The domain of locn:fullAddress is locn:Address.</rdfs:comment>
+        <rdfs:label xml:lang="en">full address</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+      </owl:Thing>
+    </rdfs:subPropertyOf>
+    <rdfs:subPropertyOf>
+      <owl:Thing rdf:about="http://www.w3.org/ns/locn#postCode">
+        <owl:sameAs rdf:resource="http://www.w3.org/ns/locn#postCode"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/ns/locn#postCode"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <owl:equivalentProperty rdf:resource="http://www.w3.org/ns/locn#postCode"/>
+        <owl:propertyDisjointWith rdf:resource="http://www.w3.org/2002/07/owl#bottomDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/locn#Address"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <dcterms:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >locn:postCode</dcterms:identifier>
+        <vs:term_status xml:lang="en">testing</vs:term_status>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/locn"/>
+        <rdfs:comment xml:lang="en">The post code (a.k.a postal code, zip code etc.). Post codes are common elements in many countries' postal address systems. The domain of locn:postCode is locn:Address.</rdfs:comment>
+        <rdfs:label xml:lang="en">post code</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+      </owl:Thing>
+    </rdfs:subPropertyOf>
+    <rdfs:subPropertyOf>
+      <owl:Thing rdf:about="http://www.w3.org/ns/locn#addressId">
+        <owl:sameAs rdf:resource="http://www.w3.org/ns/locn#addressId"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/ns/locn#addressId"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <owl:equivalentProperty rdf:resource="http://www.w3.org/ns/locn#addressId"/>
+        <owl:propertyDisjointWith rdf:resource="http://www.w3.org/2002/07/owl#bottomDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/locn#Address"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <dcterms:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >locn:addressId</dcterms:identifier>
+        <vs:term_status xml:lang="en">unstable</vs:term_status>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/locn"/>
+        <rdfs:comment xml:lang="en">The concept of adding a globally unique identifier for each instance of an address is a crucial part of the INSPIRE data spec. The domain of locn:addressId is locn:Address.</rdfs:comment>
+        <rdfs:label xml:lang="en">address ID</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+      </owl:Thing>
+    </rdfs:subPropertyOf>
+    <rdfs:subPropertyOf rdf:resource="http://xmlns.com/foaf/0.1/name"/>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/abstract"/>
+    <rdfs:subPropertyOf>
+      <owl:Thing rdf:about="http://www.w3.org/ns/locn#poBox">
+        <owl:sameAs rdf:resource="http://www.w3.org/ns/locn#poBox"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/ns/locn#poBox"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <owl:equivalentProperty rdf:resource="http://www.w3.org/ns/locn#poBox"/>
+        <owl:propertyDisjointWith rdf:resource="http://www.w3.org/2002/07/owl#bottomDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/locn#Address"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <dcterms:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >locn:poBox</dcterms:identifier>
+        <vs:term_status xml:lang="en">testing</vs:term_status>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/locn"/>
+        <rdfs:comment xml:lang="en">The Post Office Box number. The domain of locn:poBox is locn:Address.</rdfs:comment>
+        <rdfs:label xml:lang="en">PO box</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+      </owl:Thing>
+    </rdfs:subPropertyOf>
+    <rdfs:subPropertyOf>
+      <owl:DatatypeProperty rdf:about="http://purl.org/dc/elements/1.1/description"/>
+    </rdfs:subPropertyOf>
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#bottomDataProperty"/>
+    <rdfs:subPropertyOf>
+      <owl:DatatypeProperty rdf:about="http://purl.org/vocab/vann/usageNote"/>
+    </rdfs:subPropertyOf>
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/ns/dcat#mediaType"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2003/06/sw-vocab-status/ns#term_status"/>
+    <rdfs:subPropertyOf>
+      <owl:DatatypeProperty rdf:about="http://purl.org/vocab/vann/example"/>
+    </rdfs:subPropertyOf>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/modified"/>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/title"/>
+    <rdfs:subPropertyOf>
+      <owl:Thing rdf:about="http://www.w3.org/ns/locn#postName">
+        <owl:sameAs rdf:resource="http://www.w3.org/ns/locn#postName"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/ns/locn#postName"/>
+        <owl:equivalentProperty rdf:resource="http://www.w3.org/ns/locn#postName"/>
+        <owl:propertyDisjointWith rdf:resource="http://www.w3.org/2002/07/owl#bottomDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/locn#Address"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <dcterms:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >locn:postName</dcterms:identifier>
+        <vs:term_status xml:lang="en">testing</vs:term_status>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/locn"/>
+        <rdfs:comment xml:lang="en">The key postal division of the address, usually the city. (INSPIRE's definition is "One or more names created and maintained for postal purposes to identify a subdivision of addresses and postal delivery points."). The domain of locn:postName is locn:Address.</rdfs:comment>
+        <rdfs:label xml:lang="en">post name</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+      </owl:Thing>
+    </rdfs:subPropertyOf>
+    <rdfs:subPropertyOf rdf:resource="http://creativecommons.org/ns#attributionName"/>
+    <rdfs:subPropertyOf>
+      <owl:Thing rdf:about="http://www.w3.org/ns/locn#thoroughfare">
+        <owl:sameAs rdf:resource="http://www.w3.org/ns/locn#thoroughfare"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/ns/locn#thoroughfare"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <owl:equivalentProperty rdf:resource="http://www.w3.org/ns/locn#thoroughfare"/>
+        <owl:propertyDisjointWith rdf:resource="http://www.w3.org/2002/07/owl#bottomDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/locn#Address"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <dcterms:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >locn:thoroughfare</dcterms:identifier>
+        <vs:term_status xml:lang="en">testing</vs:term_status>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/locn"/>
+        <rdfs:comment xml:lang="en">An address component that represents the name of a passage or way through from one location to another. A thoroughfare is not necessarily a road, it might be a waterway or some other feature. The domain of locn:thoroughfare is locn:Address.</rdfs:comment>
+        <rdfs:label xml:lang="en">thoroughfare</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+      </owl:Thing>
+    </rdfs:subPropertyOf>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/vocab/vann/changes"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/rights"/>
+    <rdfs:subPropertyOf>
+      <owl:DatatypeProperty rdf:about="http://purl.org/vocommons/voaf#classNumber"/>
+    </rdfs:subPropertyOf>
+    <owl:equivalentProperty rdf:resource="http://www.w3.org/2002/07/owl#bottomDataProperty"/>
+    <owl:propertyDisjointWith rdf:resource="http://www.w3.org/ns/locn#addressArea"/>
+    <owl:propertyDisjointWith>
+      <owl:DatatypeProperty rdf:about="http://purl.org/vocommons/voaf#propertyNumber"/>
+    </owl:propertyDisjointWith>
+    <owl:propertyDisjointWith>
+      <owl:DatatypeProperty rdf:about="http://purl.org/dc/terms/issued"/>
+    </owl:propertyDisjointWith>
+    <owl:propertyDisjointWith>
+      <owl:DatatypeProperty rdf:about="http://purl.org/vocab/vann/preferredNamespaceUri"/>
+    </owl:propertyDisjointWith>
+    <owl:propertyDisjointWith>
+      <owl:DatatypeProperty rdf:about="http://purl.org/dc/terms/title"/>
+    </owl:propertyDisjointWith>
+    <owl:propertyDisjointWith>
+      <owl:DatatypeProperty rdf:about="http://purl.org/vocab/vann/preferredNamespacePrefix"/>
+    </owl:propertyDisjointWith>
+    <owl:propertyDisjointWith rdf:resource="http://purl.org/dc/elements/1.1/date"/>
+    <owl:propertyDisjointWith>
+      <owl:DatatypeProperty rdf:about="http://purl.org/dc/terms/identifier"/>
+    </owl:propertyDisjointWith>
+    <owl:propertyDisjointWith rdf:resource="http://www.w3.org/ns/locn#fullAddress"/>
+    <owl:propertyDisjointWith rdf:resource="http://www.w3.org/ns/locn#postCode"/>
+    <owl:propertyDisjointWith rdf:resource="http://www.w3.org/ns/locn#addressId"/>
+    <owl:propertyDisjointWith rdf:resource="http://xmlns.com/foaf/0.1/name"/>
+    <owl:propertyDisjointWith rdf:resource="http://purl.org/dc/terms/abstract"/>
+    <owl:propertyDisjointWith rdf:resource="http://www.w3.org/ns/locn#poBox"/>
+    <owl:propertyDisjointWith>
+      <owl:DatatypeProperty rdf:about="http://purl.org/dc/elements/1.1/description"/>
+    </owl:propertyDisjointWith>
+    <owl:propertyDisjointWith rdf:resource="http://www.w3.org/2002/07/owl#bottomDataProperty"/>
+    <owl:propertyDisjointWith>
+      <owl:DatatypeProperty rdf:about="http://purl.org/vocab/vann/usageNote"/>
+    </owl:propertyDisjointWith>
+    <owl:propertyDisjointWith rdf:resource="http://www.w3.org/ns/dcat#mediaType"/>
+    <owl:propertyDisjointWith rdf:resource="http://www.w3.org/2003/06/sw-vocab-status/ns#term_status"/>
+    <owl:propertyDisjointWith>
+      <owl:DatatypeProperty rdf:about="http://purl.org/vocab/vann/example"/>
+    </owl:propertyDisjointWith>
+    <owl:propertyDisjointWith rdf:resource="http://purl.org/dc/terms/modified"/>
+    <owl:propertyDisjointWith rdf:resource="http://purl.org/dc/elements/1.1/title"/>
+    <owl:propertyDisjointWith rdf:resource="http://www.w3.org/ns/locn#postName"/>
+    <owl:propertyDisjointWith rdf:resource="http://creativecommons.org/ns#attributionName"/>
+    <owl:propertyDisjointWith rdf:resource="http://www.w3.org/ns/locn#thoroughfare"/>
+    <owl:propertyDisjointWith rdf:resource="http://purl.org/vocab/vann/changes"/>
+    <owl:propertyDisjointWith rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+    <owl:propertyDisjointWith rdf:resource="http://purl.org/dc/terms/rights"/>
+    <owl:propertyDisjointWith>
+      <owl:DatatypeProperty rdf:about="http://purl.org/vocommons/voaf#classNumber"/>
+    </owl:propertyDisjointWith>
+    <rdfs:domain rdf:resource="http://www.w3.org/ns/locn#Address"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://purl.org/dc/elements/1.1/description">
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/description"/>
+    <owl:equivalentProperty rdf:resource="http://purl.org/dc/elements/1.1/description"/>
+    <owl:propertyDisjointWith rdf:resource="http://www.w3.org/2002/07/owl#bottomDataProperty"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://purl.org/dc/terms/issued">
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/issued"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+    <owl:equivalentProperty rdf:resource="http://purl.org/dc/terms/issued"/>
+    <owl:propertyDisjointWith rdf:resource="http://www.w3.org/2002/07/owl#bottomDataProperty"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://purl.org/vocab/vann/preferredNamespacePrefix">
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/vocab/vann/preferredNamespacePrefix"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+    <owl:equivalentProperty rdf:resource="http://purl.org/vocab/vann/preferredNamespacePrefix"/>
+    <owl:propertyDisjointWith rdf:resource="http://www.w3.org/2002/07/owl#bottomDataProperty"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://purl.org/vocab/vann/preferredNamespaceUri">
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/vocab/vann/preferredNamespaceUri"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+    <owl:equivalentProperty rdf:resource="http://purl.org/vocab/vann/preferredNamespaceUri"/>
+    <owl:propertyDisjointWith rdf:resource="http://www.w3.org/2002/07/owl#bottomDataProperty"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://purl.org/vocab/vann/example">
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/vocab/vann/example"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+    <owl:equivalentProperty rdf:resource="http://purl.org/vocab/vann/example"/>
+    <owl:propertyDisjointWith rdf:resource="http://www.w3.org/2002/07/owl#bottomDataProperty"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://purl.org/vocommons/voaf#propertyNumber">
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/vocommons/voaf#propertyNumber"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+    <owl:equivalentProperty rdf:resource="http://purl.org/vocommons/voaf#propertyNumber"/>
+    <owl:propertyDisjointWith rdf:resource="http://www.w3.org/2002/07/owl#bottomDataProperty"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://purl.org/vocab/vann/usageNote">
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/vocab/vann/usageNote"/>
+    <owl:equivalentProperty rdf:resource="http://purl.org/vocab/vann/usageNote"/>
+    <owl:propertyDisjointWith rdf:resource="http://www.w3.org/2002/07/owl#bottomDataProperty"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://purl.org/vocommons/voaf#classNumber">
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/vocommons/voaf#classNumber"/>
+    <owl:equivalentProperty rdf:resource="http://purl.org/vocommons/voaf#classNumber"/>
+    <owl:propertyDisjointWith rdf:resource="http://www.w3.org/2002/07/owl#bottomDataProperty"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://purl.org/dc/terms/title">
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/title"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+    <owl:equivalentProperty rdf:resource="http://purl.org/dc/terms/title"/>
+    <owl:propertyDisjointWith rdf:resource="http://www.w3.org/2002/07/owl#bottomDataProperty"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://purl.org/dc/terms/identifier">
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/identifier"/>
+    <owl:equivalentProperty rdf:resource="http://purl.org/dc/terms/identifier"/>
+    <owl:propertyDisjointWith rdf:resource="http://www.w3.org/2002/07/owl#bottomDataProperty"/>
+  </owl:DatatypeProperty>
+  <owl:Thing rdf:about="https://creativecommons.org/licenses/by/4.0/">
+    <owl:sameAs rdf:resource="https://creativecommons.org/licenses/by/4.0/"/>
+  </owl:Thing>
+  <owl:Thing rdf:about="http://www.w3.org/2000/01/rdf-schema#seeAlso">
+    <owl:sameAs rdf:resource="http://www.w3.org/2000/01/rdf-schema#seeAlso"/>
+    <dcterms:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >rdfs:seeAlso</dcterms:identifier>
+    <vann:usageNote xml:lang="en">Used in the ISA Programme Location Core Vocabulary to provide a URI that identifies the location. This should be expressed using the rdfs:seeAlso property unless the identifier is already the subject of the description. Examples include URIs from GeoNames.org and DBpedia such as http://dbpedia.org/resource/ISO_3166-2:XX where XX is the ISO 3166 two character code for a country.</vann:usageNote>
+    <vs:term_status xml:lang="en">unstable</vs:term_status>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/2000/01/rdf-schema#"/>
+    <rdfs:comment xml:lang="en">rdfs:seeAlso fully represents the ISA Programme Location Core Vocabulary concept of a geographic identifier.</rdfs:comment>
+    <rdfs:label xml:lang="en">geographic identifier</rdfs:label>
+  </owl:Thing>
+  <owl:Thing rdf:about="free-agenda/turismo-ct/ontology.php">
+    <owl:sameAs rdf:resource="free-agenda/turismo-ct/ontology.php"/>
+    <dcterms:license rdf:resource="https://creativecommons.org/licenses/by/4.0/"/>
+    <owl:imports rdf:resource="https://www.w3.org/2003/01/geo/wgs84_pos"/>
+    <owl:imports rdf:resource="http://www.w3.org/ns/locn"/>
+    <owl:imports rdf:resource="http://motools.sf.net/event/event.n3"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+  </owl:Thing>
+  <owl:Thing rdf:about="http://www.w3.org/2003/01/geo/wgs84_pos#">
+    <owl:sameAs rdf:resource="http://www.w3.org/2003/01/geo/wgs84_pos#"/>
+    <dc:date>$Date: 2009/04/20 15:00:30 $</dc:date>
+    <dc:description>A vocabulary for representing latitude, longitude and 
+ altitude information in the WGS84 geodetic reference datum. 
+ Version $Id: wgs84_pos.rdf,v 1.22 2009/04/20 15:00:30 timbl Exp $. See http://www.w3.org/2003/01/geo/ for more details.</dc:description>
+    <dc:title>WGS84 Geo Positioning: an RDF vocabulary</dc:title>
+    <rdfs:comment>
+Recent changes to this namespace:
+$Log: wgs84_pos.rdf,v $
+Revision 1.22  2009/04/20 15:00:30  timbl
+Remove the time bits which have been deal with elsewhere eg in iCal.
+
+Revision 1.21  2009/04/20 12:52:47  timbl
+try again
+
+Revision 1.20  2009/04/20 12:42:11  timbl
+Add Event (edited ages ago and never checked in), and location (following discussion http://chatlogs.planetrdf.com/swig/2009-04-20#T12-36-09)
+
+Revision 1.19  2009/04/20 12:36:31  timbl
+Add Event (edited ages ago and never checked in), and location (following discussion http://chatlogs.planetrdf.com/swig/2009-04-20#T12-36-09)
+
+Revision 1.18  2006/02/01 22:01:04  danbri
+Clarified that lat and long are decimal degrees, and that alt is decimal metres about local reference ellipsoid
+
+Revision 1.17  2004/02/06 17:38:12  danbri
+Fixed a bad commit screwup
+
+Revision 1.15  2003/04/19 11:24:08  danbri
+Fixed the typo even more.
+
+Revision 1.14  2003/04/19 11:16:56  danbri
+fixed a typo
+
+Revision 1.13  2003/02/19 22:27:27  connolly
+relaxed domain constraints on lat/long/alt from Point to SpatialThing
+
+Revision 1.12  2003/01/12 01:41:41  danbri
+Trying local copy of XSLT doc.
+
+Revision 1.11  2003/01/12 01:20:18  danbri
+added a link to morten's xslt rdfs viewer.
+
+Revision 1.10  2003/01/11 18:56:49  danbri
+Removed datatype range from lat and long properties, since they would
+have required each occurance of the property to mention the datatype.
+
+Revision 1.9  2003/01/11 11:41:31  danbri
+Another typo; repaired rdfs:Property to rdf:Property x4
+
+Revision 1.8  2003/01/11 11:05:02  danbri
+Added an rdfs:range for each lat/long/alt property,
+http://www.w3.org/2001/XMLSchema#float
+
+Revision 1.7  2003/01/10 20:25:16  danbri
+Longer rdfs:comment for Point, trying to be Earth-centric and neutral about
+coordinate system(s) at the same time. Feedback welcomed.
+
+Revision 1.6  2003/01/10 20:18:30  danbri
+Added CVS log comments into the RDF/XML as an rdfs:comment property of the
+vocabulary. Note that this is not common practice (but seems both harmless
+and potentially useful).
+
+
+revision 1.5
+date: 2003/01/10 20:14:31;  author: danbri;  state: Exp;  lines: +16 -5
+Updated schema:
+Added a dc:date, added url for more info. Changed the rdfs:label of the
+namespace from gp to geo. Added a class Point, set as the rdfs:domain of
+each property. Added XML comment on the lat_long property suggesting that
+we might not need it (based on #rdfig commentary from implementors).
+
+revision 1.4
+date: 2003/01/10 20:01:07;  author: danbri;  state: Exp;  lines: +6 -5
+Fixed typo; several rdfs:about attributes are now rdf:about. Thanks to MortenF in
+#rdfig for catching this error.
+
+revision 1.3
+date: 2003/01/10 11:59:03;  author: danbri;  state: Exp;  lines: +4 -3
+fixed buglet in vocab, added more wgs links
+
+revision 1.2
+date: 2003/01/10 11:01:11;  author: danbri;  state: Exp;  lines: +4 -4
+Removed alt from the as-a-flat-string property, and switched from
+space separated to comma separated.
+
+revision 1.1
+date: 2003/01/10 10:53:23;  author: danbri;  state: Exp;
+basic geo vocab
+
+</rdfs:comment>
+    <rdfs:label>geo</rdfs:label>
+  </owl:Thing>
+</rdf:RDF>
