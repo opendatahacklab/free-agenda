@@ -4,6 +4,3 @@ java -jar ../../semanticoctopus/target/semanticoctopus-0.1.1.jar http://localhos
 curl -X PUT -H "Content-Type: application/rdf+xml" -u 'cristianolongo'  --data-binary @tmp.owl https://dydra.com/cristianolongo/agenda-bastione-degli-infetti-catania/service
 sleep 5
 rm tmp.owl
-php calendar.php >agenda.ics
-php rssfeed.php >agenda.atom
-
