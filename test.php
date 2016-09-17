@@ -5,10 +5,11 @@ require('AgendaSheetParser.php');
 $p = new AgendaSheetParser(AGEND_UNICA_URL);
 foreach ($p as $e)
 {
+	$auth=$e->distributionAuthorization ? 'yes' : 'no';
 	if ($e->creationTime!=null)
-		echo $e->name." Creation=".$e->creationTime->format('d/m/Y H.i.s')."\n";
+		echo $e->name." Creation=".$e->creationTime->format('d/m/Y H.i.s')." auth=".$auth."\n";
 	else
-		echo $e->name."\n";
+		echo $e->name." auth=".$auth."\n";
 }
 
 

@@ -61,7 +61,7 @@ class AgendaRDFGenerator {
 		
 		$agendaParser = new AgendaSheetParser ( $this->sheetUrl );
 		foreach ( $agendaParser as $event ) {
-			if ($event->start != null)
+			if ($event->start != null && $event->distributionAuthorization==true)
 				(new RDFEventsGenerator ( $event ))->generateEvent ( $ontology->getXML (), $ontology->getXML ()->documentElement, AgendaRDFGenerator::$BASEURI );
 		}
 		$locations = $agendaParser->getAllParsedLocations ();

@@ -38,6 +38,7 @@ class Event {
 	public $organizedBy;
 	public $locationId;
 	public $creationTime;
+	public $distributionAuthorization;
 	
 	/**
 	 * 
@@ -56,6 +57,7 @@ class Event {
 		$this->creationTime=(isset($row[0]) && strlen($row[0])>0) ? 
 			DateTime::createFromFormat ( DATE_FORMAT_bis, $row[0], new DateTimeZone ( 'Europe/Rome' ) ) : 
 			DateTime::createFromFormat ( DATE_FORMAT_bis, Event::$DEFAULT_DATE, new DateTimeZone ( 'Europe/Rome' ) );
+		$this->distributionAuthorization = (count($row)<19 || $row[18]==null || strcasecmp('NO',$row[18])) ? true : false;
 	}
 	
 	/**
