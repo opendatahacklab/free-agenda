@@ -28,6 +28,7 @@ class AgendaRDFGenerator {
 	
 	private $ontologyUrl;
 	private $sheetUrl;
+	private $rowParser;
 	
 	/**
 	 * Prepare to generate an ontology from the
@@ -36,10 +37,13 @@ class AgendaRDFGenerator {
 	 *        	of the ontology element 
 	 * @param $sheetUrl url
 	 *        	to a google sheet with the source data
+	 * @param $rowParser an implementation of AgendaEventParser. 
+	 *        
 	 */
-	public function __construct($ontologyUrl, $sheetUrl) {
+	public function __construct($ontologyUrl, $sheetUrl, $rowParser) {
 		$this->ontologyUrl = $ontologyUrl;
 		$this->sheetUrl = $sheetUrl;
+		$this->rowParser = $rowParser;
 	}
 	
 	/**
@@ -59,7 +63,7 @@ class AgendaRDFGenerator {
 		$ontology->addSubPropertyAxiom ( 'org:siteAddress', 'locn:address' );
 		$ontology->addSubPropertyAxiom ( 'http://purl.org/NET/c4dm/event.owl#place', 'http://www.w3.org/ns/locn#location' );
 		
-		$agendaParser = new AgendaSheetParser ( $this->sheetUrl );
+		$agendaParser = new AgendaSheetParser ( $this->sheetUrl, $this->rowParser );
 		foreach ( $agendaParser as $event ) {
 			if ($event->start != null && $event->distributionAuthorization==true)
 				(new RDFEventsGenerator ( $event ))->generateEvent ( $ontology->getXML (), $ontology->getXML ()->documentElement, AgendaRDFGenerator::$BASEURI );

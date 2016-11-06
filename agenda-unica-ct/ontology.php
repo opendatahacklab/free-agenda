@@ -20,10 +20,11 @@
  * @author Cristiano Longo
  */
 require('../AgendaRDFGenerator.php');
+require('../DefaultEventParser.php');
 
 define('ONTOLOGY_URL', 'http://opendatahacklab.org/free-agenda/agenda-unica-ct/ontology');
 define('AGENDA_UNICA_URL','https://docs.google.com/spreadsheets/d/1bzVASM5_JjCgvNp3Vs0GJ4vDgYsKo_ig5NHU1QI5USc/export?format=tsv&exportFormat=tsv&ndplr=1');
 
 
-(new AgendaRDFGenerator(ONTOLOGY_URL, AGENDA_UNICA_URL))->generate();
+(new AgendaRDFGenerator(ONTOLOGY_URL, AGENDA_UNICA_URL, new DefaultEventParser()))->generate();
 ?>

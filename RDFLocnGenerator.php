@@ -28,66 +28,6 @@
  *        
  */
 define ( 'ADMIN_UNIT', 'IT' );
-
-/**
- * Basic representation of a Location
- *
- * @author Michele Maresca
- */
-class Location {
-	public $name;
-	public $city;
-	public $address;
-	public $houseNumber;
-	public $lat;
-	public $long;
-	public $id;
-	
-	/**
-	 *
-	 * @param String $name
-	 *        	not null, used to identify the location
-	 * @param String $city        	
-	 * @param String $address        	
-	 * @param String $houseNumber        	
-	 * @param double $lat        	
-	 * @param double $long        	
-	 */
-	public function __construct($name, $city, $address, $houseNumber, $lat, $long) {
-		$this->name = $name;
-		$this->city = $city;
-		$this->address = $address;
-		$this->houseNumber = $houseNumber;
-		$this->lat = $lat;
-		$this->long = $long;
-		$this->id = Location::generateId($name, $city, $address, $houseNumber);
-	}
-
-	/**
-	 * Create a unique identifier for this location
-	 */
-	private static function generateId($name, $city, $address, $houseNumber){
-		if ($name!=null && strlen($name)>0)
-			return $name;
-		$city=$city==null ? '' : $city;
-		$address=$address==null ? '' : $address;
-		$houseNumber=$houseNumber==null ? '' : $houseNumber;
-		return "$city-$address-$houseNumber";
-	}
-	
-// 	/**
-// 	 * Create a unique identifier for this location
-// 	 */
-// 	public function getId(){
-// 		if ($this->name!=null && strlen($this->name)>0)
-// 			return $this->name;
-// 		$city=$this->city==null ? '' : $this->city;
-// 		$address=$this->address==null ? '' : $this->address;
-// 		$houseNumber=$this->houseNumber==null ? '' : $this->houseNumber;
-// 		return "$city-$address-$houseNumber";		
-// 	}
-}
-
 /**
  * Create a Locn RDFnode
  *

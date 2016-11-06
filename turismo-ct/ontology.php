@@ -20,7 +20,8 @@
  * @author Cristiano Longo
  */
 require('../AgendaRDFGenerator.php');
+require('../DefaultEventParser.php');
 require('constants.php');
 
-(new AgendaRDFGenerator(ONTOLOGY, SHEET))->generate();
+(new AgendaRDFGenerator(ONTOLOGY, SHEET, new DefaultEventParser()))->generate();
 ?>

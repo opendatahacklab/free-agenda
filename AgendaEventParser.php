@@ -1,6 +1,6 @@
 <?php 
 /**
- * A generator to produce the ontology from the parsed csv.
+ * Implementatios will be agenda specific parsers of source csv rows
  * 
  * Copyright 2016 Cristiano Longo
  *
@@ -16,15 +16,24 @@
  *
  * You should have received a copy of the GNU Lesser General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
- *
- * @author Cristiano Longo
  */
-require('../AgendaRDFGenerator.php');
-require('../DefaultEventParser.php');
 
-define('ONTOLOGY_URL', 'http://opendatahacklab.org/free-agenda/gdg-catania/ontology');
-define('AGENDA_URL','https://docs.google.com/spreadsheets/d/1-ROgDxqRnh4Nknih_oPZeaTIoXHY3GRJQdSxpq4XMhA/export?format=tsv&exportFormat=tsv&ndplr=1');
+interface AgendaEventParser{
+	/**
+	 * Create a location by parsing a row of the sheet.
+	 *
+	 * @param row an array of fields obtained by splitting a csv row
+	 * @return the corresponding Location object or null if the location name is not provided.
+	 */
+	function parseLocation($row);
 
-
-(new AgendaRDFGenerator(ONTOLOGY_URL, AGENDA_URL, new DefaultEventParser()))->generate();
+	/**
+	 * Produce an event with the given location id by parsing a csv row
+	 * @param row an array of fields obtained by splitting a csv row
+	 * @param locationId a unique identifier for the location where the event take place
+	 * or null if no location has been specified
+	 * @return an Event
+	 */
+	function parseEvent($row, $locationId);
+}
 ?>

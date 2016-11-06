@@ -1,6 +1,6 @@
-<?php 
+<?php
 /**
- * A generator to produce the ontology from the parsed csv.
+ * Representation of an Event
  * 
  * Copyright 2016 Cristiano Longo
  *
@@ -19,12 +19,13 @@
  *
  * @author Cristiano Longo
  */
-require('../AgendaRDFGenerator.php');
-require('../DefaultEventParser.php');
-
-define('ONTOLOGY_URL', 'http://opendatahacklab.org/free-agenda/gdg-catania/ontology');
-define('AGENDA_URL','https://docs.google.com/spreadsheets/d/1-ROgDxqRnh4Nknih_oPZeaTIoXHY3GRJQdSxpq4XMhA/export?format=tsv&exportFormat=tsv&ndplr=1');
-
-
-(new AgendaRDFGenerator(ONTOLOGY_URL, AGENDA_URL, new DefaultEventParser()))->generate();
-?>
+class Event {
+	public $name;
+	public $description;
+	public $start;
+	// array organizations
+	public $organizedBy;
+	public $locationId;
+	public $creationTime;
+	public $distributionAuthorization;
+}

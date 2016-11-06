@@ -20,9 +20,10 @@
  * @author Cristiano Longo
  */
 require('../AgendaRDFGenerator.php');
+require('../DefaultEventParser.php');
 
 define('ONTOLOGY_URL', 'http://opendatahacklab.org/free-agenda/bastione-infetti/ontology');
 define('SHEET_URL','https://docs.google.com/spreadsheets/d/1mNJ2I-QldzoxCR-EkTJ-K7xvzlurZC0vge224FD3gnY/export?format=tsv&exportFormat=tsv&ndplr=1');
 
-(new AgendaRDFGenerator(ONTOLOGY_URL, SHEET_URL))->generate();
+(new AgendaRDFGenerator(ONTOLOGY_URL, SHEET_URL, new DefaultEventParser()))->generate();
 ?>
