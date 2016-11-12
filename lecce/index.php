@@ -1,7 +1,5 @@
 <?php 
 /**
- * A generator to produce the ontology from the parsed csv.
- * 
  * Copyright 2016 Cristiano Longo
  *
  * This program is free software: you can redistribute it and/or modify
@@ -19,12 +17,8 @@
  *
  * @author Cristiano Longo
  */
-require('../AgendaRDFGenerator.php');
-require('LecceEventParser.php');
-
-define('ONTOLOGY_URL', 'http://opendatahacklab.org/free-agenda/lecce/ontology');
-define('SRC_URL','https://docs.google.com/spreadsheets/d/1__pUnfUkVYDmw-0Lp76dFjF9TCRZc0S8V27tul02nDs/export?format=tsv&exportFormat=tsv&ndplr=1');
-
-
-(new AgendaRDFGenerator(ONTOLOGY_URL, SRC_URL, new LecceEventParser()))->generate();
+$title="Eventi condivisi con la cittadinanza - Lecce";
+$sparql="http://dydra.com/cristianolongo/agenda-comune-di-lecce/sparql";
+$sheet='https://docs.google.com/spreadsheets/d/1bzVASM5_JjCgvNp3Vs0GJ4vDgYsKo_ig5NHU1QI5USc';
+require('../agendaTemplate.php');
 ?>

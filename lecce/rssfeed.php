@@ -20,8 +20,8 @@
 * @author Cristiano Longo
 */
 require('../RDFEvents2RSS.php');
-require('constants.php');
 
-(new RDFEvents2RSS(SPARQL_ENDPOINT, TITLE, 'http://www.opendatahacklab.org/free-agenda/agenda-unica-ct/', 'http://www.opendatahacklab.org/free-agenda/agenda-unica-ct/rssfeed.php','Agenda Unica', 
+(new RDFEvents2RSS("http://dydra.com/cristianolongo/agenda-comune-di-lecce/sparql", 'Eventi condivisi con la cittadinanza - Lecce', 
+			'http://www.opendatahacklab.org/free-agenda/lecce/', 'http://www.opendatahacklab.org/free-agenda/lecce/rssfeed.php',null, 
 		null, null, null))->generate();
 ?>

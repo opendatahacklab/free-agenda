@@ -63,7 +63,8 @@ var processEventFunction = function(event){
 
 	var address = document.createElement("p");
 	address.className="eventaddress";
-	address.appendChild(document.createTextNode(event.address));
+	var addressTxt = event.eventPlace ==null ? event.address : event.eventPlace + " - "+event.address;
+	address.appendChild(document.createTextNode(addressTxt));
 	container.appendChild(address);	
 	
 	if(event.description != null){

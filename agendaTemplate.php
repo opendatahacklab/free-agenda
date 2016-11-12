@@ -62,6 +62,7 @@ fclose($handle);
 		</nav>
 	</header>
 
+	<p><a href="../index.html">Vedi altre agende</a></p>
 	<table id="events">
 	</table>
 

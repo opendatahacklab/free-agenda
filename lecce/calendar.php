@@ -1,6 +1,6 @@
 <?php 
 /**
- * A generator to produce the ontology from the parsed csv.
+ * Generate the calendar file from the ontology.
  * 
  * Copyright 2016 Cristiano Longo
  *
@@ -19,12 +19,8 @@
  *
  * @author Cristiano Longo
  */
-require('../AgendaRDFGenerator.php');
-require('LecceEventParser.php');
-
-define('ONTOLOGY_URL', 'http://opendatahacklab.org/free-agenda/lecce/ontology');
-define('SRC_URL','https://docs.google.com/spreadsheets/d/1__pUnfUkVYDmw-0Lp76dFjF9TCRZc0S8V27tul02nDs/export?format=tsv&exportFormat=tsv&ndplr=1');
+require('../RDFEvents2Calendar.php');
 
 
-(new AgendaRDFGenerator(ONTOLOGY_URL, SRC_URL, new LecceEventParser()))->generate();
+(new RDFEvents2Calendar('http://dydra.com/cristianolongo/agenda-comune-di-lecce/sparql', 'agenda-lecce'))->generate();
 ?>
