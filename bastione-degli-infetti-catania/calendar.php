@@ -23,5 +23,5 @@ require('../RDFEvents2Calendar.php');
 require('constants.php');
 
 
-(new RDFEvents2Calendar(SPARQL_ENDPOINT, 'agenda-unica-ct'))->generate();
+(new RDFEvents2Calendar(SPARQL_ENDPOINT, 'bastione-degli-infetti'))->generate();
 ?>
