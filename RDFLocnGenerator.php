@@ -68,14 +68,21 @@ class RDFLocnGenerator {
 		// Create node locn:fullAddress
 		$fullAddress = $xml->createElement ( "locn:fullAddress" );
 		$fullAddress->appendChild ( $xml->createTextNode ( $this->formatLabel () ) );
+		$locnAddress->appendChild ( $fullAddress );
 		
 		// Create node locn:throughfare
-		$locnThroughfare = $xml->createElement ( "locn:throughfare" );
-		$locnThroughfare->appendChild ( $xml->createTextNode ( $this->location->address ) );
+		if (isset($this->location->address) && $this->location->address!=null){
+			$locnThroughfare = $xml->createElement ( "locn:throughfare" );
+			$locnThroughfare->appendChild ( $xml->createTextNode ( $this->location->address ) );
+			$locnAddress->appendChild ( $locnThroughfare );
+		}
 		
 		// Create node locn:locatorDesignator
-		$locnDesignator = $xml->createElement ( "locn:locatorDesignator" );
-		$locnDesignator->appendChild ( $xml->createTextNode ( $this->location->houseNumber ) );
+		if (isset($this->location->houseNumber) && $this->location->houseNumber!=null){
+			$locnDesignator = $xml->createElement ( "locn:locatorDesignator" );
+			$locnDesignator->appendChild ( $xml->createTextNode ( $this->location->houseNumber ) );
+			$locnAddress->appendChild ( $locnDesignator );
+		}
 		
 		// Create node locn:locatorPostname
 		$locnPostName = $xml->createElement ( "locn:postName" );
@@ -87,9 +94,6 @@ class RDFLocnGenerator {
 		
 		// Insert node in locn:Address
 		$locnAddress->appendChild ( $rdfLabel );
-		$locnAddress->appendChild ( $fullAddress );
-		$locnAddress->appendChild ( $locnThroughfare );
-		$locnAddress->appendChild ( $locnDesignator );
 		$locnAddress->appendChild ( $locnPostName );
 		$locnAddress->appendChild ( $locnAdminUnitL1 );
 		
@@ -152,7 +156,14 @@ class RDFLocnGenerator {
 	}
 	
 	private function formatLabel() {
-		return ( string ) ($this->location->houseNumber . ", " . $this->location->address . ", " . $this->location->city . ", Italy");
+		$label="Italy";
+		if (isset($this->location->city) && $this->location->city!=null && count($this->location->city)>0)
+			$label=$this->location->city.', '.$label;
+		if (isset($this->location->address) && $this->location->address!=null && count($this->location->address)>0)
+			$label=$this->location->address.', '.$label;
+		if (isset($this->location->houseNumber) && $this->location->houseNumber!=null && count($this->location->houseNumber)>0)
+			$label=$this->location->houseNumber.', '.$label;
+		return $label;
 	}
 }
 
