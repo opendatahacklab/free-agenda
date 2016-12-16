@@ -1,6 +1,6 @@
 <?php 
 /**
- * A generator to produce the ontology from the parsed csv.
+ * Generate the calendar file from the ontology.
  * 
  * Copyright 2016 Cristiano Longo
  *
@@ -19,9 +19,9 @@
  *
  * @author Cristiano Longo
  */
+require('../RDFEvents2Calendar.php');
 require('constants.php');
-require('../AgendaRDFGenerator.php');
-require('../DefaultEventParser.php');
 
-(new AgendaRDFGenerator(ONTOLOGY, SHEET, new DefaultEventParser()))->generate();
+
+(new RDFEvents2Calendar(SPARQL_ENDPOINT, 'agenda-unica-ct'))->generate();
 ?>

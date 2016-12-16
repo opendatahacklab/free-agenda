@@ -1,8 +1,6 @@
 <?php 
 /**
- * A generator to produce the ontology from the parsed csv.
- * 
- * Copyright 2016 Cristiano Longo
+ * Copyright 2016 Cristiano Longo, Alberto Berrittella, Michele Maresca
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU Lesser General Public License as published by
@@ -19,9 +17,7 @@
  *
  * @author Cristiano Longo
  */
-require('constants.php');
-require('../AgendaRDFGenerator.php');
-require('../DefaultEventParser.php');
-
-(new AgendaRDFGenerator(ONTOLOGY, SHEET, new DefaultEventParser()))->generate();
+$agenda_title='Agenda Unica del Movimento - Catania';
+$sparql_endpoint='http://dydra.com/cristianolongo/agenda-unica-ct/sparql';
+require('../eventTemplate.php');
 ?>
