@@ -42,9 +42,9 @@ fclose($handle);
 <meta charset="utf-8">
 <title><?php echo $title?></title>
 <script type="text/javascript"
-	src="http://www.opendatahacklab.org/sparql_suite/sparql_processor.js"></script>
+	src="http://www.opendatahacklab.org/sparql_suite0.3/sparql_processor.js"></script>
 <script type="text/javascript"
-	src="http://www.opendatahacklab.org/sparql_suite/event_sparql_processor.js"></script>
+	src="http://www.opendatahacklab.org/sparql_suite0.3/event_sparql_processor.js"></script>
 <link rel="stylesheet" type="text/css" href="../mystyle.css">
 </head>
 
