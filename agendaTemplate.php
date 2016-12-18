@@ -58,7 +58,10 @@ fclose($handle);
 			<a href="#info" title="informazioni"><img src="../../commons/imgs/Info_Simple_bw.svg.png" /></a>
 			<a title="Internet Calendar" href="calendar.php" type="text/calendar"><img src="../../commons/imgs/Octicons-calendar.svg.png" /></a>
 			<a title="Atom Feed" href="rssfeed.php" type="application/atom+xml"><img src="../../commons/imgs/rss-feed-icon.png" /></a>
-			<a href="https://docs.google.com/forms/d/1QL7C46f4Csc_uAKVjkyWIgXEi3C2hE0GSAXCaX_dPpE/viewform?ndplr=1" title="aggiungi evento" target="_blank"><img src="../../commons/imgs/plus.png" /></a>
+<?php 
+	if (isset($form))
+		echo ("<a href=\"$form\" title=\"aggiungi evento\" target=\"_blank\"><img src=\"../../commons/imgs/plus.png\" /></a>\n");
+?>			
 		</nav>
 	</header>
 
@@ -76,7 +79,7 @@ fclose($handle);
 		l'unica limitazione di dover citare questa pagina come fonte.
 		Sono accessibili nelle seguenti modalit&agrave;:</p>
 		<ul>
-			<li><a target="_blank" href="<?php echo $sheet;?>/view?ndplr=1">google sheet</a></li>
+			<li><a target="_blank" href="<?php echo $sheet;?>">google sheet</a></li>
 			<li><a href="calendar.php">Internet Calendar</a></li>
 			<li><a href="rssfeed.php">Feed RSS Atom</a></li>
 			<li><a href="ontology.php" type="application/rdf+xml">ontologia OWL in RDF/XML</a></li>
@@ -196,8 +199,9 @@ fclose($handle);
 			trevents.appendChild(tdLocn);	
 			
 			var tdTitolo = document.createElement("td");
-			var tdTestoTitolo = document.createTextNode(event.eventName);
+			var tdTestoTitolo = document.createTextNode((isNext ? "*" : "")+event.eventName);
 			tdTitolo.appendChild(tdTestoTitolo);
+				
 			trevents.appendChild(tdTitolo);
 
 			var tdLink = document.createElement("td");

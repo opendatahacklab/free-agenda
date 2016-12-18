@@ -20,6 +20,6 @@
 require('constants.php');
 $title=TITLE;
 $sparql=SPARQL_ENDPOINT;
-$sheet='https://docs.google.com/spreadsheets/d/1lA4waOA9FwcN2S80GyW4LSC5Pi2TpKD6fKLsUwqjbdk';
+$sheet=SHEET;
 require('../agendaTemplate.php');
 ?>

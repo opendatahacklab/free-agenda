@@ -17,7 +17,7 @@
  *
  * @author Cristiano Longo
  */
-$agenda_title='Agenda Unica del Movimento - Catania';
-$sparql_endpoint='http://dydra.com/cristianolongo/agenda-unica-ct/sparql';
+$agenda_title=TITLE;
+$sparql_endpoint=SPARQL;
 require('../eventTemplate.php');
 ?>
