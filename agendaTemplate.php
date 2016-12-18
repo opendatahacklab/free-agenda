@@ -199,7 +199,7 @@ fclose($handle);
 			trevents.appendChild(tdLocn);	
 			
 			var tdTitolo = document.createElement("td");
-			var tdTestoTitolo = document.createTextNode((isNext ? "*" : "")+event.eventName);
+			var tdTestoTitolo = document.createTextNode((isNext ? "" : "")+event.eventName);
 			tdTitolo.appendChild(tdTestoTitolo);
 				
 			trevents.appendChild(tdTitolo);
