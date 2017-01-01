@@ -27,8 +27,8 @@
 	<head>
 		<meta charset="UTF-8">
 		<title><?php echo $agenda_title; ?></title>
-		<script type="text/javascript" src="http://opendatahacklab.org/sparql_suite/sparql_processor.js"></script>
-		<script type="text/javascript" src="http://opendatahacklab.org/sparql_suite/event_sparql_processor.js"></script>
+		<script type="text/javascript" src="http://opendatahacklab.org/sparql_suite3.0/sparql_processor.js"></script>
+		<script type="text/javascript" src="http://opendatahacklab.org/sparql_suite3.0/event_sparql_processor.js"></script>
         <link rel="stylesheet" type="text/css" href="../mystyle.css"> 	
 	</head>
 <body>

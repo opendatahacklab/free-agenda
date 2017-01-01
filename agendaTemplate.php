@@ -40,9 +40,9 @@ fclose($handle);
 <meta charset="utf-8">
 <title><?php echo $title?></title>
 <script type="text/javascript"
-	src="http://www.opendatahacklab.org/sparql_suite3.0/sparql_processor.js"></script>
+	src="../../sparql_suite/sparql_processor.js"></script>
 <script type="text/javascript"
-	src="http://www.opendatahacklab.org/sparql_suite3.0/event_sparql_processor.js"></script>
+	src="../../sparql_suite/event_sparql_processor.js"></script>
 <link rel="stylesheet" type="text/css" href="../mystyle.css">
 </head>
 
@@ -66,8 +66,9 @@ fclose($handle);
 	</header>
 
 	<p><a href="../index.html">Vedi altre agende</a></p>
-	<table id="events">
-	</table>
+	
+	<section id="events">
+	</section>
 
 	<section id="data">
 		<header>
@@ -150,91 +151,15 @@ fclose($handle);
 
 	<script type="text/javascript">
 		var container = document.getElementById("events");
-		var processEventFunction = function(event, isNext) {
-
-			function insertZero(x) {
-
-				if (x == "0" || x == "1" || x == "2" || x == "3" || x == "4"
-						|| x == "5" || x == "6" || x == "7" || x == "8"
-						|| x == "9") {
-					x = "0" + x;
-				}
-				return x;
-			}
-			;
-
-			var trevents = document.createElement("tr");
-			container.appendChild(trevents);
-
-			var tdData = document.createElement("td");
-			var data = new Date(event.timeStart);
-			var giorno = data.getDate();
-			giorno = insertZero(giorno);
-			var mese = data.getMonth() + 1;
-			mese = insertZero(mese);
-			var stringaData = document.createTextNode(giorno + "/" + mese + "/"
-					+ data.getFullYear());
-			tdData.appendChild(stringaData);
-			tdData.setAttribute('class', 'date');
-			trevents.appendChild(tdData);
-
-
-			var tdOra = document.createElement("td");
-			var data = new Date(event.timeStart);
-			var minuti = data.getMinutes();
-			minuti = insertZero(minuti);
-			var ore = data.getHours();
-			ore = insertZero(ore);
-			var ora = document.createTextNode(ore + ":" + minuti);
-			tdOra.appendChild(ora);
-			tdOra.setAttribute('class', 'time');
-			trevents.appendChild(tdOra);
-
-			var tdLocn = document.createElement("td");
-
-//Verify the prescence of the event place
-
-			event.eventPlace !== null ?  tdLocn.appendChild(document.createTextNode(event.eventPlace)) : tdLocn.appendChild(document.createTextNode("")); 
-
-			trevents.appendChild(tdLocn);	
-			
-			var tdTitolo = document.createElement("td");
-			var tdTestoTitolo = document.createTextNode((isNext ? "" : "")+event.eventName);
-			tdTitolo.appendChild(tdTestoTitolo);
-				
-			trevents.appendChild(tdTitolo);
-
-			var tdLink = document.createElement("td");
-			var a = document.createElement("a");
-			a.href = "eventDetails.php?iri=" + encodeURIComponent(event.URI);
-			var lente = document.createElement("img");
-			lente.src = "https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Loupe.svg/58px-Loupe.svg.png";
-			lente.style.height = "1em";
-			a.appendChild(lente);
-			tdLink.appendChild(a);
-			trevents.appendChild(tdLink);
-
-		};
-
-		function EventProcessor() {
-			this.processPast = function(event) {
-				processEventFunction(event, false);
-			};
-			this.processNext = function(event) {
-				processEventFunction(event, true);
-			};
-			this.processFuture = function(event) {
-				processEventFunction(event, false);
-			};
-			this.flush = function() {
-			};
-
-		}
-
-		var p = new EventQueryProcessor(new EventProcessor(), new Date());
-
+		var currentTime = new Date();
+		var futureEventsProcessor = new EventQueryProcessor(new DrawTableEventProcessorAsc(container, "Prossimi Eventi", "event"), currentTime, currentTime);
 		sparql_query("<?php echo $sparql;?>",
-				p);
+				futureEventsProcessor);
+		
+ 		var pastEventsProcessor = new EventQueryProcessor(new DrawTableEventProcessorDec(container, "Eventi Passati", "event"), currentTime, null, currentTime);
+		sparql_query("<?php echo $sparql;?>",
+				pastEventsProcessor);
+		
 	</script>
 </body>
 </html>

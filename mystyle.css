@@ -66,10 +66,24 @@ nav img{
 }
 
 table{
+	margin-top : 1em;
+	margin-bottom : 3em;
 	margin-left : 10%;
 	margin-right : 10%;
-	border:none;
+	width : 80%;
+	border-left : 1px solid #cccccc;
+	border-right : 1px solid #cccccc;
+	border-top : none;
+	border-bottom : none;
     border-collapse: collapse;
+}
+
+
+caption.eventCaption{
+	font-weight : bold;	
+	color : #fefefe;
+	background-color : #e62e00;
+	padding:0.5em 0.5em 0.5em 0.5em;
 }
 
 th , td {
@@ -77,11 +91,19 @@ th , td {
   padding : 1em;  
 }
 
-td.date, td.time{
+td.eventDate, td.eventTime{
 	padding-right : 0;
 	font-family: Courier, monospace;
 	font-weight: bold;
 	color : #707070;
+}
+
+td.eventDate{
+	width : 6em;
+}
+
+td.eventTime{
+	width : 3em;
 }
 
 #eventdetail{
