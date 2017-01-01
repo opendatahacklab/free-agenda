@@ -28,7 +28,7 @@ while read line; do
 	echo "Sending $ontology to $sparql begin";
 	echo "Sending $ontology to $sparql end";
 	java -jar ~/semanticoctopus/0.1.1/semanticoctopus-0.1.1.jar $ontology >tmp.owl
-	curl -X PUT -H "Content-Type: application/rdf+xml" -u "$user"  --data-binary @tmp.owl http://dydra.com/cristianolongo/agenda-unica-ct/service
+	curl -X PUT -H "Content-Type: application/rdf+xml" -u "$user"  --data-binary @tmp.owl $sparql
 done </dev/stdin
 sleep 5
 rm tmp.owl
