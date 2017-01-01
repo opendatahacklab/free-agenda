@@ -67,7 +67,9 @@ fclose($handle);
 
 	<p><a href="../index.html">Vedi altre agende</a></p>
 	
-	<section id="events">
+	<section id="futureevents">
+	</section>
+	<section id="pastevents">
 	</section>
 
 	<section id="data">
@@ -150,13 +152,14 @@ fclose($handle);
 	</section>
 
 	<script type="text/javascript">
-		var container = document.getElementById("events");
+		var container = document.getElementById("futureevents");
 		var currentTime = new Date();
 		var futureEventsProcessor = new EventQueryProcessor(new DrawTableEventProcessorAsc(container, "Prossimi Eventi", "event"), currentTime, currentTime);
 		sparql_query("<?php echo $sparql;?>",
 				futureEventsProcessor);
 		
- 		var pastEventsProcessor = new EventQueryProcessor(new DrawTableEventProcessorDec(container, "Eventi Passati", "event"), currentTime, null, currentTime);
+		var containerPastEvents = document.getElementById("pastevents");		
+ 		var pastEventsProcessor = new EventQueryProcessor(new DrawTableEventProcessorDec(containerPastEvents, "Eventi Passati", "event"), currentTime, null, currentTime);
 		sparql_query("<?php echo $sparql;?>",
 				pastEventsProcessor);
 		
