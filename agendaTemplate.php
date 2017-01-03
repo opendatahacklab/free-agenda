@@ -152,14 +152,14 @@ fclose($handle);
 	</section>
 
 	<script type="text/javascript">
-		var container = document.getElementById("futureevents");
+		var futureEventsContainer = document.getElementById("futureevents");
 		var currentTime = new Date();
-		var futureEventsProcessor = new EventQueryProcessor(new DrawTableEventProcessorAsc(container, "Prossimi Eventi", "event"), currentTime, currentTime);
+		var futureEventsProcessor = new EventQueryProcessor(new DrawTableEventProcessorAsc(futureEventsContainer, "Prossimi Eventi", "event"), currentTime, currentTime);
 		sparql_query("<?php echo $sparql;?>",
 				futureEventsProcessor);
 		
-		var containerPastEvents = document.getElementById("pastevents");		
- 		var pastEventsProcessor = new EventQueryProcessor(new DrawTableEventProcessorDec(containerPastEvents, "Eventi Passati", "event"), currentTime, null, currentTime);
+		var pastEventsContainer = document.getElementById("pastevents");		
+ 		var pastEventsProcessor = new EventQueryProcessor(new DrawTableEventProcessorDec(pastEventsContainer, "Eventi Passati", "event"), currentTime, null, currentTime);
 		sparql_query("<?php echo $sparql;?>",
 				pastEventsProcessor);
 		

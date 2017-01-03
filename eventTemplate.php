@@ -47,8 +47,6 @@ var processEventFunction = function(event){
 	//replace titles 
 	var titleLower=event.eventName;
 	document.getElementById("maintitle").appendChild(document.createTextNode(titleLower));
-	//document.getElementById("eventinbreadcrumb").appendChild(
-	//		document.createTextNode(titleLower));
     
 	//put event details in the specified section
 	var container = document.getElementById("eventdetail");

@@ -33,26 +33,35 @@ img.wp-smiley, img.emoji {
 	padding: 0 !important;
 }
 
-td.eventDate, td.eventTime{
-	padding-right : 0;
+td.eventDate, td.eventTime {
+	padding-right: 0;
 	font-family: Courier, monospace;
 	font-weight: bold;
-	color : #707070;
+	color: #707070;
 }
 
-td.eventDate{
-	width : 8em;
+td.eventDate {
+	width: 8em;
 }
 
-td.eventTime{
-	width : 5em;
+td.eventTime {
+	width: 5em;
 }
 
-caption.eventCaption{
-	font-weight : bold;
-	font-size : 1.3em;	
+caption.eventCaption {
+	font-weight: bold;
+	font-size: 1.3em;
 }
 
+
+img, img.widget {
+	height: 2em;
+	padding-top: 0;
+	padding-bottom: 0;
+	padding-left: 0.2em;
+	padding-right: 0;
+	margin: 0;
+}
 </style>
 <link rel='stylesheet' id='zerif_font-css'
 	href='//fonts.googleapis.com/css?family=Lato%3A300%2C400%2C700%2C400italic%7CMontserrat%3A700%7CHomemade+Apple&#038;subset=latin%2Clatin-ext'
@@ -153,18 +162,44 @@ body.custom-background {
 								to content</a>
 							<ul id="menu-menu-1"
 								class="nav navbar-nav navbar-right responsive-nav main-nav-list">
+								<li
+									class="menu-item menu-item-type-custom menu-item-object-custom">
+									<a href="https://github.com/opendatahacklab/free-agenda.git"
+									title="Source Code"> <img
+										src="http://opendatahacklab.org/commons/imgs/GitHub-Mark-64px.png" class="widget" /></a>
+								</li>
+<!-- 								<li -->
+<!-- 									class="menu-item menu-item-type-custom menu-item-object-custom"> -->
+<!-- 									<a href="#data" title="dati"><img class="widget" -->
+<!-- 										src="http://opendatahacklab.org/commons/imgs/rdf.png" /></a> -->
+<!-- 								</li> -->
+<!-- 								<li -->
+<!-- 									class="menu-item menu-item-type-custom menu-item-object-custom"> -->
+<!-- 									<a href="#info" title="informazioni"><img class="widget" -->
+<!-- 										src="http://opendatahacklab.org/commons/imgs/Info_Simple_bw.svg.png" /></a> -->
+<!-- 								</li> -->
+								<li
+									class="menu-item menu-item-type-custom menu-item-object-custom">
+									<a title="Internet Calendar" href="http://opendatahacklab.org/free-agenda/coderdojo-etneo/calendar.php"
+									type="text/calendar"><img class="widget"
+										src="http://opendatahacklab.org/commons/imgs/Octicons-calendar.svg.png" /></a>
+								</li>
+								<li
+									class="menu-item menu-item-type-custom menu-item-object-custom">
+									<a title="Atom Feed" href="http://opendatahacklab.org/free-agenda/coderdojo-etneo/rssfeed.php"
+									type="application/atom+xml"><img class="widget"
+										src="http://opendatahacklab.org/commons/imgs/rss-feed-icon.png" /></a>
+								</li>
 								<li id="menu-item-40"
 									class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-40"><a
 									href="http://www.coderdojoetneo.it/">Home</a></li>
 								<li id="menu-item-62"
-									class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-60 current_page_item menu-item-62"><a
+									class="menu-item menu-item-type-post_type menu-item-object-page page_item page-item-60 menu-item-62"><a
 									href="http://www.coderdojoetneo.it/come-diventare-mentor/">Come
 										diventare mentor</a></li>
 							</ul>
 						</nav>
-
 					</div>
-
 				</div>
 				<!-- / END TOP BAR -->
 				<div class="clear"></div>
@@ -185,12 +220,13 @@ body.custom-background {
 								class="post-60 page type-page status-publish hentry">
 
 								<header class="entry-header">
-									<h1 id="maintitle" class="entry-title">Agenda CoderDojo Etneo</h1>
+									<h1 class="entry-title">Agenda CoderDojo Etneo</h1>
 								</header>
 								<!-- .entry-header -->
 
-								<div class="entry-content" id="eventdetail">
-									<p class="loading" id="loading">Loading ...</p>
+								<div class="entry-content">
+									<div id="futureevents"></div>
+									<div id="pastevents"></div>
 								</div>
 								<!-- .entry-content -->
 
@@ -280,76 +316,23 @@ body.custom-background {
 		src='http://www.coderdojoetneo.it/wp-content/themes/zerif-lite/js/zerif.js?ver=20120206'></script>
 	<script type='text/javascript'
 		src='http://www.coderdojoetneo.it/wp-includes/js/wp-embed.min.js?ver=4.6.1'></script>
-		
+
 	<script type="text/javascript"
 		src="http://opendatahacklab.org/sparql_suite/sparql_processor.js"></script>
 	<script type="text/javascript"
 		src="http://opendatahacklab.org/sparql_suite/event_sparql_processor.js"></script>
 	<script type="text/javascript">
-	//the function responsible to print event information
-	var processEventFunction = function(event){
+		var futureEventsContainer = document.getElementById("futureevents");
+		var currentTime = new Date();
+		var futureEventsProcessor = new EventQueryProcessor(new DrawTableEventProcessorAsc(futureEventsContainer, "Prossimi Eventi", "event"), currentTime, currentTime);
+		sparql_query("http://dydra.com/cristianolongo/coderdojo-etneo/sparql",
+				futureEventsProcessor);
 		
-		//replace titles 
-		var titleLower=event.eventName;
-		document.getElementById("maintitle").appendChild(document.createTextNode(titleLower));
-	    
-		//put event details in the specified section
-		var container = document.getElementById("eventdetail");
-		container.removeChild(document.getElementById("loading"));
+		var pastEventsContainer = document.getElementById("pastevents");		
+ 		var pastEventsProcessor = new EventQueryProcessor(new DrawTableEventProcessorDec(pastEventsContainer, "Eventi Passati", "event"), currentTime, null, currentTime);
+		sparql_query("http://dydra.com/cristianolongo/coderdojo-etneo/sparql",
+				pastEventsProcessor);
 		
-		var time = document.createElement("p");
-		var timeStart = new Date(event.timeStart);
-		time.className="eventtime";
-		time.appendChild(document.createTextNode(timeStart.toLocaleDateString()+" - "+
-			timeStart.toLocaleTimeString(navigator.language, {hour: '2-digit', minute:'2-digit'})));
-		container.appendChild(time);
-
-		var address = document.createElement("p");
-		address.className="eventaddress";
-		var addressTxt = event.eventPlace ==null ? event.address : event.eventPlace + " - "+event.address;
-		address.appendChild(document.createTextNode(addressTxt));
-		container.appendChild(address);	
-		
-		if(event.description != null){
-			var description = document.createElement("p");
-			description.className="eventdescription";
-			description.appendChild(document.createTextNode(event.description));
-			container.appendChild(description);
-		}
-		
-		if (event.posts!=null && event.posts.lenght>0){
-			var postsTitle=document.createElement("h2");
-			h2.className="posts";
-			postTitle.appendChild(document.createTextNode("Related Posts"));
-			container.appendChild(postTitle);
-			
-			var postList=document.createElemet("ul");
-			container.appendChild(postList);
-			for(var i=0; i<event.posts.lenght; i++){
-				var postValue = event.posts[i];
-				var postItem=document.createElement("li");
-				postList.appendChild(postItem);
-				var a = document.createElement("a");
-				a.href=postValue.URI;
-				a.appendChild(document.createTextNode(postValue.title));
-				postItem.appendChild(a);
-			}
-		}	
-	};
-
-	//retrieve the eventIRI from parameters
-	var eventIRI = location.search.split('?iri=')[1];
-
-	if (eventIRI==null)
-		window.alert("No event IRI provided.");
-	else{
-		var eventIRIdecoded=decodeURIComponent(eventIRI);
-		var p = new SingleEventQueryProcessor(eventIRIdecoded, processEventFunction, function(event){
-			window.alert("No such event!"+eventIRIdecoded);
-		});
-
-		sparql_query("http://dydra.com/cristianolongo/coderdojo-etneo/sparql", p);
-	}
 	</script>
 </body>
 
