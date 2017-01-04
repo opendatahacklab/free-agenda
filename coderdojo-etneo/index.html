@@ -53,7 +53,6 @@ caption.eventCaption {
 	font-size: 1.3em;
 }
 
-
 img, img.widget {
 	height: 2em;
 	padding-top: 0;
@@ -61,6 +60,22 @@ img, img.widget {
 	padding-left: 0.2em;
 	padding-right: 0;
 	margin: 0;
+}
+
+ul.iconlist{
+	list-style-type : none;
+}
+
+ul.iconlist img {
+	height : 2em;
+	vertical-align : middle;
+	margin : 0.3em 1em 1em 1em;
+	float : left;
+}
+
+ul.iconlist li{
+	clear:left;
+	margin-bottom : 1em;
 }
 </style>
 <link rel='stylesheet' id='zerif_font-css'
@@ -164,39 +179,37 @@ body.custom-background {
 								class="nav navbar-nav navbar-right responsive-nav main-nav-list">
 								<li
 									class="menu-item menu-item-type-custom menu-item-object-custom">
-									<a href="https://github.com/opendatahacklab/free-agenda.git"
-									title="Source Code"> <img
-										src="http://opendatahacklab.org/commons/imgs/GitHub-Mark-64px.png" class="widget" /></a>
+									<a href="#data" title="dati"><img class="widget"
+										src="http://opendatahacklab.org/commons/imgs/rdf.png" /></a>
 								</li>
-<!-- 								<li -->
+								<!-- 								<li>
 <!-- 									class="menu-item menu-item-type-custom menu-item-object-custom"> -->
-<!-- 									<a href="#data" title="dati"><img class="widget" -->
-<!-- 										src="http://opendatahacklab.org/commons/imgs/rdf.png" /></a> -->
-<!-- 								</li> -->
-<!-- 								<li -->
-<!-- 									class="menu-item menu-item-type-custom menu-item-object-custom"> -->
-<!-- 									<a href="#info" title="informazioni"><img class="widget" -->
-<!-- 										src="http://opendatahacklab.org/commons/imgs/Info_Simple_bw.svg.png" /></a> -->
-<!-- 								</li> -->
+								<!-- 									<a href="#info" title="informazioni"><img class="widget" -->
+								<!-- 										src="http://opendatahacklab.org/commons/imgs/Info_Simple_bw.svg.png" /></a> -->
+								<!-- 								</li> -->
 								<li
 									class="menu-item menu-item-type-custom menu-item-object-custom">
-									<a title="Internet Calendar" href="http://opendatahacklab.org/free-agenda/coderdojo-etneo/calendar.php"
+									<a title="Internet Calendar"
+									href="http://opendatahacklab.org/free-agenda/coderdojo-etneo/calendar.php"
 									type="text/calendar"><img class="widget"
 										src="http://opendatahacklab.org/commons/imgs/Octicons-calendar.svg.png" /></a>
 								</li>
 								<li
 									class="menu-item menu-item-type-custom menu-item-object-custom">
-									<a title="Atom Feed" href="http://opendatahacklab.org/free-agenda/coderdojo-etneo/rssfeed.php"
+									<a title="Atom Feed"
+									href="http://opendatahacklab.org/free-agenda/coderdojo-etneo/rssfeed.php"
 									type="application/atom+xml"><img class="widget"
 										src="http://opendatahacklab.org/commons/imgs/rss-feed-icon.png" /></a>
 								</li>
-								<li id="menu-item-40"
-									class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-40"><a
-									href="http://www.coderdojoetneo.it/">Home</a></li>
-								<li id="menu-item-62"
-									class="menu-item menu-item-type-post_type menu-item-object-page page_item page-item-60 menu-item-62"><a
-									href="http://www.coderdojoetneo.it/come-diventare-mentor/">Come
-										diventare mentor</a></li>
+								<li
+									class="menu-item menu-item-type-custom menu-item-object-custom">
+									<a href="https://github.com/opendatahacklab/free-agenda.git"
+									title="Source Code"> <img
+										src="http://opendatahacklab.org/commons/imgs/GitHub-Mark-64px.png"
+										class="widget" /></a>
+								</li>
+								<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-40"><a
+									href="http://www.coderdojoetneo.it/">CoderDojo Etneo</a></li>
 							</ul>
 						</nav>
 					</div>
@@ -227,10 +240,40 @@ body.custom-background {
 								<div class="entry-content">
 									<div id="futureevents"></div>
 									<div id="pastevents"></div>
+									<!-- .entry-content -->
+
+									<h2 id="data" class="entry-title">Open Data</h2>
+
+									<p>
+										I dati relativi agli eventi del <a
+											href="http://www.coderdojoetneo.it/">CoderDojo Etneo</a> sono
+										rilasciati come <a href="http://opendefinition.org/">open
+											data</a> con licenza <a
+											href="https://creativecommons.org/licenses/by/4.0/">CC BY
+											4.0</a>, ossia possono essere scaricati e riutilizzati in
+										qualsiasi modo e a qualsiasi fine con l'unica limitazione di
+										dover citare questa pagina come fonte.
+									<p>Sono accessibili nelle seguenti modalit&agrave;:</p>
+									<ul class="iconlist">
+										<li><img
+											src="http://opendatahacklab.org/commons/imgs/rdf.png" /> <a
+											href="http://www.opendatahacklab.org/free-agenda/coderdojo-etneo/ontology.php"
+											type="application/rdf+xml">ontologia OWL in RDF/XML</a></li>
+										<li><img
+											src="http://opendatahacklab.org/commons/imgs/rdf.png" /> <a
+											href="https://dydra.com/cristianolongo/coderdojo-etneo/sparql">SPARQL
+												endpoint</a>,</li>
+										<li><img
+											src="http://opendatahacklab.org/commons/imgs//Octicons-calendar.svg.png" /><a
+											href="http://www.opendatahacklab.org/free-agenda/coderdojo-etneo/calendar.php">Internet
+												Calendar</a>,</li>
+										<li><img
+											src="http://opendatahacklab.org/commons//imgs/rss-feed-icon.png" />
+											<a
+											href="http://www.opendatahacklab.org/free-agenda/coderdojo-etneo/rssfeed.php">Feed
+												RSS Atom</a>.</li>
+									</ul>
 								</div>
-								<!-- .entry-content -->
-
-
 							</article>
 							<!-- #post-## --> </main>
 							<!-- #main -->
