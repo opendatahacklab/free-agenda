@@ -17,6 +17,7 @@
  *
  * @author Cristiano Longo
  */
+require('constants.php');
 $agenda_title=TITLE;
 $sparql_endpoint=SPARQL;
 require('../eventTemplate.php');

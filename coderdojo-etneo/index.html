@@ -62,21 +62,29 @@ img, img.widget {
 	margin: 0;
 }
 
-ul.iconlist{
-	list-style-type : none;
+ul.iconlist {
+	list-style-type: none;
 }
 
 ul.iconlist img {
-	height : 2em;
-	vertical-align : middle;
-	margin : 0.3em 1em 1em 1em;
-	float : left;
+	height: 2em;
+	vertical-align: middle;
+	margin: 0.3em 1em 1em 1em;
+	float: left;
 }
 
-ul.iconlist li{
-	clear:left;
-	margin-bottom : 1em;
+ul.iconlist li {
+	clear: left;
+	margin-bottom: 1em;
 }
+
+img.creditsLogo{
+	height : 8em;
+	vertical-align:middle;
+	float:left;
+	padding:1em 1em 1em 1em;
+}
+
 </style>
 <link rel='stylesheet' id='zerif_font-css'
 	href='//fonts.googleapis.com/css?family=Lato%3A300%2C400%2C700%2C400italic%7CMontserrat%3A700%7CHomemade+Apple&#038;subset=latin%2Clatin-ext'
@@ -182,11 +190,6 @@ body.custom-background {
 									<a href="#data" title="dati"><img class="widget"
 										src="http://opendatahacklab.org/commons/imgs/rdf.png" /></a>
 								</li>
-								<!-- 								<li>
-<!-- 									class="menu-item menu-item-type-custom menu-item-object-custom"> -->
-								<!-- 									<a href="#info" title="informazioni"><img class="widget" -->
-								<!-- 										src="http://opendatahacklab.org/commons/imgs/Info_Simple_bw.svg.png" /></a> -->
-								<!-- 								</li> -->
 								<li
 									class="menu-item menu-item-type-custom menu-item-object-custom">
 									<a title="Internet Calendar"
@@ -201,6 +204,9 @@ body.custom-background {
 									type="application/atom+xml"><img class="widget"
 										src="http://opendatahacklab.org/commons/imgs/rss-feed-icon.png" /></a>
 								</li>
+								<li class="menu-item menu-item-type-custom menu-item-object-custom">
+									<a href="#credits" title="informazioni"><img class="widget" src="http://opendatahacklab.org/commons/imgs/Info_Simple_bw.svg.png" /></a>
+								</li>
 								<li
 									class="menu-item menu-item-type-custom menu-item-object-custom">
 									<a href="https://github.com/opendatahacklab/free-agenda.git"
@@ -208,7 +214,8 @@ body.custom-background {
 										src="http://opendatahacklab.org/commons/imgs/GitHub-Mark-64px.png"
 										class="widget" /></a>
 								</li>
-								<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-40"><a
+								<li
+									class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-40"><a
 									href="http://www.coderdojoetneo.it/">CoderDojo Etneo</a></li>
 							</ul>
 						</nav>
@@ -241,9 +248,13 @@ body.custom-background {
 									<div id="futureevents"></div>
 									<div id="pastevents"></div>
 									<!-- .entry-content -->
-
-									<h2 id="data" class="entry-title">Open Data</h2>
-
+								</div>
+							</article>
+							<article id="data" class="post-60 page type-page status-publish hentry">
+								<header class="entry-header">
+									<h2 class="entry-title">Open Data</h2>
+								</header>
+								<div class="entry-content">
 									<p>
 										I dati relativi agli eventi del <a
 											href="http://www.coderdojoetneo.it/">CoderDojo Etneo</a> sono
@@ -272,6 +283,81 @@ body.custom-background {
 											<a
 											href="http://www.opendatahacklab.org/free-agenda/coderdojo-etneo/rssfeed.php">Feed
 												RSS Atom</a>.</li>
+									</ul>
+								</div>
+							</article>
+							<article id="credits" class="post-60 page type-page status-publish hentry">
+								<header class="entry-header">
+									<h2  class="entry-title">Crediti</h2>
+								</header>
+								<div class="entry-content">
+									<p>
+									<a href="http://opendatahacklab.org/free-agenda" title="free agenda"
+										target="_blank"> <img class="creditsLogo"
+										src="http://opendatahacklab.org/free-agenda/free-agenda-logo.png" />
+									</a>	
+									<a href="http://opendatahacklab.org" title="opendatahacklab"
+										target="_blank"> <img class="creditsLogo"
+										src="http://opendatahacklab.org/commons/imgs/logo_cog4_ter.png" />
+									</a>
+								
+									L'agenda eventi del CoderDojo Etneo &egrave; una 
+									<a href="http://opendatahacklab.org/free-agenda/">Agenda Libera</a> realizzata da
+									<a href="http://hackspacecatania.it" target="_blank">Hackspace
+									Catania</a> nell'ambito del progetto
+										<code>
+											<a href="http://opendatahacklab.org" title="opendatahacklab"
+												target="_blank">opendatahacklab</a>
+										</code>, in collaborazione con Palestra per la Mente e Fare Nostrum.
+										Il sito risiede su un <em>hosting</em> gentilmente offerto da
+										<a class="wt-tech" target="_blank" href="http://wt-tech.it">WT-TECH</a>.
+										La base di conoscenza che contiene l'elenco degli eventi
+										&egrave; gentilmente offerta da <a href="http://dydra.com"
+											target="_blank"><img id="dydralogo" alt="dydra.com"
+											src="http://opendatahacklab.org/commons/imgs/dydra-logo-24pt.png" /></a>.
+										Il modulo di inserimento eventi &egrave; stato realizzato in
+										collaborazione col <em>Google Developer Group</em> di Catania.
+									</p>
+									
+									<p style="clear:both">Riportiamo nel seguito i riconoscimenti per le immagini
+										utilizzate nel sito.</p>
+									<ul class="iconlist">
+										<li><img src="http://opendatahacklab.org/commons/imgs/logo_cog4_ter.png" />
+											&egrave; stato realizzato a partire dal logo di <a
+											href="http://opendatasicilia.it">Open Data Sicilia</a> (vedi
+											il <em>communication kit</em> nel <a
+											href="https://github.com/SiciliaHub/opendatasicilia-blog">repository
+												di Open Data Sicilia</a>) ed il file <a
+											href="https://commons.wikimedia.org/wiki/File%3ACog%2C_Web_Fundamentals.svg">Cog,
+												Web Fundamentals.svg</a> by Google (Google Web Fundamentals)
+											[Apache License 2.0
+											(http://www.apache.org/licenses/LICENSE-2.0)], via Wikimedia
+											Commons;</li>
+										<li><img
+											src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Loupe.svg/58px-Loupe.svg.png">
+											by <a
+											href="https://commons.wikimedia.org/wiki/Magnifying_glass">Wikimedia
+												commons</a>;</li>
+										<li><img
+											src="http://opendatahacklab.org/commons/imgs/Octicons-calendar.svg.png" /> by
+											Stefania Servidio (The Noun Project) <a
+											href="http://creativecommons.org/licenses/by/3.0/us/deed.en">CC
+												BY 3.0</a>, via <a
+											href="https://commons.wikimedia.org/wiki/File%3ANoun_project_-_Calendar.svg">Wikimedia
+												Commons</a>;</li>
+										<li><img src="http://opendatahacklab.org/commons/imgs/GitHub-Mark-64px.png" />
+											<a href="https://github.com/logos">GitHub Mark</a>;</li>
+										<li><img src="http://opendatahacklab.org/commons/imgs/rdf.png" /> derivata da
+											<a href="http://www.w3.org/RDF/icons/">W3C RDF Resource
+												Description Framework Icons</a>;</li>
+										<li><img src="http://opendatahacklab.org/commons/imgs/Info_Simple_bw.svg.png" />
+											via <a
+											href="https://commons.wikimedia.org/wiki/File:Info_Simple_bw.svg">Wikimedia
+												Commons</a>;
+										<li><img src="http://opendatahacklab.org/commons/imgs/rss-feed-icon.png" /> by <a
+											href="http://www.endlessicons.com/free-icons/rss-feed-icon/">Endless Icons</a>,</li>
+										<li><img src="http://opendatahacklab.org/free-agenda/free-agenda-logo.png"> il logo di Agenda Libera
+										nasce da una composizione dei precedenti.</li>
 									</ul>
 								</div>
 							</article>

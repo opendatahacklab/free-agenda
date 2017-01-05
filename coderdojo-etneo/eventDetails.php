@@ -146,23 +146,6 @@ body.custom-background {
 								src="http://www.coderdojoetneo.it/wp-content/uploads/2016/09/lampadinetna-orizzontale.png"
 								alt="CoderDojo Etneo"></a>
 						</div>
-
-						<nav class="navbar-collapse bs-navbar-collapse collapse"
-							role="navigation" id="site-navigation">
-							<a class="screen-reader-text skip-link" href="#content">Skip
-								to content</a>
-							<ul id="menu-menu-1"
-								class="nav navbar-nav navbar-right responsive-nav main-nav-list">
-								<li id="menu-item-40"
-									class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-40"><a
-									href="http://www.coderdojoetneo.it/">Home</a></li>
-								<li id="menu-item-62"
-									class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-60 current_page_item menu-item-62"><a
-									href="http://www.coderdojoetneo.it/come-diventare-mentor/">Come
-										diventare mentor</a></li>
-							</ul>
-						</nav>
-
 					</div>
 
 				</div>
@@ -194,7 +177,7 @@ body.custom-background {
 								</div>
 								<!-- .entry-content -->
 
-
+								<p><a href="index.html">Torna all'agenda</a>
 							</article>
 							<!-- #post-## --> </main>
 							<!-- #main -->
