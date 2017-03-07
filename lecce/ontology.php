@@ -23,7 +23,7 @@ require('../AgendaRDFGenerator.php');
 require('LecceEventParser.php');
 
 define('ONTOLOGY_URL', 'http://opendatahacklab.org/free-agenda/lecce/ontology');
-define('SRC_URL','https://docs.google.com/spreadsheets/d/1__pUnfUkVYDmw-0Lp76dFjF9TCRZc0S8V27tul02nDs/export?format=tsv&exportFormat=tsv&ndplr=1');
+define('SRC_URL','https://goo.gl/ha4kiU/export?format=tsv&exportFormat=tsv&ndplr=1');
 
 
 (new AgendaRDFGenerator(ONTOLOGY_URL, SRC_URL, new LecceEventParser()))->generate();
