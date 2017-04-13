@@ -272,7 +272,7 @@ body.custom-background {
 											type="application/rdf+xml">ontologia OWL in RDF/XML</a></li>
 										<li><img
 											src="http://opendatahacklab.org/commons/imgs/rdf.png" /> <a
-											href="https://dydra.com/cristianolongo/coderdojo-etneo/sparql">SPARQL
+											href="sparql.php">SPARQL
 												endpoint</a>,</li>
 										<li><img
 											src="http://opendatahacklab.org/commons/imgs//Octicons-calendar.svg.png" /><a
@@ -311,10 +311,9 @@ body.custom-background {
 										</code>, in collaborazione con Palestra per la Mente e Fare Nostrum.
 										Il sito risiede su un <em>hosting</em> gentilmente offerto da
 										<a class="wt-tech" target="_blank" href="http://wt-tech.it">WT-TECH</a>.
-										La base di conoscenza che contiene l'elenco degli eventi
-										&egrave; gentilmente offerta da <a href="http://dydra.com"
-											target="_blank"><img id="dydralogo" alt="dydra.com"
-											src="http://opendatahacklab.org/commons/imgs/dydra-logo-24pt.png" /></a>.
+										L'endpoint sparql risiede su una istanza di <a href="http://www.opendatahacklab.org/semanticoctopus/">Semantic Octopus</a> ed &egrave; 
+										esposto attraverso una versione modificata di 
+										<a href="http://github.com/eslachance/php-transparent-proxy">php-transparent-proxy</a>. 
 										Il modulo di inserimento eventi &egrave; stato realizzato in
 										collaborazione col <em>Google Developer Group</em> di Catania.
 									</p>
@@ -447,19 +446,19 @@ body.custom-background {
 		src='http://www.coderdojoetneo.it/wp-includes/js/wp-embed.min.js?ver=4.6.1'></script>
 
 	<script type="text/javascript"
-		src="../../sparql_suite/sparql_processor.js"></script>
+		src="http://opendatahacklab.org/sparql_suite/sparql_processor.js"></script>
 	<script type="text/javascript"
 		src="http://opendatahacklab.org/sparql_suite/event_sparql_processor.js"></script>
 	<script type="text/javascript">
 		var futureEventsContainer = document.getElementById("futureevents");
 		var currentTime = new Date();
 		var futureEventsProcessor = new EventQueryProcessor(new DrawTableEventProcessorAsc(futureEventsContainer, "Prossimi Eventi", "event"), currentTime, currentTime);
-		sparql_query("http://dydra.com/cristianolongo/coderdojo-etneo/sparql",
+		sparql_query("sparql.php",
 				futureEventsProcessor);
 		
 		var pastEventsContainer = document.getElementById("pastevents");		
  		var pastEventsProcessor = new EventQueryProcessor(new DrawTableEventProcessorDec(pastEventsContainer, "Eventi Passati", "event"), currentTime, null, currentTime);
-		sparql_query("http://dydra.com/cristianolongo/coderdojo-etneo/sparql",
+		sparql_query("sparql.php",
 				pastEventsProcessor);
 		
 	</script>
