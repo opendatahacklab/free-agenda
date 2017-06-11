@@ -340,9 +340,7 @@ http://www.w3.org/2003/01/geo/wgs84_pos#alt,http://www.w3.org/2002/07/owl#equiva
 http://www.w3.org/2003/01/geo/wgs84_pos#alt,http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://www.w3.org/2002/07/owl#ObjectProperty
 http://www.w3.org/2003/01/geo/wgs84_pos#,http://purl.org/dc/elements/1.1/title,WGS84 Geo Positioning: an RDF vocabulary
 http://www.w3.org/2003/01/geo/wgs84_pos#,http://purl.org/dc/elements/1.1/date,$Date: 2009/04/20 15:00:30 $
-http://www.w3.org/2003/01/geo/wgs84_pos#,http://purl.org/dc/elements/1.1/description,"A vocabulary for representing latitude, longitude and 
- altitude information in the WGS84 geodetic reference datum. 
- Version $Id: wgs84_pos.rdf,v 1.22 2009/04/20 15:00:30 timbl Exp $. See http://www.w3.org/2003/01/geo/ for more details."
+http://www.w3.org/2003/01/geo/wgs84_pos#,http://purl.org/dc/elements/1.1/description,"A vocabulary for representing latitude, longitude and altitude information in the WGS84 geodetic reference datum.  Version $Id: wgs84_pos.rdf,v 1.22 2009/04/20 15:00:30 timbl Exp $. See http://www.w3.org/2003/01/geo/ for more details."
 http://www.w3.org/2003/01/geo/wgs84_pos#,http://www.w3.org/2002/07/owl#sameAs,http://www.w3.org/2003/01/geo/wgs84_pos#
 http://www.w3.org/2003/01/geo/wgs84_pos#,http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://www.w3.org/2002/07/owl#Thing
 http://opendatahacklab.org/free-agenda/20151221/CoderDojo+Etneo+%235/time/begin,http://www.w3.org/2006/time#inXSDDateTime,2015-12-21T16:00:00+01:00
@@ -1384,16 +1382,6 @@ http://www.w3.org/2003/01/geo/wgs84_pos#long,http://www.w3.org/2000/01/rdf-schem
 http://www.w3.org/2003/01/geo/wgs84_pos#long,http://www.w3.org/2000/01/rdf-schema#label,longitude
 http://www.w3.org/2003/01/geo/wgs84_pos#long,http://www.w3.org/2000/01/rdf-schema#domain,http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing
 http://www.w3.org/2003/01/geo/wgs84_pos#long,http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
-http://www.w3.org/2003/01/geo/wgs84_pos#Point,http://www.w3.org/2000/01/rdf-schema#comment," 
-Uniquely identified by lat/long/alt. i.e.
-
-spaciallyIntersects(P1, P2) :- lat(P1, LAT), long(P1, LONG), alt(P1, ALT),
-  lat(P2, LAT), long(P2, LONG), alt(P2, ALT).
-
-sameThing(P1, P2) :- type(P1, Point), type(P2, Point), spaciallyIntersects(P1, P2).
-  "
-http://www.w3.org/2003/01/geo/wgs84_pos#Point,http://www.w3.org/2000/01/rdf-schema#comment,"A point, typically described using a coordinate system relative to Earth, such as WGS84.
-  "
 http://www.w3.org/2003/01/geo/wgs84_pos#Point,http://www.w3.org/2000/01/rdf-schema#label,point
 http://www.w3.org/2003/01/geo/wgs84_pos#Point,http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://www.w3.org/2000/01/rdf-schema#Class
 http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing,http://www.w3.org/2000/01/rdf-schema#comment,"Anything with spatial extent, i.e. size, shape, or position.
@@ -1486,8 +1474,7 @@ basic geo vocab
 
 "
 http://www.w3.org/2003/01/geo/wgs84_pos#,http://www.w3.org/2000/01/rdf-schema#label,geo
-http://www.w3.org/2003/01/geo/wgs84_pos#alt,http://www.w3.org/2000/01/rdf-schema#comment,The WGS84 altitude of a SpatialThing (decimal meters 
-above the local reference ellipsoid).
+http://www.w3.org/2003/01/geo/wgs84_pos#alt,http://www.w3.org/2000/01/rdf-schema#comment,The WGS84 altitude of a SpatialThing (decimal meters above the local reference ellipsoid).
 http://www.w3.org/2003/01/geo/wgs84_pos#alt,http://www.w3.org/2000/01/rdf-schema#label,altitude
 http://www.w3.org/2003/01/geo/wgs84_pos#alt,http://www.w3.org/2000/01/rdf-schema#domain,http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing
 http://www.w3.org/2003/01/geo/wgs84_pos#alt,http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
