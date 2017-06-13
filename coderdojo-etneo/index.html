@@ -268,11 +268,11 @@ body.custom-background {
 									<ul class="iconlist">
 										<li><img
 											src="http://opendatahacklab.org/commons/imgs/rdf.png" /> <a
-											href="http://www.opendatahacklab.org/free-agenda/coderdojo-etneo/ontology.php"
+											href="http://www.opendatahacklab.org/free-agenda/coderdojo-etneo/ontologybak.php"
 											type="application/rdf+xml">ontologia OWL in RDF/XML</a></li>
 										<li><img
 											src="http://opendatahacklab.org/commons/imgs/rdf.png" /> <a
-											href="sparql.php">SPARQL
+											href="http://dydra.com/cristianolongo/coderdojo-etnet/sparql">SPARQL
 												endpoint</a>,</li>
 										<li><img
 											src="http://opendatahacklab.org/commons/imgs//Octicons-calendar.svg.png" /><a
@@ -450,15 +450,33 @@ body.custom-background {
 	<script type="text/javascript"
 		src="http://opendatahacklab.org/sparql_suite/event_sparql_processor.js"></script>
 	<script type="text/javascript">
+	/*
+    @licstart  The following applies to the following javascript code (inside this script element)
+    
+    Copyright 2016 Cristiano Longo
+
+    The following JavaScript code is free software: you can
+    redistribute it and/or modify it under the terms  of the GNU Lesser General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version. The code is distributed 
+    WITHOUT ANY WARRANTY;
+    without even the implied warranty of MERCHANTABILITY or FITNESS
+    FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+
+    @licend  The above is the license notice
+    for the JavaScript code below (inside the enclosing script element).
+    */
+
 		var futureEventsContainer = document.getElementById("futureevents");
 		var currentTime = new Date();
 		var futureEventsProcessor = new EventQueryProcessor(new DrawTableEventProcessorAsc(futureEventsContainer, "Prossimi Eventi", "event"), currentTime, currentTime);
-		sparql_query("sparql.php",
+		sparql_query("http://dydra.com/cristianolongo/coderdojo-etnet/sparql",
 				futureEventsProcessor);
 		
 		var pastEventsContainer = document.getElementById("pastevents");		
  		var pastEventsProcessor = new EventQueryProcessor(new DrawTableEventProcessorDec(pastEventsContainer, "Eventi Passati", "event"), currentTime, null, currentTime);
-		sparql_query("sparql.php",
+		sparql_query("http://dydra.com/cristianolongo/coderdojo-etnet/sparql",
 				pastEventsProcessor);
 		
 	</script>
