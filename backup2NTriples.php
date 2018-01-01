@@ -19,6 +19,8 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
+//array pof prefixes wich will expanded
+
 /**
  * Generate and output an ntriples file by reading the csv $src
  * @param unknown $src url of the source csv
@@ -49,14 +51,49 @@ function publishNTriples($src){
  * @param unknown $string
  */
 function convertToNtriples($string){
-	if (preg_match('#^http#', $string))
+	$string=expandPrefix($string);
+	if (isURI($string))
 		return "<$string>";
 	if (preg_match('#^_:#', $string))
 		return $string;
+	//this correct some 'strange' blank nodes
+	if (preg_match('#^[a-z0-9]*:[a-z0-9]*:-[a-z0-9]*$#', $string))
+		return '_:'.str_replace(':','_',$string);
 	$string=str_replace("\n",'',
 			str_replace("\r",'', 
 			str_replace('"',"\\\"", $string)));
 	return "\"$string\"";
 }
 
+/**
+ * Handle some prefixes
+ * 
+ * @prefixes a map prefix -> URI
+ * @param $string the input string 
+ * 
+ * @return the string with the prefix expanded (if any)
+ */
+function expandPrefix($string){
+	$prefixes = array( 'locn' => 'http://www.w3.org/ns/locn#',
+			'org' => 'http://www.w3.org/ns/org#'
+	);
+	foreach($prefixes as $prefix => $uri)
+		if (preg_match("#^$prefix:.*#", $string))
+			return str_replace("$prefix:",$uri, $string);
+	return $string;
+}
+
+/**
+ * Check if the string is an URI by recognizing the protocol, if any
+ * @param unknown $string
+ * 
+ * @return true if the string starts with a recognized protocol, false otherwise
+ */
+function isURI($string){
+	$protocols = array( 'http', 'https', 'mailto' );
+	foreach($protocols as $p)
+		if (preg_match("#^$p:.*#", $string))
+			return true;
+	return false;
+}
 ?>
