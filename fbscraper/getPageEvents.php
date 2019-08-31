@@ -63,17 +63,65 @@ function parseEvent($eventDiv){
 
 //just handle single day events
 //see https://www.php.net/manual/en/datetime.formats.date.php/
+/**
+  *
+  * @return a map with two dates (begine and end), false if $str is not in the expected format.
+  */
 function parseDate($dateSpanElement){
+	$date=parseSingleDayEventDate($dateSpanElement->textContent);
+	if ($date){
+		echo "begin ".$date[0]->format(DateTime::ISO8601)."\n";
+		echo "end ".$date[1]->format(DateTime::ISO8601)."\n";
+	}
+}
+
+/**
+   * Parse begin and end of a date for an event occurring in a single day, for example Monday, August 24, 2020 at 12:00 PM – 3:00 PM UTC+02
+   *
+   * @param $str 
+   * 
+   * @return a map with two dates (begine and end), false if $str is not in the expected format.
+   */
+function parseSingleDayEventDate($str){
+	$dateFull=explode(' at ',$str);
+	if (count($dateFull)!=2) return FALSE;
+	$dayStr=$dateFull[0];
+	$hoursParts=explode(' – ',$dateFull[1]);
+	if (count($hoursParts)!=2) return FALSE;
+	$endHourAndTz=$hoursParts[1];
+	$endHourAndTzParts=explode(' ', $endHourAndTz);
+	if (count($endHourAndTzParts)!=3) return FALSE;
+	$timezone=$endHourAndTzParts[2];
+	$beginStr="$dayStr $hoursParts[0] $timezone";
+	$endStr="$dayStr $endHourAndTz";
+
+	$ret=array();
+	$ret[0]=DateTimeImmutable::createFromFormat('*, M d, Y g:i A \U\T\CO', $beginStr);	
+
+	if ($ret[0]==FALSE){
+		echo "Begin $beginStr\n";
+		return FALSE;
+	}
+	$ret[1]=DateTimeImmutable::createFromFormat('*, M d, Y g:i A \U\T\CO', $endStr);	
+	if ($ret[1]==FALSE){
+		echo "End $endStr\n";
+		return FALSE;
+	}
+	return $ret;
+}
+
+/**
+   * Parse begin and end of a date for an event occurring in a single day
+   *
+   * @param $str 
+   * 
+   * @return a map with two dates (begine and end), false if $str is not in the expected format.
+   */
+function parseSigleDayEventDate($str){
 	$dateFull=explode(' at ',$dateSpanElement->textContent);
+	if (count($dateFull)!=2) return FALSE;
 	$dateStr=$dateFull[0];
 	$timeStr=$dateFull[1];
-	echo "time $timeStr\n";
-	$date=DateTimeImmutable::createFromFormat('*, M d,  Y', $dateStr);
-	if ($date){
-		$d=$date->format('d-m-y');
-		echo "OK date $d\n";
-	} else
-		echo "NOK date $dateStr\n";
 }
 
 //does not handle locations, just addresses
