@@ -54,7 +54,6 @@ class FBPageEvents2Calendar{
 			$divClass=$eventDiv->getAttribute('class');
 			if (isset($divClass) && (strcmp($divClass,'bo bp bq')===0 || strcmp($divClass,'co cp cq')===0 || strcmp($divClass,'bq br bs')===0)){
 				$event=$this->parseEvent($eventDiv);
-				echo "----------------- Title ".$event['title']."\n";
 				if ($event!=FALSE)
 					$calendar->add_event($event['begin']->format(DateTimeInterface::ISO8601),$event['end']->format(DateTimeInterface::ISO8601),$event['link'],$event['address'],$event['title']);
 			}		
@@ -63,7 +62,14 @@ class FBPageEvents2Calendar{
 		header("Content-type:text/calendar");
 		$calendar->show();		
 	}
-	
+
+	/**
+	 * Just download events page, for testing purposes
+	 */
+	public function getPage(){
+		return $this->downloadPage($this->fbPageURL);
+	}	
+
 	/**
 	   * just download the page using CURL.
 	   */
@@ -105,13 +111,16 @@ class FBPageEvents2Calendar{
 		if ($child->count()!=3)
 			die ("Invalid child count $child->count()"); 
 		$dates=$this->parseDate($child->item(0));
-		if ($dates==FALSE) return FALSE;
+		if ($dates==FALSE){
+			echo "\n\n unable to parse event $eventDiv->textContent\n\n";
+			return FALSE;
+		}
 		$event['begin']=$dates[0];
 		$event['end']=$dates[1];
 		$event['address']=$this->parseAddress($child->item(1));
 		$titleAndLink=$this->parseLink($child->item(2));
 		$event['title']=$titleAndLink[0];
-		$event['link']=$this->fbPageURL.$titleAndLink[1];
+		$event['link']="https://mbasic.facebook.com".$titleAndLink[1];
 		return $event;
 	}
 
@@ -122,7 +131,13 @@ class FBPageEvents2Calendar{
 	  * @return a map with two dates (begine and end), false if $str is not in the expected format.
 	  */
 	private function parseDate($dateSpanElement){
-		return $this->parseSingleDayEventDate($dateSpanElement->textContent);
+		$datesStr=$dateSpanElement->textContent;
+		$d=$this->parseSingleDayEventDate($datesStr);
+		if ($d!=FALSE) return $d;
+		$d=$this->parseMultipleDaysEventCurrentYear($datesStr);
+		if ($d!=FALSE) return $d;
+		else echo "------------ unable to parse date $dateStr----";
+
 	}
 
 	/**
@@ -149,13 +164,49 @@ class FBPageEvents2Calendar{
 		$ret[0]=DateTimeImmutable::createFromFormat('*, M d, Y g:i A \U\T\CO', $beginStr);	
 	
 		if ($ret[0]==FALSE){
-			echo "Begin $beginStr\n";
 			return FALSE;
 		}
 		$ret[1]=DateTimeImmutable::createFromFormat('*, M d, Y g:i A \U\T\CO', $endStr);	
 		if ($ret[1]==FALSE){
-			echo "End $endStr\n";
 			return FALSE;
+		}
+		return $ret;
+	}
+
+	/**
+	   * Parse begin and end of a date for an event spanning on multiple days but in the current year, for example Sep 24 at 8:00 PM – Sep 25 at 9:30 PM UTC+02
+	   *
+	   * @param $str 
+	   * 
+	   * @return a map with two dates (begine and end), false if $str is not in the expected format.
+	   */
+	public static function parseMultipleDaysEventCurrentYear($str){
+		$beginEndPieces=explode(' – ',$str);
+		if (count($beginEndPieces)!=2)
+			return FALSE;
+		$begin=$beginEndPieces[0];
+		$endWithTz=$beginEndPieces[1];
+		$endWithTzPieces=explode(' at ',$endWithTz);
+		if (count($endWithTzPieces)!=2)
+			return FALSE;
+		$endHourWithTzPieces=explode(' ',$endWithTzPieces[1]);
+		if (count($endHourWithTzPieces)!=3)
+			return FALSE;
+		$beginWithTz="$begin $endHourWithTzPieces[2]";
+		$dateFormat='M d \a\t g:i A \U\T\CO';
+		$dateFormatWithYear='M d, Y \a\t g:i A \U\T\CO';
+		$ret=array();
+		$ret[0]=DateTimeImmutable::createFromFormat($dateFormat, $beginWithTz);		
+		if ($ret[0]==FALSE){
+			$ret[0]=DateTimeImmutable::createFromFormat($dateFormatWithYear, $beginWithTz);		
+			if ($ret[0]==FALSE)
+				return FALSE;
+		}
+		$ret[1]=DateTimeImmutable::createFromFormat($dateFormat, $endWithTz);	
+		if ($ret[1]==FALSE){
+			$ret[1]=DateTimeImmutable::createFromFormat($dateFormatWithYear, $endWithTz);		
+			if ($ret[1]==FALSE)
+				return FALSE;
 		}
 		return $ret;
 	}
