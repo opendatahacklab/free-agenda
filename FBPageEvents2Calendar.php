@@ -55,7 +55,7 @@ class FBPageEvents2Calendar{
 			if (isset($divClass) && (strcmp($divClass,'bo bp bq')===0 || strcmp($divClass,'co cp cq')===0 || strcmp($divClass,'bq br bs')===0)){
 				$event=$this->parseEvent($eventDiv);
 				if ($event!=FALSE)
-					$calendar->add_event($event['begin']->format(DateTimeInterface::ISO8601),$event['end']->format(DateTimeInterface::ISO8601),$event['link'],$event['address'],$event['title']);
+					$calendar->add_event($event['begin']->format(DateTimeInterface::ISO8601),$event['end']->format(DateTimeInterface::ISO8601),$event['link'],$event['address'],$event['title'],$event['link']);
 			}		
 		} 
 		//Chiusura e download del calendario
@@ -214,9 +214,25 @@ class FBPageEvents2Calendar{
 
 	//does not handle locations, just addresses
 	private function parseAddress($addressSpanElement){
-		return $addressSpanElement->textContent;
+		return $this->getTextChildrenCommaSeparated($addressSpanElement);
 	}
 
+	/**
+	  * Get all  the text elements in $el and its children, recursively. Return a string of those strings, concatenaded with commas.
+	  *
+	  * @param DOMElement $el
+	  */
+	private function getTextChildrenCommaSeparated($el){
+		$ret='';
+		foreach($el->childNodes as $child){
+			if ($child->nodeType===XML_ELEMENT_NODE){
+				if (strlen($ret)!==0) $ret.=', ';
+				$ret.=$this->getTextChildrenCommaSeparated($child);
+			} else if ($child->nodeType===XML_TEXT_NODE)
+				$ret.=$child->textContent;
+		}
+		return $ret;
+	}
 	/**
 	  * @return an array with title and relative link as elements
 	  */	
