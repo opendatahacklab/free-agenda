@@ -24,20 +24,20 @@ require_once('Calendar.php');
  * @author Cristiano Longo
  */
 class FBPageEvents2Calendar{
-	private $fbPageURL;
+	private $pageIds;
 	private $calendarId;
 	
 	/**
 	 * Prepare a generator which will retrieve events from the specified 
 	 * sparql endpoint.
 	 * 
-	 * @param string $pageId identifier of the page on facebook
+	 * @param string $pageIds array of string s representing identifiers of facebook pages
 	 * @param string $calendarId calendar name (ascii chars without space) used to
 	 * generate the calendar unique identifier
 	 */
-	public function __construct($pageId, $calendarId)
+	public function __construct($pageIds, $calendarId)
 	{
-		$this->fbPageURL="https://mbasic.facebook.com/$pageId/events?__nodl&_rdr";
+		$this->pageIds=$pageIds;
 		$this->calendarId= $calendarId;
 	}
 	
@@ -45,11 +45,24 @@ class FBPageEvents2Calendar{
 	 * Generate the calendar file, send it on the standard output
 	 */
 	public function generate(){
-		$page=$this->downloadPage($this->fbPageURL);
+		$calendar = new Calendar($this->calendarId);
+		foreach($this->pageIds as $pageId)
+			$this->generateEventsFromPage($pageId,$calendar);
+		//Chiusura e download del calendario
+		header("Content-type:text/calendar");
+		$calendar->show();		
+	}
+
+	/**
+	  * Get events from a facebook page and put them into a calendar.
+	  */
+	public function generateEventsFromPage($fbPageId,$calendar){
+		$fbPageURL="https://mbasic.facebook.com/$fbPageId/events?__nodl&_rdr";
+		$page=$this->downloadPage($fbPageURL);
+		if ($page==FALSE)
+			return;
 		$doc=new DOMDocument();
 		$doc->loadHTML($page);
-		$calendar = new Calendar($this->calendarId);
-
 		foreach($doc->getElementsByTagName('div') as $eventDiv) {
 			$divClass=$eventDiv->getAttribute('class');
 			if (isset($divClass) && (strcmp($divClass,'bo bp bq')===0 || strcmp($divClass,'co cp cq')===0 || strcmp($divClass,'bq br bs')===0)){
@@ -58,9 +71,6 @@ class FBPageEvents2Calendar{
 					$calendar->add_event($event['begin']->format(DateTimeInterface::ISO8601),$event['end']->format(DateTimeInterface::ISO8601),$event['link'],$event['address'],$event['title'],$event['link']);
 			}		
 		} 
-		//Chiusura e download del calendario
-		header("Content-type:text/calendar");
-		$calendar->show();		
 	}
 
 	/**
@@ -94,8 +104,11 @@ class FBPageEvents2Calendar{
 		curl_setopt($ch,CURLOPT_HTTPHEADER,$header);
 		$responsetxt = curl_exec($ch);
 		$error=curl_error($ch);
-		if ($error!=='') die($error);
 		curl_close($ch);
+		if ($error!==''){
+			fwrite(STDERR, "Unable to load page  $url: $error\n");
+			return FALSE;
+		}
 		return $responsetxt;
 	}
 
@@ -108,11 +121,13 @@ class FBPageEvents2Calendar{
 	private function parseEvent($eventDiv){
 		$event=array();
 		$child=$eventDiv->childNodes;
-		if ($child->count()!=3)
-			die ("Invalid child count $child->count()"); 
+		if ($child->count()!=3){
+			fwrite(STDERR, "Invalid child count $child->count()\n");
+			return FALSE;
+		} 
 		$dates=$this->parseDate($child->item(0));
 		if ($dates==FALSE){
-			echo "\n\n unable to parse event $eventDiv->textContent\n\n";
+			fwrite(STDERR, "unable to parse event $eventDiv->textContent\n");
 			return FALSE;
 		}
 		$event['begin']=$dates[0];
@@ -136,7 +151,7 @@ class FBPageEvents2Calendar{
 		if ($d!=FALSE) return $d;
 		$d=$this->parseMultipleDaysEventCurrentYear($datesStr);
 		if ($d!=FALSE) return $d;
-		else echo "------------ unable to parse date $dateStr----";
+		//else echo "------------ unable to parse date $datesStr----";
 
 	}
 
