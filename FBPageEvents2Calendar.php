@@ -54,30 +54,41 @@ class FBPageEvents2Calendar{
 	}
 
 	/**
+	  * Construct page URL from page id.
+	  */
+	public function getFBPageURL($fbPageId){
+		return "https://mbasic.facebook.com/$fbPageId/events?__nodl&_rdr";
+	}
+
+	/**
 	  * Get events from a facebook page and put them into a calendar.
 	  */
 	public function generateEventsFromPage($fbPageId,$calendar){
-		$fbPageURL="https://mbasic.facebook.com/$fbPageId/events?__nodl&_rdr";
+		$fbPageURL=$this->getFBPageURL($fbPageId);
 		$page=$this->downloadPage($fbPageURL);
 		if ($page==FALSE)
 			return;
 		$doc=new DOMDocument();
 		$doc->loadHTML($page);
+
 		foreach($doc->getElementsByTagName('div') as $eventDiv) {
 			$divClass=$eventDiv->getAttribute('class');
-			if (isset($divClass) && (strcmp($divClass,'bo bp bq')===0 || strcmp($divClass,'co cp cq')===0 || strcmp($divClass,'bq br bs')===0)){
+			if (isset($divClass) && (strcmp($divClass,'bo bp bq')===0 || strcmp($divClass,'co cp cq')===0 || strcmp($divClass,'bq br bs')===0 || strcmp($divClass,'ci cj ck')===0 || strcmp($divClass,'bs bt bu')===0)){
 				$event=$this->parseEvent($eventDiv);
 				if ($event!=FALSE)
 					$calendar->add_event($event['begin']->format(DateTimeInterface::ISO8601),$event['end']->format(DateTimeInterface::ISO8601),$event['link'],$event['address'],$event['title'],$event['link']);
-			}		
+			}
 		} 
 	}
 
 	/**
-	 * Just download events page, for testing purposes
+	 * Just download events page catenated, for testing purposes
 	 */
-	public function getPage(){
-		return $this->downloadPage($this->fbPageURL);
+	public function getPages(){
+		$ret='';
+		foreach($this->pageIds as $pageId)
+ 			$ret.=$this->downloadPage($this->getFBPageURL($pageId));
+		return $ret;
 	}	
 
 	/**
@@ -125,9 +136,11 @@ class FBPageEvents2Calendar{
 			fwrite(STDERR, "Invalid child count $child->count()\n");
 			return FALSE;
 		} 
-		$dates=$this->parseDate($child->item(0));
+		$dateEl=$child->item(0);
+		$dates=$this->parseDate($dateEl);
 		if ($dates==FALSE){
-			fwrite(STDERR, "unable to parse event $eventDiv->textContent\n");
+			//fwrite(STDERR, "unable to parse event $eventDiv->textContent\n");
+			fwrite(STDERR, "unable to parse event $dateEl->textContent\n");
 			return FALSE;
 		}
 		$event['begin']=$dates[0];
@@ -151,8 +164,7 @@ class FBPageEvents2Calendar{
 		if ($d!=FALSE) return $d;
 		$d=$this->parseMultipleDaysEventCurrentYear($datesStr);
 		if ($d!=FALSE) return $d;
-		//else echo "------------ unable to parse date $datesStr----";
-
+		else return FALSE;
 	}
 
 	/**

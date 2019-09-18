@@ -48,5 +48,6 @@ require('../FBPageEvents2Calendar.php');
 	'tifonecrew',
 	'Mamma-Africa-1676805999243933',
 	'BARACCIOBABANGIDA',
-	'collettivored.militant'), 'eventi-catania'))->generate();
+	'collettivored.militant',
+	'monocentromulticulturale'), 'eventi-catania'))->generate();
 ?>
