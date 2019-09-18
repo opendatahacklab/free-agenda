@@ -43,5 +43,10 @@ require('../FBPageEvents2Calendar.php');
 	'vulcanic.incubatore',
 	'cittainsiemect',
 	'Dirittodiaccesso.GY',
-	'Partito-Comunista-Italiano-Catania-1110154402389049'), 'eventi-catania'))->generate();
+	'Partito-Comunista-Italiano-Catania-1110154402389049',
+	'fridaysforfuturecatania',
+	'tifonecrew',
+	'Mamma-Africa-1676805999243933',
+	'BARACCIOBABANGIDA',
+	'collettivored.militant'), 'eventi-catania'))->generate();
 ?>

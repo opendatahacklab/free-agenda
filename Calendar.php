@@ -31,9 +31,15 @@ class Calendar {
 	}
 		//FUNZIONE PER AGGIUNGERE EVENTI
 
-	function add_event($start,$end,$uid,$location,$summary) {
-		
-		$this->data .= "BEGIN:VEVENT\r\nDTSTART:".date("Ymd\THis\Z",strtotime($start))."\r\nDTEND:".date("Ymd\THis\Z",strtotime($end))."\r\nDTSTAMP:".date("Ymd\THis\Z")."\r\nUID:".$uid."\r\nDESCRIPTION:\r\nLOCATION:".$location."\r\nSEQUENCE:0\r\nSTATUS:CONFIRMED\r\nSUMMARY:".$summary."\r\nTRANSP:OPAQUE\r\nEND:VEVENT\r\n";
+	/**
+	  * @param $star string
+	  * @param $end string 
+	  */ 
+	function add_event($start,$end,$uid,$location,$summary, $url=null) {
+		$this->data .= "BEGIN:VEVENT\r\nDTSTART:".gmdate("Ymd\THis\Z",strtotime($start))."\r\nDTEND:".gmdate("Ymd\THis\Z",strtotime($end))."\r\nDTSTAMP:".gmdate("Ymd\THis\Z")."\r\nUID:".$uid."\r\nDESCRIPTION:\r\nLOCATION:".$location."\r\nSEQUENCE:0\r\nSTATUS:CONFIRMED\r\nSUMMARY:".$summary."\r\n";
+		if ($url!=null)
+			$this->data .="URL:$url\r\n";
+		$this->data .="TRANSP:OPAQUE\r\nEND:VEVENT\r\n";
 	}
 		//FUNZIONE PER CHIUDERE IL FILE E SCARICARLO
 	function show() {
